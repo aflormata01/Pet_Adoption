@@ -14,6 +14,7 @@
 	.border{border: solid 2px orange;margin: 15px 0px 0px 0px;padding: 10px;}
 	.search{margin-top: 10;}
 	.height{height: 500px;}
+	.menupad{padding-right: 40px;}
 	body{background-color: #FFF5C9;}
 	#myCarousel{height: 500px;}
 	button{margin:auto;}
