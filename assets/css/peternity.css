@@ -1,0 +1,24 @@
+/*peternity.css */
+
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {margin-bottom: 0;border-radius: 0;}
+    .row.content {height: 100px}
+	.sidenav {padding-top: 20px; background-color: #f1f1f1;height: 100%;}
+    .sidenav {height: auto;padding: 15px;}
+    .row.content {height:auto;} 
+	.u{text-decoration:underline;}
+	.b{text-decoration: bold;}
+	.carousel-inner{ width:100%; max-height:500px;}
+	.carmargin{margin:20px 0px 0px 0px;}
+	.right{text-align: right;}
+	.border{border: solid 2px orange;margin: 15px 0px 0px 0px;padding: 10px;}
+	.search{margin-top: 10;}
+	.height{height: 500px;}
+	body{background-color: #FFF5C9;}
+	#myCarousel{height: 500px;}
+	button{margin:auto;}
+	h1, h5, a, label{font-family: montserrat; font-size: 2;}
+	hr{ display: block;margin-top: 0.5em; margin-bottom: 0.5em;margin-left: auto; margin-right: auto;border-style: inset;border-width: 1px; border-color: white;}
+	p{text-indent: 50px; font-family: montserrat;}
+	
+	
