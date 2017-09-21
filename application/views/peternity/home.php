@@ -8,7 +8,7 @@
 			
 			<div class="carousel-inner carmargin">
 			  <div class="item active">
-				<img src="<?php echo base_url('assets/images/banda.jpg'); ?>" alt="Rescued Pet 1" style="width:100%; height:100%">
+				<img src="<?php echo base_url('assets/images/banda.jpg'); ?>" alt="Rescued Pet 1" style="width:100%; height:500px">
 				<div class="carousel-caption">
 				<h3>Georgina before and after</h3>
 				<p>posted by aflormata01</p>
@@ -16,7 +16,7 @@
 			  </div>
 
 			  <div class="item">
-				<img src="<?php echo base_url('assets/images/bugsy.jpg'); ?>" alt="Rescued Pet 2" style="width:100%;height:100%">
+				<img src="<?php echo base_url('assets/images/bugsy.jpg'); ?>" alt="Rescued Pet 2" style="width:100%;height:500px">
 				<div class="carousel-caption">
 				<h3>Wilson before and After</h3>
 				<p>posted by graceymacey</p>
@@ -25,9 +25,9 @@
 			  
 			
 			  <div class="item">
-				<img src="<?php echo base_url('assets/images/kitty.jpg'); ?>" alt="Rescued Pet 3" style="width:100%; height: 100%">
+				<img src="<?php echo base_url('assets/images/wilson.jpg'); ?>" alt="Rescued Pet 3" style="width:100%; height: 500px">
 				<div class="carousel-caption">
-				<h3>Smitten, after 3 weeks</h3>
+				<h3>Wilson, after 3 weeks</h3>
 				<p>posted by user123</p>
 			  </div>
 			  </div>
