@@ -19,7 +19,14 @@ class peternity extends CI_Controller {
 		
 	}	
 
-	
+	public function signup(){
+		$header_data['title'] = "SIGN-UP";
+		$this->load->view('include/header',$header_data);
+		$this->load->view('include/menu');
+		$this->load->view('peternity/sign-up');
+		$this->load->view('include/footer');
+		
+	}
 	
 	
 	
