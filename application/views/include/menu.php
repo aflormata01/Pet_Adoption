@@ -16,10 +16,9 @@
         </ul>
       </li>
       <li><a class="u" href="#">FAQ's</a></li>  
-	  <li class="search"><input type="text" class="form-control" placeholder="Search"></li>
-	  <li><button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button></li>
 	  
-	  
+	  <li><a class="u" href="peternity/signup"> SIGN-UP <a/></li>
+		
     </ul>
   </div>
 </nav>
