@@ -18,7 +18,7 @@
 			  <div class="item">
 				<img src="<?php echo base_url('assets/images/bugsy.jpg'); ?>" alt="Rescued Pet 2" style="width:100%;height:500px">
 				<div class="carousel-caption">
-				<h3>Wilson before and After</h3>
+				<h3>Bugsy</h3>
 				<p>posted by graceymacey</p>
 			  </div>
 			  </div>
