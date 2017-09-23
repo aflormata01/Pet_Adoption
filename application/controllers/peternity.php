@@ -81,5 +81,21 @@ class peternity extends CI_Controller {
 		$this->load->view('include/footer');
 		
 	}
-	
+	public function loghome(){
+		$header_data['title'] = "USER HOME";
+		$this->load->view('include/header',$header_data);
+		$this->load->view('include/menu-login');
+		$this->load->view('peternity/login-home');
+		$this->load->view('include/footer');
+		
+	}
+	public function profile(){
+		$header_data['title'] = "USER HOME";
+		$this->load->view('include/header',$header_data);
+		$this->load->view('include/menu-login');
+		$this->load->view('peternity/userprofile');
+		$this->load->view('include/footer');
+		
+	}
 }
+

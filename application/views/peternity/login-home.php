@@ -44,26 +44,8 @@
 		  </div>
 	</div>
 	
-<div class="container-fluid text-center">    
-  <div class="row content">
-	<div class="container text-center">    
-	<div class="content">
-		<div class="col-sm-4 text-left border"> 
-		 <h1 class="text-warning u">LOG IN</h1>
-					<div class="form-group">
-						<span class="glyphicon glyphicon-user"></span> <label for="username"> USERNAME: </label>
-						<input type="text" class="form-control" id="idno" name="idno" />
-					</div>
-					<div class="form-group">
-						 <span class="glyphicon glyphicon-lock"></span> <label for="username"> PASSWORD: </label>
-						<input type="password" class="form-control" id="idno" name="idno" />
-					</div>
-					<div>
-						<h5><button type="submit" class="btn btn-muted col-sm-4"><a href="peternity/loghome"><span class="glyphicon glyphicon-log-in"></span> LOG IN</a></h5></button>
-					</div>
-						
-		</div>
-		<div class="col-sm-8 text-left"> 
+	<div class="container">
+		<div class="col-sm-12 text-center"> 
 		  <h1 class="text-warning u">MOST DISCUSSED TOPICS</h1>
 		  <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 		  <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa.</p>
@@ -71,20 +53,19 @@
 		  <hr class="color">
 		</div>
   </div>
-</div>
-</div>
+
 	
 <div class="container text-center">    
   <div class="content">
 	<div class="col-sm-4 text-left border"> 
-      <h1 class="text-warning">VISIT US</h1>
+      <h1 class="text-warning text-center">VISIT US</h1>
 	  <p class="b"><a href="#"><img src="<?php echo base_url('assets/images/fb.png'); ?>" /></a> PETERNITY: Adopt A Pet Today!</p>
 	  <p class="b"><a href="#"><img src="<?php echo base_url('assets/images/twitter.png'); ?>" /></a> FOLLOW US: @peternity</p>
 	  <p class="b"><a href="#"><img src="<?php echo base_url('assets/images/insta.png'); ?>" /></a> IG: @peternity</p>
 	  <p class="b"><a href="#"><img src="<?php echo base_url('assets/images/pin.png'); ?>" /></a> PETERNITY</p>
     </div>
 	
-	 <div class="col-sm-8 text-left"> 
+	 <div class="col-sm-8 text-center"> 
       <h1 class="text-warning u">PET CARE TIPS</h1>
       <p><a class="u" href="#">• 10 Health Care Tips For Cat Owners</a> by HealthyPet Magazine</p>
       <p><a class="u" href="#">• Things To Remember Before Owning A Rescued Pet</a> by All Animals</p>

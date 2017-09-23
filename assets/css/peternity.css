@@ -19,11 +19,14 @@
 	.adoptimg{margin-top: 10px;}
 	.leftmargin{margin-left: 140px;}
 	.margin{margin-left: 120px;}
+	.marginleft{margin-left: 120px;}
+	.margintop{margin-top: 20px;}
 	.shadow{box-shadow: 10px 10px 5px #888888; }
 	body{background-color: #FFF5C9;}
 	#myCarousel{height: 500px;}
 	button{margin:auto;}
-	h1, h5, a, label{font-family: montserrat; font-size: 2;}
+	h1, a, label{font-family: montserrat; font-size: 2;}
+	h5{font-family: montserrat;}
 	hr{ display: block;margin-top: 0.5em; margin-bottom: 0.5em;margin-left: auto; margin-right: auto;border-style: inset;border-width: 1px; border-color: orange;}
 	p{text-indent: 50px; font-family: montserrat;}
 	.sign{padding-left: 350px;}
