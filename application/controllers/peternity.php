@@ -37,7 +37,14 @@ class peternity extends CI_Controller {
 		$this->load->view('include/footer');
 		
 	}
-	
+	public function rescuepet(){
+		$header_data['title'] = "Rescued Pets";
+		$this->load->view('include/header',$header_data);
+		$this->load->view('include/menu-petcatalogue');
+		$this->load->view('peternity/rescuedpets');
+		$this->load->view('include/footer');
+		
+	}
 	
 	
 }

@@ -18,6 +18,7 @@
 	.fontsize{font-size: 30; text-align: center;}
 	.adoptimg{margin-top: 10px;}
 	.leftmargin{margin-left: 140px;}
+	.margin{margin-left: 120px;}
 	body{background-color: #FFF5C9;}
 	#myCarousel{height: 500px;}
 	button{margin:auto;}
@@ -25,4 +26,5 @@
 	hr{ display: block;margin-top: 0.5em; margin-bottom: 0.5em;margin-left: auto; margin-right: auto;border-style: inset;border-width: 1px; border-color: orange;}
 	p{text-indent: 50px; font-family: montserrat;}
 	.sign{padding-left: 350px;}
+	
 	

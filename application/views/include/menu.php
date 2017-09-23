@@ -9,7 +9,7 @@
         <a class="u" class="dropdown-toggle" data-toggle="dropdown" href="#">PET CATALOGUE
         <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li class="menupad"><a href="#">RESCUED PETS</a></li>
+          <li class="menupad"><a href="peternity/rescuepet">RESCUED PETS</a></li>
           <li class="menupad"><a href="peternity/petforadoption">PET FOR ADOPTION</a></li>
         </ul>
       </li>
