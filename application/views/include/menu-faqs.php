@@ -29,8 +29,8 @@
           <li class="menupad"><a href="">UPCOMING EVENTS</a></li>
         </ul>
       </li>
-      <li class="menupad"><a class="u" href="faqs">FAQ's</a></li>  
-      <li><a class="u" href="">SIGN UP</a></li>  
+      <li class="menupad"><a class="u" href="">FAQ's</a></li>  
+      <li><a class="u" href="signup">SIGN UP</a></li>  
 	  
 	  
 	  

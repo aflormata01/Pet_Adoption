@@ -1,5 +1,5 @@
 <div class="container"> 
-		  <div id="myCarousel" class="carousel slide " data-ride="carousel">
+		  <div id="myCarousel" class="carousel slide shadow" data-ride="carousel">
 			<ol class="carousel-indicators">
 			  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
 			  <li data-target="#myCarousel" data-slide-to="1"></li>
@@ -57,11 +57,9 @@
 					<div class="form-group">
 						 <span class="glyphicon glyphicon-lock"></span> <label for="username"> PASSWORD: </label>
 						<input type="password" class="form-control" id="idno" name="idno" />
+						<h5><button type="submit" class="btn btn-muted col-sm-4 login"><a href="peternity/loghome"><span class="glyphicon glyphicon-log-in"></span> LOG IN</a></h5></button>
 					</div>
-					<div>
-						<h5><button type="submit" class="btn btn-muted col-sm-4"><a href="peternity/loghome"><span class="glyphicon glyphicon-log-in"></span> LOG IN</a></h5></button>
-					</div>
-						
+				
 		</div>
 		<div class="col-sm-8 text-left"> 
 		  <h1 class="text-warning u">MOST DISCUSSED TOPICS</h1>

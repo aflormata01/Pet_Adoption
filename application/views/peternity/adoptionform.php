@@ -43,7 +43,7 @@
 	 </form><br/><br/>
 	 
 	 <div class="text-center">
-      <h4 class=" text-center" >Pet Adopter's Oath <br /></h4>
+      <h4 class=" font text-center" >Pet Adopter's Oath <br /></h4>
 	  <p class="text-center ">I hereby swear to take good care of my pet. To feed them, play with them, and take care of their needs.<p>
 	  </div>
 	  
@@ -57,7 +57,7 @@
 	
 	<div class="form-group">        
       <div class="col-sm-offset-2 col-sm-10 text-center margin">
-        <button type="submit" class="btn btn-default margin text-center"><span class="glyphicon glyphicon-heart">ADOPT</span></button>
+        <button type="submit" class="btn btn-default margin text-center "><span class="glyphicon glyphicon-heart">ADOPT</span></button>
       </div>
     </div>
   </div>

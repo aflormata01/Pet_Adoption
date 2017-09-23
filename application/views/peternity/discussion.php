@@ -1,9 +1,9 @@
 <div class="container">
 	<h1 class="text-center">DISCUSSIONS</h1>
 	
-	<div class="panel panel-default">
-		<div class=" panel panel-heading">DISCUSSION #1 posted by aflormata01 09/23/17 4:42pm</div>
-		<div class=" panel panel-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+	<div class="panel panel-default shadow">
+		<div class="  panel-heading"><h4 class="font">DISCUSSION #1 posted by aflormata01 09/23/17 4:42pm</h4></div>
+		<div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
 		<div class=" panel panel-footer">
 		<div class="form-group">        
 					<div class="col-sm-10">
@@ -21,8 +21,8 @@
 	</div>
 	
 	<div class="panel panel-default">
-			<div class=" panel panel-heading">DISCUSSION #2 posted by francheeseca 09/15/17 3:20pm</div>
-			<div class=" panel panel-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+			<div class=" panel-heading"><h4 class="font">DISCUSSION #2 posted by francheeseca 09/15/17 3:20pm</h4></div>
+			<div class=" panel-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
 		<div class=" panel panel-footer">
 			<div class="form-group">        
 					<div class="col-sm-10">
