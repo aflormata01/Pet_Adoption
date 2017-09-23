@@ -29,7 +29,7 @@
           <li class="menupad"><a href="#">UPCOMING EVENTS</a></li>
         </ul>
       </li>
-      <li class="menupad"><a class="u" href="#">FAQ's</a></li>  
+      <li class="menupad"><a class="u" href="peternity/faqs">FAQ's</a></li>  
       <li class="dropdown menupad">
         <a class="u" class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"><span class="caret"></span></span></a>
         <ul class="dropdown-menu table-hover">

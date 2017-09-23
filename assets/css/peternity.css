@@ -16,12 +16,14 @@
 	.menupad{padding-right: 40px;}
 	.auto{margin: auto; margin-top: 10px;}
 	.fontsize{font-size: 30; text-align: center;}
+	.font{font-family: montserrat; text-decoration: bold; font-size: 5;}
 	.adoptimg{margin-top: 10px;}
 	.leftmargin{margin-left: 140px;}
 	.margin{margin-left: 120px;}
 	.marginleft{margin-left: 120px;}
 	.margintop{margin-top: 20px;}
 	.shadow{box-shadow: 10px 10px 5px #888888; }
+	.login{margin-left: 120px;}
 	body{background-color: #FFF5C9;}
 	#myCarousel{height: 500px;}
 	button{margin:auto;}

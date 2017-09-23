@@ -97,5 +97,13 @@ class peternity extends CI_Controller {
 		$this->load->view('include/footer');
 		
 	}
+	public function faqs(){
+		$header_data['title'] = "USER HOME";
+		$this->load->view('include/header',$header_data);
+		$this->load->view('include/menu-faqs');
+		$this->load->view('peternity/faqs');
+		$this->load->view('include/footer');
+		
+	}
 }
 
