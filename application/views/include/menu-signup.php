@@ -9,20 +9,27 @@
         <a class="u" class="dropdown-toggle" data-toggle="dropdown" href="">PET CATALOGUE
         <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li class="menupad"><a href="#">RESCUED PETS</a></li>
+          <li class="menupad"><a href="rescuepet">RESCUED PETS</a></li>
           <li class="menupad"><a href="petforadoption">PET FOR ADOPTION</a></li>
         </ul>
       </li>
-      <li class="menupad"><a class="u" href="#">COMMUNITY</a></li>
-      <li class="dropdown menupad">
-        <a class="u" class="dropdown-toggle" data-toggle="dropdown" href="#">NEWS AND EVENTS
+     <li class="dropdown menupad">
+        <a class="u" class="dropdown-toggle" data-toggle="dropdown" href="">COMMUNITY
         <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li class="menupad"><a href="#">RECENT NEWS</a></li>
-          <li class="menupad"><a href="#">EVENTS</a></li>
+          <li class="menupad"><a href="stories">SUCCESS STORIES</a></li>
+          <li class="menupad"><a href="discussion">DICUSSIONS</a></li>
         </ul>
       </li>
-      <li class="menupad"><a class="u" href="#">FAQ's</a></li>  
+      <li class="dropdown menupad">
+        <a class="u" class="dropdown-toggle" data-toggle="dropdown" href="">NEWS AND EVENTS
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li class="menupad"><a href="news">NEWS</a></li>
+          <li class="menupad"><a href="">UPCOMING EVENTS</a></li>
+        </ul>
+      </li>
+      <li class="menupad"><a class="u" href="">FAQ's</a></li>  
       <li><a class="u" href="">SIGN UP</a></li>  
 	  
 	  

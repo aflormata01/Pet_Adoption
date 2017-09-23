@@ -1,7 +1,7 @@
 <nav class="navbar navbar-default">
   <div class="container search">
     <div class="navbar-header menupad">
-      <a class="navbar-brand" href="index"><img src="<?php echo base_url('assets/images/fulllogo.png'); ?>" /></a>
+      <a class="navbar-brand" href=""><img src="<?php echo base_url('assets/images/fulllogo.png'); ?>" /></a>
     </div>
     <ul class="nav navbar-nav">
       <li class="menupad"><a class="u" href="index">HOME</a></li>
@@ -13,7 +13,7 @@
           <li class="menupad"><a href="petforadoption">PET FOR ADOPTION</a></li>
         </ul>
       </li>
-     <li class="dropdown menupad">
+	  <li class="dropdown menupad">
         <a class="u" class="dropdown-toggle" data-toggle="dropdown" href="">COMMUNITY
         <span class="caret"></span></a>
         <ul class="dropdown-menu">
@@ -22,10 +22,10 @@
         </ul>
       </li>
       <li class="dropdown menupad">
-        <a class="u" class="dropdown-toggle" data-toggle="dropdown" href="#">NEWS AND EVENTS
+        <a class="u" class="dropdown-toggle" data-toggle="dropdown" href="">NEWS AND EVENTS
         <span class="caret"></span></a>
         <ul class="dropdown-menu">
-         <li class="menupad"><a href="news">NEWS</a></li>
+          <li class="menupad"><a href="news">NEWS</a></li>
           <li class="menupad"><a href="">UPCOMING EVENTS</a></li>
         </ul>
       </li>

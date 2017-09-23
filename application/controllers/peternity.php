@@ -38,10 +38,37 @@ class peternity extends CI_Controller {
 		
 	}
 	public function rescuepet(){
-		$header_data['title'] = "Rescued Pets";
+		$header_data['title'] = "RESCUED PETS";
 		$this->load->view('include/header',$header_data);
 		$this->load->view('include/menu-petcatalogue');
 		$this->load->view('peternity/rescuedpets');
+		$this->load->view('include/footer');
+		
+	}
+	
+	public function news(){
+		$header_data['title'] = "NEWS";
+		$this->load->view('include/header',$header_data);
+		$this->load->view('include/menu-petcatalogue');
+		$this->load->view('peternity/news');
+		$this->load->view('include/footer');
+		
+	}
+	
+	public function stories(){
+		$header_data['title'] = "SUCCESS STORIES";
+		$this->load->view('include/header',$header_data);
+		$this->load->view('include/menu-community');
+		$this->load->view('peternity/stories');
+		$this->load->view('include/footer');
+		
+	}
+	
+	public function discussion(){
+		$header_data['title'] = "DISCUSSIONS";
+		$this->load->view('include/header',$header_data);
+		$this->load->view('include/menu-community');
+		$this->load->view('peternity/discussion');
 		$this->load->view('include/footer');
 		
 	}

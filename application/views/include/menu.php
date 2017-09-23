@@ -13,13 +13,20 @@
           <li class="menupad"><a href="peternity/petforadoption">PET FOR ADOPTION</a></li>
         </ul>
       </li>
-      <li class="menupad"><a class="u" href="#">COMMUNITY</a></li>
+	  <li class="dropdown menupad">
+        <a class="u" class="dropdown-toggle" data-toggle="dropdown" href="#">COMMUNITY
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li class="menupad"><a href="peternity/stories">SUCCESS STORIES</a></li>
+          <li class="menupad"><a href="peternity/discussion">DICUSSIONS</a></li>
+        </ul>
+      </li>
       <li class="dropdown menupad">
         <a class="u" class="dropdown-toggle" data-toggle="dropdown" href="#">NEWS AND EVENTS
         <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li class="menupad"><a href="#">RECENT NEWS</a></li>
-          <li class="menupad"><a href="#">EVENTS</a></li>
+          <li class="menupad"><a href="peternity/news">NEWS</a></li>
+          <li class="menupad"><a href="#">UPCOMING EVENTS</a></li>
         </ul>
       </li>
       <li class="menupad"><a class="u" href="#">FAQ's</a></li>  
