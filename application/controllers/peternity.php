@@ -73,5 +73,13 @@ class peternity extends CI_Controller {
 		
 	}
 	
+	public function adopt(){
+		$header_data['title'] = "ADOPTION FORM";
+		$this->load->view('include/header',$header_data);
+		$this->load->view('include/menu-petcatalogue');
+		$this->load->view('peternity/adoptionform');
+		$this->load->view('include/footer');
+		
+	}
 	
 }
