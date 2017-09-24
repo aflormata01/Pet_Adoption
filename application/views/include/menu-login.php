@@ -35,7 +35,7 @@
         <ul class="dropdown-menu table-hover">
           <li class="menupad "><a href="profile">Your Profile</a></li>
           <li class="menupad "><a href="peternity/petforadoption">Settings</a></li>
-		  <li class="menupad "><a href="peternity/petforadoption">Logout</a></li>
+		  <li class="menupad "><a href="index">Logout</a></li>
         </ul>
       </li>
 	  
