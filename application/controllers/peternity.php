@@ -147,15 +147,28 @@ class peternity extends CI_Controller {
 	}
 	
 	public function addDiscussion(){
-		
-		$this->load->view('peternity/adddiscussion');
-		
+		$rules = array(
+                    array('field'=>'title', 'label'=>'Title', 'rules'=>'required'),
+                    array('field'=>'body', 'label'=>'body', 'rules'=>'required')
+				);
+		$this->form_validation->set_rules($rules);
+		$this->form_validation->set_error_delimiters('<p class="error">', '</p>');
+		if($this->form_validation->run()==FALSE){
+			$this->load->view('peternity/adddiscussion');
+		}else{
+			$addDiscuss=array('title'=>$_POST['title'],'body'=>$_POST['body']);
+            $this->Peter->create_discussion($addDiscuss);
+            redirect('peternity/userDiscussion');
+		}
 	}
 	public function userdiscussion(){
+		$result_array = $this->Peter->read_discussion();
+        $data['user_discussion'] = $result_array;
+		
 		$header_data['title'] = "DISCUSSIONS";
 		$this->load->view('include/header',$header_data);
 		$this->load->view('include/menu-login');
-		$this->load->view('peternity/userdiscussion');
+		$this->load->view('peternity/userdiscussion',$data);
 		$this->load->view('include/footer');
 		
 	}
