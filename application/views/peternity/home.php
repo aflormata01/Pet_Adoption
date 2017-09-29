@@ -50,14 +50,14 @@
 	<div class="content">
 		<div class="col-sm-4 text-left border"> 
 		 <h1 class="text-warning u">LOG IN</h1>
-		 <?php echo form_open('','class="form-signin"');  //this is equal to <form method="post" accept-charset="utf-8" action="http://localhost/Pet_Adoption/">?>
+		 <?php echo form_open('peternity/loghome'); //this is equal to <form method="post" accept-charset="utf-8" action="http://localhost/Pet_Adoption/peternity"?>
 					<div class="form-group">
 						<span class="glyphicon glyphicon-user"></span> <label for="username"> USERNAME: </label>
 						<input type="text" class="form-control" id="username" name="username" placeholder="Username" />
 					</div>
 					<div class="form-group">
 						 <span class="glyphicon glyphicon-lock"></span> <label for="password"> PASSWORD: </label>
-						<input type="password" class="form-control" id="password" name="username" placeholder="Password" />
+						<input type="password" class="form-control" id="password" name="password" placeholder="Password" />
 						<h5>
 						<button type="submit" class="btn btn-muted col-sm-4 login" value="Login"><span class="glyphicon glyphicon-log-in"></span> LOG IN</h5></button>
 					</div>
