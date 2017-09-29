@@ -81,19 +81,25 @@ class peternity extends CI_Controller {
 	}
 	
 	public function stories(){
+		$result_array = $this->Peter->read_stories();
+        $data['stories'] = $result_array;
+		
 		$header_data['title'] = "SUCCESS STORIES";
 		$this->load->view('include/header',$header_data);
 		$this->load->view('include/menu-community');
-		$this->load->view('peternity/stories');
+		$this->load->view('peternity/stories',$data);
 		$this->load->view('include/footer');
 		
 	}
 	
 	public function discussion(){
+		$result_array = $this->Peter->read_discussion();
+        $data['discussion'] = $result_array;
+		
 		$header_data['title'] = "DISCUSSIONS";
 		$this->load->view('include/header',$header_data);
 		$this->load->view('include/menu-community');
-		$this->load->view('peternity/discussion');
+		$this->load->view('peternity/discussion',$data);
 		$this->load->view('include/footer');
 		
 	}
@@ -107,24 +113,27 @@ class peternity extends CI_Controller {
 		
 	}
 	public function loghome(){
-		if($this->session->userdata('logged_in')){
+		/*if($this->session->userdata('logged_in')){
             $session_data=$this->session->userdata('logged_in');
             $data['username']=$session_data['username'];
-            if($session_data['isAflormata01']>0){
+            if($session_data['aUser']>0){*/
 				$header_data['title'] = "USER HOME";
 				$this->load->view('include/header',$header_data);
 				$this->load->view('include/menu-login');
 				$this->load->view('peternity/login-home');
 				$this->load->view('include/footer');
-			}
-		}
+			//}
+		//}
 		
 	}
 	public function profile(){
+		$result_array = $this->Peter->read_ownerinfo();
+        $data['profile'] = $result_array;
+		
 		$header_data['title'] = "USER HOME";
 		$this->load->view('include/header',$header_data);
 		$this->load->view('include/menu-login');
-		$this->load->view('peternity/userprofile');
+		$this->load->view('peternity/userprofile',$data);
 		$this->load->view('include/footer');
 		
 	}
