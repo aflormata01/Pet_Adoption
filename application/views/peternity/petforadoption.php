@@ -1,6 +1,6 @@
 <div class="container text-center">    
   <h1>PETS FOR ADOPTION</h1><br>
-  <div class="row">
+  <div class="row">	
     <div class="col-xs-4">
         <div class="panel shadow">
 		<div class=" panel-heading">
