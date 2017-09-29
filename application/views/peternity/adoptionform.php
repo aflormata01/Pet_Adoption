@@ -2,6 +2,53 @@
   <div class="container">
 	<img src="<?php echo base_url('assets/images/pets.png'); ?>" class="img-responsive" style="width:100% ; height:200px" alt="logoform">
   </div>
+
+   
+   <form class="form-horizontal" action="">
+    <div class="form-group petpic">
+	<div class="col-sm-12">
+		<div class="col-sm-12 ">
+			<img src="<?php echo base_url('assets/images/bugsy.jpg'); ?>" class="img-thumbnail" style="width: 200px; height:200px" alt="profilepic">
+		</div>
+     </div>
+     </div>
+     <div class="form-group">
+	<div class="col-sm-12 ">	
+	<div class="col-sm-12">	
+	 <label class="control-label col-sm-4 margin" for="oname">Owner Name: </label>
+      <div class="col-sm-4">
+        <input type="oname" class="form-control" id="oname" placeholder="Enter your name" name="oname">
+      </div>
+	  <br/>
+	  <br/>
+  </div>
+  
+  <div class="col-sm-12">	
+	 <label class="control-label col-sm-4 margin" for="contactno">Contact Number: </label>
+      <div class="col-sm-4">
+        <input type="contactno" class="form-control" id="contactno" placeholder="Enter contact number" name="">
+      </div>
+	  <br/>
+	  <br/>
+  </div>
+  
+  <div class="col-sm-12">	
+	 <label class="control-label col-sm-4 margin" for="address">Address: </label>
+      <div class="col-sm-4">
+        <input type="address" class="form-control" id="address" placeholder="Enter address" name="address">
+      </div>
+	  <br/>
+	  <br/>
+  </div>
+  
+	<div class="col-sm-12">	
+	  <div class="form-group">
+      <label class="control-label col-sm-4 margin" for="height">Pet Height & Weight: </label>
+      <div class="col-sm-2">
+        <input type="height" class="form-control" id="height" placeholder="Enter pet height" name="height">
+	  </div>
+      <div class="col-sm-2">
+
    <form class="form-horizontal" action="">
     <div class="form-group">
       <label class="control-label col-sm-2 margin" for="oname">Owner Name: </label>
@@ -37,6 +84,7 @@
         <input type="height" class="form-control" id="height" placeholder="Enter pet height" name="height">
 	  </div>
       <div class="col-xs-2">
+
         <input type="weight" class="form-control" id="weight" placeholder="Enter pet weight" name="weight">
       </div>
 	  </div>
@@ -61,3 +109,6 @@
       </div>
     </div>
   </div>
+	  </div>
+	  </div>
+	
