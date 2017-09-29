@@ -1,38 +1,44 @@
 <div class="container">
 	<h1 class="text-center">DISCUSSIONS</h1>
 	
-	<div class="panel panel-default shadow">
-		<div class="  panel-heading"><h4 class="font">DISCUSSION #1 posted by aflormata01 09/23/17 4:42pm</h4></div>
-		<div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-		<div class=" panel panel-footer">
-		<div class="form-group">        
-					<div class="col-sm-10">
-					<input type="text" class="form-control" placeholder="Comment.."/>
-					</div>
-					<div class="col-sm-2">
-					<h5><button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-ok-sign"></span> SUBMIT</button></h5>
-					</div>
-				</div>
+		<div class="panel container text-center">
+		<table class="table table-bordered">
+		<tr>
+		<td>
+			<table class="table-responsive">
+			<thead>
+			<th>Restricted food for dogs</th>
+			</thead>
+			<tbody>
+			<tr> 
+			<td>posted by aflormata01</td>
+			<td class="gap"><a href="">Lorem Ipsum Dolor shimberlu eklaboo </a></td>
+			</tr>
+			</tbody>
+			</table>
+		</td>
+		</tr>
+		<tr>
+		<td>
+			<table class="table-responsive">
+			<thead>
+			<th>Affordable Vet Clinics?</th>
+			</thead>
+			<tbody>
+			<tr> 
+			<td>posted by franchescamarie</td>
+			<td class="gap"><a href="">Lorem Ipsum Dolor shimberlu eklaboo </a></td>
+			</tr>
+			</tbody>
+			</table>
+		</td>
+		</tr>
+		
+		</tr>
+		</table>
 		
 		
-		
-		
+		</table>
 		</div>
-	</div>
-	
-	<div class="panel panel-default">
-			<div class=" panel-heading"><h4 class="font">DISCUSSION #2 posted by francheeseca 09/15/17 3:20pm</h4></div>
-			<div class=" panel-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-		<div class=" panel panel-footer">
-			<div class="form-group">        
-					<div class="col-sm-10">
-					<input type="text" class="form-control" placeholder="Comment.."/>
-					</div>
-					<div class="col-sm-2">
-					<h5 ><button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-ok-sign"></span> SUBMIT</button></h5>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
+		
+		
