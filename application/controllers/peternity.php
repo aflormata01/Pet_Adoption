@@ -7,7 +7,7 @@ class peternity extends CI_Controller {
 	{
 		parent::__construct();
 	
-		$this->load->model('peternity_model','Students');
+		$this->load->model('peternity_model','Peter');
 	}
 	
 	public function index(){	
@@ -28,8 +28,10 @@ class peternity extends CI_Controller {
 		$this->load->view('include/footer');
 		
 	}
-	public function petforadoption()
-	{
+	public function petforadoption(){
+		$result_array = $this->Peter->read_petrescued();
+        $data['petadopt'] = $result_array;
+		
 		$header_data['title'] = "PETS FOR ADOPTION";
 		$this->load->view('include/header',$header_data);
 		$this->load->view('include/menu-petcatalogue');
@@ -38,10 +40,13 @@ class peternity extends CI_Controller {
 		
 	}
 	public function rescuepet(){
+		$result_array = $this->Peter->read_petrescued();
+        $data['petrescue'] = $result_array;
+		
 		$header_data['title'] = "RESCUED PETS";
 		$this->load->view('include/header',$header_data);
 		$this->load->view('include/menu-petcatalogue');
-		$this->load->view('peternity/rescuedpets');
+		$this->load->view('peternity/rescuedpets',$data);
 		$this->load->view('include/footer');
 		
 	}
