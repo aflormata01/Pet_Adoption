@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.4
+-- version 4.7.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 21, 2017 at 06:20 AM
--- Server version: 5.7.14
--- PHP Version: 5.6.25
+-- Generation Time: Sep 29, 2017 at 09:26 AM
+-- Server version: 10.1.26-MariaDB
+-- PHP Version: 7.1.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -17,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `peternity`
+-- Database: `peternity_db`
 --
 
 -- --------------------------------------------------------
@@ -29,6 +31,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `discussion` (
   `discuss#` varchar(50) NOT NULL,
   `username` varchar(50) NOT NULL,
+  `Title` varchar(100) NOT NULL,
   `body` varchar(500) NOT NULL,
   `date` varchar(50) NOT NULL,
   `time` varchar(50) NOT NULL
@@ -105,6 +108,19 @@ CREATE TABLE `ownerinfo` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `petadoption`
+--
+
+CREATE TABLE `petadoption` (
+  `petID` int(100) NOT NULL,
+  `date_adopted` date DEFAULT NULL,
+  `username` varchar(20) NOT NULL,
+  `contactno` bigint(10) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `petrescued`
 --
 
@@ -138,7 +154,15 @@ CREATE TABLE `stories` (
 -- Indexes for table `discussion`
 --
 ALTER TABLE `discussion`
-  ADD PRIMARY KEY (`discuss#`);
+  ADD PRIMARY KEY (`discuss#`),
+  ADD KEY `username` (`username`);
+
+--
+-- Indexes for table `disc_comments`
+--
+ALTER TABLE `disc_comments`
+  ADD KEY `username` (`username`),
+  ADD KEY `discuss#` (`discuss#`);
 
 --
 -- Indexes for table `news`
@@ -147,10 +171,28 @@ ALTER TABLE `news`
   ADD PRIMARY KEY (`news#`);
 
 --
+-- Indexes for table `ownedpets`
+--
+ALTER TABLE `ownedpets`
+  ADD KEY `username` (`username`);
+
+--
 -- Indexes for table `owneraccount`
 --
 ALTER TABLE `owneraccount`
   ADD PRIMARY KEY (`username`);
+
+--
+-- Indexes for table `ownerinfo`
+--
+ALTER TABLE `ownerinfo`
+  ADD KEY `username` (`username`);
+
+--
+-- Indexes for table `petadoption`
+--
+ALTER TABLE `petadoption`
+  ADD KEY `adoptionID` (`petID`,`username`);
 
 --
 -- Indexes for table `petrescued`
@@ -162,7 +204,9 @@ ALTER TABLE `petrescued`
 -- Indexes for table `stories`
 --
 ALTER TABLE `stories`
-  ADD PRIMARY KEY (`story#`);
+  ADD PRIMARY KEY (`story#`),
+  ADD KEY `username` (`username`);
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
