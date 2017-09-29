@@ -11,7 +11,6 @@ foreach($petrescue as $d){
         <div class="panel-body">
 			   <h4 class="text-center">'.$d['pet_nickname'].'</h4>
 			   <h5 class="text-center">adopted '.$d['date_rescued'].' </h5>
-			   <h6 class="text-center">'.$d['availability'].'</h6>
             </div>
         </div>
     </div>';

@@ -10,6 +10,7 @@ class peternity_model extends CI_model
 	private $owneraccount = "owneraccount";
 	private $ownerinfo = "ownerinfo";
 	private $petrescued = "petrescued";
+	private $petadoption = "petadoption";
 	private $stories = "stories";
 	
 		public function create_discussion($data)
@@ -265,6 +266,12 @@ class peternity_model extends CI_model
 		public function create_form($signupform)
 		{
 			$this->db->insert($this->ownerinfo, $signupform);
+			return TRUE;
+		}
+		
+		public function create_adopt($adoption)
+		{
+			$this->db->insert($this->petadoption, $adoption);
 			return TRUE;
 		}
 }
