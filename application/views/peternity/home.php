@@ -1,5 +1,5 @@
 <div class="container"> 
-		  <div id="myCarousel" class="carousel slide " data-ride="carousel">
+		  <div id="myCarousel" class="carousel slide shadow" data-ride="carousel">
 			<ol class="carousel-indicators">
 			  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
 			  <li data-target="#myCarousel" data-slide-to="1"></li>
@@ -8,7 +8,7 @@
 			
 			<div class="carousel-inner carmargin">
 			  <div class="item active">
-				<img src="<?php echo base_url('assets/images/banda.jpg'); ?>" alt="Rescued Pet 1" style="width:100%; height:100%">
+				<img src="<?php echo base_url('assets/images/banda.jpg'); ?>" alt="Rescued Pet 1" style="width:100%; height:500px">
 				<div class="carousel-caption">
 				<h3>Georgina before and after</h3>
 				<p>posted by aflormata01</p>
@@ -16,18 +16,18 @@
 			  </div>
 
 			  <div class="item">
-				<img src="<?php echo base_url('assets/images/bugsy.jpg'); ?>" alt="Rescued Pet 2" style="width:100%;height:100%">
+				<img src="<?php echo base_url('assets/images/bugsy.jpg'); ?>" alt="Rescued Pet 2" style="width:100%;height:500px">
 				<div class="carousel-caption">
-				<h3>Wilson before and After</h3>
+				<h3>Bugsy</h3>
 				<p>posted by graceymacey</p>
 			  </div>
 			  </div>
 			  
 			
 			  <div class="item">
-				<img src="<?php echo base_url('assets/images/kitty.jpg'); ?>" alt="Rescued Pet 3" style="width:100%; height: 100%">
+				<img src="<?php echo base_url('assets/images/wilson.jpg'); ?>" alt="Rescued Pet 3" style="width:100%; height: 500px">
 				<div class="carousel-caption">
-				<h3>Smitten, after 3 weeks</h3>
+				<h3>Wilson, after 3 weeks</h3>
 				<p>posted by user123</p>
 			  </div>
 			  </div>
@@ -50,18 +50,18 @@
 	<div class="content">
 		<div class="col-sm-4 text-left border"> 
 		 <h1 class="text-warning u">LOG IN</h1>
+		 <?php echo form_open('peternity/loghome'); //this is equal to <form method="post" accept-charset="utf-8" action="http://localhost/Pet_Adoption/peternity"?>
 					<div class="form-group">
 						<span class="glyphicon glyphicon-user"></span> <label for="username"> USERNAME: </label>
-						<input type="text" class="form-control" id="idno" name="idno" />
+						<input type="text" class="form-control" id="username" name="username" placeholder="Username" />
 					</div>
 					<div class="form-group">
-						 <span class="glyphicon glyphicon-lock"></span> <label for="username"> PASSWORD: </label>
-						<input type="password" class="form-control" id="idno" name="idno" />
+						 <span class="glyphicon glyphicon-lock"></span> <label for="password"> PASSWORD: </label>
+						<input type="password" class="form-control" id="password" name="password" placeholder="Password" />
+						<h5>
+						<button type="submit" class="btn btn-muted col-sm-4 login" value="Login"><span class="glyphicon glyphicon-log-in"></span> LOG IN</h5></button>
 					</div>
-					<div>
-						<h5><button type="submit" class="btn btn-muted col-sm-4"><span class="glyphicon glyphicon-log-in"></span> LOG IN</h5></button>
-					</div>
-						
+		</form>	
 		</div>
 		<div class="col-sm-8 text-left"> 
 		  <h1 class="text-warning u">MOST DISCUSSED TOPICS</h1>
