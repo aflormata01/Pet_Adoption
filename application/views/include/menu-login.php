@@ -17,7 +17,7 @@
         <a class="u" class="dropdown-toggle" data-toggle="dropdown" href="#">COMMUNITY
         <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li class="menupad"><a href="peternity/stories">SUCCESS STORIES</a></li>
+          <li class="menupad"><a href="peternity/userstories">SUCCESS STORIES</a></li>
           <li class="menupad"><a href="peternity/userdiscussion">DICUSSIONS</a></li>
         </ul>
       </li>

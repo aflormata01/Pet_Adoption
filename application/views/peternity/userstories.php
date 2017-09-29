@@ -30,6 +30,20 @@
 		
 		
 		</div>
+		
+		<div class="text-right">
+		<a href="<?php echo base_url('peternity/addstories')?>" data-toggle="modal" data-target="#myModal">
+    <button class="btn btn-muted" type="button" id="addButton"><span class="glyphicon glyphicon-plus"> </span>Add Story</button></a>
+    <div id="table">
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content"></div>
+        </div>
+    </div>
+</div>
+</div>
+		
+		
 </div>
 		
 	
