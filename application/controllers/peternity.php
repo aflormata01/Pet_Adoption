@@ -21,12 +21,29 @@ class peternity extends CI_Controller {
 
 	public function signup()
 	{
-		$header_data['title'] = "SIGN-UP";
-		$this->load->view('include/header',$header_data);
-		$this->load->view('include/menu-signup');
-		$this->load->view('peternity/sign-up');
-		$this->load->view('include/footer');
-		
+		$rules = array(
+                    array('field'=>'fname', 'label'=>'First Name', 'rules'=>'required'),
+                    array('field'=>'lname', 'label'=>'Last Name', 'rules'=>'required'),
+                    array('field'=>'email', 'label'=>'Email', 'rules'=>'required'),
+					array('field'=>'username', 'label'=>'Username', 'rules'=>'required'),
+					array('field'=>'password', 'label'=>'Password', 'rules'=>'required'),
+					array('field'=>'sex', 'label'=>'Sex', 'rules'=>'required'),
+					array('field'=>'birthdate', 'label'=>'Birthday', 'rules'=>'required')
+                );
+        $this->form_validation->set_rules($rules);
+		$this->form_validation->set_error_delimiters('<p class="error">', '</p>');
+		if($this->form_validation->run()==FALSE){
+			$header_data['title'] = "SIGN-UP";
+			$this->load->view('include/header',$header_data);
+			$this->load->view('include/menu-signup');
+			$this->load->view('peternity/sign-up');
+			$this->load->view('include/footer');
+		}
+		else{
+			$signupform=array('fname'=>$_POST['fname'],'lname'=>$_POST['lname'],'username'=>$_POST['username'],'password'=>$_POST['password'],'sex'=>$_POST['sex'],'birthdate'=>$_POST['birthdate']);
+            $this->Peter->create_form($signupform);
+            redirect('peternity/loghome');
+		}
 	}
 	public function petforadoption(){
 		$result_array = $this->Peter->read_petrescued();
@@ -52,10 +69,13 @@ class peternity extends CI_Controller {
 	}
 	
 	public function news(){
+		$result_array = $this->Peter->read_news();
+        $data['news'] = $result_array;
+		
 		$header_data['title'] = "NEWS";
 		$this->load->view('include/header',$header_data);
 		$this->load->view('include/menu-petcatalogue');
-		$this->load->view('peternity/news');
+		$this->load->view('peternity/news',$data);
 		$this->load->view('include/footer');
 		
 	}
@@ -87,11 +107,17 @@ class peternity extends CI_Controller {
 		
 	}
 	public function loghome(){
-		$header_data['title'] = "USER HOME";
-		$this->load->view('include/header',$header_data);
-		$this->load->view('include/menu-login');
-		$this->load->view('peternity/login-home');
-		$this->load->view('include/footer');
+		if($this->session->userdata('logged_in')){
+            $session_data=$this->session->userdata('logged_in');
+            $data['username']=$session_data['username'];
+            if($session_data['isAflormata01']>0){
+				$header_data['title'] = "USER HOME";
+				$this->load->view('include/header',$header_data);
+				$this->load->view('include/menu-login');
+				$this->load->view('peternity/login-home');
+				$this->load->view('include/footer');
+			}
+		}
 		
 	}
 	public function profile(){

@@ -1,15 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
+-- version 4.6.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 29, 2017 at 09:26 AM
--- Server version: 10.1.26-MariaDB
--- PHP Version: 7.1.9
+-- Generation Time: Sep 29, 2017 at 12:06 PM
+-- Server version: 5.7.14
+-- PHP Version: 5.6.25
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -61,8 +59,17 @@ CREATE TABLE `news` (
   `news#` varchar(50) NOT NULL,
   `title` varchar(100) NOT NULL,
   `body` varchar(500) NOT NULL,
-  `time` varchar(50) NOT NULL
+  `date` varchar(50) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `news`
+--
+
+INSERT INTO `news` (`news#`, `title`, `body`, `date`) VALUES
+('1', 'Bugsy the new baby', 'Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum', 'October 1,2016'),
+('2', 'Hamster, Forever', 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).', 'September 8,2017'),
+('3', 'Puppy for me', 'If you are going to use a passage of Lorem Ipsum, you need to be sure there isn\'t anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.', 'November 4,2017');
 
 -- --------------------------------------------------------
 
@@ -98,12 +105,20 @@ CREATE TABLE `owneraccount` (
 
 CREATE TABLE `ownerinfo` (
   `username` varchar(50) NOT NULL,
+  `password` int(20) NOT NULL,
   `fname` varchar(50) NOT NULL,
   `lname` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
   `birthdate` varchar(50) NOT NULL,
   `sex` varchar(50) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `ownerinfo`
+--
+
+INSERT INTO `ownerinfo` (`username`, `password`, `fname`, `lname`, `email`, `birthdate`, `sex`) VALUES
+('aflormata01', 1234, 'Allysa', 'Flormata', '', '2017-09-09', 'F');
 
 -- --------------------------------------------------------
 
@@ -130,6 +145,21 @@ CREATE TABLE `petrescued` (
   `date_rescued` varchar(50) NOT NULL,
   `availability` varchar(50) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `petrescued`
+--
+
+INSERT INTO `petrescued` (`petID`, `pet_nickname`, `date_rescued`, `availability`) VALUES
+('1', 'PIOLO', '2017', 'Unadopted'),
+('2', 'LILY', '2017', 'Scheduled'),
+('3', 'BOGGART', '2016', 'Adopted'),
+('4', 'HAMMER', '2017', 'Scheduled'),
+('5', 'SHOOKIRA', '2015', 'Adopted'),
+('6', 'CHARLIE', '2017', 'Scheduled'),
+('7', 'BERRY', '2017', 'Unadopted'),
+('8', 'KISSES', '2017', 'Scheduled'),
+('9', 'ALVIN', '2017', 'Unadopted');
 
 -- --------------------------------------------------------
 
@@ -206,7 +236,6 @@ ALTER TABLE `petrescued`
 ALTER TABLE `stories`
   ADD PRIMARY KEY (`story#`),
   ADD KEY `username` (`username`);
-COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
