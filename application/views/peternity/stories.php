@@ -3,33 +3,33 @@
 	
 		<div class="panel container text-center">
 		<table class="table table-bordered">
-
+<?php
+foreach($stories as $d){ 
+  echo'
 		<tr>
 		<td>
 			<table class="table-responsive">
 			<thead>
-			<th><img src="<?php echo base_url('assets/images/hh.jpg')?>" style="width: 150px; height: 100px;" /></th>
-			<th class="gap"><a href="">Lorem Ipsum Dolor shimberlu eklaboo </a></th>
+			<th><img src="assets/images/hh.jpg" style="width: 150px; height: 100px;" /></th>
+			<th class="gap"><a href="">'.$d['body'].' </a></th>
 			</thead>
 			</table>
 			
 			<table class="table-responsive">
 			<thead>
-			<th>Affordable Vet Clinics?</th>
+			<th>'.$d['title'].'</th>
 			</thead>
 			<tbody>
 			<tr> 
-			<td>posted by franchescamarie</td>
+			<td>posted by '.$d['username'].' | '.$d['date'].' | '.$d['time'].'</td>
 			</tr>
 			</tbody>
 			</table>
 		</td>
-		</tr>
+		</tr>';
+}
+?>
 		
-		</table>
-		
-		
-		</div>
+		</table>	
 </div>
-		
-	
+</div>

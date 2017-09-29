@@ -102,12 +102,27 @@ class peternity extends CI_Controller {
 	}
 	
 	public function adopt(){
-		$header_data['title'] = "ADOPTION FORM";
-		$this->load->view('include/header',$header_data);
-		$this->load->view('include/menu-petcatalogue');
-		$this->load->view('peternity/adoptionform');
-		$this->load->view('include/footer');
-		
+		$rules = array(
+                    array('field'=>'username', 'label'=>'Owner Name', 'rules'=>'required'),
+                    array('field'=>'contactno', 'label'=>'Contact No.', 'rules'=>'required'),
+                    array('field'=>'address', 'label'=>'Address', 'rules'=>'required'),
+					array('field'=>'pet_height', 'label'=>'Pet Height', 'rules'=>'required'),
+					array('field'=>'pet_weight', 'label'=>'Pet Weight', 'rules'=>'required')
+                );
+        $this->form_validation->set_rules($rules);
+		$this->form_validation->set_error_delimiters('<p class="error">', '</p>');
+		if($this->form_validation->run()==FALSE){
+			$header_data['title'] = "ADOPTION FORM";
+			$this->load->view('include/header',$header_data);
+			$this->load->view('include/menu-petcatalogue');
+			$this->load->view('peternity/adoptionform');
+			$this->load->view('include/footer');
+		}
+		else{
+			$adoption=array('username'=>$_POST['username'],'contactno'=>$_POST['contactno'],'address'=>$_POST['address'],'pet_height'=>$_POST['pet_height'],'pet_weight'=>$_POST['pet_weight']);
+            $this->Peter->create_adopt($adoption);
+            redirect('peternity/petcatalogue');
+		}
 	}
 	public function loghome(){
 		/*if($this->session->userdata('logged_in')){
@@ -178,15 +193,28 @@ class peternity extends CI_Controller {
 		
 	}
 	public function addstories(){
-		
-		$this->load->view('peternity/addstories');
-		
+		$rules = array(
+                    array('field'=>'title', 'label'=>'Title', 'rules'=>'required'),
+                    array('field'=>'body', 'label'=>'body', 'rules'=>'required')
+				);
+		$this->form_validation->set_rules($rules);
+		$this->form_validation->set_error_delimiters('<p class="error">', '</p>');
+		if($this->form_validation->run()==FALSE){
+			$this->load->view('peternity/addstories');
+		}else{
+			$addstory=array('title'=>$_POST['title'],'body'=>$_POST['body']);
+            $this->Peter->create_stories($addstory);
+            redirect('peternity/userstories');
+		}
 	}
 	public function userstories(){
+		$result_array = $this->Peter->read_stories();
+        $data['user_stories'] = $result_array;
+		
 		$header_data['title'] = "STORIES";
 		$this->load->view('include/header',$header_data);
 		$this->load->view('include/menu-login');
-		$this->load->view('peternity/userstories');
+		$this->load->view('peternity/userstories',$data);
 		$this->load->view('include/footer');
 		
 	}

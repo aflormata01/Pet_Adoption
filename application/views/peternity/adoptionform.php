@@ -1,9 +1,11 @@
-<div class=" container">
+
+ <?php echo form_open('peternity/adopt'); //this is equal to <form method="post" accept-charset="utf-8" action="http://localhost/Pet_Adoption/peternity/adopt"?>
+ <div class=" container">
   <div class="container">
 	<img src="<?php echo base_url('assets/images/pets.png'); ?>" class="img-responsive" style="width:100% ; height:200px" alt="logoform">
   </div>
    
-   <form class="form-horizontal" action="">
+
     <div class="form-group petpic">
 	<div class="col-sm-12">
 		<div class="col-sm-12 ">
@@ -14,9 +16,9 @@
      <div class="form-group">
 	<div class="col-sm-12 ">	
 	<div class="col-sm-12">	
-	 <label class="control-label col-sm-4 margin" for="oname">Owner Name: </label>
+	 <label class="control-label col-sm-4 margin" for="username">Owner Name: </label>
       <div class="col-sm-4">
-        <input type="oname" class="form-control" id="oname" placeholder="Enter your name" name="oname">
+        <input type="text" class="form-control" id="username" placeholder="Enter your name" name="username">
       </div>
 	  <br/>
 	  <br/>
@@ -25,7 +27,7 @@
   <div class="col-sm-12">	
 	 <label class="control-label col-sm-4 margin" for="contactno">Contact Number: </label>
       <div class="col-sm-4">
-        <input type="contactno" class="form-control" id="contactno" placeholder="Enter contact number" name="">
+        <input type="text" class="form-control" id="contactno" placeholder="Enter contact number" name="contactno">
       </div>
 	  <br/>
 	  <br/>
@@ -34,7 +36,7 @@
   <div class="col-sm-12">	
 	 <label class="control-label col-sm-4 margin" for="address">Address: </label>
       <div class="col-sm-4">
-        <input type="address" class="form-control" id="address" placeholder="Enter address" name="address">
+        <input type="text" class="form-control" id="address" placeholder="Enter address" name="address">
       </div>
 	  <br/>
 	  <br/>
@@ -44,10 +46,10 @@
 	  <div class="form-group">
       <label class="control-label col-sm-4 margin" for="height">Pet Height & Weight: </label>
       <div class="col-sm-2">
-        <input type="height" class="form-control" id="height" placeholder="Enter pet height" name="height">
+        <input type="text" class="form-control" id="pet_height" placeholder="Enter pet height" name="pet_height">
 	  </div>
       <div class="col-sm-2">
-        <input type="weight" class="form-control" id="weight" placeholder="Enter pet weight" name="weight">
+        <input type="text" class="form-control" id="pet_weight" placeholder="Enter pet weight" name="pet_weight">
       </div>
 	  </div>
 	 </form><br/><br/>
@@ -67,7 +69,7 @@
 	
 	<div class="form-group">        
       <div class="col-sm-offset-2 col-sm-10 text-center margin">
-        <button type="submit" class="btn btn-default margin text-center "><span class="glyphicon glyphicon-heart">ADOPT</span></button>
+        <button type="submit" class="btn btn-default margin text-center" value="Submit"><span class="glyphicon glyphicon-heart">ADOPT</span></button>
       </div>
     </div>
   </div>
