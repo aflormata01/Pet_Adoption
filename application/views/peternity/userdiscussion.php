@@ -3,39 +3,26 @@
 	
 		<div class="panel container text-center">
 		<table class="table table-bordered">
+		<?php
+		foreach($user_discussion as $d){ 
+		echo'
 		<tr>
 		<td>
 			<table class="table-responsive">
-			<thead>
-			<th>Restricted food for dogs</th>
-			</thead>
-			<tbody>
-			<tr> 
-			<td>posted by aflormata01</td>
-			<td class="gap"><a href="">Lorem Ipsum Dolor shimberlu eklaboo </a></td>
-			</tr>
-			</tbody>
+				<thead>
+					<th>'.$d['Title'].'</th>
+				</thead>
+				<tbody>
+					<tr> 
+						<td>posted by '.$d['username'].' | '.$d['date'].' | '.$d['time'].'</td>
+						<td class="gap"><a href="">'.$d['body'].'</a></td>
+					</tr>
+				</tbody>
 			</table>
 		</td>
-		</tr>
-		<tr>
-		<td>
-			<table class="table-responsive">
-			<thead>
-			<th>Affordable Vet Clinics?</th>
-			</thead>
-			<tbody>
-			<tr> 
-			<td>posted by franchescamarie</td>
-			<td class="gap"><a href="">Lorem Ipsum Dolor shimberlu eklaboo </a></td>
-			</tr>
-			</tbody>
-			</table>
-		</td>
-		</tr>
-		
-		</tr>
-		</table>
+		</tr>';
+		}
+		?>
 		
 		</table>
 		</div>
