@@ -18,7 +18,7 @@
         <span class="caret"></span></a>
         <ul class="dropdown-menu">
           <li class="menupad"><a href="peternity/stories">SUCCESS STORIES</a></li>
-          <li class="menupad"><a href="peternity/discussion">DICUSSIONS</a></li>
+          <li class="menupad"><a href="peternity/userdiscussion">DICUSSIONS</a></li>
         </ul>
       </li>
       <li class="dropdown menupad">

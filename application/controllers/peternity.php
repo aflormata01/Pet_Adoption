@@ -136,5 +136,19 @@ class peternity extends CI_Controller {
 		$this->load->view('include/footer');
 		
 	}
+	
+	public function addDiscussion(){
+		
+		$this->load->view('peternity/adddiscussion');
+		
+	}
+	public function userdiscussion(){
+		$header_data['title'] = "DISCUSSIONS";
+		$this->load->view('include/header',$header_data);
+		$this->load->view('include/menu-login');
+		$this->load->view('peternity/userdiscussion');
+		$this->load->view('include/footer');
+		
+	}
 }
 
