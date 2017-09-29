@@ -1,8 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-
 class peternity extends CI_Controller {
-
 	public function __construct()
 	{
 		parent::__construct();
@@ -18,7 +16,6 @@ class peternity extends CI_Controller {
 		$this->load->view('include/footer');
 		
 	}	
-
 	public function signup()
 	{
 		$rules = array(
@@ -145,6 +142,14 @@ class peternity extends CI_Controller {
 		$this->load->view('include/footer');
 		
 	}
+	public function petcatalogue(){
+		$header_data['title'] = "PET CATALOGUE";
+		$this->load->view('include/header',$header_data);
+		$this->load->view('include/menu-petcatalogue');
+		$this->load->view('peternity/catalogue');
+		$this->load->view('include/footer');
+		
+	}
 	
 	public function addDiscussion(){
 		
@@ -160,4 +165,3 @@ class peternity extends CI_Controller {
 		
 	}
 }
-
