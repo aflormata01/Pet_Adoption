@@ -1,20 +1,18 @@
 <div class="container margintop">   
-<?php
-        echo'<div class=" imgmarg col-sm-8">
+
+        <div class=" imgmarg col-sm-8">
 			<div class="">
-				<img src="assets/images/123.jpg" class="profilepic img-circle " style="width: 200px ; height:200px" alt="profilepic">
+				<img src="<?php echo base_url('assets/images/123.jpg'); ?>" class="profilepic img-circle " style="width: 200px ; height:200px" alt="profilepic">
 					<div class="col-sm-8 text-center">
-						<h1 class=""> '.$profile[0]['fname'].' '.$profile[0]['lname'].'</h1>
-						<h4 class="font "><span class="glyphicon glyphicon-user"></span> '.$profile[0]['username'].'</h4>
-						<h4 class="font "><span class="glyphicon glyphicon-envelope"></span> '.$profile[0]['email'].'</h4>
-						<h4 class="font "><span class="glyphicon glyphicon-baby-formula"></span> '.$profile[0]['birthdate'].'</h4>
-						<h4 class="font "><i class="fi-male-female"></i> '.$profile[0]['sex'].'</h4>
+						<h1 class="">JANELYN GELLADO</h1>
+						<h4 class="font "><span class="glyphicon glyphicon-user"></span> jengellado</h4>
+						<h4 class="font "><span class="glyphicon glyphicon-envelope"></span> @jengellado</h4>
+						<h4 class="font "><span class="glyphicon glyphicon-baby-formula"></span> August 8,1999</h4>
+						<h4 class="font "><i class="fi-male-female"></i>Female</h4>
 					</div>
 			</div>
-		</div>';
-?>
-	&nbsp;
-	<?php//timeline-images?>
+		</div>
+
 		<div class="row">
 		<div class="col-sm-4">
 			<div class="panel">

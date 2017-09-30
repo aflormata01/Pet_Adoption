@@ -166,6 +166,15 @@ class peternity extends CI_Controller {
 		
 	}
 	
+	public function upcomingevents(){
+		$header_data['title'] = "UPCOMING EVENTS";
+		$this->load->view('include/header',$header_data);
+		$this->load->view('include/menu-news');
+		$this->load->view('peternity/events');
+		$this->load->view('include/footer');
+		
+	}
+	
 	public function addDiscussion(){
 		$rules = array(
                     array('field'=>'title', 'label'=>'Title', 'rules'=>'required'),

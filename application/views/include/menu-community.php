@@ -18,6 +18,7 @@
         <a class="u" class="dropdown-toggle" data-toggle="dropdown" href="">NEWS AND EVENTS
         <span class="caret"></span></a>
         <ul class="dropdown-menu">
+
           <li class="menupad"><a href="<?php echo base_url('peternity/news')?>">NEWS</a></li>
           <li class="menupad"><a href="">UPCOMING EVENTS</a></li>
         </ul>
