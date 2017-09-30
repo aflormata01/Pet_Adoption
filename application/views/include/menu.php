@@ -19,7 +19,7 @@
         <span class="caret"></span></a>
         <ul class="dropdown-menu">
           <li class="menupad"><a href="<?php echo base_url('peternity/news')?>">NEWS</a></li>
-          <li class="menupad"><a href="#">UPCOMING EVENTS</a></li>
+          <li class="menupad"><a href="<?php echo base_url('peternity/upcomingevents')?>">UPCOMING EVENTS</a></li>
         </ul>
       </li>
       <li class="menupad"><a class="u" href="<?php echo base_url('peternity/faqs')?>">FAQ's</a></li>  

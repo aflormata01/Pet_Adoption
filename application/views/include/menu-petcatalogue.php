@@ -5,7 +5,7 @@
     </div>
     <ul class="nav navbar-nav">
       <li class="menupad"><a class="u" href="index">HOME</a></li>
-	  <li class="menupad"><a class="u" href="peternity/petcatalogue">PET CATALOGUE</a></li>
+	  <li class="menupad"><a class="u" href="petcatalogue">PET CATALOGUE</a></li>
      <li class="dropdown menupad">
         <a class="u" class="dropdown-toggle" data-toggle="dropdown" href="">COMMUNITY
         <span class="caret"></span></a>
@@ -19,7 +19,7 @@
         <span class="caret"></span></a>
         <ul class="dropdown-menu">
          <li class="menupad"><a href="news">NEWS</a></li>
-          <li class="menupad"><a href="">UPCOMING EVENTS</a></li>
+         <li class="menupad"><a href="upcomingevents">UPCOMING EVENTS</a></li>
         </ul>
       </li>
       <li class="menupad"><a class="u" href="faqs">FAQ's</a></li>  

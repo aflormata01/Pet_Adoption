@@ -19,7 +19,7 @@
         <span class="caret"></span></a>
         <ul class="dropdown-menu">
           <li class="menupad"><a href="news">NEWS</a></li>
-          <li class="menupad"><a href="">UPCOMING EVENTS</a></li>
+         <li class="menupad"><a href="upcomingevents">UPCOMING EVENTS</a></li>
         </ul>
       </li>
       <li class="menupad"><a class="u" href="faqs">FAQ's</a></li>  
