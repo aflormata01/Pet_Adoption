@@ -1,3 +1,4 @@
+<?php echo form_open('peternity/signup'); //this is equal to <form method="post" accept-charset="utf-8" action="http://localhost/Pet_Adoption/peternity/signup"?>
 <div class="container">
   <div class="container">
   <h2>Sign up form</h2>
