@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 29, 2017 at 12:06 PM
+-- Generation Time: Sep 30, 2017 at 05:10 AM
 -- Server version: 5.7.14
 -- PHP Version: 5.6.25
 
@@ -27,13 +27,23 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `discussion` (
-  `discuss#` varchar(50) NOT NULL,
+  `discuss#` int(11) NOT NULL,
   `username` varchar(50) NOT NULL,
   `Title` varchar(100) NOT NULL,
   `body` varchar(500) NOT NULL,
   `date` varchar(50) NOT NULL,
   `time` varchar(50) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `discussion`
+--
+
+INSERT INTO `discussion` (`discuss#`, `username`, `Title`, `body`, `date`, `time`) VALUES
+(1, 'aflormata01', '\r\nRestricted food for dogs', 'Lorem Ipsum Dolor shimberlu eklaboo', '07/23/2017', '4:03pm'),
+(2, 'franchescamarie', '\r\nAffordable Vet Clinics?', 'Lorem Ipsum Dolor shimberlu eklaboo', '08/12/2017', '10:45pm'),
+(3, '', 'How to breed dogs', 'dsfasdfsdf', '', ''),
+(4, '', 'How to train cats', 'sdafsdfsdfsdf', '', '');
 
 -- --------------------------------------------------------
 
@@ -110,15 +120,16 @@ CREATE TABLE `ownerinfo` (
   `lname` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
   `birthdate` varchar(50) NOT NULL,
-  `sex` varchar(50) NOT NULL
+  `sex` varchar(50) NOT NULL,
+  `aUser` int(10) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `ownerinfo`
 --
 
-INSERT INTO `ownerinfo` (`username`, `password`, `fname`, `lname`, `email`, `birthdate`, `sex`) VALUES
-('aflormata01', 1234, 'Allysa', 'Flormata', '', '2017-09-09', 'F');
+INSERT INTO `ownerinfo` (`username`, `password`, `fname`, `lname`, `email`, `birthdate`, `sex`, `aUser`) VALUES
+('aflormata', 1234, 'Allysa', 'Flormata', '@aflormata01', '2000-01-01', 'Female', 1);
 
 -- --------------------------------------------------------
 
@@ -130,8 +141,18 @@ CREATE TABLE `petadoption` (
   `petID` int(100) NOT NULL,
   `date_adopted` date DEFAULT NULL,
   `username` varchar(20) NOT NULL,
-  `contactno` bigint(10) DEFAULT NULL
+  `contactno` bigint(10) DEFAULT NULL,
+  `address` varchar(50) NOT NULL,
+  `pet_height` varchar(20) NOT NULL,
+  `pet_weight` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `petadoption`
+--
+
+INSERT INTO `petadoption` (`petID`, `date_adopted`, `username`, `contactno`, `address`, `pet_height`, `pet_weight`) VALUES
+(0, NULL, 'Chesca', 63977777, 'Pandacan, Manila', '1ft', '6kg');
 
 -- --------------------------------------------------------
 
@@ -175,6 +196,14 @@ CREATE TABLE `stories` (
   `date` varchar(50) NOT NULL,
   `time` varchar(50) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `stories`
+--
+
+INSERT INTO `stories` (`story#`, `username`, `title`, `body`, `date`, `time`) VALUES
+('1', 'aflormata', 'Rescued Pup: Wilson', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus nulla sapien, semper in sodales ac, rutrum at orci. Maecenas vulputate nec tellus sit amet porttitor. Suspendisse congue porta sagittis. Vivamus nulla sapien, semper in sodales ac, rutrum at orci. Maecenas vulputate nec tellus sit amet porttitor. Suspendisse congue porta sagittis.', '08/01/2017', '1:43pm'),
+('', '', 'Rescued Cat: Miggy', 'Breeders. People who breed dogs and cats profit at animals\' expense. There is no such thing as a “responsible” breeder, because for every puppy or kitten who is produced by any breeder, an animal awaiting adoption at an animal shelter loses his or her chance at finding a home—and will be euthanized.', '', '');
 
 --
 -- Indexes for dumped tables
@@ -237,6 +266,15 @@ ALTER TABLE `stories`
   ADD PRIMARY KEY (`story#`),
   ADD KEY `username` (`username`);
 
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `discussion`
+--
+ALTER TABLE `discussion`
+  MODIFY `discuss#` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
