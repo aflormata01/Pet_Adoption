@@ -87,8 +87,30 @@ class peternity extends CI_Controller {
 		$this->load->view('include/footer');
 		
 	}
+<<<<<<< HEAD
 	public function signup()
 	{
+=======
+	public function petcatalogue(){
+		$header_data['title'] = "PET CATALOGUE";
+		$this->load->view('include/header',$header_data);
+		$this->load->view('include/menu-petcatalogue');
+		$this->load->view('peternity/catalogue');
+		$this->load->view('include/footer');
+		
+	}
+	
+	public function upcomingevents(){
+		$header_data['title'] = "UPCOMING EVENTS";
+		$this->load->view('include/header',$header_data);
+		$this->load->view('include/menu-news');
+		$this->load->view('peternity/events');
+		$this->load->view('include/footer');
+		
+	}
+	
+	public function addDiscussion(){
+>>>>>>> master
 		$rules = array(
                     array('field'=>'fname', 'label'=>'First Name', 'rules'=>'required'),
                     array('field'=>'lname', 'label'=>'Last Name', 'rules'=>'required'),
