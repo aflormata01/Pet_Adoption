@@ -4,8 +4,8 @@
 	
 	<div class="col-md-2">
 		<div>
-		<div class="menupad"><a href="<?php echo base_url('peternity/rescuepet');?>" style="font-size:20px;"><span class="glyphicon glyphicon-heart-empty">RESCUED PETS</span></a><br/><br />
-          <a href="<?php echo base_url('peternity/petforadoption');?>" style="font-size:20px;"><span class="glyphicon glyphicon-heart-empty">PET FOR ADOPTION</span></a>
+		<div class="menupad"><a href="rescuepet" style="font-size:20px;"><span class="glyphicon glyphicon-heart-empty">RESCUED PETS</span></a><br/><br />
+          <a href="petforadoption" style="font-size:20px;"><span class="glyphicon glyphicon-heart-empty">PET FOR ADOPTION</span></a>
 		  
 		   </div> </div>
 	</div>
