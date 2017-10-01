@@ -50,7 +50,7 @@
 	<div class="content">
 		<div class="col-sm-4 text-left border"> 
 		 <h1 class="text-warning u">LOG IN</h1>
-		 <?php echo form_open('peternity/loghome'); //this is equal to <form method="post" accept-charset="utf-8" action="http://localhost/Pet_Adoption/peternity"?>
+		 <form method="post">
 					<div class="form-group">
 						<span class="glyphicon glyphicon-user"></span> <label for="username"> USERNAME: </label>
 						<input type="text" class="form-control" id="username" name="username" placeholder="Username" />
