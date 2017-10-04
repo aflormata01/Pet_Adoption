@@ -3,46 +3,36 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Login extends CI_Controller {
 
-	public function index()
-	{
-		$this->form_validation->set_rules('username','Username','required', array('required' => 'Invalid Username or Password.'));
-        if($this->form_validation->run()==TRUE)
-            $this->form_validation->set_rules('password','Password','callback_verifyLogin');
-        if($this->form_validation->run()==FALSE){
-            $this->load->view('login-home');
-        }
-        else {
-            redirect(base_url('home'));
-        }
+	public function __construct(){
+		parent::__construct();
+	
 	}
-    
-    public function verifyLogin($password) {
-        $username = $this->input->post('username');
-        
-        $condition = array('username'=>$username, 'password'=>$password);
-        $this->load->model('login_model','Login');
-        $result_array = $this->Login->read($condition);
-        
-        if($result_array){
-            foreach($result_array as $row){
-                $this->session->set_userdata('username', $row['username']);
-                /*$this->session->set_userdata('isAdmin', $row['isAdmin']);*/
-                /*$sess_data=array(
-                    'userID' => $row['userID'],
-                    'isAdmin' => $row['isAdmin']
-                );*/
-                //$this->session->set_userdata('logged_in', $sess_data);
-            }
-            return true;
-        }
-        else{
-            $this->form_validation->set_message('verifyLogin','Invalid Username or Password.');
-            return false;
-        }
-    }
-    
-    public function logout(){
-        session_destroy();
-        redirect(base_url());
-    }
+	
+	public function index()
+	{	
+		$data = array();
+		if( $_SERVER['REQUEST_METHOD']=='POST' )
+		{
+			//do some form validation
+			$validate = array(
+							array('field'=>'username','label'=>'Username','rules'=>'trim|required'),
+							array('field'=>'password','label'=>'Password','rules'=>'trim|required'),
+						);
+			$this->form_validation->set_rules($validate);
+			if ($this->form_validation->run()===FALSE){
+				echo validation_errors();
+			}else{
+				// echo "Ok set the session";
+				//check in the user table and match username and password
+				$this->session->set_userdata('username', $_POST['username']);
+				redirect('User');
+			}
+		}
+		$header_data['title'] = "Peternity";
+		$this->load->view('include/header',$header_data);
+		$this->load->view('include/menu');
+		$this->load->view('home');
+		$this->load->view('include/footer');
+	}
+	
 }
