@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 30, 2017 at 05:10 AM
+-- Generation Time: Oct 06, 2017 at 05:47 AM
 -- Server version: 5.7.14
 -- PHP Version: 5.6.25
 
@@ -120,16 +120,16 @@ CREATE TABLE `ownerinfo` (
   `lname` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
   `birthdate` varchar(50) NOT NULL,
-  `sex` varchar(50) NOT NULL,
-  `aUser` int(10) NOT NULL
+  `sex` varchar(50) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `ownerinfo`
 --
 
-INSERT INTO `ownerinfo` (`username`, `password`, `fname`, `lname`, `email`, `birthdate`, `sex`, `aUser`) VALUES
-('aflormata', 1234, 'Allysa', 'Flormata', '@aflormata01', '2000-01-01', 'Female', 1);
+INSERT INTO `ownerinfo` (`username`, `password`, `fname`, `lname`, `email`, `birthdate`, `sex`) VALUES
+('aflormata', 1234, 'Allysa', 'Flormata', '@aflormata01', '2000-01-01', 'Female'),
+('alexiamndz', 403212315, 'Alexia', 'Armando', '@alexiamndz', '1999-04-04', 'Female');
 
 -- --------------------------------------------------------
 
