@@ -1,7 +1,7 @@
 <?php
 
 class login_model extends CI_Model {
-    private $table = 'owneraccount';
+    private $table = 'ownerinfo';
     
     function create($clientRecord){
         $this->db->insert($this->table, $clientRecord);
