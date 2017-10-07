@@ -12,6 +12,7 @@ class peternity_model extends CI_model
 	private $petrescued = "petrescued";
 	private $petadoption = "petadoption";
 	private $stories = "stories";
+	private $stories_like = "stories_like";
 	
 		public function create_discussion($data)
 		{
@@ -190,11 +191,6 @@ class peternity_model extends CI_model
 		}
 		
 		
-		
-		
-		
-		
-		
 		public function create_petrescued($data)
 		{
 			$this->db->insert($this->petrescued, $data);
@@ -274,6 +270,22 @@ class peternity_model extends CI_model
 			$this->db->insert($this->petadoption, $adoption);
 			return TRUE;
 		}
-}
+		
+		
+			public function create_stories_like($data)
+		{
+			$this->db->insert($this->stories_like, $data);
+			return TRUE;	
+		}
+	
+		public function del_stories_like()
+		{
+			$this->db->where($data);
+			$this->db->delete($this->stories_like);
+			return TRUE;	
+		}
+		
+		
+
 ?>
 
