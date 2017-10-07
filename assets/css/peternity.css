@@ -140,7 +140,9 @@
   position: relative;
   width: 230px;
   height: 230px;
+
   left: 20px;
+
 }
 .ih-item.circle.effect1 .img:before {
   display: none;
@@ -178,9 +180,11 @@
 	margin-left: 80px;
 }
 
+
 .marginpett{
 	margin-right: -35px;
 }
+
 
 	/**picture fade**/
 .image {
