@@ -8,10 +8,10 @@
 	</p>
 	<br/>
 	</div>
-<div class="row">
- <div class="col-sm-4">
+<div class="col-md-12 margintpet ">
+ <div class="col-md-4 margintpett">
  
-    <div class="ih-item circle effect1"><a href="#">
+    <div class="ih-item circle effect1 "><a href="#">
         <div class="spinner">
 		</div>
         <div class="img"><img src=" <?php echo base_url('assets/images/cat.jpg'); ?>" alt="img" class="img-circle imagespin img-responsive"></div>
@@ -25,9 +25,9 @@
     </div>
     </div>
 	
-	 <div class="col-sm-4">
+	 <div class="col-md-4 margintpett">
  
-    <div class="ih-item circle effect1"><a href="#">
+    <div class="ih-item circle effect1 "><a href="#">
         <div class="spinner">
 		</div>
         <div class="img"><img src=" <?php echo base_url('assets/images/dog1.jpg'); ?>" alt="img" class="img-circle imagespin img-responsive"></div>
@@ -41,9 +41,9 @@
     </div>
     </div>
 	
-	<div class="col-sm-4">
+	<div class="col-md-4 margintpett">
  
-    <div class="ih-item circle effect1"><a href="#">
+    <div class="ih-item circle effect1 "><a href="#">
         <div class="spinner">
 		</div>
 		<div class="img"><img src="<?php echo base_url('assets/images/hamster.jpg'); ?>" alt="img" class="img-circle imagespin img-responsive"></div>
@@ -58,11 +58,11 @@
         </div>
 	
     </div>
-	
-  <div class="row">	
-    <div class="col-sm-4">
+	<br/>
+  <div class="col-md-12 margintpet">	
+    <div class="col-md-4 margintpett">
  
-    <div class="ih-item circle effect1"><a href="#">
+    <div class="ih-item circle effect1 "><a href="#">
         <div class="spinner">
 		</div>
 		<div class="img"><img src="<?php echo base_url('assets/images/hh.jpg'); ?>" alt="img" class="img-circle imagespin img-responsive"></div>
@@ -76,9 +76,9 @@
     </div>
         </div>
 		
-		 <div class="col-sm-4">
+		 <div class="col-md-4 margintpett">
  
-    <div class="ih-item circle effect1"><a href="#">
+    <div class="ih-item circle effect1 "><a href="#">
         <div class="spinner">
 		</div>
 		<div class="img"><img src="<?php echo base_url('assets/images/bird1.jpg'); ?>" alt="img" class="img-circle imagespin img-responsive"></div>
@@ -92,9 +92,9 @@
     </div>
         </div>
 		
-		 <div class="col-sm-4">
+		 <div class="col-md-4  margintpettx">
  
-    <div class="ih-item circle effect1"><a href="#">
+    <div class="ih-item circle effect1 "><a href="#">
         <div class="spinner">
 		</div>
 		<div class="img"><img src="<?php echo base_url('assets/images/bunny.jpg'); ?>" alt="img" class="img-circle imagespin img-responsive"></div>
