@@ -53,7 +53,15 @@
 						 <span class="glyphicon glyphicon-lock"></span> <label for="password"> PASSWORD: </label>
 						<input type="password" class="form-control" id="password" name="password" placeholder="Password" />
 						<h5><button type="submit" class="btn btn-muted col-sm-5 login" value="Login"><span class="glyphicon glyphicon-log-in"></span> LOG IN</h5></button>
-						<button class="btn btn-muted col-sm-5 login margintop b"><a href="<?php echo base_url('peternity/signup')?>" class="b"><span class="glyphicon glyphicon-edit"></span> SIGN UP</a></h5></button>
+						<a href="<?php echo base_url('peternity/signup')?>" data-toggle="modal" data-target="#myModal">
+						<button class="btn btn-muted col-sm-5 login margintop b"><span class="glyphicon glyphicon-edit"></span> SIGN UP</a></h5></button>
+						<div id="table">
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content"></div>
+        </div>
+    </div>
+</div>
 					</div>
 		</form>	
 		

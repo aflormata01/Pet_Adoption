@@ -61,10 +61,7 @@ class user extends CI_Controller {
 		$this->form_validation->set_error_delimiters('<p class="error">', '</p>');
 		if($this->form_validation->run()==FALSE){
 			$header_data['title'] = "ADOPTION FORM";
-			$this->load->view('include/header',$header_data);
-			$this->load->view('include/menu_user');
 			$this->load->view('peternity_user/adoptionform');
-			$this->load->view('include/footer');
 		}
 		else{
 			$adoption=array('username'=>$_POST['username'],'contactno'=>$_POST['contactno'],'address'=>$_POST['address'],'pet_height'=>$_POST['pet_height'],'pet_weight'=>$_POST['pet_weight']);

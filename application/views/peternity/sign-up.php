@@ -1,62 +1,57 @@
-<?php echo form_open('peternity/signup'); //this is equal to <form method="post" accept-charset="utf-8" action="http://localhost/Pet_Adoption/peternity/signup"?>
-<div class="container">
-  <div class="container">
-  <h2>Sign up form</h2>
-  <form class="form-horizontal" action="">
-    <div class="form-group">
-      <label class="control-label col-sm-2" for="fname">First Name: </label>
-      <div class="col-sm-4">
-        <input type="text" class="form-control" id="fname" placeholder="Enter first name" name="fname" value="<?php echo set_value('fname'); ?>">
+  <?php echo form_open('peternity/signup'); //this is equal to <form method="post" accept-charset="utf-8" action="http://localhost/Pet_Adoption/user/addstories"?>
+  <div class="modal-body modalb">
+      <button type="button" class="close" data-dismiss="modal">&times;</button>
+	<h2>Sign up form</h2>
+	<div class="form-group">
+	 <div class="col-sm-12">
+      <label class="control-label col-sm-4" for="fname">First Name: </label>
+      <div class="col-sm-6">
+        <input type="fname" class="form-control" id="fname" placeholder="Enter first name" name="fname">
       </div>
 	  <?php echo form_error('fname', '<p class="text-danger">', '</p>'); ?>
 	  </div>
+	  </div>
 
 	<div class="form-group">
-      <label class="control-label col-sm-2" for="lname">Last Name:</label>
-      <div class="col-sm-4">
-        <input type="text" class="form-control" id="lname" placeholder="Enter last name" name="lname" value="<?php echo set_value('lname'); ?>">
+	 <div class="col-sm-12">
+      <label class="control-label col-sm-4" for="lname">Last Name:</label>
+      <div class="col-sm-6">
+        <input type="lname" class="form-control col-sm-4" id="lname" placeholder="Enter last name" name="lname">
       </div>
 	  <?php echo form_error('lname', '<p class="text-danger">', '</p>'); ?>
 	  </div>
+	  </div>
 	  
 	  <div class="form-group">
-      <label class="control-label col-sm-2" for="email">Email:</label>
-      <div class="col-sm-4">
-          <input type="text" class="form-control" id="email" placeholder="Enter email" name="email" value="<?php echo set_value('email'); ?>">
+	  <div class="col-sm-12">
+      <label class="control-label col-sm-4" for="email">Email:</label>
+      <div class="col-sm-6">
+        <input type="email" class="form-control col-sm-4" id="email" placeholder="Enter email" name="email">
       </div>
-	  <?php echo form_error('email', '<p class="text-danger">', '</p>'); ?>
+	   <?php echo form_error('email', '<p class="text-danger">', '</p>'); ?>
     </div>
+    </div>
+	
 	<div class="form-group">
-      <label class="control-label col-sm-2" for="mname">User Name:</label>
-      <div class="col-sm-4">
-         <input type="text" class="form-control" id="username" placeholder="Enter user name" name="username" value="<?php echo set_value('username'); ?>">
+	 <div class="col-sm-12">
+      <label class="control-label col-sm-4" for="mname">User Name:</label>
+      <div class="col-sm-6">
+        <input type="uname" class="form-control col-sm-4" id="uname" placeholder="Enter user name" name="uname">
       </div>
-	  <?php echo form_error('username', '<p class="text-danger">', '</p>'); ?>
+	   <?php echo form_error('username', '<p class="text-danger">', '</p>'); ?>
+	</div>
 	</div>
 	
     <div class="form-group">
-      <label class="control-label col-sm-2" for="pwd">Password:</label>
-      <div class="col-sm-4">          
-         <input type="text" class="form-control" id="password" placeholder="Enter password" name="password" value="<?php echo set_value('password'); ?>">
+	 <div class="col-sm-12">
+      <label class="control-label col-sm-4" for="pwd">Password:</label>
+      <div class="col-sm-6">          
+        <input type="password" class="form-control col-sm-4" id="password" placeholder="Enter password" name="password">
       </div>
 	  <?php echo form_error('password', '<p class="text-danger">', '</p>'); ?>
     </div>
-	<div class="form-group">
-		<label class="control-label col-sm-2" for="sex">Sex</label>
-		<input type="radio" class="" id="sex" name="sex" value="M" value="<?php echo set_value('birthdate'); ?>" /> Male
-			<input type="radio" class="" id="sex" name="sex" value="F" value="<?php echo set_value('birthdate'); ?>" /> Female
-		</div>
-		<?php echo form_error('sex', '<p class="text-danger">', '</p>'); ?>
-	
-		
-	<div class="form-group">
-    <label class="control-label col-sm-2" for="birthdate">Birthday</label>
-    <div class="col-sm-2">
-           <input type="date" class="form-control" id="birthdate" placeholder="birthday" name="birthdate" value="<?php echo set_value('birthdate'); ?>"/>
-	</div>
-	<?php echo form_error('birthdate', '<p class="text-danger">', '</p>'); ?>
-	</div>
-			
+    </div>
+	  
     <div class="form-group">        
       <div class="col-sm-offset-2 col-sm-10">
         <div class="checkbox">
@@ -69,5 +64,4 @@
         <button type="submit" class="btn btn-default">Submit</button>
       </div>
     </div>
-  </form>
 </div>

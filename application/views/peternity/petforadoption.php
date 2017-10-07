@@ -22,7 +22,15 @@
 			    <div class="col-sm-11">
 				<h3 class="text-center">LUCY</h3>
 				<h5 class="text-center">Ellus ac sodales Lorem ipsum dolor Phas ellus ac sodales felis tiam non metus. lorem ipsum dolor sit amet, consectetur adipisicing elit uasi quidem minus id omnis a nib.</h5>
-				<button type="submit" class="btn btn-adopt"><a href="adopt" style="text-decoration:none"> ADOPT </a></h5></button>
+				<a href="<?php echo base_url('peternity/signup')?>" style="text-decoration:none" data-toggle="modal" data-target="#myModal">
+				<button type="submit" class="btn btn-adopt"> ADOPT </a></h5></button>
+				<div id="table">
+			<div id="myModal" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+            <div class="modal-content"></div>
+        </div>
+    </div>
+	</div>
             </div>
     </div>
     </div>
@@ -39,7 +47,15 @@
 			    <div class="col-sm-11">
 				<h3 class="text-center">BOGART</h3>
 				<h5 class="text-center">Ellus ac sodales Lorem ipsum dolor Phas ellus ac sodales felis tiam non metus. lorem ipsum dolor sit amet, consectetur adipisicing elit uasi quidem minus id omnis a nib.</h5>
-				<button type="submit" class="btn btn-adopt"><a href="adopt" style="text-decoration:none"> ADOPT </a></h5></button>
+				<a href="<?php echo base_url('peternity/signup')?>" style="text-decoration:none" data-toggle="modal" data-target="#myModal">
+				<button type="submit" class="btn btn-adopt"> ADOPT </a></h5></button>
+				<div id="table">
+			<div id="myModal" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+            <div class="modal-content"></div>
+        </div>
+    </div>
+	</div>
             </div>
     </div>
     </div>
@@ -56,7 +72,15 @@
 			    <div class="col-sm-11">
 				<h3 class="text-center">HAMSTER</h3>
 				<h5 class="text-center">Ellus ac sodales Lorem ipsum dolor Phas ellus ac sodales felis tiam non metus. lorem ipsum dolor sit amet, consectetur adipisicing elit uasi quidem minus id omnis a nib.</h5>
-				<button type="submit" class="btn btn-adopt"><a href="adopt" style="text-decoration:none"> ADOPT </a></h5></button>
+				<a href="<?php echo base_url('peternity/signup')?>" style="text-decoration:none" data-toggle="modal" data-target="#myModal">
+				<button type="submit" class="btn btn-adopt"> ADOPT </a></h5></button>
+				<div id="table">
+			<div id="myModal" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+            <div class="modal-content"></div>
+        </div>
+    </div>
+	</div>
             </div>
     </div>
         </div>
@@ -77,7 +101,15 @@
 			    <div class="col-sm-11">
 				<h3 class="text-center">SHOOKIRA</h3>
 				<h5 class="text-center">Ellus ac sodales Lorem ipsum dolor Phas ellus ac sodales felis tiam non metus. lorem ipsum dolor sit amet, consectetur adipisicing elit uasi quidem minus id omnis a nib.</h5>
-				<button type="submit" class="btn btn-adopt"><a href="adopt" style="text-decoration:none"> ADOPT </a></h5></button>
+				<a href="<?php echo base_url('peternity/signup')?>" style="text-decoration:none" data-toggle="modal" data-target="#myModal">
+				<button type="submit" class="btn btn-adopt"> ADOPT </a></h5></button>
+				<div id="table">
+			<div id="myModal" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+            <div class="modal-content"></div>
+        </div>
+    </div>
+	</div>
             </div>
     </div>
         </div>
@@ -94,7 +126,15 @@
 			    <div class="col-sm-11">
 				<h3 class="text-center">PIOLO</h3>
 				<h5 class="text-center">Ellus ac sodales Lorem ipsum dolor Phas ellus ac sodales felis tiam non metus. lorem ipsum dolor sit amet, consectetur adipisicing elit uasi quidem minus id omnis a nib.</h5>
-				<button type="submit" class="btn btn-adopt"><a href="adopt" style="text-decoration:none"> ADOPT </a></h5></button>
+				<a href="<?php echo base_url('peternity/signup')?>" style="text-decoration:none" data-toggle="modal" data-target="#myModal">
+				<button type="submit" class="btn btn-adopt"> ADOPT </a></h5></button>
+				<div id="table">
+			<div id="myModal" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+            <div class="modal-content"></div>
+        </div>
+    </div>
+	</div>
             </div>
     </div>
         </div>
@@ -110,7 +150,15 @@
 			    <div class="col-sm-11">
 				<h3 class="text-center">LUCY</h3>
 				<h5 class="text-center">Ellus ac sodales Lorem ipsum dolor Phas ellus ac sodales felis tiam non metus. lorem ipsum dolor sit amet, consectetur adipisicing elit uasi quidem minus id omnis a nib.</h5>
-				<button type="submit" class="btn btn-adopt"><a href="adopt" style="text-decoration:none"> ADOPT </a></h5></button>
+				<a href="<?php echo base_url('peternity/signup')?>" style="text-decoration:none" data-toggle="modal" data-target="#myModal">
+				<button type="submit" class="btn btn-adopt"> ADOPT </a></h5></button>
+				<div id="table">
+			<div id="myModal" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+            <div class="modal-content"></div>
+        </div>
+    </div>
+	</div>
             </div>
     </div>
         </div>

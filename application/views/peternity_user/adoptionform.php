@@ -1,11 +1,7 @@
 
- <?php echo form_open('peternity/adopt'); //this is equal to <form method="post" accept-charset="utf-8" action="http://localhost/Pet_Adoption/peternity/adopt"?>
- <div class=" container">
-  <div class="container">
-	<img src="<?php echo base_url('assets/images/pets.png'); ?>" class="img-responsive" style="width:100% ; height:200px" alt="logoform">
-  </div>
-   
-	<div class="container">
+ <?php echo form_open('peternity_user/adoptionform'); //this is equal to <form method="post" accept-charset="utf-8" action="http://localhost/Pet_Adoption/user/addstories"?>
+  <div class="modal-body ">
+      <button type="button" class="close" data-dismiss="modal">&times;</button>
     <div class="form-group petpic">
 	<div class="col-sm-4">
 		<div class="col-sm-12 ">
@@ -15,19 +11,7 @@
      </div>
      </div>
 	 
-	 <div class="container">
-     <div class="form-group">
-	 <div class="col-sm-8">
-	<div class="col-sm-12">	
-	<div class="col-sm-12">	
-	 <label class="control-label col-sm-4 margin" for="username">Owner Name: </label>
-      <div class="col-sm-6">
-        <input type="text" class="form-control" id="username" placeholder="Enter your name" name="username">
-      </div>
-	  <br/>
-	  <br/>
-  </div>
-  
+	 
   <div class="col-sm-12">	
 	 <label class="control-label col-sm-4 margin" for="contactno">Contact Number: </label>
       <div class="col-sm-6">
@@ -68,10 +52,3 @@
       </div>
     </div>
   </div>
-
-	  </div>
-	  </div>
-	  </div>
-	  </div>
-	  </div>
-	
