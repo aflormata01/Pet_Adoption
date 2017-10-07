@@ -109,7 +109,7 @@ class peternity extends CI_Controller {
 		if($this->form_validation->run()==FALSE){
 			$header_data['title'] = "SIGN-UP";
 			$this->load->view('include/header',$header_data);
-			$this->load->view('include/menu-signup');
+			$this->load->view('include/menu');
 			$this->load->view('peternity/sign-up');
 			$this->load->view('include/footer');
 		}
