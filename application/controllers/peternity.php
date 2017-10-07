@@ -108,10 +108,9 @@ class peternity extends CI_Controller {
 		$this->form_validation->set_error_delimiters('<p class="error">', '</p>');
 		if($this->form_validation->run()==FALSE){
 			$header_data['title'] = "SIGN-UP";
-			$this->load->view('include/header',$header_data);
-			$this->load->view('include/menu');
+			
 			$this->load->view('peternity/sign-up');
-			$this->load->view('include/footer');
+			
 		}
 		else{
 			$signupform=array('fname'=>$_POST['fname'],'lname'=>$_POST['lname'],'username'=>$_POST['username'],'password'=>$_POST['password'],'sex'=>$_POST['sex'],'birthdate'=>$_POST['birthdate']);

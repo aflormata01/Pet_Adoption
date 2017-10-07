@@ -34,6 +34,8 @@
 	hr{ display: block;margin-top: 0.5em; margin-bottom: 0.5em;margin-left: auto; margin-right: auto;border-style: inset;border-width: 1px; border-color: orange;}
 	p{text-indent: 50px; font-family: montserrat;}
 	.sign{padding-left: 350px;}
+	.modalb{height: 350px;}
+	.modalbx{height: 500px;}
 
 
 .navbar:hover {background-color: #E9967A;
