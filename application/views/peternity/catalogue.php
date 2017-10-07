@@ -9,13 +9,13 @@
 	</p>
 	<br/>
 	</div>
-	<div class="col-md-12">
+	<div class="col-md-12 marginpet">
 	
 	
   
-  <div class="col-md-4">
+  <div class="col-md-4 marginpett">
     <div class="thumb">
-        <img src="<?php echo base_url('assets/images/r1.jpg'); ?>" alt="pet 1" class="img-circle image img-responsive"> 
+        <img src="<?php echo base_url('assets/images/bunny.jpg'); ?>" alt="pet 1" class="img-circle image img-responsive"> 
 		 <div class="overlay">
 			<div class="text">Hello</div>
 		</div>
@@ -40,7 +40,7 @@
  <br/>		
   </div>
   
-<div class="col-md-4">
+<div class="col-md-4 marginpett">
   <div class="thumb">
         <img src="<?php echo base_url('assets/images/r4.jpg'); ?>"  alt="pet 3" class="img-circle image img-responsive">
     <div class="overlay">
@@ -69,7 +69,7 @@
  
   
 		
-	<div class="col-md-4">
+	<div class="col-md-4 marginpett">
 	 <div class="thumb">
         <img src="<?php echo base_url('assets/images/hh.jpg'); ?>"  alt="pet 5" class="img-circle image img-responsive">
       <div class="overlay">
