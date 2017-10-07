@@ -151,11 +151,11 @@ class peternity_model extends CI_model
 		}
 		public function read_ownerinfo($condition=null)
 		{
-			 $this -> db -> select('*');
-			 $this -> db -> from($this-> ownerinfo);
+			 $this->db->select('*');
+			 $this->db->from($this->ownerinfo);
 			 if ( isset($condition)) $this->db->where($condition);
-			 $query= $this->db->get();
-			 return $query-> result_array(); 
+			 $query=$this->db->get();
+			 return $query->result_array(); 
 		}
 		
 		

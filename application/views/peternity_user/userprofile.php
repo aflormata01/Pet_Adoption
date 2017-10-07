@@ -4,15 +4,15 @@
 			<div class="">
 				<img src="<?php echo base_url('assets/images/123.jpg'); ?>" class="profilepic img-circle " style="width: 200px ; height:200px" alt="profilepic">
 					<div class="col-sm-8 text-center">
-						<h1 class="">JANELYN GELLADO</h1>
-						<h4 class="font "><span class="glyphicon glyphicon-user"></span> jengellado</h4>
-						<h4 class="font "><span class="glyphicon glyphicon-envelope"></span> @jengellado</h4>
-						<h4 class="font "><span class="glyphicon glyphicon-baby-formula"></span> August 8,1999</h4>
-						<h4 class="font "><i class="fi-male-female"></i>Female</h4>
+						<h1 class=""><?php echo $profile[0]['fname']; ?><?php echo $profile[0]['lname']; ?></h1>
+						<h4 class="font "><span class="glyphicon glyphicon-user"></span> <?php echo $profile[0]['username']; ?></h4>
+						<h4 class="font "><span class="glyphicon glyphicon-envelope"></span> <?php echo $profile[0]['email']; ?></h4>
+						<h4 class="font "><span class="glyphicon glyphicon-baby-formula"></span><?php echo $profile[0]['birthdate']; ?></h4>
+						<h4 class="font "><i class="fi-male-female"></i><?php echo $profile[0]['sex']; ?></h4>
 					</div>
 			</div>
 		</div>
-
+	
 		<div class="row">
 		<div class="col-sm-4">
 			<div class="panel">
