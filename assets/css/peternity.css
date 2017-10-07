@@ -121,12 +121,14 @@
   -webkit-transition: all 0.8s ease-in-out;
   -moz-transition: all 0.8s ease-in-out;
   transition: all 0.8s ease-in-out;
+  margin-left: 40px;
+
 }
 .ih-item.circle.effect1 .img {
   position: absolute;
   top: 15px;
   bottom: 0;
-  left: 30px;
+  left: 50px;
   right: 0;
   width: 240px;
   height: 240px;
@@ -138,6 +140,7 @@
   position: relative;
   width: 230px;
   height: 230px;
+  left: 20px;
 }
 .ih-item.circle.effect1 .img:before {
   display: none;
@@ -150,6 +153,7 @@
   -ms-transform: rotate(180deg);
   -o-transform: rotate(180deg);
   transform: rotate(180deg);
+  
 }
 .btn-adopt{
     height: 50px;
@@ -173,15 +177,11 @@
 .marginpet{
 	margin-left: 80px;
 }
-.marginpetx{
-	margin-left: 80px;
-}
+
 .marginpett{
 	margin-right: -35px;
 }
-.marginpettx{
-	margin-right: -35px;
-}
+
 	/**picture fade**/
 .image {
   border-radius: 100%;
