@@ -8,8 +8,10 @@
 	</p>
 	<br/>
 	</div>
+
 <div class="col-md-12 margintpet ">
  <div class="col-md-4 margintpett">
+
  
     <div class="ih-item circle effect1 "><a href="#">
         <div class="spinner">
@@ -25,8 +27,9 @@
     </div>
     </div>
 	
+
 	 <div class="col-md-4 margintpett">
- 
+
     <div class="ih-item circle effect1 "><a href="#">
         <div class="spinner">
 		</div>
@@ -41,8 +44,9 @@
     </div>
     </div>
 	
+
 	<div class="col-md-4 margintpett">
- 
+
     <div class="ih-item circle effect1 "><a href="#">
         <div class="spinner">
 		</div>
@@ -58,9 +62,11 @@
         </div>
 	
     </div>
+
 	<br/>
   <div class="col-md-12 margintpet">	
     <div class="col-md-4 margintpett">
+
  
     <div class="ih-item circle effect1 "><a href="#">
         <div class="spinner">
@@ -76,8 +82,9 @@
     </div>
         </div>
 		
+
 		 <div class="col-md-4 margintpett">
- 
+
     <div class="ih-item circle effect1 "><a href="#">
         <div class="spinner">
 		</div>

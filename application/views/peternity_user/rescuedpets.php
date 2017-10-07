@@ -8,7 +8,9 @@
 	</p>
 	<br/>
 	</div>
+
   <div class="col-md-12  margintpet">
+
 
 <?php
 foreach($petrescue as $d){ 
