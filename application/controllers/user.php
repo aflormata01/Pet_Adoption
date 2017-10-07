@@ -17,8 +17,7 @@ class user extends CI_Controller {
 		$this->load->view('include/header',$header_data);
 		$this->load->view('include/menu_user');
 		$this->load->view('login-home');
-		$this->load->view('include/footer');
-		
+		$this->load->view('include/footer');	
 	}
 	public function petcatalogue(){
 		$header_data['title'] = "PET CATALOGUE";
@@ -150,15 +149,18 @@ class user extends CI_Controller {
 		$this->load->view('include/footer');
 		
 	}
-	public function profile(){
-		$result_array = $this->Peter->read_ownerinfo();
-        $data['profile'] = $result_array;
-		
-		$header_data['title'] = "USER HOME";
-		$this->load->view('include/header',$header_data);
-		$this->load->view('include/menu_user');
-		$this->load->view('peternity_user/userprofile',$data);
-		$this->load->view('include/footer');
-		
+	public function profile($user){
+		$result_array = $this->Peter->read_ownerinfo(array('username',$user));
+		if(count($result_array)>0){
+			$data['profile'] = $result_array;
+			
+			$header_data['title'] = "USER HOME";
+			$this->load->view('include/header',$header_data);
+			$this->load->view('include/menu_user');
+			$this->load->view('peternity_user/userprofile',$data);
+			$this->load->view('include/footer');
+		}else{
+			echo "hello";
+		}
 	}
 }
