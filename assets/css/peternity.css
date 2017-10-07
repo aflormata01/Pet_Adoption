@@ -28,7 +28,6 @@
 	.sign{padding-left: 350px;}
 	.info{margin-left:50px; text-align: left;}
 	panel{margin-left: 600px; margin-right: 600px;}
-	body{background-color: #FFF5C9;}
 	button{margin:auto;}
 	h3, h5, label{font-family: Arial Black;}
 	a{font-family: Arial Black; color: Black;}
@@ -37,6 +36,9 @@
 	.sign{padding-left: 350px;}
 
 
+.navbar:hover {background-color: #E9967A;
+    color: white;}	
+	
 .button1 {
     background-color: white; 
     color: black; 
@@ -110,8 +112,8 @@
     display: block;
 }
 .ih-item.circle.effect1 .spinner {
-  width: 320px;
-  height: 320px;
+  width: 260px;
+  height: 260px;
   border: 15px solid #ecab18;
   border-right-color: #E9967A;
   border-bottom-color:#E9967A;
@@ -126,16 +128,16 @@
   bottom: 0;
   left: 30px;
   right: 0;
-  width: 300px;
-  height: 300px;
+  width: 240px;
+  height: 240px;
   
 }
 .imagespin{
   border-radius: 100%;
   overflow: hidden;
   position: relative;
-  width: 290px;
-  height: 290px;
+  width: 230px;
+  height: 230px;
 }
 .ih-item.circle.effect1 .img:before {
   display: none;
@@ -168,16 +170,28 @@
     -webkit-box-shadow: -100px 0 0 #ecab18 inset;
 }
 	
+.marginpet{
+	margin-left: 80px;
+}
+.marginpetx{
+	margin-left: 80px;
+}
+.marginpett{
+	margin-right: -35px;
+}
+.marginpettx{
+	margin-right: -35px;
+}
 	/**picture fade**/
 .image {
   border-radius: 100%;
   display: flex;
   flex: 0 0 150px;
-  height: 300px;
+  height: 250px;
   justify-content: center;
   overflow: hidden;
   position: relative;
-  width: 300px;
+  width: 250px;
   border: 10px solid  #E9967A;
 }  
 .thumb {
@@ -192,8 +206,8 @@
   bottom: 0;
   left: 0;
   right: 0;
-  height: 300px;
-  width: 300px;
+  height: 250px;
+  width: 250px;
   opacity: 0;
   transition: .3s ease;
   background-color: black;

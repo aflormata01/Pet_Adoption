@@ -15,7 +15,7 @@
   
   <div class="col-md-4">
     <div class="thumb">
-        <img src="<?php echo base_url('assets/images/r1.jpg'); ?>" alt="pet 1" class="img-circle image img-responsive"> 
+        <img src="<?php echo base_url('assets/images/bunny.jpg'); ?>" alt="pet 1" class="img-circle image img-responsive"> 
 		 <div class="overlay">
 			<div class="text">Hello</div>
 		</div>

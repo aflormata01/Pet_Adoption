@@ -8,14 +8,14 @@
 	</p>
 	<br/>
 	</div>
-  <div class="row">
- <div class="col-sm-4">
+  <div class="col-md-12  margintpetx">
+ <div class="col-md-4 marginpettx">
  
-    <div class="ih-item circle effect1"><a href="#">
+    <div class="ih-item circle effect1 "><a href="#">
         <div class="spinner">
 		</div>
-        <div class="img"><img src=" <?php echo base_url('assets/images/r1.jpg'); ?>" alt="img" class="img-circle imagespin  img-responsive"></div></div></a>
-        <div class="panel-body">
+        <div class="img"><img src=" <?php echo base_url('assets/images/r5.jpg'); ?>" alt="img" class="img-circle imagespin  img-responsive"></div></div></a>
+        <div class="panel-body  margintpett">
 			   <h4 class="text-center">'.$d['pet_nickname'].'</h4>
 			   <h5 class="text-center">adopted '.$d['date_rescued'].' </h5>
             </div>
@@ -24,13 +24,13 @@
     </div>
 <?php
 foreach($petrescue as $d){ 
-  echo' <div class="col-sm-4">
+  echo' <div class="col-md-4 marginpettx">
  
-    <div class="ih-item circle effect1"><a href="#">
+    <div class="ih-item circle effect1 "><a href="#">
         <div class="spinner">
 		</div>
         <div class="img"><img src=" assets/images/r1.jpg" alt="img" class="img-circle imagespin  img-responsive"></div></div></a>
-        <div class="panel-body">
+        <div class="panel-body  margintpett">
 			   <h4 class="text-center">'.$d['pet_nickname'].'</h4>
 			   <h5 class="text-center">adopted '.$d['date_rescued'].' </h5>
             </div>
