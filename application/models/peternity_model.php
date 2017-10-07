@@ -191,11 +191,6 @@ class peternity_model extends CI_model
 		}
 		
 		
-		
-		
-		
-		
-		
 		public function create_petrescued($data)
 		{
 			$this->db->insert($this->petrescued, $data);
@@ -291,5 +286,6 @@ class peternity_model extends CI_model
 		}
 		
 		
+
 ?>
 
