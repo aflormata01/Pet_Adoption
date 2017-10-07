@@ -1,18 +1,40 @@
 <div class="container text-center">    
   <h1>RESCUED PETS</h1><br>
+  <div class="col-md-12">
+	 <p>
+		<a href="petcatalogue" style="text-decoration:none"><button type="button" class="btn  btn-lg button1">Pet Catalogue</a></button>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="rescuepet" style="text-decoration:none"><button type="button" class="btn  btn-lg button1">Rescued Pets</a></button>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="petforadoption" style="text-decoration:none"><button type="button" class="btn btn-lg button1">Pets for Adoption</a></button>&nbsp;&nbsp;&nbsp;&nbsp;
+	</p>
+	<br/>
+	</div>
   <div class="row">
-<?php
-foreach($petrescue as $d){ 
-  echo'<div class="col-xs-4">
-        <div class="panel shadow">
-		<div class=" panel-heading">
-			<img src="assets/images/r1.jpg") class="img-responsive" style="width:100% ; height:200px" alt="RescuedPet1">
-			</div>
+ <div class="col-sm-4">
+ 
+    <div class="ih-item circle effect1"><a href="#">
+        <div class="spinner">
+		</div>
+        <div class="img"><img src=" <?php echo base_url('assets/images/r1.jpg'); ?>" alt="img" class="img-circle imagespin  img-responsive"></div></div></a>
         <div class="panel-body">
 			   <h4 class="text-center">'.$d['pet_nickname'].'</h4>
 			   <h5 class="text-center">adopted '.$d['date_rescued'].' </h5>
             </div>
-        </div>
+        
+
+    </div>
+<?php
+foreach($petrescue as $d){ 
+  echo' <div class="col-sm-4">
+ 
+    <div class="ih-item circle effect1"><a href="#">
+        <div class="spinner">
+		</div>
+        <div class="img"><img src=" assets/images/r1.jpg" alt="img" class="img-circle imagespin  img-responsive"></div></div></a>
+        <div class="panel-body">
+			   <h4 class="text-center">'.$d['pet_nickname'].'</h4>
+			   <h5 class="text-center">adopted '.$d['date_rescued'].' </h5>
+            </div>
+        
     </div>';
 }
 ?>
