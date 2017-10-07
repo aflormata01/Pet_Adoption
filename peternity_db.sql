@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.4
+-- version 4.7.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 06, 2017 at 05:47 AM
--- Server version: 5.7.14
--- PHP Version: 5.6.25
+-- Generation Time: Oct 07, 2017 at 06:39 AM
+-- Server version: 10.1.26-MariaDB
+-- PHP Version: 7.1.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -31,6 +33,7 @@ CREATE TABLE `discussion` (
   `username` varchar(50) NOT NULL,
   `Title` varchar(100) NOT NULL,
   `body` varchar(500) NOT NULL,
+  `photo` blob,
   `date` varchar(50) NOT NULL,
   `time` varchar(50) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
@@ -39,11 +42,11 @@ CREATE TABLE `discussion` (
 -- Dumping data for table `discussion`
 --
 
-INSERT INTO `discussion` (`discuss#`, `username`, `Title`, `body`, `date`, `time`) VALUES
-(1, 'aflormata01', '\r\nRestricted food for dogs', 'Lorem Ipsum Dolor shimberlu eklaboo', '07/23/2017', '4:03pm'),
-(2, 'franchescamarie', '\r\nAffordable Vet Clinics?', 'Lorem Ipsum Dolor shimberlu eklaboo', '08/12/2017', '10:45pm'),
-(3, '', 'How to breed dogs', 'dsfasdfsdf', '', ''),
-(4, '', 'How to train cats', 'sdafsdfsdfsdf', '', '');
+INSERT INTO `discussion` (`discuss#`, `username`, `Title`, `body`, `photo`, `date`, `time`) VALUES
+(1, 'aflormata01', '\r\nRestricted food for dogs', 'Lorem Ipsum Dolor shimberlu eklaboo', NULL, '07/23/2017', '4:03pm'),
+(2, 'franchescamarie', '\r\nAffordable Vet Clinics?', 'Lorem Ipsum Dolor shimberlu eklaboo', NULL, '08/12/2017', '10:45pm'),
+(3, '', 'How to breed dogs', 'dsfasdfsdf', NULL, '', ''),
+(4, '', 'How to train cats', 'sdafsdfsdfsdf', NULL, '', '');
 
 -- --------------------------------------------------------
 
@@ -69,6 +72,7 @@ CREATE TABLE `news` (
   `news#` varchar(50) NOT NULL,
   `title` varchar(100) NOT NULL,
   `body` varchar(500) NOT NULL,
+  `photo` blob,
   `date` varchar(50) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
@@ -76,10 +80,10 @@ CREATE TABLE `news` (
 -- Dumping data for table `news`
 --
 
-INSERT INTO `news` (`news#`, `title`, `body`, `date`) VALUES
-('1', 'Bugsy the new baby', 'Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum', 'October 1,2016'),
-('2', 'Hamster, Forever', 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).', 'September 8,2017'),
-('3', 'Puppy for me', 'If you are going to use a passage of Lorem Ipsum, you need to be sure there isn\'t anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.', 'November 4,2017');
+INSERT INTO `news` (`news#`, `title`, `body`, `photo`, `date`) VALUES
+('1', 'Bugsy the new baby', 'Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum', NULL, 'October 1,2016'),
+('2', 'Hamster, Forever', 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).', NULL, 'September 8,2017'),
+('3', 'Puppy for me', 'If you are going to use a passage of Lorem Ipsum, you need to be sure there isn\'t anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.', NULL, 'November 4,2017');
 
 -- --------------------------------------------------------
 
@@ -91,6 +95,7 @@ CREATE TABLE `ownedpets` (
   `username` varchar(50) NOT NULL,
   `petID` varchar(50) NOT NULL,
   `petname` varchar(50) NOT NULL,
+  `photo` blob,
   `bdate` varchar(50) NOT NULL,
   `breed` varchar(50) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
@@ -115,9 +120,9 @@ CREATE TABLE `owneraccount` (
 
 CREATE TABLE `ownerinfo` (
   `username` varchar(50) NOT NULL,
-  `password` int(20) NOT NULL,
   `fname` varchar(50) NOT NULL,
   `lname` varchar(50) NOT NULL,
+  `photo` blob,
   `email` varchar(50) NOT NULL,
   `birthdate` varchar(50) NOT NULL,
   `sex` varchar(50) NOT NULL
@@ -127,9 +132,9 @@ CREATE TABLE `ownerinfo` (
 -- Dumping data for table `ownerinfo`
 --
 
-INSERT INTO `ownerinfo` (`username`, `password`, `fname`, `lname`, `email`, `birthdate`, `sex`) VALUES
-('aflormata', 1234, 'Allysa', 'Flormata', '@aflormata01', '2000-01-01', 'Female'),
-('alexiamndz', 403212315, 'Alexia', 'Armando', '@alexiamndz', '1999-04-04', 'Female');
+INSERT INTO `ownerinfo` (`username`, `fname`, `lname`, `photo`, `email`, `birthdate`, `sex`) VALUES
+('aflormata', 'Allysa', 'Flormata', NULL, '@aflormata01', '2000-01-01', 'Female'),
+('alexiamndz', 'Alexia', 'Armando', NULL, '@alexiamndz', '1999-04-04', 'Female');
 
 -- --------------------------------------------------------
 
@@ -142,17 +147,15 @@ CREATE TABLE `petadoption` (
   `date_adopted` date DEFAULT NULL,
   `username` varchar(20) NOT NULL,
   `contactno` bigint(10) DEFAULT NULL,
-  `address` varchar(50) NOT NULL,
-  `pet_height` varchar(20) NOT NULL,
-  `pet_weight` varchar(20) NOT NULL
+  `address` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `petadoption`
 --
 
-INSERT INTO `petadoption` (`petID`, `date_adopted`, `username`, `contactno`, `address`, `pet_height`, `pet_weight`) VALUES
-(0, NULL, 'Chesca', 63977777, 'Pandacan, Manila', '1ft', '6kg');
+INSERT INTO `petadoption` (`petID`, `date_adopted`, `username`, `contactno`, `address`) VALUES
+(0, NULL, 'Chesca', 63977777, 'Pandacan, Manila');
 
 -- --------------------------------------------------------
 
@@ -164,6 +167,7 @@ CREATE TABLE `petrescued` (
   `petID` varchar(50) NOT NULL,
   `pet_nickname` varchar(50) NOT NULL,
   `date_rescued` varchar(50) NOT NULL,
+  `photo` blob NOT NULL,
   `availability` varchar(50) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
@@ -171,16 +175,16 @@ CREATE TABLE `petrescued` (
 -- Dumping data for table `petrescued`
 --
 
-INSERT INTO `petrescued` (`petID`, `pet_nickname`, `date_rescued`, `availability`) VALUES
-('1', 'PIOLO', '2017', 'Unadopted'),
-('2', 'LILY', '2017', 'Scheduled'),
-('3', 'BOGGART', '2016', 'Adopted'),
-('4', 'HAMMER', '2017', 'Scheduled'),
-('5', 'SHOOKIRA', '2015', 'Adopted'),
-('6', 'CHARLIE', '2017', 'Scheduled'),
-('7', 'BERRY', '2017', 'Unadopted'),
-('8', 'KISSES', '2017', 'Scheduled'),
-('9', 'ALVIN', '2017', 'Unadopted');
+INSERT INTO `petrescued` (`petID`, `pet_nickname`, `date_rescued`, `photo`, `availability`) VALUES
+('1', 'PIOLO', '2017', '', 'Unadopted'),
+('2', 'LILY', '2017', '', 'Scheduled'),
+('3', 'BOGGART', '2016', '', 'Adopted'),
+('4', 'HAMMER', '2017', '', 'Scheduled'),
+('5', 'SHOOKIRA', '2015', '', 'Adopted'),
+('6', 'CHARLIE', '2017', '', 'Scheduled'),
+('7', 'BERRY', '2017', '', 'Unadopted'),
+('8', 'KISSES', '2017', '', 'Scheduled'),
+('9', 'ALVIN', '2017', '', 'Unadopted');
 
 -- --------------------------------------------------------
 
@@ -192,7 +196,7 @@ CREATE TABLE `stories` (
   `story#` varchar(50) NOT NULL,
   `username` varchar(50) NOT NULL,
   `title` varchar(50) NOT NULL,
-  `body` varchar(500) NOT NULL,
+  `body` blob NOT NULL,
   `date` varchar(50) NOT NULL,
   `time` varchar(50) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
@@ -202,8 +206,19 @@ CREATE TABLE `stories` (
 --
 
 INSERT INTO `stories` (`story#`, `username`, `title`, `body`, `date`, `time`) VALUES
-('1', 'aflormata', 'Rescued Pup: Wilson', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus nulla sapien, semper in sodales ac, rutrum at orci. Maecenas vulputate nec tellus sit amet porttitor. Suspendisse congue porta sagittis. Vivamus nulla sapien, semper in sodales ac, rutrum at orci. Maecenas vulputate nec tellus sit amet porttitor. Suspendisse congue porta sagittis.', '08/01/2017', '1:43pm'),
-('', '', 'Rescued Cat: Miggy', 'Breeders. People who breed dogs and cats profit at animals\' expense. There is no such thing as a “responsible” breeder, because for every puppy or kitten who is produced by any breeder, an animal awaiting adoption at an animal shelter loses his or her chance at finding a home—and will be euthanized.', '', '');
+('1', 'aflormata', 'Rescued Pup: Wilson', 0x4c6f72656d20697073756d20646f6c6f722073697420616d65742c20636f6e73656374657475722061646970697363696e6720656c69742e20566976616d7573206e756c6c612073617069656e2c2073656d70657220696e20736f64616c65732061632c2072757472756d206174206f7263692e204d616563656e61732076756c707574617465206e65632074656c6c75732073697420616d657420706f72747469746f722e2053757370656e646973736520636f6e67756520706f7274612073616769747469732e20566976616d7573206e756c6c612073617069656e2c2073656d70657220696e20736f64616c65732061632c2072757472756d206174206f7263692e204d616563656e61732076756c707574617465206e65632074656c6c75732073697420616d657420706f72747469746f722e2053757370656e646973736520636f6e67756520706f7274612073616769747469732e, '08/01/2017', '1:43pm'),
+('', '', 'Rescued Cat: Miggy', 0x42726565646572732e2050656f706c652077686f20627265656420646f677320616e6420636174732070726f66697420617420616e696d616c732720657870656e73652e205468657265206973206e6f2073756368207468696e67206173206120e2809c726573706f6e7369626c65e2809d20627265656465722c206265636175736520666f72206576657279207075707079206f72206b697474656e2077686f2069732070726f647563656420627920616e7920627265656465722c20616e20616e696d616c206177616974696e672061646f7074696f6e20617420616e20616e696d616c207368656c746572206c6f73657320686973206f7220686572206368616e63652061742066696e64696e67206120686f6d65e28094616e642077696c6c2062652065757468616e697a65642e, '', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `stories_like`
+--
+
+CREATE TABLE `stories_like` (
+  `story#` varchar(30) NOT NULL,
+  `username` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Indexes for dumped tables
@@ -267,6 +282,12 @@ ALTER TABLE `stories`
   ADD KEY `username` (`username`);
 
 --
+-- Indexes for table `stories_like`
+--
+ALTER TABLE `stories_like`
+  ADD KEY `story#` (`story#`,`username`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -275,6 +296,8 @@ ALTER TABLE `stories`
 --
 ALTER TABLE `discussion`
   MODIFY `discuss#` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+COMMIT;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
