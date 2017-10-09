@@ -8,8 +8,8 @@
 			   
 			   <div class="tab-pane">
                      <div class="container-fluid">
-                        <div class="row">
-                              <h2 class="text-center" style="color: #E9967A;">  Register </h2> <hr />
+                       
+                              <h2 class="text-center" style="color: #E9967A;">  Register </h2> 
                                  <div class="row">
                                     <div class="col-xs-12 col-sm-12 col-md-12">
                                        <div class="form-group">
@@ -21,9 +21,9 @@
                                           </div>
                                        </div>
                                     </div>
-                                 </div>
+                                
 
-                                 <div class="row">
+                                 
                                     <div class="col-xs-12 col-sm-12 col-md-12">
                                        <div class="form-group">
                                           <div class="input-group">
@@ -34,9 +34,8 @@
                                           </div>
                                        </div>
                                     </div>
-                                 </div>
-
-                                 <div class="row">
+                                
+                                
                                     <div class="col-xs-12 col-sm-12 col-md-12">
                                        <div class="form-group">
                                           <div class="input-group">
@@ -47,15 +46,14 @@
                                           </div>
                                        </div>
                                     </div>
-                                 </div>
-                                 <hr>
-                                 <div class="row">
+                                
+                                 
                                     <div class="col-xs-12 col-sm-12 col-md-12">
                                        <div class="form-group">
-                                          <button type="submit" class="btn btn-lg btn-block btn-warning"> Register</button>
+                                          <button type="submit" class="btn btn-lg btn-block "> Register</button>
                                        </div>
                                     </div>
-                                 </div>
+                                 
                         </div>
                      </div>
                      </div>
