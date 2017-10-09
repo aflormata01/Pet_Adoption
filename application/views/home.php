@@ -14,19 +14,19 @@
 					<div class="carousel-inner item carmargin">
 		
 					 <div class="item active">
-						<img src="<?php echo base_url('assets/images/slide1.jpg'); ?>" alt="Rescued Pet 1" style="width:100%; height:auto;" >
+						<img src="<?php echo base_url('assets/images/s1.jpg'); ?>" alt="Rescued Pet 1" style="width:100%; height:auto;" >
 					  </div>
 
 					  <div class="item">
-						<img src="<?php echo base_url('assets/images/slide2.jpg'); ?>" alt="Rescued Pet 2" style="width:100%;height:auto;" >
+						<img src="<?php echo base_url('assets/images/s2.jpg'); ?>" alt="Rescued Pet 2" style="width:100%;height:auto;" >
 					  </div>
 					  
 					  <div class="item">
-						<img src="<?php echo base_url('assets/images/slide3.jpg'); ?>" alt="Rescued Pet 3" style="width:100%; height: auto;" >
+						<img src="<?php echo base_url('assets/images/s3.jpg'); ?>" alt="Rescued Pet 3" style="width:100%; height: auto;" >
 					  </div>
 					  
 					  <div class="item">
-						<img src="<?php echo base_url('assets/images/slide4.jpg'); ?>" alt="Rescued Pet 3" style="width:100%; height: auto;" >
+						<img src="<?php echo base_url('assets/images/s4.jpg'); ?>" alt="Rescued Pet 3" style="width:100%; height: auto;" >
 					  </div>
 					</div>
 
@@ -43,18 +43,18 @@
 				  
 	<div class="form">
      <div class="form-content shadow">
-	  <h3 class="text-warning text-center b u">LOG IN</h3>
+	  <h3 class="text-center heading ">LOG IN</h3>
 		 <form method="post">
 					<div class="form-group text-center b">
 						<span class="glyphicon glyphicon-user"></span> <label for="username"> USERNAME: </label>
-						<input type="text" class="form-control" id="username" name="username" placeholder="Username" />
+						<input type="text" class="form-control" id="username" name="username"  />
 					</div>
 					<div class="form-group text-center b">
 						 <span class="glyphicon glyphicon-lock"></span> <label for="password"> PASSWORD: </label>
-						<input type="password" class="form-control" id="password" name="password" placeholder="Password" />
-						<h5><button type="submit" class="btn btn-muted col-sm-5 login" value="Login"><span class="glyphicon glyphicon-log-in"></span> LOG IN</h5></button>
+						<input type="password" class="form-control" id="password" name="password"  />
+						<h5 class="heading"><button type="submit" class="btn btn-muted col-xs-5 login" value="Login"><span class="glyphicon glyphicon-log-in"></span> LOG IN</h5></button>
 						<a href="<?php echo base_url('peternity/signup')?>" data-toggle="modal" data-target="#myModal">
-						<button class="btn btn-muted col-sm-5 login margintop b"><span class="glyphicon glyphicon-edit"></span> SIGN UP</a></h5></button>
+						<h5 class="heading"><button type="submit" class="btn btn-muted col-xs-5 login margintop" value="Login"><span class="glyphicon glyphicon-edit"></span> SIGN UP</h5></button>
 						<div id="table">
     <div id="myModal" class="modal fade" role="dialog">
         <div class="modal-dialog">

@@ -12,7 +12,7 @@
 	.border{border: solid 2px orange;margin: 15px 0px 0px 0px;padding: 10px;}
 	.adoptborder{border: 4px solid #A55F00;}
 	.height{height: 500px;}
-	.menupad{padding-right:53px;}
+	.menupad{padding-right:70px;}
 	.auto{margin: auto; margin-top: 10px;}
 	.adoptimg{margin-top: 10px;}
 	.leftmargin{margin-left: 140px;}
@@ -27,21 +27,20 @@
 	.imgmarg{margin-left:200px; margin-right:200px;}
 	.sign{padding-left: 350px;}
 	.info{margin-left:50px; text-align: left;}
+	.sm{font-size:  12px; font-family: Verdana;}
+	.sign{padding-left: 350px;}
+	.heart{border-radius: 50%; padding: 5px;}
 	panel{margin-left: 600px; margin-right: 600px;}
 	button{margin:auto;}
-	h3, h5, label{font-family: Arial Black;}
+	h3, h5, label, th{font-family: Verdana;}
 	a{font-family: Arial Black; color: Black;}
 	hr{ display: block;margin-top: 0.5em; margin-bottom: 0.5em;margin-left: auto; margin-right: auto;border-style: inset;border-width: 1px; border-color: orange;}
-	p{text-indent: 50px; font-family: montserrat;}
+	p{text-indent: 50px; font-family: Verdana;}
 	.sign{padding-left: 350px;}
 	.modalb{height: 350px;}
 	.modalbx{height: 500px;}
 	.mainbox1{width:100px;}
-	.footer{ position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;}
-
+	.heading{font-family: Montserrat; color: Black;}	
 
 .navbar:hover {background-color: #E9967A;
     color: white;}	

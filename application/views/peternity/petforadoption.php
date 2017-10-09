@@ -1,10 +1,10 @@
 <div class="container text-center">    
-  <h1>PETS FOR ADOPTION</h1><br>
+  <h2 class="heading">PETS FOR ADOPTION</h2><br>
   <div class="col-md-12 ">
 	 <p>
-		<a href="petcatalogue" style="text-decoration:none"><button type="button" class="btn btn-lg button1">Pet Catalogue</a></button>&nbsp;&nbsp;&nbsp;&nbsp;
-		<a href="rescuepet" style="text-decoration:none"><button type="button" class="btn btn-lg button1">Rescued Pets</a></button>&nbsp;&nbsp;&nbsp;&nbsp;
-		<a href="petforadoption" style="text-decoration:none"><button type="button" class="btn btn-lg button1">Pets for Adoption</a></button>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="petcatalogue" style="text-decoration:none"><button type="button" class="btn btn-lg button1"><h4 class="heading">Pet Catalogue</h4></a></button>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="rescuepet" style="text-decoration:none"><button type="button" class="btn btn-lg button1"><h4 class="heading">Rescued Pets</h4></a></button>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="petforadoption" style="text-decoration:none"><button type="button" class="btn btn-lg button1"><h4 class="heading">Pets for Adoption</h4></a></button>&nbsp;&nbsp;&nbsp;&nbsp;
 	</p>
 	<br/>
 	</div>
@@ -20,8 +20,8 @@
 		</div></a>
         <div class="panel-body">
 			    <div class="col-sm-11">
-				<h3 class="text-center">LUCY</h3>
-				<h5 class="text-center">Ellus ac sodales Lorem ipsum dolor Phas ellus ac sodales felis tiam non metus. lorem ipsum dolor sit amet, consectetur adipisicing elit uasi quidem minus id omnis a nib.</h5>
+				<h3 class="text-center heading">LUCY</h3>
+				<h5 class="text-center sm">Ellus ac sodales Lorem ipsum dolor Phas ellus ac sodales felis tiam non metus. lorem ipsum dolor sit amet, consectetur adipisicing elit uasi quidem minus id omnis a nib.</h5>
 				<a href="<?php echo base_url('peternity/signin')?>" style="text-decoration:none" data-toggle="modal" data-target="#myModal">
 				<button type="submit" class="btn btn-adopt"> ADOPT </a></h5></button>
 				<div id="table">
@@ -45,8 +45,8 @@
 		</div></a>
         <div class="panel-body">
 			    <div class="col-sm-11">
-				<h3 class="text-center">BOGART</h3>
-				<h5 class="text-center">Ellus ac sodales Lorem ipsum dolor Phas ellus ac sodales felis tiam non metus. lorem ipsum dolor sit amet, consectetur adipisicing elit uasi quidem minus id omnis a nib.</h5>
+				<h3 class="text-center heading">BOGART</h3>
+				<h5 class="text-center sm">Ellus ac sodales Lorem ipsum dolor Phas ellus ac sodales felis tiam non metus. lorem ipsum dolor sit amet, consectetur adipisicing elit uasi quidem minus id omnis a nib.</h5>
 				<a href="<?php echo base_url('peternity/signin')?>" style="text-decoration:none" data-toggle="modal" data-target="#myModal">
 				<button type="submit" class="btn btn-adopt"> ADOPT </a></h5></button>
 				<div id="table">
@@ -70,8 +70,8 @@
 		</div></a>
 			<div class="panel-body">
 			    <div class="col-sm-11">
-				<h3 class="text-center">HAMSTER</h3>
-				<h5 class="text-center">Ellus ac sodales Lorem ipsum dolor Phas ellus ac sodales felis tiam non metus. lorem ipsum dolor sit amet, consectetur adipisicing elit uasi quidem minus id omnis a nib.</h5>
+				<h3 class="text-center heading">HAMSTER</h3>
+				<h5 class="text-center sm">Ellus ac sodales Lorem ipsum dolor Phas ellus ac sodales felis tiam non metus. lorem ipsum dolor sit amet, consectetur adipisicing elit uasi quidem minus id omnis a nib.</h5>
 				<a href="<?php echo base_url('peternity/signin')?>" style="text-decoration:none" data-toggle="modal" data-target="#myModal">
 				<button type="submit" class="btn btn-adopt"> ADOPT </a></h5></button>
 				<div id="table">
@@ -99,8 +99,8 @@
 		</div></a>
 			<div class="panel-body">
 			    <div class="col-sm-11">
-				<h3 class="text-center">SHOOKIRA</h3>
-				<h5 class="text-center">Ellus ac sodales Lorem ipsum dolor Phas ellus ac sodales felis tiam non metus. lorem ipsum dolor sit amet, consectetur adipisicing elit uasi quidem minus id omnis a nib.</h5>
+				<h3 class="text-center heading">SHOOKIRA</h3>
+				<h5 class="text-center sm">Ellus ac sodales Lorem ipsum dolor Phas ellus ac sodales felis tiam non metus. lorem ipsum dolor sit amet, consectetur adipisicing elit uasi quidem minus id omnis a nib.</h5>
 				<a href="<?php echo base_url('peternity/signin')?>" style="text-decoration:none" data-toggle="modal" data-target="#myModal">
 				<button type="submit" class="btn btn-adopt"> ADOPT </a></h5></button>
 				<div id="table">
@@ -124,8 +124,8 @@
 		</div></a>
 			<div class="panel-body">
 			    <div class="col-sm-11">
-				<h3 class="text-center">PIOLO</h3>
-				<h5 class="text-center">Ellus ac sodales Lorem ipsum dolor Phas ellus ac sodales felis tiam non metus. lorem ipsum dolor sit amet, consectetur adipisicing elit uasi quidem minus id omnis a nib.</h5>
+				<h3 class="text-center heading">PIOLO</h3>
+				<h5 class="text-center sm">Ellus ac sodales Lorem ipsum dolor Phas ellus ac sodales felis tiam non metus. lorem ipsum dolor sit amet, consectetur adipisicing elit uasi quidem minus id omnis a nib.</h5>
 				<a href="<?php echo base_url('peternity/signin')?>" style="text-decoration:none" data-toggle="modal" data-target="#myModal">
 				<button type="submit" class="btn btn-adopt"> ADOPT </a></h5></button>
 				<div id="table">
@@ -148,8 +148,8 @@
 		</div></a>
 			<div class="panel-body">
 			    <div class="col-sm-11">
-				<h3 class="text-center">LUCY</h3>
-				<h5 class="text-center">Ellus ac sodales Lorem ipsum dolor Phas ellus ac sodales felis tiam non metus. lorem ipsum dolor sit amet, consectetur adipisicing elit uasi quidem minus id omnis a nib.</h5>
+				<h3 class="text-center heading">LUCY</h3>
+				<h5 class="text-center sm">Ellus ac sodales Lorem ipsum dolor Phas ellus ac sodales felis tiam non metus. lorem ipsum dolor sit amet, consectetur adipisicing elit uasi quidem minus id omnis a nib.</h5>
 				<a href="<?php echo base_url('peternity/signin')?>" style="text-decoration:none" data-toggle="modal" data-target="#myModal">
 				<button type="submit" class="btn btn-adopt"> ADOPT </a></h5></button>
 				<div id="table">
