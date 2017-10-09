@@ -27,7 +27,7 @@
         <a class="u" class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"><span class="caret"></span></span></a>
         <ul class="dropdown-menu table-hover">
           <li class="menupad "><a href="<?php echo base_url('user/profile')?>">Your Profile</a></li>
-          <li class="menupad "><a href="<?php echo base_url('user/signup')?>">Settings</a></li>
+          <li class="menupad "><a href="<?php echo base_url('user/setting')?>">Settings</a></li>
 		  <li class="menupad "><a href="logout">Logout</a></li>
         </ul>
       </li>

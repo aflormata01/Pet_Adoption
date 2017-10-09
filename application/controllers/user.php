@@ -144,7 +144,7 @@ class user extends CI_Controller {
 		$this->load->view('include/footer');
 		
 	}
-	public function profile(){
+	public function profile($user){
 		$result_array = $this->Peter->read_ownerinfo(array('username',$user));
 		if(count($result_array)>0){
 			$data['profile'] = $result_array;
@@ -157,5 +157,14 @@ class user extends CI_Controller {
 		}else{
 			echo "hello";
 		}
+	}
+	
+	public function setting(){
+		$header_data['title'] = "ACCOUNT SETTINGS";
+		$this->load->view('include/header',$header_data);
+		$this->load->view('include/menu_user');
+		$this->load->view('peternity_user/settings');
+		$this->load->view('include/footer');
+		
 	}
 }
