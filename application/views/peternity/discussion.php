@@ -1,5 +1,5 @@
 <div class="container">
-	<h1 class="text-center">DISCUSSIONS</h1>
+	<h2 class="text-center heading">DISCUSSIONS</h2>
 	
 	<div class="panel container text-center">
 		<table class="table table-bordered">
@@ -15,7 +15,7 @@
 				<tbody>
 					<tr> 
 						<td>posted by '.$d['username'].' | '.$d['date'].' | '.$d['time'].'</td>
-						<td class="gap"><a href="">'.$d['body'].'</a></td>
+						<td class="gap sm"><a href="" class="sm">'.$d['body'].'</a></td>
 					</tr>
 				</tbody>
 			</table>
