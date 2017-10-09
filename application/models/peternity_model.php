@@ -284,8 +284,5 @@ class peternity_model extends CI_model
 			$this->db->delete($this->stories_like);
 			return TRUE;	
 		}
-		
-		
-
+}
 ?>
-

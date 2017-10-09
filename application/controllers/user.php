@@ -54,8 +54,6 @@ class user extends CI_Controller {
                     array('field'=>'username', 'label'=>'Owner Name', 'rules'=>'required'),
                     array('field'=>'contactno', 'label'=>'Contact No.', 'rules'=>'required'),
                     array('field'=>'address', 'label'=>'Address', 'rules'=>'required'),
-					array('field'=>'pet_height', 'label'=>'Pet Height', 'rules'=>'required'),
-					array('field'=>'pet_weight', 'label'=>'Pet Weight', 'rules'=>'required')
                 );
         $this->form_validation->set_rules($rules);
 		$this->form_validation->set_error_delimiters('<p class="error">', '</p>');
@@ -64,7 +62,7 @@ class user extends CI_Controller {
 			$this->load->view('peternity_user/adoptionform');
 		}
 		else{
-			$adoption=array('username'=>$_POST['username'],'contactno'=>$_POST['contactno'],'address'=>$_POST['address'],'pet_height'=>$_POST['pet_height'],'pet_weight'=>$_POST['pet_weight']);
+			$adoption=array('username'=>$_POST['username'],'contactno'=>$_POST['contactno'],'address'=>$_POST['address']);
             $this->Peter->create_adopt($adoption);
             redirect('peternity_user/petcatalogue');
 		}

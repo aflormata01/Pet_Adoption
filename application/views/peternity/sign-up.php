@@ -1,67 +1,73 @@
   <?php echo form_open('peternity/signup'); //this is equal to <form method="post" accept-charset="utf-8" action="http://localhost/Pet_Adoption/user/addstories"?>
-  <div class="modal-body modalb">
-      <button type="button" class="close" data-dismiss="modal">&times;</button>
-	<h2>Sign up form</h2>
-	<div class="form-group">
-	 <div class="col-sm-12">
-      <label class="control-label col-sm-4" for="fname">First Name: </label>
-      <div class="col-sm-6">
-        <input type="fname" class="form-control" id="fname" placeholder="Enter first name" name="fname">
-      </div>
-	  <?php echo form_error('fname', '<p class="text-danger">', '</p>'); ?>
-	  </div>
-	  </div>
+  <div class="" style="display:none; margin-top:50px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <div class="panel-title">Sign Up</div>
+                            <div style="float:right; font-size: 85%; position: relative; top:-10px"><a id="signinlink" href="#" onclick="$('#signupbox').hide(); $('#loginbox').show()">Sign In</a></div>
+                        </div>  
+                        <div class="panel-body" >
+                            <form id="signupform" class="form-horizontal" role="form">
+                                
+                                <div id="signupalert" style="display:none" class="alert alert-danger">
+                                    <p>Error:</p>
+                                    <span></span>
+                                </div>
+                                    
+                                
+                                  
+                                <div class="form-group">
+                                    <label for="email" class="col-md-3 control-label">Email</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="email" placeholder="Email Address">
+                                    </div>
+                                </div>
+                                    
+                                <div class="form-group">
+                                    <label for="firstname" class="col-md-3 control-label">First Name</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="firstname" placeholder="First Name">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastname" class="col-md-3 control-label">Last Name</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="lastname" placeholder="Last Name">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="password" class="col-md-3 control-label">Password</label>
+                                    <div class="col-md-9">
+                                        <input type="password" class="form-control" name="passwd" placeholder="Password">
+                                    </div>
+                                </div>
+                                    
+                                <div class="form-group">
+                                    <label for="icode" class="col-md-3 control-label">Invitation Code</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="icode" placeholder="">
+                                    </div>
+                                </div>
 
-	<div class="form-group">
-	 <div class="col-sm-12">
-      <label class="control-label col-sm-4" for="lname">Last Name:</label>
-      <div class="col-sm-6">
-        <input type="lname" class="form-control col-sm-4" id="lname" placeholder="Enter last name" name="lname">
-      </div>
-	  <?php echo form_error('lname', '<p class="text-danger">', '</p>'); ?>
-	  </div>
-	  </div>
-	  
-	  <div class="form-group">
-	  <div class="col-sm-12">
-      <label class="control-label col-sm-4" for="email">Email:</label>
-      <div class="col-sm-6">
-        <input type="email" class="form-control col-sm-4" id="email" placeholder="Enter email" name="email">
-      </div>
-	   <?php echo form_error('email', '<p class="text-danger">', '</p>'); ?>
-    </div>
-    </div>
-	
-	<div class="form-group">
-	 <div class="col-sm-12">
-      <label class="control-label col-sm-4" for="mname">User Name:</label>
-      <div class="col-sm-6">
-        <input type="uname" class="form-control col-sm-4" id="uname" placeholder="Enter user name" name="uname">
-      </div>
-	   <?php echo form_error('username', '<p class="text-danger">', '</p>'); ?>
-	</div>
-	</div>
-	
-    <div class="form-group">
-	 <div class="col-sm-12">
-      <label class="control-label col-sm-4" for="pwd">Password:</label>
-      <div class="col-sm-6">          
-        <input type="password" class="form-control col-sm-4" id="password" placeholder="Enter password" name="password">
-      </div>
-	  <?php echo form_error('password', '<p class="text-danger">', '</p>'); ?>
-    </div>
-    </div>
-	  
-    <div class="form-group">        
-      <div class="col-sm-offset-2 col-sm-10">
-        <div class="checkbox">
-          <label><input type="checkbox" name="remember">Remember me</label>
-        </div>
-      </div>
-    </div>
-    <div class="form-group">        
-      <div class="col-sm-offset-2 col-sm-10">
-        <button type="submit" class="btn btn-default">Submit</button>
-      </div>
-    </div>
-</div>
+                                <div class="form-group">
+                                    <!-- Button -->                                        
+                                    <div class="col-md-offset-3 col-md-9">
+                                        <button id="btn-signup" type="button" class="btn btn-info"><i class="icon-hand-right"></i> &nbsp; Sign Up</button>
+                                        <span style="margin-left:8px;">or</span>  
+                                    </div>
+                                </div>
+                                
+                                <div style="border-top: 1px solid #999; padding-top:20px"  class="form-group">
+                                    
+                                    <div class="col-md-offset-3 col-md-9">
+                                        <button id="btn-fbsignup" type="button" class="btn btn-primary"><i class="icon-facebook"></i>   Sign Up with Facebook</button>
+                                    </div>                                           
+                                        
+                                </div>
+                                
+                                
+                                
+                            </form>
+                         </div>
+                    </div>
+                    </div>
+                    

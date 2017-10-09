@@ -1,6 +1,7 @@
 
- <?php echo form_open('peternity_user/adoptionform'); //this is equal to <form method="post" accept-charset="utf-8" action="http://localhost/Pet_Adoption/user/addstories"?>
-  <div class="modal-body ">
+ <?php echo form_open('user/adopt'); //this is equal to <form method="post" accept-charset="utf-8" action="http://localhost/Pet_Adoption/user/addstories"?>
+  <div class="modal modalbx">
+  <div class="modal-body">
       <button type="button" class="close" data-dismiss="modal">&times;</button>
     <div class="form-group petpic">
 	<div class="col-sm-4">
@@ -51,4 +52,5 @@
         <button type="submit" class="btn btn-default margin text-center" value="Submit"><span class="glyphicon glyphicon-heart">ADOPT</span></button>
       </div>
     </div>
+  </div>
   </div>
