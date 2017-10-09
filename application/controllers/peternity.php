@@ -101,8 +101,7 @@ class peternity extends CI_Controller {
                     array('field'=>'email', 'label'=>'Email', 'rules'=>'required'),
 					array('field'=>'username', 'label'=>'Username', 'rules'=>'required'),
 					array('field'=>'password', 'label'=>'Password', 'rules'=>'required'),
-					array('field'=>'sex', 'label'=>'Sex', 'rules'=>'required'),
-					array('field'=>'birthdate', 'label'=>'Birthday', 'rules'=>'required')
+					
                 );
         $this->form_validation->set_rules($rules);
 		$this->form_validation->set_error_delimiters('<p class="error">', '</p>');
@@ -113,8 +112,31 @@ class peternity extends CI_Controller {
 			
 		}
 		else{
-			$signupform=array('fname'=>$_POST['fname'],'lname'=>$_POST['lname'],'username'=>$_POST['username'],'password'=>$_POST['password'],'sex'=>$_POST['sex'],'birthdate'=>$_POST['birthdate']);
+			$signupform=array('fname'=>$_POST['fname'],'lname'=>$_POST['lname'],'username'=>$_POST['username'],'password'=>$_POST['password']);
             $this->Peter->create_form($signupform);
+            redirect('login-home');
+		}
+	}
+	public function signin()
+	{
+		$rules = array(
+      
+                    array('field'=>'email', 'label'=>'Email', 'rules'=>'required'),
+					array('field'=>'username', 'label'=>'Username', 'rules'=>'required'),
+					array('field'=>'password', 'label'=>'Password', 'rules'=>'required'),
+					
+                );
+        $this->form_validation->set_rules($rules);
+		$this->form_validation->set_error_delimiters('<p class="error">', '</p>');
+		if($this->form_validation->run()==FALSE){
+			$header_data['title'] = "SIGN-IN";
+			
+			$this->load->view('peternity/sign-in');
+			
+		}
+		else{
+			$signinform=array('fname'=>$_POST['fname'],'lname'=>$_POST['lname'],'username'=>$_POST['username'],'password'=>$_POST['password']);
+            $this->Peter->create_form($signinform);
             redirect('login-home');
 		}
 	}
