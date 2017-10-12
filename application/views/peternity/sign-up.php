@@ -9,7 +9,7 @@
 			   <div class="tab-pane">
                      <div class="container-fluid">
                        
-                              <h2 class="text-center" style="color: #E9967A;">  Register </h2> 
+                              <h2 class="text-center heading" style="color: #E9967A;">  Sign Up </h2> 
                                  <div class="row">
                                     <div class="col-xs-12 col-sm-12 col-md-12">
                                        <div class="form-group">
@@ -17,7 +17,7 @@
                                              <div class="input-group-addon iga1">
                                                 <span class="glyphicon glyphicon-user"></span>
                                              </div>
-                                             <input type="text" class="form-control" placeholder="Enter User Name" name="name">
+                                             <input type="text" class="form-control sm" placeholder="Enter User Name" name="name">
                                           </div>
                                        </div>
                                     </div>
@@ -30,7 +30,7 @@
                                              <div class="input-group-addon iga1">
                                                 <span class="glyphicon glyphicon-envelope"></span>
                                              </div>
-                                             <input type="email" class="form-control" placeholder="Enter E-Mail" name="mail">
+                                             <input type="email" class="form-control sm" placeholder="Enter E-Mail" name="mail">
                                           </div>
                                        </div>
                                     </div>
@@ -42,7 +42,7 @@
                                              <div class="input-group-addon iga1">
                                                 <span class="glyphicon glyphicon-lock"></span>
                                              </div>
-                                             <input type="password" class="form-control" placeholder="Enter Password" name="pass">
+                                             <input type="password" class="form-control sm" placeholder="Enter Password" name="pass">
                                           </div>
                                        </div>
                                     </div>
@@ -50,7 +50,7 @@
                                  
                                     <div class="col-xs-12 col-sm-12 col-md-12">
                                        <div class="form-group">
-                                          <button type="submit" class="btn btn-lg btn-block "> Register</button>
+                                          <button type="submit" class="btn btn-lg btn-block heading"> Register</button>
                                        </div>
                                     </div>
                                  

@@ -13,7 +13,9 @@
 	.border{border: solid 2px orange;margin: 15px 0px 0px 0px;padding: 10px;}
 	.adoptborder{border: 4px solid #A55F00;}
 	.height{height: 500px;}
+
 	.menupad{padding-right:70px; background-color:#E9967A;}
+
 	.userpad{padding-right:54px;}
 	.auto{margin: auto; margin-top: 10px;}
 	.adoptimg{margin-top: 10px;}
@@ -43,7 +45,6 @@
 	.modalbx{height: 600px; float:center;}
 	.mainbox1{width:100px;}
 	.heading{font-family: Montserrat; color: Black;}	
-
 
 	
 .button1 {

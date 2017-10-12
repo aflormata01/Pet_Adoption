@@ -6,7 +6,7 @@
   <div class="modal-body">
   <div >
     <div class="form-group text-left">
-	<h2 class="font text-center">ADD STORY</h2>
+	<h2 class="heading text-center ">ADD STORY</h2>
 		<label class="control-label" for="cname">Title: </label><?php echo form_error('title', '<p class="text-danger">', '</p>'); ?>
 		<input class="form-control" type="text" id="title" name="title" type="text" value="<?php echo set_value('title'); ?>"/>
     </div>

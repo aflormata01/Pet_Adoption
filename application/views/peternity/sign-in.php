@@ -14,7 +14,7 @@
                   <div id="login" class="tab-pane fade in active register">
                      <div class="container-fluid">
                         <div class="row">
-                              <h2 class="text-center" style="color: #E9967A;"> <strong> Login  </strong></h2>
+                              <h2 class="text-center heading" style="color: #E9967A;"> <strong> LOGIN </strong></h2>
 
                              
                                  <div class="col-xs-12 col-sm-12 col-md-12">
@@ -23,7 +23,7 @@
                                           <div class="input-group-addon">
                                              <span class="glyphicon glyphicon-user"></span>
                                           </div>
-                                          <input type="text" placeholder="User Name" name="uname" class="form-control">
+                                          <input type="text" placeholder="User Name" name="uname" class="form-control sm">
                                        </div>
                                     </div>
                                  </div>
@@ -37,7 +37,7 @@
                                              <span class="glyphicon glyphicon-lock"></span>
                                           </div>
 
-                                          <input type="password" placeholder="Password" name="pass" class="form-control">
+                                          <input type="password" placeholder="Password" name="pass" class="form-control sm">
                                        </div>
                                     </div>
                                  </div>
@@ -46,20 +46,20 @@
                               <div class="col-xs-12 col-sm-12 col-md-12">
                                  <div class="col-xs-6 col-sm-6 col-md-6">
                                     <div class="form-group">
-                                       <input type="checkbox" name="check" checked> Remember Me
+                                       <input type="checkbox" name="check" checked class="sm"> Remember Me
                                     </div>
                                  </div>
 
                                   <div class="col-xs-6 col-sm-6 col-md-6">
                                     <div class="form-group">
-                                       <a href="#forgot" data-toggle="modal"> Forgot Password? </a>
+                                       <a href="#forgot" data-toggle="modal" class="sm"> Forgot Password? </a>
                                     </div>
                                  </div>
                               </div>
                              
                              
                                  <div class="col-xs-12 col-sm-12 col-md-12">
-                                    <button type="submit" class="btn  btn-block btn-lg"> Login </button>
+                                    <button type="submit" class="btn  btn-block btn-lg heading"> LOGIN</button>
                                  </div>
                             
                         </div>
@@ -69,7 +69,7 @@
                   <div id="signup" class="tab-pane fade">
                      <div class="container-fluid">
                         <div class="row">
-                              <h2 class="text-center" style="color: #E9967A;"> <Strong> Register </Strong></h2> 
+                              <h2 class="text-center heading" style="color: #E9967A;"> <Strong> Sign Up </Strong></h2> 
                                  
                                     <div class="col-xs-12 col-sm-12 col-md-12">
                                        <div class="form-group">
@@ -77,7 +77,7 @@
                                              <div class="input-group-addon iga1">
                                                 <span class="glyphicon glyphicon-user"></span>
                                              </div>
-                                             <input type="text" class="form-control" placeholder="Enter Name" name="name">
+                                             <input type="text" class="form-control sm" placeholder="Enter Name" name="name">
                                           </div>
                                        </div>
                                     </div>
@@ -90,7 +90,7 @@
                                              <div class="input-group-addon iga1">
                                                 <span class="glyphicon glyphicon-envelope"></span>
                                              </div>
-                                             <input type="email" class="form-control" placeholder="Enter E-Mail" name="mail">
+                                             <input type="email" class="form-control sm" placeholder="Enter E-Mail" name="mail">
                                           </div>
                                        </div>
                                     </div>
@@ -103,7 +103,7 @@
                                              <div class="input-group-addon iga1">
                                                 <span class="glyphicon glyphicon-lock"></span>
                                              </div>
-                                             <input type="password" class="form-control" placeholder="Enter Password" name="pass">
+                                             <input type="password" class="form-control sm" placeholder="Enter Password" name="pass">
                                           </div>
                                        </div>
                                     </div>
@@ -112,7 +112,7 @@
                                 
                                     <div class="col-xs-12 col-sm-12 col-md-12">
                                        <div class="form-group">
-                                          <button type="submit" class="btn btn-lg btn-block"> Register</button>
+                                          <button type="submit" class="btn btn-lg btn-block heading"> Register</button>
                                        </div>
                                     </div>
                                 
