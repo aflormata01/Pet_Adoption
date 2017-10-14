@@ -4,7 +4,9 @@ class peternity_model extends CI_model
 {
     
 	private $discussion = "discussion";
+	private $events = "events";
 	private $news = "news";
+	private $faqs = "faqs";
 	private $disc_comments = "disc_comments";
 	private $ownedpets = "ownedpets";
 	private $owneraccount = "owneraccount";
@@ -39,6 +41,59 @@ class peternity_model extends CI_model
 			 $query= $this->db->get();
 			 return $query-> result_array();
 		 
+		}
+		
+		
+		public function create_events($data)
+		{
+			$this->db->insert($this->events, $data);
+			return TRUE;	
+		}
+		public function update_events()
+		{
+			$this->db->where($data);
+			$this->db->update($this->events, $data);
+			return TRUE;	
+		}
+		public function del_events()
+		{
+			$this->db->where($data);
+			$this->db->delete($this->events);
+			return TRUE;	
+		}
+		public function read_events($condition=null)
+		{
+			 $this -> db -> select('*');
+			 $this -> db -> from($this-> events);
+			 if ( isset($condition)) $this->db->where($condition);
+			 $query= $this->db->get();
+			 return $query-> result_array();
+		}
+		
+		public function create_faqs($data)
+		{
+			$this->db->insert($this->faqs, $data);
+			return TRUE;	
+		}
+		public function update_faqs()
+		{
+			$this->db->where($data);
+			$this->db->update($this->faqs, $data);
+			return TRUE;	
+		}
+		public function del_faqs()
+		{
+			$this->db->where($data);
+			$this->db->delete($this->faqs);
+			return TRUE;	
+		}
+		public function read_faqs($condition=null)
+		{
+			 $this -> db -> select('*');
+			 $this -> db -> from($this-> faqs);
+			 if ( isset($condition)) $this->db->where($condition);
+			 $query= $this->db->get();
+			 return $query-> result_array();
 		}
 		
 		

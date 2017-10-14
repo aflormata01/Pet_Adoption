@@ -79,25 +79,29 @@ class peternity extends CI_Controller {
 		
 	}
 	public function upcomingevents(){
+		$result_array = $this->Peter->read_events();
+        $data['events'] = $result_array;
+		
 		$header_data['title'] = "UPCOMING EVENTS";
 		$this->load->view('include/header',$header_data);
 		$this->load->view('include/menu');
-		$this->load->view('peternity/events');
+		$this->load->view('peternity/events',$data);
 		$this->load->view('include/footer');		
 	}
 	public function faqs(){
+		$result_array = $this->Peter->read_faqs();
+        $data['faqs'] = $result_array;
+		
 		$header_data['title'] = "USER HOME";
 		$this->load->view('include/header',$header_data);
 		$this->load->view('include/menu');
-		$this->load->view('peternity/faqs');
+		$this->load->view('peternity/faqs',$data);
 		$this->load->view('include/footer');
 		
 	}
 	public function signup()
 	{
 		$rules = array(
-                    array('field'=>'fname', 'label'=>'First Name', 'rules'=>'required'),
-                    array('field'=>'lname', 'label'=>'Last Name', 'rules'=>'required'),
                     array('field'=>'email', 'label'=>'Email', 'rules'=>'required'),
 					array('field'=>'username', 'label'=>'Username', 'rules'=>'required'),
 					array('field'=>'password', 'label'=>'Password', 'rules'=>'required'),

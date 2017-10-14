@@ -130,17 +130,23 @@ class user extends CI_Controller {
 		
 	}
 	public function upcomingevents(){
+		$result_array = $this->Peter->read_events();
+        $data['events'] = $result_array;
+		
 		$header_data['title'] = "UPCOMING EVENTS";
 		$this->load->view('include/header',$header_data);
 		$this->load->view('include/menu_user');
-		$this->load->view('peternity_user/events');
+		$this->load->view('peternity_user/events',$data);
 		$this->load->view('include/footer');		
 	}
 	public function faqs(){
+		$result_array = $this->Peter->read_faqs();
+        $data['faqs'] = $result_array;
+		
 		$header_data['title'] = "USER HOME";
 		$this->load->view('include/header',$header_data);
 		$this->load->view('include/menu_user');
-		$this->load->view('peternity_user/faqs');
+		$this->load->view('peternity_user/faqs',$data);
 		$this->load->view('include/footer');
 		
 	}
