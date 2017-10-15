@@ -73,7 +73,7 @@
 	<div class="form-group">
       <label class="control-label col-sm-2" for="username">Password:</label>
       <div class="col-sm-4">
-        <a href="peternity/changepass">Change Password</a>
+        <a href="user/changepass" class="heading">Change Password</a>
       </div>
 	</div>
 	
