@@ -165,12 +165,18 @@ class user extends CI_Controller {
 		}
 	}
 	
-	public function setting(){
-		$header_data['title'] = "ACCOUNT SETTINGS";
-		$this->load->view('include/header',$header_data);
-		$this->load->view('include/menu_user');
-		$this->load->view('peternity_user/settings');
-		$this->load->view('include/footer');
+	public function setting($user){
+		$result_array = $this->Peter->read_ownerinfo(array('username',$user));
+		if(count($result_array)>0){
+			
+			$data['profile'] = $result_array;
+			$header_data['title'] = "ACCOUNT SETTINGS";
+			$this->load->view('include/header',$header_data);
+			$this->load->view('include/menu_user');
+			$this->load->view('peternity_user/settings');
+			$this->load->view('include/footer');
+		}
+		
 		
 	}
 }
