@@ -7,6 +7,10 @@
   <div >
     <div class="form-group text-left">
 	<h2 class="heading text-center ">ADD STORY</h2>
+	<div class="form-group text-left">
+		<label class="control-label" for="">Attach an image: </label>
+		<input class="text-center" id="files-upload" type="file">
+    </div>
 		<label class="control-label" for="cname">Title: </label><?php echo form_error('title', '<p class="text-danger">', '</p>'); ?>
 		<input class="form-control" type="text" id="title" name="title" type="text" value="<?php echo set_value('title'); ?>"/>
     </div>

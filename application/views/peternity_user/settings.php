@@ -4,13 +4,16 @@
 			<div class="profile-sidebar">
 				
 				<div class="profile-userpic">
-					<img src="<?php echo base_url('assets/images/123.jpg'); ?>" class="img-responsive img-circle" alt="profilepic">
+					
+				<img src="<?php echo base_url('assets/images/123.jpg'); ?>" class="img-responsive img-circle" alt="profilepic">
+				<label>Change your profile picture : </label><input class="text-center" id="files-upload" type="file">
 				</div>
 				
 				<div class="profile-usertitle">
 					<div class="profile-usertitle-name text-center">
 					<h2>	Janelyn Ann Gellado </h2>
 					</div>
+					
 					
 				</div>
 				<br/>
