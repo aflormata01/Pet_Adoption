@@ -28,7 +28,7 @@
         <ul class="dropdown-menu table-hover">
           <li class="sm"><a href="<?php echo base_url('user/profile')?>">Your Profile</a></li>
           <li class="sm"><a href="<?php echo base_url('user/setting')?>">Settings</a></li>
-		  <li class="sm"><a href="logout">Logout</a></li>
+		  <li class="sm"><a href="<?php echo base_url('logout');?>">Logout</a></li>
         </ul>
       </li>
 	  

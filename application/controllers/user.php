@@ -166,11 +166,28 @@ class user extends CI_Controller {
 	}
 	
 	public function setting(){
-		$header_data['title'] = "ACCOUNT SETTINGS";
-		$this->load->view('include/header',$header_data);
-		$this->load->view('include/menu_user');
-		$this->load->view('peternity_user/settings');
-		$this->load->view('include/footer');
-		
+		$rules = array(
+                    array('field'=>'fname', 'label'=>'First Name', 'rules'=>'required'),
+                    array('field'=>'lname', 'label'=>'Last Name', 'rules'=>'required'),
+                    array('field'=>'email', 'label'=>'Email', 'rules'=>'required'),
+					array('field'=>'username', 'label'=>'Username', 'rules'=>'required'),
+					array('field'=>'password', 'label'=>'Password', 'rules'=>'required'),
+					array('field'=>'sex', 'label'=>'Sex', 'rules'=>'required'),
+					array('field'=>'birthdate', 'label'=>'Birthday', 'rules'=>'required')
+                );
+        $this->form_validation->set_rules($rules);
+		$this->form_validation->set_error_delimiters('<p class="error">', '</p>');
+		if($this->form_validation->run()==FALSE){
+			$header_data['title'] = "ACCOUNT SETTINGS";
+			$this->load->view('include/header',$header_data);
+			$this->load->view('include/menu_user');
+			$this->load->view('peternity_user/settings');
+			$this->load->view('include/footer');
+		}
+		else{
+			$settings=array('fname'=>$_POST['fname'],'lname'=>$_POST['lname'],'username'=>$_POST['username'],'password'=>$_POST['password'],'sex'=>$_POST['sex'],'birthdate'=>$_POST['birthdate']);
+            $this->Peter->create_ownerinfo($settings);
+            redirect('user');
+		}
 	}
 }
