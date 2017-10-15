@@ -1,73 +1,12 @@
 
          <div class="col-md-12">
          <div class="panel with-nav-tabs panel">
-            <div class="panel-heading">
-			<button type="button" class="close" data-dismiss="modal">&times;</button>
-               <ul class="nav nav-tabs">
-                  <li class="active"><a href="#login" data-toggle="tab"> Login </a></li>
-                  <li><a href="#signup" data-toggle="tab"> Signup </a></li>
-               </ul>
-            </div>
+           
 
             <div class="panel-body">
                <div class="tab-content">
-			   <form method="post">
-                  <div id="login" class="tab-pane fade in active register">
-                     <div class="container-fluid">
-                        <div class="row">
-                              <h2 class="text-center heading" style="color: #E9967A;"> <strong> LOGIN </strong></h2>
-
-                             
-                                 <div class="col-xs-12 col-sm-12 col-md-12">
-                                    <div class="form-group">
-                                       <div class="input-group">
-                                          <div class="input-group-addon">
-                                             <span class="glyphicon glyphicon-user"></span>
-                                          </div>
-                                          <input type="text" placeholder="User Name" id="username" name="username" class="form-control sm">
-                                       </div>
-                                    </div>
-                                 </div>
-                             
-
-                              
-                                 <div class="col-xs-12 col-sm-12 col-md-12">
-                                    <div class="form-group">
-                                       <div class="input-group">
-                                          <div class="input-group-addon">
-                                             <span class="glyphicon glyphicon-lock"></span>
-                                          </div>
-
-                                          <input type="password" placeholder="Password" name="password" id="password" class="form-control sm">
-                                       </div>
-                                    </div>
-                                 </div>
-                              
-
-                              <div class="col-xs-12 col-sm-12 col-md-12">
-                                 <div class="col-xs-6 col-sm-6 col-md-6">
-                                    <div class="form-group">
-                                       <input type="checkbox" name="check" checked class="sm"> Remember Me
-                                    </div>
-                                 </div>
-
-                                  <div class="col-xs-6 col-sm-6 col-md-6">
-                                    <div class="form-group">
-                                       <a href="#forgot" data-toggle="modal" class="sm"> Forgot Password? </a>
-                                    </div>
-                                 </div>
-                              </div>
-                             
-                             
-                                 <div class="col-xs-12 col-sm-12 col-md-12">
-                                    <button type="submit" class="btn  btn-block btn-lg heading" value="signin"> LOGIN</button>
-                                 </div>
-                            
-                        </div>
-                     </div> 
-                  </div>
-			</form>
-                  <div id="signup" class="tab-pane fade">
+                  <div id="signup" class="tab-pane fade in active register">
+				   <?php echo form_open('peternity/signup');//this is equal to <form method="post" accept-charset="utf-8" action="http://localhost/Pet_Adoption/peternity/signup"?>
                      <div class="container-fluid">
                         <div class="row">
                               <h2 class="text-center heading" style="color: #E9967A;"> <Strong> Sign Up </Strong></h2> 
@@ -78,7 +17,7 @@
                                              <div class="input-group-addon iga1">
                                                 <span class="glyphicon glyphicon-user"></span>
                                              </div>
-                                             <input type="text" class="form-control sm" placeholder="Enter Name" name="name">
+                                             <input type="text" class="form-control sm" placeholder="Username" name="uname">
                                           </div>
                                        </div>
                                     </div>
@@ -91,7 +30,7 @@
                                              <div class="input-group-addon iga1">
                                                 <span class="glyphicon glyphicon-envelope"></span>
                                              </div>
-                                             <input type="email" class="form-control sm" placeholder="Enter E-Mail" name="mail">
+                                             <input type="email" class="form-control sm" placeholder="Enter E-Mail" name="email">
                                           </div>
                                        </div>
                                     </div>
@@ -116,15 +55,24 @@
                                           <button type="submit" class="btn btn-lg btn-block heading" value="Submit"> Register</button>
                                        </div>
                                     </div>
+									</form>
+									
+									   <div class="col-xs-6 col-sm-6 col-md-6">
+                                    <div class="form-group">
+                                       Already have an account? <a href="<?php echo base_url('peternity/')?>" data-toggle="modal" class="sm"> Sign-in. </a>
+                                    </div>
+                                 </div>
+                              </div>
                                 
                         </div>
                      </div>
+					
                   </div>
                </div>
             </div>
          </div>
       </div>
-
+	
 
 
 
