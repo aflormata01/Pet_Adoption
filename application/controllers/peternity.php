@@ -112,6 +112,8 @@ class peternity extends CI_Controller {
 		}else{
 			$signupform=array('username'=>$_POST['uname'],'password'=>$_POST['pass']);
             $this->Peter->create_owneraccount($signupform);
+			$signupaccform=array('username'=>$_POST['uname'],'fname'=>$_POST['fname'],'lname'=>$_POST['lname']);
+            $this->Peter->create_ownerinfo($signupaccform);
             redirect('user');
 		}
 	}
