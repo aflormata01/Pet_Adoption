@@ -4,9 +4,9 @@
   </div>
   
   <div class="modal-body">
-  <div >
+  <div>
     <div class="form-group text-left">
-	<h2 class="font text-center">ADD DISCUSSION</h2>
+	<h2 class="font text-center heading">ADD DISCUSSION</h2>
 		<label class="control-label" for="title">Title: </label><?php echo form_error('title', '<p class="text-danger">', '</p>'); ?>
 		<input class="form-control" type="text" id="title" name="title" type="text" value="<?php echo set_value('title'); ?>"/>
     </div>

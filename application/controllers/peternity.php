@@ -100,6 +100,7 @@ class peternity extends CI_Controller {
 		
 	}
 	public function signup(){
+
 		$rules = array(
                     array('field'=>'uname', 'label'=>'username', 'rules'=>'required'),
 					array('field'=>'pass', 'label'=>'password', 'rules'=>'required')

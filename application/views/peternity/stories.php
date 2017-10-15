@@ -1,5 +1,5 @@
 <div class="container">
-	<h1 class="text-center">STORIES</h1>
+	<h2 class="text-center heading ">STORIES</h2>
 	
 		<div class="panel container text-center">
 		<table class="table table-bordered">
@@ -11,7 +11,7 @@ foreach($stories as $d){
 			<table class="table-responsive">
 			<thead>
 			<th><img src="assets/images/hh.jpg" style="width: 150px; height: 100px;" /></th>
-			<th class="gap"><a href="">'.$d['body'].' </a></th>
+			<th class="gap sm"><a href="" class="sm">'.$d['body'].' </a></th>
 			</thead>
 			</table>
 			

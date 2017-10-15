@@ -1,73 +1,73 @@
 <?php echo form_open('peternity/signup'); //this is equal to <form method="post" accept-charset="utf-8" action="http://localhost/Pet_Adoption/peternity/signup"?>
-<div class="container">
-  <div class="container">
-  <h2>Sign up form</h2>
-  <form class="form-horizontal" action="">
-    <div class="form-group">
-      <label class="control-label col-sm-2" for="fname">First Name: </label>
-      <div class="col-sm-4">
-        <input type="text" class="form-control" id="fname" placeholder="Enter first name" name="fname" value="<?php echo set_value('fname'); ?>">
-      </div>
-	  <?php echo form_error('fname', '<p class="text-danger">', '</p>'); ?>
-	  </div>
-
-	<div class="form-group">
-      <label class="control-label col-sm-2" for="lname">Last Name:</label>
-      <div class="col-sm-4">
-        <input type="text" class="form-control" id="lname" placeholder="Enter last name" name="lname" value="<?php echo set_value('lname'); ?>">
-      </div>
-	  <?php echo form_error('lname', '<p class="text-danger">', '</p>'); ?>
-	  </div>
-	  
-	  <div class="form-group">
-      <label class="control-label col-sm-2" for="email">Email:</label>
-      <div class="col-sm-4">
-          <input type="text" class="form-control" id="email" placeholder="Enter email" name="email" value="<?php echo set_value('email'); ?>">
-      </div>
-	  <?php echo form_error('email', '<p class="text-danger">', '</p>'); ?>
-    </div>
-	<div class="form-group">
-      <label class="control-label col-sm-2" for="mname">User Name:</label>
-      <div class="col-sm-4">
-         <input type="text" class="form-control" id="username" placeholder="Enter user name" name="username" value="<?php echo set_value('username'); ?>">
-      </div>
-	  <?php echo form_error('username', '<p class="text-danger">', '</p>'); ?>
-	</div>
-	
-    <div class="form-group">
-      <label class="control-label col-sm-2" for="pwd">Password:</label>
-      <div class="col-sm-4">          
-         <input type="text" class="form-control" id="password" placeholder="Enter password" name="password" value="<?php echo set_value('password'); ?>">
-      </div>
-	  <?php echo form_error('password', '<p class="text-danger">', '</p>'); ?>
-    </div>
-	<div class="form-group">
-		<label class="control-label col-sm-2" for="sex">Sex</label>
-		<input type="radio" class="" id="sex" name="sex" value="M" value="<?php echo set_value('birthdate'); ?>" /> Male
-			<input type="radio" class="" id="sex" name="sex" value="F" value="<?php echo set_value('birthdate'); ?>" /> Female
-		</div>
-		<?php echo form_error('sex', '<p class="text-danger">', '</p>'); ?>
-	
-		
-	<div class="form-group">
-    <label class="control-label col-sm-2" for="birthdate">Birthday</label>
-    <div class="col-sm-2">
-           <input type="date" class="form-control" id="birthdate" placeholder="birthday" name="birthdate" value="<?php echo set_value('birthdate'); ?>"/>
-	</div>
-	<?php echo form_error('birthdate', '<p class="text-danger">', '</p>'); ?>
-	</div>
-			
-    <div class="form-group">        
-      <div class="col-sm-offset-2 col-sm-10">
-        <div class="checkbox">
-          <label><input type="checkbox" name="remember">Remember me</label>
-        </div>
-      </div>
-    </div>
-    <div class="form-group">        
-      <div class="col-sm-offset-2 col-sm-10">
-        <button type="submit" class="btn btn-default">Submit</button>
-      </div>
-    </div>
-  </form>
+                                  
+<div class="col-md-12">
+         <div class="panel with-nav-tabs panel">
+            <div class="panel-heading">
+			<button type="button" class="close" data-dismiss="modal">&times;</button>
+               <ul class="nav nav-tabs">
+                  <li></li>
+               </ul>
 </div>
+		  <div class="modal-body">	   
+			   <div class="tab-pane">
+                     <div class="container-fluid">
+                      <div> 
+                              <h2 class="text-center heading" style="color: #E9967A;">  Sign Up </h2> 
+                                 <div class="row">
+                                    <div class="col-xs-12 col-sm-12 col-md-12">
+                                       <div class="form-group">
+                                          <div class="input-group">
+                                             <div class="input-group-addon iga1">
+                                                <span class="glyphicon glyphicon-user"></span>
+                                             </div>
+											 <label for="username"></label>
+											 <?php echo form_error('username', '<p class="text-danger">', '</p>'); ?>
+                                             <input type="text" class="form-control sm" placeholder="Enter User Name" id="username" name="username" value="<?php echo set_value('username'); ?>" />
+                                          </div>
+                                       </div>
+                                    </div>
+                                
+
+                                 
+                                    <div class="col-xs-12 col-sm-12 col-md-12">
+                                       <div class="form-group">
+                                          <div class="input-group">
+                                             <div class="input-group-addon iga1">
+                                                <span class="glyphicon glyphicon-envelope"></span>
+                                             </div>
+											 <label for="email"></label>
+											 <?php echo form_error('email', '<p class="text-danger">', '</p>'); ?>
+                                             <input type="email" class="form-control sm" placeholder="Enter E-Mail" id="email" name="email" value="<?php echo set_value('email'); ?>" />
+                                          </div>
+                                       </div>
+                                    </div>
+                                
+                                
+                                    <div class="col-xs-12 col-sm-12 col-md-12">
+                                       <div class="form-group">
+                                          <div class="input-group">
+                                             <div class="input-group-addon iga1">
+                                                <span class="glyphicon glyphicon-lock"></span>
+                                             </div>
+											 <label for="password"></label>
+											 <?php echo form_error('password', '<p class="text-danger">', '</p>'); ?>
+                                             <input type="password" class="form-control sm" placeholder="Enter Password" id="password" name="password" value="<?php echo set_value('password'); ?>" />
+                                          </div> 
+                                       </div>
+                                    </div>
+                                
+                                 
+                                    <div class="col-xs-12 col-sm-12 col-md-12">
+                                       <div class="form-group">
+                                          <button type="submit" class="btn btn-lg btn-block heading" value="Submit"> Register</button>
+                                       </div>
+                                    </div>
+                             </form>    
+                        </div>
+                        </div>
+                     </div>
+                     </div>
+                     </div>
+                     </div>
+                     </div>
+                     </div>
