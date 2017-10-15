@@ -154,7 +154,8 @@ class user extends CI_Controller {
 		
 	}
 	public function profile($user){
-		$result_array = $this->Peter->read_ownerinfo(array('username',$user));
+			$condition = array('username' => $user);
+			$result_array = $this->Peter->read_ownerinfo($condition);
 			$data['profile'] = $result_array;
 			$header_data['title'] = "USER HOME";
 			$this->load->view('include/header',$header_data);
