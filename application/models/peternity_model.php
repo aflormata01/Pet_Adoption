@@ -185,10 +185,6 @@ class peternity_model extends CI_model
 		}
 		
 		
-		
-		
-		
-		
 		public function create_ownerinfo($data)
 		{
 			$this->db->insert($this->ownerinfo, $data);

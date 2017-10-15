@@ -11,14 +11,14 @@ class user extends CI_Controller {
 			redirect('login','refresh');
 		
 		$this->load->model('peternity_model','Peter');
+		$data['user'] = $user;
+		$this->load->view('include/menu_user',$data);
 	}
 	
 	public function index(){	
 		$user =  $this->session->userdata('username');
 		$header_data['title'] = "Peternity";
 		$this->load->view('include/header',$header_data);
-		$data['user'] = $user;
-		$this->load->view('include/menu_user',$data);
 		$this->load->view('login-home');
 		$this->load->view('include/footer');	
 	}
@@ -26,8 +26,6 @@ class user extends CI_Controller {
 		$user =  $this->session->userdata('username');
 		$header_data['title'] = "PET CATALOGUE";
 		$this->load->view('include/header',$header_data);
-		$data['user'] = $user;
-		$this->load->view('include/menu_user',$data);
 		$this->load->view('peternity_user/catalogue');
 		$this->load->view('include/footer');
 		
@@ -39,8 +37,6 @@ class user extends CI_Controller {
 		
 		$header_data['title'] = "RESCUED PETS";
 		$this->load->view('include/header',$header_data);
-		$data['user'] = $user;
-		$this->load->view('include/menu_user',$data);
 		$this->load->view('peternity_user/rescuedpets',$data);
 		$this->load->view('include/footer');
 		
@@ -52,8 +48,6 @@ class user extends CI_Controller {
 		
 		$header_data['title'] = "PETS FOR ADOPTION";
 		$this->load->view('include/header',$header_data);
-		$data['user'] = $user;
-		$this->load->view('include/menu_user',$data);
 		$this->load->view('peternity_user/petforadoption');
 		$this->load->view('include/footer');
 		
@@ -83,8 +77,6 @@ class user extends CI_Controller {
 		
 		$header_data['title'] = "STORIES";
 		$this->load->view('include/header',$header_data);
-		$data['user'] = $user;
-		$this->load->view('include/menu_user',$data);
 		$this->load->view('peternity_user/userstories',$data);
 		$this->load->view('include/footer');
 	}
@@ -110,8 +102,6 @@ class user extends CI_Controller {
 		
 		$header_data['title'] = "DISCUSSIONS";
 		$this->load->view('include/header',$header_data);
-		$data['user'] = $user;
-		$this->load->view('include/menu_user',$data);
 		$this->load->view('peternity_user/userdiscussion',$data);
 		$this->load->view('include/footer');
 		
@@ -138,8 +128,6 @@ class user extends CI_Controller {
 		
 		$header_data['title'] = "NEWS";
 		$this->load->view('include/header',$header_data);
-		$data['user'] = $user;
-		$this->load->view('include/menu_user',$data);
 		$this->load->view('peternity_user/news',$data);
 		$this->load->view('include/footer');
 		
@@ -151,8 +139,6 @@ class user extends CI_Controller {
 		
 		$header_data['title'] = "UPCOMING EVENTS";
 		$this->load->view('include/header',$header_data);
-		$data['user'] = $user;
-		$this->load->view('include/menu_user',$data);
 		$this->load->view('peternity_user/events',$data);
 		$this->load->view('include/footer');		
 	}
@@ -163,8 +149,6 @@ class user extends CI_Controller {
 		
 		$header_data['title'] = "USER HOME";
 		$this->load->view('include/header',$header_data);
-		$data['user'] = $user;
-		$this->load->view('include/menu_user',$data);
 		$this->load->view('peternity_user/faqs',$data);
 		$this->load->view('include/footer');
 		
@@ -176,8 +160,6 @@ class user extends CI_Controller {
 			$data['profile'] = $result_array;
 			$header_data['title'] = "USER HOME";
 			$this->load->view('include/header',$header_data);
-			$data['user'] = $user;
-			$this->load->view('include/menu_user',$data);
 			$this->load->view('peternity_user/userprofile',$data);
 			$this->load->view('include/footer');
 		
@@ -213,9 +195,7 @@ class user extends CI_Controller {
 		if($this->form_validation->run()==FALSE){
 
 			$header_data['title'] = "ACCOUNT SETTINGS";
-			$this->load->view('include/header',$header_data);
-			$data['user'] = $user;
-			$this->load->view('include/menu_user',$data);			
+			$this->load->view('include/header',$header_data);		
 			$this->load->view('peternity_user/settings',$data);
 			$this->load->view('include/footer');
 		}
