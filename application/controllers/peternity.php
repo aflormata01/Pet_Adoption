@@ -120,8 +120,12 @@ class peternity extends CI_Controller {
 	
 	public function signin(){
 
+		$header_data['title'] = "SIGN IN";
+		$this->load->view('include/header',$header_data);
+		$this->load->view('include/menu');
+		$this->load->view('peternity/sign-in');
+		$this->load->view('include/footer');
 		
-			$this->load->view('peternity/sign-in');
 		
 	}
 	

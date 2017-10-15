@@ -55,7 +55,7 @@
 						 <span class="glyphicon glyphicon-lock"></span> <label for="password"> PASSWORD: </label>
 						<input type="password" class="form-control" id="password" name="password"  />
 						<h5 class="heading"><button type="submit" class="btn btn-muted col-xs-5 login" value="Login"><span class="glyphicon glyphicon-log-in"></span> LOG IN</h5></button>
-						<h5 class="heading"><button type="submit" class="btn btn-muted col-xs-5 login margintop" value="Login"><a href="peternity/signin" class="heading"><span class="glyphicon glyphicon-log-in"></span> SIGN-IN</a></h5></button>
+						<h5 class="heading"><button type="submit" class="btn btn-muted col-xs-5 login margintop" value="Login"><a href="peternity/signin" class="heading"><span class="glyphicon glyphicon-log-in"></span> SIGN UP</a></h5></button>
 			</form>
 
 		

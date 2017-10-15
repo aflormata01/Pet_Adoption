@@ -1,5 +1,5 @@
 <nav class="navbar navbar-default">
-  <div class="container">
+  <div class="container ">
     <div class="navbar-header menupad">
       <a class="navbar-brand" href=""><img src="<?php echo base_url('assets/images/logo.png'); ?>" /></a>
     </div>
