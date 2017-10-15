@@ -79,46 +79,42 @@ class peternity extends CI_Controller {
 		
 	}
 	public function upcomingevents(){
+		$result_array = $this->Peter->read_events();
+        $data['events'] = $result_array;
+		
 		$header_data['title'] = "UPCOMING EVENTS";
 		$this->load->view('include/header',$header_data);
 		$this->load->view('include/menu');
-		$this->load->view('peternity/events');
+		$this->load->view('peternity/events',$data);
 		$this->load->view('include/footer');		
 	}
 	public function faqs(){
+		$result_array = $this->Peter->read_faqs();
+        $data['faqs'] = $result_array;
+		
 		$header_data['title'] = "USER HOME";
 		$this->load->view('include/header',$header_data);
 		$this->load->view('include/menu');
-		$this->load->view('peternity/faqs');
+		$this->load->view('peternity/faqs',$data);
 		$this->load->view('include/footer');
 		
 	}
-	public function signup()
-	{
+	public function signup(){
 		$rules = array(
-                    array('field'=>'fname', 'label'=>'First Name', 'rules'=>'required'),
-                    array('field'=>'lname', 'label'=>'Last Name', 'rules'=>'required'),
-                    array('field'=>'email', 'label'=>'Email', 'rules'=>'required'),
-					array('field'=>'username', 'label'=>'Username', 'rules'=>'required'),
-					array('field'=>'password', 'label'=>'Password', 'rules'=>'required'),
-					array('field'=>'sex', 'label'=>'Sex', 'rules'=>'required'),
-					array('field'=>'birthdate', 'label'=>'Birthday', 'rules'=>'required')
-                );
-        $this->form_validation->set_rules($rules);
+                    array('field'=>'uname', 'label'=>'username', 'rules'=>'required'),
+					array('field'=>'pass', 'label'=>'password', 'rules'=>'required')
+				);
+		$this->form_validation->set_rules($rules);
 		$this->form_validation->set_error_delimiters('<p class="error">', '</p>');
 		if($this->form_validation->run()==FALSE){
-			$header_data['title'] = "SIGN-UP";
-			$this->load->view('include/header',$header_data);
-			$this->load->view('include/menu-signup');
-			$this->load->view('peternity/sign-up');
-			$this->load->view('include/footer');
-		}
-		else{
-			$signupform=array('fname'=>$_POST['fname'],'lname'=>$_POST['lname'],'username'=>$_POST['username'],'password'=>$_POST['password'],'sex'=>$_POST['sex'],'birthdate'=>$_POST['birthdate']);
-            $this->Peter->create_form($signupform);
-            redirect('login-home');
+			$this->load->view('peternity/sign-in');
+		}else{
+			$signupform=array('username'=>$_POST['uname'],'password'=>$_POST['pass']);
+            $this->Peter->create_owneraccount($signupform);
+            redirect('user');
 		}
 	}
+	
 	
 	/*public function loghome(){
 		/*if($this->session->userdata('logged_in')){
