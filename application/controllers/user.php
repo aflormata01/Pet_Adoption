@@ -115,7 +115,7 @@ class user extends CI_Controller {
 		}else{
 			$addDiscuss=array('title'=>$_POST['title'],'body'=>$_POST['body']);
             $this->Peter->create_discussion($addDiscuss);
-            redirect('peternity_user/userDiscussion');
+            redirect('user/userDiscussion');
 		}
 	}
 	public function news(){
