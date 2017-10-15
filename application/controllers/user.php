@@ -12,10 +12,13 @@ class user extends CI_Controller {
 		
 		$this->load->model('peternity_model','Peter');
 	}
+	
 	public function index(){	
+		$user =  $this->session->userdata('username');
 		$header_data['title'] = "Peternity";
 		$this->load->view('include/header',$header_data);
-		$this->load->view('include/menu_user');
+		$data['user'] = $user;
+		$this->load->view('include/menu_user',$data);
 		$this->load->view('login-home');
 		$this->load->view('include/footer');	
 	}
@@ -151,21 +154,20 @@ class user extends CI_Controller {
 		
 	}
 	public function profile($user){
-		$result_array = $this->Peter->read_ownerinfo(array('username',$user));
-		if(count($result_array)>0){
+			$condition = array('username' => $user);
+			$result_array = $this->Peter->read_ownerinfo($condition);
 			$data['profile'] = $result_array;
-			
 			$header_data['title'] = "USER HOME";
 			$this->load->view('include/header',$header_data);
-			$this->load->view('include/menu_user');
+			$data['user'] = $user;
+			$this->load->view('include/menu_user',$data);
 			$this->load->view('peternity_user/userprofile',$data);
 			$this->load->view('include/footer');
-		}else{
-			echo "hello";
-		}
+		
 	}
 	
-	public function setting(){
+	public function setting($user){
+		$result_array = $this->Peter->read_ownerinfo(array('username',$user));
 		$rules = array(
                     array('field'=>'fname', 'label'=>'First Name', 'rules'=>'required'),
                     array('field'=>'lname', 'label'=>'Last Name', 'rules'=>'required'),
@@ -178,16 +180,20 @@ class user extends CI_Controller {
         $this->form_validation->set_rules($rules);
 		$this->form_validation->set_error_delimiters('<p class="error">', '</p>');
 		if($this->form_validation->run()==FALSE){
+
 			$header_data['title'] = "ACCOUNT SETTINGS";
 			$this->load->view('include/header',$header_data);
-			$this->load->view('include/menu_user');
+			$data['user'] = $user;
+			$this->load->view('include/menu_user',$data);
 			$this->load->view('peternity_user/settings');
 			$this->load->view('include/footer');
 		}
+
 		else{
 			$settings=array('fname'=>$_POST['fname'],'lname'=>$_POST['lname'],'username'=>$_POST['username'],'password'=>$_POST['password'],'sex'=>$_POST['sex'],'birthdate'=>$_POST['birthdate']);
             $this->Peter->create_ownerinfo($settings);
             redirect('user');
 		}
+
 	}
 }

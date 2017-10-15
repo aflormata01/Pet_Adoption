@@ -26,8 +26,8 @@
       <li class="dropdown userpad">
         <a class="sm" class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"><span class="caret"></span></span></a>
         <ul class="dropdown-menu table-hover">
-          <li class="sm"><a href="<?php echo base_url('user/profile')?>">Your Profile</a></li>
-          <li class="sm"><a href="<?php echo base_url('user/setting')?>">Settings</a></li>
+          <li class="sm"><a href="<?php echo base_url('user/profile/'.$user.'')?>">Your Profile</a></li>
+          <li class="sm"><a href="<?php echo base_url('user/setting/'.$user.'')?>">Settings</a></li>
 		  <li class="sm"><a href="<?php echo base_url('logout');?>">Logout</a></li>
         </ul>
       </li>
