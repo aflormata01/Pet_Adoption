@@ -4,7 +4,7 @@
   </div>
   
   <div class="modal-body">
-  <div >
+  <div>
     <div class="form-group text-left">
 	<h2 class="font text-center heading">ADD DISCUSSION</h2>
 		<label class="control-label" for="title">Title: </label><?php echo form_error('title', '<p class="text-danger">', '</p>'); ?>

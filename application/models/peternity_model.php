@@ -10,6 +10,7 @@ class peternity_model extends CI_model
 	private $disc_comments = "disc_comments";
 	private $ownedpets = "ownedpets";
 	private $owneraccount = "owneraccount";
+	private $account = "account";
 	private $ownerinfo = "ownerinfo";
 	private $petrescued = "petrescued";
 	private $petadoption = "petadoption";
@@ -212,6 +213,33 @@ class peternity_model extends CI_model
 			 if ( isset($condition)) $this->db->where($condition);
 			 $query=$this->db->get();
 			 return $query->result_array(); 
+		}	
+		
+		
+		public function create_account($data)
+		{
+			$this->db->insert($this->account, $data);
+			return TRUE;	
+		}
+		public function update_account()
+		{
+			$this->db->where($data);
+			$this->db->update($this->account, $data);
+			return TRUE;	
+		}
+		public function del_account()
+		{
+			$this->db->where($data);
+			$this->db->delete($this->account);
+			return TRUE;	
+		}
+		public function read_account($condition=null)
+		{
+			 $this->db->select('*');
+			 $this->db->from($this->account);
+			 if ( isset($condition)) $this->db->where($condition);
+			 $query=$this->db->get();
+			 return $query->result_array(); 
 		}
 		
 		
@@ -314,9 +342,9 @@ class peternity_model extends CI_model
 			$query= $this->db->get();
 			return $query-> result_array();
 		}
-		public function create_form($signupform)
+		public function create_form($data)
 		{
-			$this->db->insert($this->ownerinfo, $signupform);
+			$this->db->insert($this->ownerinfo, $data);
 			return TRUE;
 		}
 		

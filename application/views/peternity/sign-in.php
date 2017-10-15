@@ -11,6 +11,7 @@
 
             <div class="panel-body">
                <div class="tab-content">
+			   <form method="post">
                   <div id="login" class="tab-pane fade in active register">
                      <div class="container-fluid">
                         <div class="row">
@@ -59,13 +60,13 @@
                              
                              
                                  <div class="col-xs-12 col-sm-12 col-md-12">
-                                    <button type="submit" class="btn  btn-block btn-lg heading" value="login"> LOGIN</button>
+                                    <button type="submit" class="btn  btn-block btn-lg heading" value="signin"> LOGIN</button>
                                  </div>
                             
                         </div>
                      </div> 
                   </div>
-
+			</form>
                   <div id="signup" class="tab-pane fade">
                      <div class="container-fluid">
                         <div class="row">
@@ -112,7 +113,7 @@
                                 
                                     <div class="col-xs-12 col-sm-12 col-md-12">
                                        <div class="form-group">
-                                          <button type="submit" class="btn btn-lg btn-block heading"> Register</button>
+                                          <button type="submit" class="btn btn-lg btn-block heading" value="Submit"> Register</button>
                                        </div>
                                     </div>
                                 
