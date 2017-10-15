@@ -39,33 +39,34 @@
   <div class="container">
   <br/><br/>
   <div class="form-horizontal">
+  <?php echo validation_errors(); ?>
   <?php echo form_open('user/setting'); //this is equal to <form method="post" accept-charset="utf-8" action="http://localhost/Pet_Adoption/user/setting"?>
   
     <div class="form-group">
       <label class="control-label col-sm-2" for="fname">First Name: </label>
       <div class="col-sm-4">
-        <input type="fname" class="form-control" id="fname" placeholder="Enter first name" name="fname" value="<?php echo set_value('fname'); ?>">
+        <input type="fname" class="form-control" id="fname" name="fname" value="<?php echo $d['fname'];?>">
       </div>
 	  </div>
 
 	<div class="form-group">
       <label class="control-label col-sm-2" for="lname">Last Name:</label>
       <div class="col-sm-4">
-        <input type="lname" class="form-control" id="lname" placeholder="Enter last name" name="lname" value="<?php echo set_value('lname'); ?>">
+        <input type="lname" class="form-control" id="lname" name="lname" value="<?php echo $d['lname'];?>">
       </div>
 	  </div>
 	  
 	  <div class="form-group">
       <label class="control-label col-sm-2" for="email">Email:</label>
       <div class="col-sm-4">
-        <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" value="<?php echo set_value('email'); ?>">
+        <input type="email" class="form-control" id="email" name="email" value="<?php echo $d['email'];?>">
       </div>
     </div>
 	
 	<div class="form-group">
       <label class="control-label col-sm-2" for="username">User Name:</label>
       <div class="col-sm-4">
-        <input type="uname" class="form-control" id="username" placeholder="Enter user name" name="username" value="<?php echo set_value('username'); ?>">
+        <input type="uname" class="form-control" id="username" name="username" value="<?php echo $d['username'];?>">
       </div>
 	</div>
 	
@@ -80,15 +81,15 @@
     <div class="form-group">
       <label class="control-label col-sm-2" for="password">Password:</label>
       <div class="col-sm-4">          
-        <input type="password" class="form-control" id="password" placeholder="Enter password" name="password" value="<?php echo set_value('password'); ?>">
+        <input type="password" class="form-control" id="password" name="password" value="<?php echo $d['password']; ?>">
       </div>
     </div>
 	
 	<div class="form-group">
 		<label class="control-label col-sm-2" for="sex">Sex</label>
 		<div class="col-sm-6">
-		<input type="radio" class="" id="sex" name="sex" value="F" value="<?php echo set_value('sex'); ?>" /> Male
-		<input type="radio" class="" id="sex" name="sex" value="M" value="<?php echo set_value('sex'); ?>" /> Female
+		<input type="radio" class="" id="sex" name="sex" value="F" value="<?php echo $d['sex']; ?>" /> Male
+		<input type="radio" class="" id="sex" name="sex" value="M" value="<?php echo $d['sex'];?>" /> Female
 	</div>
 	</div>
 		
@@ -97,7 +98,7 @@
     <div class="col-sm-2">
       
 			
-                <input type="date" class="form-control" placeholder="bday" id="birthdate" name="birthdate" value="<?php echo set_value('birthdate'); ?>">
+                <input type="date" class="form-control" id="birthdate" name="birthdate" value="<?php echo $d['birthdate']; ?>">
 				
         
 			</div>
@@ -106,7 +107,7 @@
 
     <div class="form-group">        
       <div class="col-sm-offset-2 col-sm-10">
-        <button type="submit" class="btn btn-default">Save Changes</button>
+        <button type="submit" class="btn btn-default" value="Submit">Save Changes</button>
       </div>
     </div>
   </form>

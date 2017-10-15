@@ -4,8 +4,10 @@
 			<div class="panel-body">
                <div class="tab-content">
                   <div id="signup" class="tab-pane fade in active register">
-				   <?php echo form_open('peternity/signin');//this is equal to <form method="post" accept-charset="utf-8" action="http://localhost/Pet_Adoption/peternity/signup"?>
-                     <div class="container col-sm-4 text-center centered">
+
+				   <?php echo form_open('peternity/signup');//this is equal to <form method="post" accept-charset="utf-8" action="http://localhost/Pet_Adoption/peternity/signup"?>
+                     <div class="container-fluid">
+
                         <div class="row">
                               <h2 class="text-center heading" style="color: #E9967A;"> <Strong> Sign Up </Strong></h2> 
 							  

@@ -185,20 +185,14 @@ class peternity_model extends CI_model
 		}
 		
 		
-		
-		
-		
-		
 		public function create_ownerinfo($data)
 		{
 			$this->db->insert($this->ownerinfo, $data);
 			return TRUE;	
 		}
-		public function update_ownerinfo()
+		public function update_ownerinfo($settings)
 		{
-			$this->db->where($data);
-			$this->db->update($this->ownerinfo, $data);
-			return TRUE;	
+			$this->db->replace($this->ownerinfo,$settings);
 		}
 		public function del_ownerinfo()
 		{
@@ -216,31 +210,31 @@ class peternity_model extends CI_model
 		}	
 		
 		
-		public function create_account($data)
-		{
-			$this->db->insert($this->account, $data);
-			return TRUE;	
-		}
-		public function update_account()
-		{
-			$this->db->where($data);
-			$this->db->update($this->account, $data);
-			return TRUE;	
-		}
-		public function del_account()
-		{
-			$this->db->where($data);
-			$this->db->delete($this->account);
-			return TRUE;	
-		}
-		public function read_account($condition=null)
-		{
-			 $this->db->select('*');
-			 $this->db->from($this->account);
-			 if ( isset($condition)) $this->db->where($condition);
-			 $query=$this->db->get();
-			 return $query->result_array(); 
-		}
+		// public function create_account($data)
+		// {
+			// $this->db->insert($this->account, $data);
+			// return TRUE;	
+		// }
+		// public function update_account()
+		// {
+			// $this->db->where($data);
+			// $this->db->update($this->account, $data);
+			// return TRUE;	
+		// }
+		// public function del_account()
+		// {
+			// $this->db->where($data);
+			// $this->db->delete($this->account);
+			// return TRUE;	
+		// }
+		// public function read_account($condition=null)
+		// {
+			 // $this->db->select('*');
+			 // $this->db->from($this->account);
+			 // if ( isset($condition)) $this->db->where($condition);
+			 // $query=$this->db->get();
+			 // return $query->result_array(); 
+		// }
 		
 		
 		
@@ -272,6 +266,12 @@ class peternity_model extends CI_model
 			 return $query-> result_array();
 		 
 		}
+		function getLastRecordID(){
+        $this->db->select_max('username');
+        $query = $this->db->get($this->owneraccount,1);
+        
+        return $query->row_array();
+    }
 		
 		
 		public function create_petrescued($data)
