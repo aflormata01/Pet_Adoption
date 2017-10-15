@@ -1,3 +1,4 @@
+
 <div class="container">
     <div class="row profile col-md-12"><br/>
 		<div class="col-md-3">
@@ -37,56 +38,58 @@
 			  <div class="container">
   <div class="container">
   <br/><br/>
-  <form class="form-horizontal" action="">
+  <div class="form-horizontal">
+  <?php echo form_open('user/setting'); //this is equal to <form method="post" accept-charset="utf-8" action="http://localhost/Pet_Adoption/user/setting"?>
+  
     <div class="form-group">
       <label class="control-label col-sm-2" for="fname">First Name: </label>
       <div class="col-sm-4">
-        <input type="fname" class="form-control" id="fname" placeholder="Enter first name" name="fname">
+        <input type="fname" class="form-control" id="fname" placeholder="Enter first name" name="fname" value="<?php echo set_value('fname'); ?>">
       </div>
 	  </div>
 
 	<div class="form-group">
       <label class="control-label col-sm-2" for="lname">Last Name:</label>
       <div class="col-sm-4">
-        <input type="lname" class="form-control" id="lname" placeholder="Enter last name" name="lname">
+        <input type="lname" class="form-control" id="lname" placeholder="Enter last name" name="lname" value="<?php echo set_value('lname'); ?>">
       </div>
 	  </div>
 	  
 	  <div class="form-group">
       <label class="control-label col-sm-2" for="email">Email:</label>
       <div class="col-sm-4">
-        <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+        <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" value="<?php echo set_value('email'); ?>">
       </div>
     </div>
 	
 	<div class="form-group">
-      <label class="control-label col-sm-2" for="mname">User Name:</label>
+      <label class="control-label col-sm-2" for="username">User Name:</label>
       <div class="col-sm-4">
-        <input type="uname" class="form-control" id="uname" placeholder="Enter user name" name="uname">
+        <input type="uname" class="form-control" id="username" placeholder="Enter user name" name="username" value="<?php echo set_value('username'); ?>">
       </div>
 	</div>
 	
     <div class="form-group">
-      <label class="control-label col-sm-2" for="pwd">Password:</label>
+      <label class="control-label col-sm-2" for="password">Password:</label>
       <div class="col-sm-4">          
-        <input type="password" class="form-control" id="password" placeholder="Enter password" name="password">
+        <input type="password" class="form-control" id="password" placeholder="Enter password" name="password" value="<?php echo set_value('password'); ?>">
       </div>
     </div>
 	
 	<div class="form-group">
 		<label class="control-label col-sm-2" for="sex">Sex</label>
 		<div class="col-sm-6">
-		<input type="radio" class="" id="sex" name="sex" value="M" /> Male
-		<input type="radio" class="" id="sex" name="sex" value="F" /> Female
+		<input type="radio" class="" id="sex" name="sex" value="F" value="<?php echo set_value('sex'); ?>" /> Male
+		<input type="radio" class="" id="sex" name="sex" value="M" value="<?php echo set_value('sex'); ?>" /> Female
 	</div>
 	</div>
 		
 	<div class="form-group">
-    <label class="control-label col-sm-2" for="birthday">Birthday</label>
+    <label class="control-label col-sm-2" for="birthdate" id="birthdate" name="birthdate">Birthday</label>
     <div class="col-sm-2">
       
 			
-                <input type="date" class="form-control" placeholder="bday">
+                <input type="date" class="form-control" placeholder="bday" id="birthdate" name="birthdate" value="<?php echo set_value('birthdate'); ?>">
 				
         
 			</div>
@@ -99,6 +102,7 @@
       </div>
     </div>
   </form>
+</div>
 </div>
             </div>
 		</div>
