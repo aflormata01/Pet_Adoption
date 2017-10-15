@@ -10,6 +10,18 @@
                      <div class="container-fluid">
                         <div class="row">
                               <h2 class="text-center heading" style="color: #E9967A;"> <Strong> Sign Up </Strong></h2> 
+							  
+							  <div class="col-xs-12 col-sm-12 col-md-12">
+                                       <div class="form-group">
+                                          <div class="input-group">
+                                             <div class="input-group-addon iga1">
+                                                <span class="glyphicon glyphicon-user"></span>
+                                             </div>
+                                             <input type="text" class="form-control sm" placeholder="First name" name="fname">
+                                             <input type="text" class="form-control sm" placeholder="Last name" name="lname">
+                                          </div>
+                                       </div>
+                                    </div>
                                  
                                     <div class="col-xs-12 col-sm-12 col-md-12">
                                        <div class="form-group">
@@ -23,20 +35,6 @@
                                     </div>
                                
 
-                                
-                                    <div class="col-xs-12 col-sm-12 col-md-12">
-                                       <div class="form-group">
-                                          <div class="input-group">
-                                             <div class="input-group-addon iga1">
-                                                <span class="glyphicon glyphicon-envelope"></span>
-                                             </div>
-                                             <input type="email" class="form-control sm" placeholder="Enter E-Mail" name="email">
-                                          </div>
-                                       </div>
-                                    </div>
-                                
-
-                                
                                     <div class="col-xs-12 col-sm-12 col-md-12">
                                        <div class="form-group">
                                           <div class="input-group">
