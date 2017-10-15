@@ -1,6 +1,7 @@
 /*peternity.css */
-    .navbar {margin-bottom: 0;border-radius: 0;background-color: #E9967A; }
-	.nav {margin-bottom: 0;border-radius: 0;background-color: #E9967A; }
+    .navbar {margin-bottom: 0;border-radius: 0;background-color: #ffcab2; }
+    .navbar-default{background-color: #ffcab2!important; }
+	.nav {margin-bottom: 0;border-radius: 0;background-color: #ffcab2; }
     .row.content {height: 100px}
 	.sidenav {padding-top: 20px; background-color: #f1f1f1;height: 100%;}
     .sidenav {height: auto;padding: 15px;}
@@ -13,9 +14,7 @@
 	.border{border: solid 2px orange;margin: 15px 0px 0px 0px;padding: 10px;}
 	.adoptborder{border: 4px solid #A55F00;}
 	.height{height: 500px;}
-
-	.menupad{padding-right:70px; background-color:#E9967A;}
-
+	.menupad{padding-right:70px; background-color:#ffcab2;}
 	.userpad{padding-right:54px;}
 	.auto{margin: auto; margin-top: 10px;}
 	.adoptimg{margin-top: 10px;}
@@ -34,6 +33,8 @@
 	.sm{font-size:  12px; font-family: Verdana;}
 	.sign{padding-left: 350px;}
 	.heart{border-radius: 50%; padding: 5px;}
+	.centered{margin-left: 350px;}
+	.signinbutton{margin-left: 90px;}
 	panel{margin-left: 600px; margin-right: 600px;}
 	button{margin:auto;}
 	h3, h5, label, th{font-family: Verdana;}
