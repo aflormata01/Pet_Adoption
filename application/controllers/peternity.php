@@ -100,44 +100,22 @@ class peternity extends CI_Controller {
 		
 	}
 	public function signup(){
+
 		$rules = array(
-                    array('field'=>'username', 'label'=>'username', 'rules'=>'required'),
-                    array('field'=>'email', 'label'=>'email', 'rules'=>'required'),
-					array('field'=>'password', 'label'=>'password', 'rules'=>'required')
+                    array('field'=>'uname', 'label'=>'username', 'rules'=>'required'),
+					array('field'=>'pass', 'label'=>'password', 'rules'=>'required')
 				);
 		$this->form_validation->set_rules($rules);
 		$this->form_validation->set_error_delimiters('<p class="error">', '</p>');
 		if($this->form_validation->run()==FALSE){
-			$this->load->view('peternity/sign-up');
+			$this->load->view('peternity/sign-in');
 		}else{
-			$signupform=array('username'=>$_POST['username'],'email'=>$_POST['email'],'password'=>$_POST['password']);
-            $this->Peter->create_account($signupform);
+			$signupform=array('username'=>$_POST['uname'],'password'=>$_POST['pass']);
+            $this->Peter->create_owneraccount($signupform);
             redirect('user');
 		}
 	}
-	public function signin()
-	{
-		$rules = array(
-      
-                    array('field'=>'email', 'label'=>'Email', 'rules'=>'required'),
-					array('field'=>'username', 'label'=>'Username', 'rules'=>'required'),
-					array('field'=>'password', 'label'=>'Password', 'rules'=>'required'),
-					
-                );
-        $this->form_validation->set_rules($rules);
-		$this->form_validation->set_error_delimiters('<p class="error">', '</p>');
-		if($this->form_validation->run()==FALSE){
-			$header_data['title'] = "SIGN-IN";
-			
-			$this->load->view('peternity/sign-in');
-			
-		}
-		else{
-			$signinform=array('fname'=>$_POST['fname'],'lname'=>$_POST['lname'],'username'=>$_POST['username'],'password'=>$_POST['password']);
-            $this->Peter->create_form($signinform);
-            redirect('login-home');
-		}
-	}
+	
 	
 	/*public function loghome(){
 		/*if($this->session->userdata('logged_in')){
