@@ -127,7 +127,13 @@ class peternity extends CI_Controller {
 		$this->form_validation->set_rules($rules);
 		$this->form_validation->set_error_delimiters('<p class="error">', '</p>');
 		if($this->form_validation->run()==FALSE){
+			$header_data['title'] = "REGISTER";
+			$this->load->view('include/header',$header_data);
+			$this->load->view('include/menu');
 			$this->load->view('peternity/register');
+			$this->load->view('include/footer');
+			
+			
 		}else{
 			$signupform=array('username'=>$_POST['uname'],'password'=>$_POST['pass']);
             $this->Peter->create_owneraccount($signupform);
