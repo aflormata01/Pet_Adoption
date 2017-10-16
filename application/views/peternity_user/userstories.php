@@ -3,12 +3,18 @@
 	
 		<div class="panel container text-center">
 		<table class="table table-bordered">
-
 		<?php
 		foreach($user_stories as $d){ 
 		echo'
 		<tr>
 		<td>
+			<table class="table-responsive">
+			<thead>
+				<th><img src="'.$img.'" style="width: 150px; height: 100px;" /></th>
+				<th class="gap sm"><a href="" class="sm">'.$d['body'].' </a></th>
+			</thead>
+			</table>
+			
 			<table class="table-responsive">
 				<thead>
 					<th>'.$d['title'].'</th>
@@ -16,7 +22,7 @@
 				<tbody>
 					<tr> 
 						<td>posted by '.$d['username'].' | '.$d['date'].' | '.$d['time'].'</td>
-						<td class="gap"><a href="" class="sm">'.$d['body'].'</a></td>
+						
 					</tr>
 				</tbody>
 			</table>
