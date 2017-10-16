@@ -207,4 +207,12 @@ class user extends CI_Controller {
 		}
 
 	}
+	
+	public function changepass(){
+		$header_data['title'] = "CHANGE PASSWORD";
+			$this->load->view('include/header',$header_data);		
+			$this->load->view('peternity_user/changepass');
+			$this->load->view('include/footer');
+		
+        }
 }
