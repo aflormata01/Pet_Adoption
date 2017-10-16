@@ -87,6 +87,7 @@ class user extends CI_Controller {
             redirect('user/petcatalogue');
 		}
 	}
+
 	public function userstories(){
 		$user =  $this->session->userdata('username');
 		$result_array = $this->Peter->read_stories();
@@ -98,6 +99,7 @@ class user extends CI_Controller {
 		$this->load->view('peternity_user/userstories',$data);
 		$this->load->view('include/footer');
 	}
+
 	public function addstories(){
 		$rules = array(
                     array('field'=>'title', 'label'=>'Title', 'rules'=>'required'),
@@ -106,7 +108,7 @@ class user extends CI_Controller {
 		$this->form_validation->set_rules($rules);
 		$this->form_validation->set_error_delimiters('<p class="error">', '</p>');
 		if($this->form_validation->run()==FALSE){
-			$this->load->view('peternity_user/addstories');
+			$this->load->view('peternity_user/addstories',array('error'=>' '));
 		}else{
 			$addstory=array('title'=>$_POST['title'],'body'=>$_POST['body']);
             $this->Peter->create_stories($addstory);
@@ -233,4 +235,42 @@ class user extends CI_Controller {
 		}
 
 	}
+	public function userstories(){
+		$user =  $this->session->userdata('username');
+		$result_array = $this->Peter->read_stories();
+        $datas['user_stories'] = $result_array;
+		
+		$header_data['title'] = "STORIES";
+		$this->load->view('include/header',$header_data);
+		$this->load->view('peternity_user/userstories',$datas);
+		$this->load->view('include/footer');
+	}
+	public function changepass(){
+		$header_data['title'] = "CHANGE PASSWORD";
+			$this->load->view('include/header',$header_data);		
+			$this->load->view('peternity_user/changepass');
+			$this->load->view('include/footer');
+        }
+		public function upload(){
+			$config['upload_path'] = './images/';
+			$config['allowed_types'] = 'jpg|jpeg|gif|png';
+			$this->load->library('upload',$config);
+			
+			if(!$this->upload->do_upload()){
+				$error = array('error'=>$this->upload->display_errors());
+				$this->load->view('peternity_user/addstories',$error);
+			}
+			else{
+				$file_data = $this->upload->data();
+				$data['img'] = base_url().'/images/'.$file_data['file_name'];
+				$user =  $this->session->userdata('username');
+				$result_array = $this->Peter->read_stories();
+				$data['user_stories'] = $result_array;
+				
+				$header_data['title'] = "STORIES";
+				$this->load->view('include/header',$header_data);
+				$this->load->view('peternity_user/userstories',$data);
+				$this->load->view('include/footer');
+			}
+		}
 }
