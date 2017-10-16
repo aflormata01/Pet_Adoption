@@ -57,17 +57,7 @@
 						<h5 class="heading"><button type="submit" class="btn btn-muted col-xs-5 login" value="Login"><span class="glyphicon glyphicon-log-in"></span> LOG IN</h5></button>
 
 			</form>			
-						<h5 class="heading"><button type="submit" class="btn btn-muted col-xs-5 login margintop"><a href="<?php echo base_url('peternity/signup')?>" class="heading" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-log-in"></span> SIGN-IN</a></button></h5>
-						<div id="table">
-							<div id="myModal" class="modal fade" role="dialog">
-							<div class="modal-dialog">
-							<div class="modal-content"></div>
-							</div>
-     </div>
-     </div>
-			
-
-						<h5 class="heading"><button type="submit" class="btn btn-muted col-xs-5 login margintop" value="Login"><a href="peternity/signin" class="heading"><span class="glyphicon glyphicon-log-in"></span> SIGN UP</a></h5></button>
+						<h5 class="heading"><button type="submit" class="btn btn-muted col-xs-5 login margintop"><a href="<?php echo base_url('peternity/register')?>" class="heading"><span class="glyphicon glyphicon-log-in"></span> SIGN UP</a></button></h5>
 			</form>
 
 

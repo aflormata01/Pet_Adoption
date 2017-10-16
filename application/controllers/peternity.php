@@ -108,7 +108,7 @@ class peternity extends CI_Controller {
 		$this->form_validation->set_rules($rules);
 		$this->form_validation->set_error_delimiters('<p class="error">', '</p>');
 		if($this->form_validation->run()==FALSE){
-			$this->load->view('peternity/sign-in');
+			$this->load->view('peternity/sign-up');
 		}else{
 			$signupform=array('username'=>$_POST['uname'],'password'=>$_POST['pass']);
             $this->Peter->create_owneraccount($signupform);
@@ -118,13 +118,23 @@ class peternity extends CI_Controller {
 		}
 	}
 	
-	public function signin(){
+	public function register(){
 
-		$header_data['title'] = "SIGN IN";
-		$this->load->view('include/header',$header_data);
-		$this->load->view('include/menu');
-		$this->load->view('peternity/sign-in');
-		$this->load->view('include/footer');
+				$rules = array(
+                    array('field'=>'uname', 'label'=>'username', 'rules'=>'required'),
+					array('field'=>'pass', 'label'=>'password', 'rules'=>'required')
+				);
+		$this->form_validation->set_rules($rules);
+		$this->form_validation->set_error_delimiters('<p class="error">', '</p>');
+		if($this->form_validation->run()==FALSE){
+			$this->load->view('peternity/register');
+		}else{
+			$signupform=array('username'=>$_POST['uname'],'password'=>$_POST['pass']);
+            $this->Peter->create_owneraccount($signupform);
+			$signupaccform=array('username'=>$_POST['uname'],'fname'=>$_POST['fname'],'lname'=>$_POST['lname']);
+            $this->Peter->create_ownerinfo($signupaccform);
+            redirect('user');
+		}
 		
 		
 	}
