@@ -3,9 +3,9 @@
   
 	<div class="col-md-12">
 	 <p>
-		<a href="petcatalogue"><button type="button" class="btn  btn-lg button1 "><h4 class="heading">Pet Catalogue</h4></a></button>&nbsp;&nbsp;&nbsp;&nbsp;
-		<a href="rescuepet"><button type="button" class="btn   btn-lg button1"><h4 class="heading">Rescued Pets</h4></a></button>&nbsp;&nbsp;&nbsp;&nbsp;
-		<a href="petforadoption"><button type="button" class="btn  btn-lg button1"><h4 class="heading">Pets for Adoption</h4></a></button>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="<?php echo base_url('peternity/petcatalogue')?>"><button type="button" class="btn  btn-lg button1 "><h4 class="heading">Pet Catalogue</h4></a></button>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="<?php echo base_url('peternity/rescuepet')?>"><button type="button" class="btn   btn-lg button1"><h4 class="heading">Rescued Pets</h4></a></button>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="<?php echo base_url('peternity/petforadoption')?>"><button type="button" class="btn  btn-lg button1"><h4 class="heading">Pets for Adoption</h4></a></button>&nbsp;&nbsp;&nbsp;&nbsp;
 	</p>
 	<br/>
 	</div>

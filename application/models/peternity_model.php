@@ -279,10 +279,9 @@ class peternity_model extends CI_model
 			$this->db->insert($this->petrescued, $data);
 			return TRUE;	
 		}
-		public function update_petrescued()
+		public function update_petrescued($data)
 		{
-			$this->db->where($data);
-			$this->db->update($this->petrescued, $data);
+			$this->db->replace($this->petrescued, $data);
 			return TRUE;	
 		}
 		public function del_petrescued()
@@ -301,9 +300,6 @@ class peternity_model extends CI_model
 			 return $query-> result_array();
 		 
 		}
-		
-		
-		
 		
 		
 		
@@ -353,7 +349,12 @@ class peternity_model extends CI_model
 			$this->db->insert($this->petadoption, $adoption);
 			return TRUE;
 		}
-		
+		function getLastRecordPetID(){
+        $this->db->select_max('petID');
+        $query = $this->db->get($this->petadoption,1);
+        
+        return $query->row_array();
+		}
 		
 			public function create_stories_like($data)
 		{
