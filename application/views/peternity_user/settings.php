@@ -77,14 +77,6 @@
       </div>
 	</div>
 	
-	
-    <div class="form-group">
-      <label class="control-label col-sm-2" for="password">Password:</label>
-      <div class="col-sm-4">          
-        <input type="password" class="form-control" id="password" name="password" value="<?php echo $d['password']; ?>">
-      </div>
-    </div>
-	
 	<div class="form-group">
 		<label class="control-label col-sm-2" for="sex">Sex</label>
 		<div class="col-sm-6">
