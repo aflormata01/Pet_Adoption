@@ -36,13 +36,13 @@ class peternity extends CI_Controller {
 		
 	}
 	public function petforadoption(){
-		$result_array = $this->Peter->read_petrescued();
+		$condition = array('availability' => 'Unadopted');
+		$result_array = $this->Peter->read_petrescued($condition);
         $data['petadopt'] = $result_array;
-		
 		$header_data['title'] = "PETS FOR ADOPTION";
 		$this->load->view('include/header',$header_data);
 		$this->load->view('include/menu');
-		$this->load->view('peternity/petforadoption');
+		$this->load->view('peternity/petforadoption',$data);
 		$this->load->view('include/footer');
 		
 	}

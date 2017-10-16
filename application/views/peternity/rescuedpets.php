@@ -2,9 +2,9 @@
   <h2 class="heading">RESCUED PETS</h2><br>
   <div class="col-md-12">
 	 <p>
-		<a href="petcatalogue" style="text-decoration:none"><button type="button" class="btn  btn-lg button1"><h4 class="heading">Pet Catalogue</h4></a></button>&nbsp;&nbsp;&nbsp;&nbsp;
-		<a href="rescuepet" style="text-decoration:none"><button type="button" class="btn  btn-lg button1"><h4 class="heading">Rescued Pets</h4></a></button>&nbsp;&nbsp;&nbsp;&nbsp;
-		<a href="petforadoption" style="text-decoration:none"><button type="button" class="btn btn-lg button1"><h4 class="heading">Pets for Adoption</h4></a></button>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="<?php echo base_url('peternity/petcatalogue')?>"><button type="button" class="btn  btn-lg button1 "><h4 class="heading">Pet Catalogue</h4></a></button>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="<?php echo base_url('peternity/rescuepet')?>"><button type="button" class="btn   btn-lg button1"><h4 class="heading">Rescued Pets</h4></a></button>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="<?php echo base_url('peternity/petforadoption')?>"><button type="button" class="btn  btn-lg button1"><h4 class="heading">Pets for Adoption</h4></a></button>&nbsp;&nbsp;&nbsp;&nbsp;
 	</p>
 	<br/>
 	</div>
