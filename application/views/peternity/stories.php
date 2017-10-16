@@ -10,8 +10,8 @@ foreach($stories as $d){
 		<td>
 			<table class="table-responsive">
 			<thead>
-			<th><img src="assets/images/hh.jpg" style="width: 150px; height: 100px;" /></th>
-			<th class="gap sm"><a href="" class="sm">'.$d['body'].' </a></th>
+				<th><img src="assets/images/hh.jpg" style="width: 150px; height: 100px;" /></th>
+				<th class="gap sm"><a href="" class="sm">'.$d['body'].' </a></th>
 			</thead>
 			</table>
 			
