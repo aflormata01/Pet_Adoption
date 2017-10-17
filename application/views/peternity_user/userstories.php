@@ -10,7 +10,7 @@
 		<td>
 			<table class="table-responsive">
 			<thead>
-				<th><img src="'.$img.'" style="width: 150px; height: 100px;" /></th>
+				<th><img src="'.base_url($d['file_name']).'" style="width: 150px; height: 100px;" /></th>
 				<th class="gap sm"><a href="" class="sm">'.$d['body'].' </a></th>
 			</thead>
 			</table>
