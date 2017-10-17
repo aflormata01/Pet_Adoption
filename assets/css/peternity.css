@@ -1,6 +1,5 @@
 /*peternity.css */
     .navbar {margin-bottom: 0;border-radius: 0;background-color: #ffcab2; }
-    .navbar-default{background-color: #ffcab2!important; }
 	.nav {margin-bottom: 0;border-radius: 0;background-color: #ffcab2; }
     .row.content {height: 100px}
 	.sidenav {padding-top: 20px; background-color: #f1f1f1;height: 100%;}
@@ -128,9 +127,9 @@
 .ih-item.circle.effect1 .spinner {
   width: 260px;
   height: 260px;
-  border: 15px solid #ecab18;
-  border-right-color: #E9967A;
-  border-bottom-color:#E9967A;
+  border: 15px solid #d66126;
+  border-right-color: #d3a42c;
+  border-bottom-color:#d3a42c;
   border-radius: 50%;
   -webkit-transition: all 0.8s ease-in-out;
   -moz-transition: all 0.8s ease-in-out;
@@ -187,7 +186,7 @@
 	border-radius: 12px;
 }
 .btn-adopt:hover{
-    -webkit-box-shadow: -100px 0 0 #ecab18 inset;
+    -webkit-box-shadow: -100px 0 0 #d3a42c inset;
 }
 	
 .marginpet{
@@ -210,7 +209,7 @@
   overflow: hidden;
   position: relative;
   width: 250px;
-  border: 10px solid  #E9967A;
+  border: 20px solid  #ffcab2;
 }  
 .thumb {
   position: relative;
