@@ -2,10 +2,10 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class user extends CI_Controller {
-
+var $data = array();
 	public function __construct(){
 		parent::__construct();
-	
+		
 		$user =  $this->session->userdata('username');
 		if( empty($user) )
 			redirect('login','refresh');
@@ -85,34 +85,6 @@ class user extends CI_Controller {
 			$adoption=array('petID'=>$petID,'date_rescued'=>$date,'pet_nickname'=>$nickname,'photo'=>$photo,'availability'=>'Scheduled');
 			$this->Peter->update_petrescued($adoption);
             redirect('user/petcatalogue');
-		}
-	}
-
-	public function userstories(){
-		$user =  $this->session->userdata('username');
-		$result_array = $this->Peter->read_stories();
-        $data['user_stories'] = $result_array;
-		$data['user'] = $user;
-		$header_data['title'] = "STORIES";
-		$this->load->view('include/header',$header_data);
-		$this->load->view('include/menu_user',$data);
-		$this->load->view('peternity_user/userstories',$data);
-		$this->load->view('include/footer');
-	}
-
-	public function addstories(){
-		$rules = array(
-                    array('field'=>'title', 'label'=>'Title', 'rules'=>'required'),
-                    array('field'=>'body', 'label'=>'body', 'rules'=>'required')
-				);
-		$this->form_validation->set_rules($rules);
-		$this->form_validation->set_error_delimiters('<p class="error">', '</p>');
-		if($this->form_validation->run()==FALSE){
-			$this->load->view('peternity_user/addstories',array('error'=>' '));
-		}else{
-			$addstory=array('title'=>$_POST['title'],'body'=>$_POST['body']);
-            $this->Peter->create_stories($addstory);
-            redirect('peternity_user/userstories');
 		}
 	}
 	public function userdiscussion(){
@@ -235,42 +207,49 @@ class user extends CI_Controller {
 		}
 
 	}
-	public function userstories(){
-		$user =  $this->session->userdata('username');
-		$result_array = $this->Peter->read_stories();
-        $datas['user_stories'] = $result_array;
-		
-		$header_data['title'] = "STORIES";
-		$this->load->view('include/header',$header_data);
-		$this->load->view('peternity_user/userstories',$datas);
-		$this->load->view('include/footer');
-	}
 	public function changepass(){
 		$header_data['title'] = "CHANGE PASSWORD";
 			$this->load->view('include/header',$header_data);		
 			$this->load->view('peternity_user/changepass');
 			$this->load->view('include/footer');
         }
-		public function upload(){
-			$config['upload_path'] = './images/';
-			$config['allowed_types'] = 'jpg|jpeg|gif|png';
-			$this->load->library('upload',$config);
+		public function userstories(){
+		$user =  $this->session->userdata('username');
+		$result_array = $this->Peter->read_stories();
+        $data['user_stories'] = $result_array;
+		$data['user'] = $user;
+		$header_data['title'] = "STORIES";
+		$this->load->view('include/header',$header_data);
+		$this->load->view('include/menu_user',$data);
+		$this->load->view('peternity_user/userstories',$data);
+		$this->load->view('include/footer');
+	}
+
+		public function addstories(){
+		$this->load->view('peternity_user/addstories');
 			
-			if(!$this->upload->do_upload()){
-				$error = array('error'=>$this->upload->display_errors());
-				$this->load->view('peternity_user/addstories',$error);
-			}
-			else{
-				$file_data = $this->upload->data();
-				$data['img'] = base_url().'/images/'.$file_data['file_name'];
-				$user =  $this->session->userdata('username');
-				$result_array = $this->Peter->read_stories();
-				$data['user_stories'] = $result_array;
-				
-				$header_data['title'] = "STORIES";
-				$this->load->view('include/header',$header_data);
-				$this->load->view('peternity_user/userstories',$data);
-				$this->load->view('include/footer');
+				if($_SERVER['REQUEST_METHOD']=='POST')
+						{
+							$url = $this->do_upload();
+							$addstory=array(
+								'title'=>$_POST['title'],
+								'body'=>$_POST['body'],
+								'file_name'=>$url
+								);
+							$this->Peter->create_stories($addstory);
+							redirect('user/userstories');
 			}
 		}
+		public function do_upload()
+		{
+			$type = explode('.', $_FILES["file"]["name"]);
+			$type = strtolower($type[count($type)-1]);
+			$url = "./assets/uploads/".uniqid(rand()).'.'.$type;
+			if(in_array($type, array("jpg", "jpeg", "gif", "png")))
+				if(is_uploaded_file($_FILES["file"]["tmp_name"]))
+					if(move_uploaded_file($_FILES["file"]["tmp_name"],$url))
+						return $url;
+			return "";
+		}
+			
 }

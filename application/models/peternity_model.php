@@ -305,7 +305,7 @@ class peternity_model extends CI_model
 		
 		public function create_stories($data)
 		{
-			$this->db->insert($this->stories, $data);
+			$this->db->insert($this->stories,$data);
 			return TRUE;	
 		}
 		public function update_stories()
