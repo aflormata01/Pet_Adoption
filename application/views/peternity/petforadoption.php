@@ -21,7 +21,7 @@ echo '
 
         <div class="spinner">
 		</div>
-        <div class="img"><img src="'.base_url('assets/images/cat.jpg').'" alt="img" class="img-circle imagespin img-responsive"></div>
+        <div class="img"><img src="'.base_url($p['photo']).'" alt="img" class="img-circle imagespin img-responsive"></div>
 		</div></a>
         <div class="panel-body">
 			    <div class="col-sm-11">
