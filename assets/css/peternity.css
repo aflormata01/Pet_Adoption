@@ -44,6 +44,7 @@
 	.userhome{margin-left: 100px;}
 	.float{float: left;}
 	.fixed{position: fixed;}
+	.button{background-color: #ffcab2;}
 	panel{margin-left: 600px; margin-right: 600px;}
 	button{margin:auto;}
 	h3, h5, label, th{font-family: Verdana;}
