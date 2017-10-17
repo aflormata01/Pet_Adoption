@@ -6,6 +6,7 @@
 		<h6 class="heading "><span class="glyphicon glyphicon-user"></span> graceymacey </h6>
 		<h6 class="heading "><span class="glyphicon glyphicon-envelope"></span> grace.cortez@yahoo.com</h6>
 		<h6 class="heading "><span class="glyphicon glyphicon-baby-formula"></span> 08-28-2007</h6>
+		<h6 class="heading "><span class="glyphicon glyphicon-list-alt"></span> <a href="" class="heading sm">My Stories</a></h6>
 	</div>
 
 	<div class="panel panel-default margintop col-sm-9">
