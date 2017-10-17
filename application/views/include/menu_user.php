@@ -10,7 +10,6 @@
         <a class="sm" class="dropdown-toggle" data-toggle="dropdown" href="#">COMMUNITY
         <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li class="userpad"><a href="<?php echo base_url('user/userstories/'.$user.'')?>" class="sm">SUCCESS STORIES</a></li>
           <li class="userpad"><a href="<?php echo base_url('user/userdiscussion/'.$user.'')?>" class="sm">DICUSSIONS</a></li>
         </ul>
       </li>
@@ -24,7 +23,7 @@
       </li>
       <li class="userpad"><a class="sm" href="<?php echo base_url('user/faqs/')?>">FAQ's</a></li>  
       <li class="dropdown userpad">
-        <a class="sm" class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"><span class="caret"></span></span></a>
+        <a class="sm" class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"> Grace<span class="caret"></span></span></a>
         <ul class="dropdown-menu table-hover">
           <li class="sm"><a href="<?php echo base_url('user/profile/'.$user.'')?>">Your Profile</a></li>
           <li class="sm"><a href="<?php echo base_url('user/setting/'.$user.'')?>">Settings</a></li>

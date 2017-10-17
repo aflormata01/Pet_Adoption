@@ -1,81 +1,97 @@
-<div class="container"> 
-		  <div id="myCarousel" class="carousel slide " data-ride="carousel">
-			<ol class="carousel-indicators">
-			  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-			  <li data-target="#myCarousel" data-slide-to="1"></li>
-			  <li data-target="#myCarousel" data-slide-to="2"></li>
-			</ol>
-			
-			<div class="carousel-inner carmargin">
-			  <div class="item active">
-				<img src="<?php echo base_url('assets/images/banda.jpg'); ?>" alt="Rescued Pet 1" style="width:100%; height:500px">
-				<div class="carousel-caption">
-				<h3>Georgina before and after</h3>
-				<p>posted by aflormata01</p>
-			  </div>
-			  </div>
-
-			  <div class="item">
-				<img src="<?php echo base_url('assets/images/bugsy.jpg'); ?>" alt="Rescued Pet 2" style="width:100%;height:500px">
-				<div class="carousel-caption">
-				<h3>Bugsy</h3>
-				<p>posted by graceymacey</p>
-			  </div>
-			  </div>
-			  
-			
-			  <div class="item">
-				<img src="<?php echo base_url('assets/images/wilson.jpg'); ?>" alt="Rescued Pet 3" style="width:100%; height: 500px">
-				<div class="carousel-caption">
-				<h3>Wilson, after 3 weeks</h3>
-				<p>posted by user123</p>
-			  </div>
-			  </div>
-			</div>
-
-			<a class="left carousel-control" href="#myCarousel" data-slide="prev">
-			  <span class="glyphicon glyphicon-chevron-left"></span>
-			  <span class="sr-only">Previous</span>
-			</a>
-			<a class="right carousel-control" href="#myCarousel" data-slide="next">
-			  <span class="glyphicon glyphicon-chevron-right"></span>
-			  <span class="sr-only">Next</span>
-			</a>
-		  </div>
+<div class="container-fluid">
+	<div class="panel panel-default text-left col-xs-2 margintop sminfo"><br />
+		<img src="<?php echo base_url('assets/images/123.jpg'); ?>" class="profilepic img-circle logpic " style="width: 35px ; height:35px" alt="profilepic"> <h4 class="heading "> Grace Cortez</h4>
+		<br />
+		<hr />
+		<h6 class="heading "><span class="glyphicon glyphicon-user"></span> graceymacey </h6>
+		<h6 class="heading "><span class="glyphicon glyphicon-envelope"></span> grace.cortez@yahoo.com</h6>
+		<h6 class="heading "><span class="glyphicon glyphicon-baby-formula"></span> 08-28-2007</h6>
 	</div>
+
+	<div class="panel panel-default margintop col-sm-9">
+		
+	<h2 class="text-center heading">STORIES</h2>
 	
-	<div class="container">
-		<div class="col-sm-12 text-center"> 
-		  <h1 class="text-warning u">MOST DISCUSSED TOPICS</h1>
-		  <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-		  <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa.</p>
-		  <a class="right" href="#">See more</a>
-		  <hr class="color">
+		<table class="table table-bordered">
+		<tr>
+		<td>
+			<table class="table-responsive">
+			<thead>
+				<th><img src="" style="width: 150px; height: 100px;" /></th>
+				<th class="gap sm"><a href="" class="sm">Sample Body</a></th>
+			</thead>
+			</table>
+			
+			<table class="table-responsive">
+				<thead>
+					<th>Sample Title</th>
+				</thead>
+				<tbody>
+					<tr> 
+						<td>posted by graceymacey | 10-17-17 | 9:20 AM</td>
+					<tr>
+						<td class="text-left"><button class="btn-danger heart"><span class="glyphicon glyphicon-heart"></button></td>
+						
+					</tr>
+					</tr>
+				</tbody>
+			</table>
+		</td>
+		</tr>
+		</table>
 		</div>
-  </div>
-
-	
-<div class="container text-center">    
-  <div class="content">
-	<div class="col-sm-4 text-left border"> 
-      <h1 class="text-warning text-center">VISIT US</h1>
-	  <p class="b"><a href="#"><img src="<?php echo base_url('assets/images/fb.png'); ?>" /></a> PETERNITY: Adopt A Pet Today!</p>
-	  <p class="b"><a href="#"><img src="<?php echo base_url('assets/images/twitter.png'); ?>" /></a> FOLLOW US: @peternity</p>
-	  <p class="b"><a href="#"><img src="<?php echo base_url('assets/images/insta.png'); ?>" /></a> IG: @peternity</p>
-	  <p class="b"><a href="#"><img src="<?php echo base_url('assets/images/pin.png'); ?>" /></a> PETERNITY</p>
+		
+		<div class="text-right">
+		<a href="<?php echo base_url('user/addstories')?>" data-toggle="modal" data-target="#myModal">
+    <button class="btn btn-muted sm" type="button" id="addButton"><span class="glyphicon glyphicon-plus"> </span>Add Story</button></a>
+    <div id="table">
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content"></div>
+        </div>
     </div>
+</div>
+</div>
+		
+		
+</div>
+		
 	
-	 <div class="col-sm-8 text-center"> 
-      <h1 class="text-warning u">PET CARE TIPS</h1>
-      <p><a class="u" href="#">• 10 Health Care Tips For Cat Owners</a> by HealthyPet Magazine</p>
-      <p><a class="u" href="#">• Things To Remember Before Owning A Rescued Pet</a> by All Animals</p>
-      <p><a class="u" href="#">• Top 5 Dog Foods Recommended</a> by DogFancy</p>
-    </div>
-  </div>
-   
-  </div>
-</div>   
+	</div>
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
