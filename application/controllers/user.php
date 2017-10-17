@@ -88,17 +88,6 @@ class user extends CI_Controller {
 		}
 	}
 
-	public function userstories(){
-		$user =  $this->session->userdata('username');
-		$result_array = $this->Peter->read_stories();
-        $data['user_stories'] = $result_array;
-		$data['user'] = $user;
-		$header_data['title'] = "STORIES";
-		$this->load->view('include/header',$header_data);
-		$this->load->view('include/menu_user',$data);
-		$this->load->view('peternity_user/userstories',$data);
-		$this->load->view('include/footer');
-	}
 
 	public function addstories(){
 		$rules = array(

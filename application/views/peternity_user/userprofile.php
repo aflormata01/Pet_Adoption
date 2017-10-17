@@ -9,10 +9,10 @@
 						foreach($profile as $p){ 
 						echo '
 						<h1 class="">'.$p['fname'].' '.$p['lname'].'</h1>
-						<h4 class="font "><span class="glyphicon glyphicon-user"></span>'.$p['username'].' </h4>
-						<h4 class="font "><span class="glyphicon glyphicon-envelope"></span>'.$p['email'].'</h4>
-						<h4 class="font "><span class="glyphicon glyphicon-baby-formula"></span>'.$p['birthdate'].'</h4>
-						<h4 class="font "><i class="fi-male-female"></i>'.$p['sex'].'</h4> ';
+						<h4 class="heading "><span class="glyphicon glyphicon-user"></span>'.$p['username'].' </h4>
+						<h4 class="heading "><span class="glyphicon glyphicon-envelope"></span>'.$p['email'].'</h4>
+						<h4 class="heading "><span class="glyphicon glyphicon-baby-formula"></span>'.$p['birthdate'].'</h4>
+						<h4 class="heading "><i class="fi-male-female"></i>'.$p['sex'].'</h4> ';
 					}
 					
 					?>

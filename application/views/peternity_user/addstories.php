@@ -12,7 +12,7 @@
 		
 		<?php echo $error;?>
 		<?php echo form_open_multipart('user/upload');?>
-		<input type="file" name="userfile" />
+		<input type="file" name="userfile" /><br />
 		<input type="submit" class="text-center" id="files-upload" name="submit" value="upload">
 		</form>
     </div>
