@@ -1,7 +1,7 @@
 <nav class="navbar ">
   <div class="container ">
     <div class="navbar-header menupad">
-      <a class="navbar-brand" href=""><img src="<?php echo base_url('assets/images/logo.png'); ?>" /></a>
+      <a class="navbar-brand" href="<?php echo base_url('user')?>""><img src="<?php echo base_url('assets/images/logo.png'); ?>" /></a>
     </div>
     <ul class="nav navbar-nav">
       <li class="menupad "><a class="sm" href="<?php echo base_url('user')?>">HOME</a></li>

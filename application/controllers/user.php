@@ -251,5 +251,10 @@ class user extends CI_Controller {
 						return $url;
 			return "";
 		}
+		
+		public function adduserstories(){
+		$this->load->view('peternity_user/adduserstories');
 			
+				
+		}	
 }

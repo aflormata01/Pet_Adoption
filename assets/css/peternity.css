@@ -21,7 +21,8 @@
 	.margin{margin-left: 120px;}
 	.marginleft{margin-left: 120px;}
 	.margintop{margin-top: 20px;}
-	.marginbottom{margin-top: 10px;}
+	.marginbottom{margin-top: 20px;}
+	.marginbottom{margin-bottom: 10px;}
 	.shadow{box-shadow: 10px 10px 50px #2B2C2C; }
 	.login{margin-left: 75px; color: black;}
 	.gap{text-align: left; padding: 0px 0px 0px 300px;}
@@ -45,6 +46,8 @@
 	.float{float: left;}
 	.fixed{position: fixed;}
 	.button{background-color: #ffcab2;}
+	.picstory{margin-left: 65px;}
+	.usermarg{margin-left: 210px;}
 	panel{margin-left: 600px; margin-right: 600px;}
 	button{margin:auto;}
 	h3, h5, label, th{font-family: Verdana;}

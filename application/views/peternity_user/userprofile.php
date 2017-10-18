@@ -3,16 +3,18 @@
         <div class=" imgmarg col-sm-8">
 			<div class="">
 				<img src="<?php echo base_url('assets/images/123.jpg'); ?>" class="profilepic img-circle " style="width: 200px ; height:200px" alt="profilepic">
-					<div class="col-sm-8 text-center">
+					<div class="col-sm-8 text-center ">
 					<?php
 						
 						foreach($profile as $p){ 
 						echo '
 						<h1 class="">'.$p['fname'].' '.$p['lname'].'</h1>
-						<h4 class="heading "><span class="glyphicon glyphicon-user"></span>'.$p['username'].' </h4>
-						<h4 class="heading "><span class="glyphicon glyphicon-envelope"></span>'.$p['email'].'</h4>
-						<h4 class="heading "><span class="glyphicon glyphicon-baby-formula"></span>'.$p['birthdate'].'</h4>
-						<h4 class="heading "><i class="fi-male-female"></i>'.$p['sex'].'</h4> ';
+					<div class="col-sm-8 picstory text-left ">
+						<h4 class="heading "><span class="glyphicon glyphicon-user"></span> '.$p['username'].' </h4>
+						<h4 class="heading "><span class="glyphicon glyphicon-envelope"></span> '.$p['email'].'</h4>
+						<h4 class="heading "><span class="glyphicon glyphicon-baby-formula"></span> '.$p['birthdate'].'</h4>
+						<h4 class="heading "><i class="fi-male-female"></i>'.$p['sex'].'</h4> 	</div>' ;
+				
 					}
 					
 					?>

@@ -55,7 +55,7 @@
 									
 									   <div class="col-xs-6 col-sm-6 col-md-6">
                                     <div class="form-group">
-                                       Already have an account? <a href="<?php echo base_url('peternity/')?>" data-toggle="modal" class="sm"> Sign-in. </a>
+                                       Already have an account? <a href="<?php echo base_url('user')?>" data-toggle="modal" class="sm"> Sign-in. </a>
                                     </div>
                                  </div>
                               </div>
