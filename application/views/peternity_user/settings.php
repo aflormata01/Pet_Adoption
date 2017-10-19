@@ -1,11 +1,4 @@
-<div class=" margintop col-sm-1">
-<button onclick="goBack()" class="button btn-sm"><span class="glyphicon glyphicon-triangle-left"><span /><label class="heading">BACK</label></button>
-<script>
-function goBack() {
-    window.history.back();
-}
-</script>
-</div>
+
 <div class="container">
     <div class="row profile col-md-12"><br/>
 		<div class="col-md-3">
@@ -19,7 +12,7 @@ function goBack() {
 				
 				<div class="profile-usertitle">
 					<div class="profile-usertitle-name text-center">
-					<h2>	Janelyn Ann Gellado </h2>
+					<h2>	<?php echo $set[0]['fname'] ?> <?php echo $set[0]['lname'] ?> </h2>
 					</div>
 					
 					

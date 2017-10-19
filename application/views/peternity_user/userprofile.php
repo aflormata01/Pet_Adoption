@@ -28,9 +28,7 @@
 			<div class="panel">
 				<div class="thumb panel-heading">
 					<img src="<?php echo base_url('assets/images/cat.jpg'); ?>" class="img-responsive" style="width:400px ; height:300px" alt="PET1">
-					 <div class="overlay">
-						<div class="text">Pet 1</div>
-					 </div>
+					
 				</div>
 			</div>
 		</div>
@@ -40,9 +38,7 @@
 			<div class="panel">
 				<div class="thumb panel-heading">
 					<img src="<?php echo base_url('assets/images/bunny.jpg'); ?>" class="img-responsive" style="width:400px ; height:300px" alt="PET2">
-					 <div class="overlay">
-						<div class="text">Pet 2</div>
-					 </div>
+					 
 				</div>
 			</div>
 		</div>
@@ -52,9 +48,7 @@
 			<div class="panel">
 				<div class="thumb panel-heading">
 					<img src="<?php echo base_url('assets/images/r10.jpg'); ?>" class="img-responsive" style="width:400px ; height:300px" alt="PET3">
-					 <div class="overlay">
-						<div class="text">Pet 3</div>
-					 </div>
+					 
 				</div>
 			</div>
 		</div>

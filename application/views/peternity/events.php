@@ -6,7 +6,7 @@
 foreach($events as $d){ 
   echo'
 	<div class="col-sm-3">
-		<div class="panel panel-default shadow">
+		<div class="panel panel-default"><br />
 		<div class=" panel-heading">
 			<h4 class="heading">EVENT #'.$d['event_no'].' '.$d['title'].'</h4>
 		</div>

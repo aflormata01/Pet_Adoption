@@ -1,5 +1,5 @@
 
- <?php echo form_open('user/adopt/'.$petID.''); //this is equal to <form method="post" accept-charset="utf-8" action="http://localhost/Pet_Adoption/user/addstories"?>
+ <?php echo form_open_multipart('user/adopt/'.$petID.''); //this is equal to <form method="post" accept-charset="utf-8" action="http://localhost/Pet_Adoption/user/addstories"?>
    <div class="col-md-12">
          <div class="panel " style="width: 500px; height: 650px; float: center;">
             <div class="panel-heading">

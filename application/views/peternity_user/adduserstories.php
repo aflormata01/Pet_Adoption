@@ -1,4 +1,4 @@
-<?php echo form_open_multipart('user/adduserstories'); //this is equal to <form role="form" method="post" enctype="multipart/form-data" accept-charset="utf-8" action="http://localhost/Pet_Adoption/user/adduserstories"?>
+<?php echo form_open_multipart('user/addstories'); //this is equal to <form role="form" method="post" enctype="multipart/form-data" accept-charset="utf-8" action="http://localhost/Pet_Adoption/user/adduserstories"?>
  <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
   </div>
