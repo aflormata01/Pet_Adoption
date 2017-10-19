@@ -1,11 +1,3 @@
-<div class=" margintop col-sm-1">
-<button onclick="goBack()" class="button btn-sm"><span class="glyphicon glyphicon-triangle-left"><span /><label class="heading">BACK</label></button>
-<script>
-function goBack() {
-    window.history.back();
-}
-</script>
-</div>
 
 <div class="container text-center">    
   <h2 class="heading">RESCUED PETS</h2><br>

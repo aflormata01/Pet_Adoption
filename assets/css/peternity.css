@@ -46,7 +46,7 @@
 	.float{float: left;}
 	.fixed{position: fixed;}
 	.button{background-color: #ffcab2;}
-	.picstory{margin-left: 65px;}
+	.picstory{margin-left: 100px;}
 	.usermarg{margin-left: 210px;}
 	panel{margin-left: 600px; margin-right: 600px;}
 	button{margin:auto;}
@@ -252,4 +252,9 @@
   left: 50%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
+}
+
+.newss {
+  display: inline-block;
+  float: left;
 }

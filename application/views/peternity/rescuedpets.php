@@ -1,11 +1,3 @@
-<div class=" margintop col-sm-1">
-<button onclick="goBack()" class="button btn-sm"><span class="glyphicon glyphicon-triangle-left"><span /><label class="heading">BACK</label></button>
-<script>
-function goBack() {
-    window.history.back();
-}
-</script>
-</div>
 
 <div class="container text-center">    
   <h2 class="heading">RESCUED PETS</h2><br>
@@ -28,7 +20,7 @@ foreach($petrescue as $d){
     <div class="ih-item circle effect1 "><a href="#">
         <div class="spinner">
 		</div>
-        <div class="img"><img src="'.base_url($d['photo']).'" alt="img" class="img-circle imagespin  img-responsive"></div></div></a>
+        <div class="img"><img src="'.base_url($d['photo']).'" alt="img" class="img-circle imagespin  img-responsive" style="width: cover;" ></div></div></a>
         <div class="panel-body  margintpett">
 			   <h4 class="text-center heading">'.$d['pet_nickname'].'</h4>
 			   <h5 class="text-center sm">Rescued '.$d['date_rescued'].' </h5>

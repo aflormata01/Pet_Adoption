@@ -17,11 +17,16 @@ class user extends CI_Controller {
 	
 	public function index(){	
 		$user =  $this->session->userdata('username');
+		$condition = array('username' => $user);
 		$header_data['title'] = "Peternity";
 		$data['user'] = $user;
+		$result_array = $this->Peter->read_stories();
+		$result = $this->Peter->read_ownerinfo($condition);
+        $data['user_stories'] = $result_array;
+        $data['usern'] = $result;
 		$this->load->view('include/header',$header_data);
 		$this->load->view('include/menu_user',$data);
-		$this->load->view('login-home');
+		$this->load->view('login-home',$data);
 		$this->load->view('include/footer');	
 	}
 	public function petcatalogue(){
@@ -191,9 +196,12 @@ class user extends CI_Controller {
         $this->form_validation->set_rules($rules);
 		$this->form_validation->set_error_delimiters('<p class="error">', '</p>');
 		if($this->form_validation->run()==FALSE){
-
+			$user =  $this->session->userdata('username');
+			$condition = array('username' => $user);
 			$header_data['title'] = "ACCOUNT SETTINGS";
-			$this->load->view('include/header',$header_data);	
+			$this->load->view('include/header',$header_data);
+			$result_array = $this->Peter->read_ownerinfo($condition);
+			$data['set'] = $result_array;
 			$data['user'] = $user;
 			$this->load->view('include/menu_user',$data);			
 			$this->load->view('peternity_user/settings',$data);
@@ -213,9 +221,10 @@ class user extends CI_Controller {
 			$this->load->view('peternity_user/changepass');
 			$this->load->view('include/footer');
         }
-		public function userstories(){
+	public function userstories(){
 		$user =  $this->session->userdata('username');
-		$result_array = $this->Peter->read_stories();
+		$condition = array('username' => $user);
+		$result_array = $this->Peter->read_stories($condition);
         $data['user_stories'] = $result_array;
 		$data['user'] = $user;
 		$header_data['title'] = "STORIES";
@@ -224,20 +233,19 @@ class user extends CI_Controller {
 		$this->load->view('peternity_user/userstories',$data);
 		$this->load->view('include/footer');
 	}
-
 		public function addstories(){
-		$this->load->view('peternity_user/addstories');
-			
+		$this->load->view('peternity_user/adduserstories');
+		$user =  $this->session->userdata('username');
 				if($_SERVER['REQUEST_METHOD']=='POST')
 						{
 							$url = $this->do_upload();
 							$addstory=array(
 								'title'=>$_POST['title'],
-								'body'=>$_POST['body'],
-								'file_name'=>$url
+								'file_name'=>$url,
+								'username'=>$user
 								);
 							$this->Peter->create_stories($addstory);
-							redirect('user/userstories');
+							redirect('user');
 			}
 		}
 		public function do_upload()
