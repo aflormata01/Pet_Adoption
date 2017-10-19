@@ -38,7 +38,7 @@
 	<div class="margintop marginbottom">
 		<img src="'.base_url($d['file_name']).'" style="width: 500px; height: 450px;" class="picstory img-responsive"/>
 		<h4 class="heading sm picstory text-warning">posted by <a href="'.base_url('user/profile/'.$d['username'].'').'">'.$d['username'].'</a><br />'. $d['title'].'</h4>
-		<button class="btn-danger heart picstory "><span class="glyphicon glyphicon-heart"></button>	
+		<h4 class="sm"><a href="" class="picstory heart  heading" style="text-decoration: none;"><span class="glyphicon glyphicon-heart-empty" ></span> LIKE</h4></a>
 	
 	</div>
 		<hr />

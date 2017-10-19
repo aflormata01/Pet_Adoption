@@ -32,7 +32,7 @@
 	.info{margin-left:50px; text-align: left;}
 	.sm{font-size:  12px; font-family: Verdana;}
 	.sign{padding-left: 350px;}
-	.heart{border-radius: 100%; min-width: 10px; min-height: 10px;}
+	.heart{min-width: 50px; min-height: 50px;}
 	.centered{margin-left: 350px;}
 	.signinbutton{margin-left: 90px;}
 	.sign{padding-left: 350px;}
@@ -46,12 +46,13 @@
 	.float{float: left;}
 	.fixed{position: fixed;}
 	.button{background-color: #ffcab2;}
-	.picstory{margin-left: 100px;}
+	.picstory{margin-left: 100px; }
 	.usermarg{margin-left: 210px;}
+	
 	panel{margin-left: 600px; margin-right: 600px;}
 	button{margin:auto;}
 	h3, h5, label, th{font-family: Verdana;}
-	a{font-family: Arial Black; color: Black;}
+	a{font-family: Arial Black; color: Black; }
 	hr{ display: block;margin-top: 0.5em; margin-bottom: 0.5em;margin-left: auto; margin-right: auto;border-style: inset;border-width: 1px; border-color: orange;}
 	p{text-indent: 50px; font-family: Verdana;}
 
