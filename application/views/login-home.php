@@ -12,9 +12,11 @@
 		<h6 class="heading "><span class="glyphicon glyphicon-envelope"></span> '.$d['email'].'</h6>
 		<h6 class="heading "><span class="glyphicon glyphicon-baby-formula"></span> '.$d['birthdate'].'</h6>
 		<h6 class="heading "><span class="glyphicon glyphicon-list-alt"></span> <a href="" class="heading sm">My Stories</a></h6>
-	</div>';
+	';
 	}
+	
 ?>
+	</div>
 	<div class="panel panel-default margintop col-sm-6">
 		
 	<h2 class="text-center heading">STORIES</h2>
