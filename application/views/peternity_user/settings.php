@@ -1,15 +1,18 @@
-
 <div class="container">
     <div class="row profile col-md-12"><br/>
 		<div class="col-md-3">
 			<div class="profile-sidebar">
-				
 				<div class="profile-userpic">
 					
-				<img src="<?php echo base_url('assets/images/123.jpg'); ?>" class="img-responsive img-circle" alt="profilepic">
-				<label>Change your profile picture : </label><input class="text-center" id="files-upload" type="file">
-				</div>
+				<img src="<?php echo base_url($set[0]['photo']);?>" class="img-responsive img-circle" alt="profilepic" name="photo" id="photo">
+				<label>Change your profile picture : </label>
 				
+				<?php echo form_open_multipart('user/profile_pic'); //this is equal to <form role="form" method="post" enctype="multipart/form-data" accept-charset="utf-8" action="http://localhost/Pet_Adoption/user/profile_pic"?>
+				<input class="text-center" id="file" name="file" type="file" />
+				</div>
+				<input type="submit" value="Upload" />
+				</form>
+
 				<div class="profile-usertitle">
 					<div class="profile-usertitle-name text-center">
 					<h2>	<?php echo $set[0]['fname'] ?> <?php echo $set[0]['lname'] ?> </h2>
@@ -80,8 +83,8 @@
 	<div class="form-group">
 		<label class="control-label col-sm-2" for="sex">Sex</label>
 		<div class="col-sm-6">
-		<input type="radio" class="" id="sex" name="sex" value="F" value="<?php echo $d['sex']; ?>" /> Male
-		<input type="radio" class="" id="sex" name="sex" value="M" value="<?php echo $d['sex'];?>" /> Female
+		<input type="radio" class="" id="sex" name="sex" value="Female" value="<?php echo $d['sex']; ?>" /> Male
+		<input type="radio" class="" id="sex" name="sex" value="Male" value="<?php echo $d['sex'];?>" /> Female
 	</div>
 	</div>
 		

@@ -194,6 +194,7 @@ class peternity_model extends CI_model
 		{
 			$this->db->replace($this->ownerinfo,$settings);
 		}
+
 		public function del_ownerinfo()
 		{
 			$this->db->where($data);
