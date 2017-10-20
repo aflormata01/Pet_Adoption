@@ -69,6 +69,42 @@
      
   </div>
   </div>
+ <div class="container fixed-bg margintop"> 
+ 
+		 <div class="container margintop">
+			<h2 class="heading white" id="textmargin">-FEATURED PETS-</h2>
+			  <div class="panel panel-default1 col-xs-5 re">
+			  <img src="<?php echo base_url('assets/images/bird1.jpg')?>" class="img img-responsive img-circle margintop marginbottom float" alt="featured pet 1" style="width: 100px; height:100px;"/>
+			  <h4 class="heading margintop spacing"> SERENE</h4>
+			  <h5 class="sm spacing"> Serene is a baby parakeet; She was rescued from an abandoned shelter and now recovered from the traumatic experience. She now enjoys singing especially in the morning. She became a very active parakeet.</h5>
+			  </div>
+			</div>
+			<div class="container">
+			  <div class="panel  panel-default1 col-xs-5 re">
+			  <img src="<?php echo base_url('assets/images/hamster.jpg')?>" class="img img-responsive img-circle margintop marginbottom float" alt="featured pet 1" style="width: 100px; height:100px;"/>
+			  <h4 class="heading margintop spacing"> VLADIMIR</h4>
+			  <h5 class="sm spacing"> Serene is a baby parakeet; She was rescued from an abandoned shelter and now recovered from the traumatic experience. She now enjoys singing especially in the morning. She became a very active parakeet.</h5>
+			  </div>
+			  </div>
+			  
+			  <div class="container">
+			  <div class="panel panel-default1 col-xs-5 re">
+			  <img src="<?php echo base_url('assets/images/hh.jpg')?>" class="img img-responsive img-circle margintop  marginbottom float" alt="featured pet 1" style="width: 100px; height:100px;"/>
+			 <h4 class="heading margintop spacing"> TORCH</h4>
+			  <h5 class="sm spacing"> Serene is a baby parakeet; She was rescued from an abandoned shelter and now recovered from the traumatic experience. She now enjoys singing especially in the morning. She became a very active parakeet.</h5>
+			  </div>
+			  </div>
+</div>
+
+  
+  
+  
+  
+  </div>
+  
+
+     
+  
 
 	
 	

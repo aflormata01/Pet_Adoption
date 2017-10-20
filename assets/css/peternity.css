@@ -21,8 +21,7 @@
 	.margin{margin-left: 120px;}
 	.marginleft{margin-left: 120px;}
 	.margintop{margin-top: 20px;}
-	.marginbottom{margin-top: 20px;}
-	.marginbottom{margin-bottom: 10px;}
+	.marginbottom{margin-bottom: 20px;}
 	.shadow{box-shadow: 10px 10px 50px #2B2C2C; }
 	.login{margin-left: 75px; color: black;}
 	.gap{text-align: left; padding: 0px 0px 0px 300px;}
@@ -49,10 +48,22 @@
 	.picstory{margin-left: 100px; }
 	.usermarg{margin-left: 210px;}
 	.dropdown-menu a:hover {background-color: }
-	.dropdown:hover .dropdown-menu {
-    display: block;
-}
-	
+	.dropdown:hover .dropdown-menu {display: block;}
+	.spacing{margin-left: 120px;}
+	.white{color: white;}
+	.re{border-radius: 30px;}
+	.panel-default1{background-color: #FAD332;}
+	.fixed-bg {
+    background-image: url('../images/petbg2.jpg');
+    min-height: 500px;
+    min-width: 750px;
+	border-radius: 40px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;}
+							
+	#textmargin{margin-left: 135px;}
 	panel{margin-left: 600px; margin-right: 600px;}
 	button{margin:auto;}
 	h3, h5, label, th{font-family: Verdana;}
