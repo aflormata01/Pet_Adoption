@@ -3,7 +3,7 @@
   <h2 class="heading">RESCUED PETS</h2><br>
   <div class="col-md-12">
 	 <p>
-		<a href="<?php echo base_url('user/petcatalogue')?>"><button type="button" class="btn  btn-lg button1"><h4 class="heading">Pet Catalogue</h4></a></button>&nbsp;&nbsp;&nbsp;&nbsp;
+
 		<a href=""><button type="button" class="btn  btn-lg button1"><h4 class="heading">Rescued Pets</h4></a></button>&nbsp;&nbsp;&nbsp;&nbsp;
 		<a href="<?php echo base_url('user/petforadoption')?>"><button type="button" class="btn btn-lg button1"><h4 class="heading">Pets for Adoption</h4></a></button>&nbsp;&nbsp;&nbsp;&nbsp;
 	</p>

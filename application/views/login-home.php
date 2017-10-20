@@ -30,7 +30,7 @@
 				</div>
 			</div>
 		</div>
-	<div id="stories"	
+	<div id="stories">
 	<?php	
 	// foreach($user_stories as $d){ 
 		// $liked=0;
@@ -67,7 +67,7 @@
 	</div>
 	</div>
 
-</div></div>
+</div>
 	<script>
 	 $(document).ready(function(){
             $.ajax({
