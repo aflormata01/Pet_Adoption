@@ -1,15 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.0
+-- version 4.6.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 20, 2017 at 08:03 AM
--- Server version: 10.1.26-MariaDB
--- PHP Version: 7.1.8
+-- Generation Time: Oct 20, 2017 at 02:48 PM
+-- Server version: 5.7.14
+-- PHP Version: 5.6.25
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -194,7 +192,7 @@ CREATE TABLE `ownerinfo` (
   `username` varchar(50) NOT NULL,
   `fname` varchar(50) NOT NULL,
   `lname` varchar(50) NOT NULL,
-  `photo` blob,
+  `photo` varchar(100) NOT NULL,
   `email` varchar(50) NOT NULL,
   `birthdate` varchar(50) NOT NULL,
   `sex` varchar(50) NOT NULL
@@ -205,7 +203,7 @@ CREATE TABLE `ownerinfo` (
 --
 
 INSERT INTO `ownerinfo` (`username`, `fname`, `lname`, `photo`, `email`, `birthdate`, `sex`) VALUES
-('aflormata', 'flormata', 'allysa', NULL, 'aflormata2000@gmail.com', '01-01-2000', 'F');
+('aflormata', 'Allysa', 'Flormata', './assets/uploads/2262259e9d4e120aed.png', 'aflormata2000@gmail.com', '2017-10-03', 'Male');
 
 -- --------------------------------------------------------
 
@@ -421,8 +419,7 @@ ALTER TABLE `hehe`
 -- AUTO_INCREMENT for table `stories`
 --
 ALTER TABLE `stories`
-  MODIFY `story#` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;COMMIT;
-
+  MODIFY `story#` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
