@@ -24,6 +24,8 @@ class user extends CI_Controller {
 		$result = $this->Peter->read_ownerinfo($condition);
         $data['user_stories'] = $result_array;
         $data['usern'] = $result;
+		$likes = $this->Peter->read_stories_like($condition);
+		$data['liked_stories'] = $likes;
 		$this->load->view('include/header',$header_data);
 		$this->load->view('include/menu_user',$data);
 		$this->load->view('login-home',$data);
@@ -260,9 +262,18 @@ class user extends CI_Controller {
 			return "";
 		}
 		
-		public function adduserstories(){
-		$this->load->view('peternity_user/adduserstories');
-			
+		public function addstorylikes(){
+			$user =  $this->session->userdata('username');
+			if(isset($_POST['post'])&&isset($_POST['del'])){
 				
-		}	
+				$like=array('story#'=>$_POST['post'],'username'=>$user);
+				if($_POST['del']=='0')
+					$this->Peter->del_stories_like($like);
+				else{
+					$this->Peter->create_stories_like($like);
+				}
+			}
+			
+		}
+				
 }
