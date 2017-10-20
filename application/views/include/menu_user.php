@@ -1,3 +1,37 @@
+  <style>
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+	background-color: #ffcab2;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffcab2;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    padding: 5px 2px 5px 2px;
+    text-decoration: none;
+    display: block;
+	background-color: #ffcab2;
+}
+
+.dropdown-content a:hover {
+	text-decoration: none;
+	background-color: #ccffea;
+	
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+</style>
 <nav class="navbar ">
   <div class="">
     <div class="navbar-header userpad">
@@ -6,19 +40,17 @@
     <ul class="nav navbar-nav">
       <li class="userpad"><a class="sm" href="<?php echo base_url('user')?>">HOME</a></li>
 	  <li class="userpad"><a class="sm" href="<?php echo base_url('user/rescuepet')?>">PET CATALOGUE</a></li>
-	  <li class="dropdown userpad">
-        <a class="sm" class="dropdown-toggle" data-toggle="dropdown" href="#">COMMUNITY
-        <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li class="userpad"><a href="<?php echo base_url('user/userdiscussion/'.$user.'')?>" class="sm">DICUSSIONS</a></li>
+	  <li class="dropdown">
+        <a class="sm" class="dropdown-toggle" data-toggle="dropdown" href="#">COMMUNITY</a>
+        <ul class="dropdown-content">
+          <a class="userpad"><a href="<?php echo base_url('user/userdiscussion/'.$user.'')?>" class="sm">DICUSSIONS</a></a>
         </ul>
       </li>
-      <li class="dropdown userpad">
-        <a class="sm" class="dropdown-toggle" data-toggle="dropdown" href="#">NEWS AND EVENTS
-        <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li class="userpad"><a href="<?php echo base_url('user/news/')?>" class="sm">NEWS</a></li>
-          <li class="userpad"><a href="<?php echo base_url('user/upcomingevents/')?>" class="sm">UPCOMING EVENTS</a></li>
+      <li class="dropdown userpad showhover">
+        <a class="sm" class="dropdown-toggle" data-toggle="dropdown" href="#">NEWS AND EVENTS</a>
+        <ul class="dropdown-content">
+          <a class="userpad"><a href="<?php echo base_url('user/news/')?>" class="sm">NEWS</a></a>
+          <a class="userpad"><a href="<?php echo base_url('user/upcomingevents/')?>" class="sm">UPCOMING EVENTS</a></a>
         </ul>
       </li>
       <li class="userpad"><a class="sm" href="<?php echo base_url('user/faqs/')?>">FAQ's</a></li>  
