@@ -170,7 +170,7 @@ class user extends CI_Controller {
 		
 	}
 	
-	public function setting($user){
+	public function setting(){
 		$user =  $this->session->userdata('username');
 		$condition = array('username' => $user);
 		$result_array = $this->Peter->read_ownerinfo($condition);
@@ -179,19 +179,18 @@ class user extends CI_Controller {
 				'fname' => $o['fname'],
 				'lname' => $o['lname'],
 				'email' => $o['email'],
-				'username' => $o['username'],
-				'password' => $o['password'],
+				'photo' => $o['photo'],
 				'sex' => $o['sex'],
+				'username' => $o['username'],
 				'birthdate' => $o['birthdate']
 				);
-        }
+		}
 		$data['d']=$info;
 		$rules = array(
                     array('field'=>'fname', 'label'=>'First Name', 'rules'=>'required'),
                     array('field'=>'lname', 'label'=>'Last Name', 'rules'=>'required'),
                     array('field'=>'email', 'label'=>'Email', 'rules'=>'required'),
 					array('field'=>'username', 'label'=>'Username', 'rules'=>'required'),
-					array('field'=>'password', 'label'=>'Password', 'rules'=>'required'),
 					array('field'=>'sex', 'label'=>'Sex', 'rules'=>'required'),
 					array('field'=>'birthdate', 'label'=>'Birthday', 'rules'=>'required')
                 );
@@ -206,12 +205,13 @@ class user extends CI_Controller {
 			$data['set'] = $result_array;
 			$data['user'] = $user;
 			$this->load->view('include/menu_user',$data);			
+			$this->load->view('peternity_user/profile_pic');
 			$this->load->view('peternity_user/settings',$data);
 			$this->load->view('include/footer');
 		}
 
 		else{
-			$settings=array('fname'=>$_POST['fname'],'lname'=>$_POST['lname'],'email'=>$_POST['email'],'username'=>$_POST['username'],'password'=>$_POST['password'],'sex'=>$_POST['sex'],'birthdate'=>$_POST['birthdate']);
+			$settings=array('fname'=>$_POST['fname'],'lname'=>$_POST['lname'],'email'=>$_POST['email'],'username'=>$_POST['username'],'sex'=>$_POST['sex'],'birthdate'=>$_POST['birthdate']);
             $this->Peter->update_ownerinfo($settings);
             redirect('user');
 		}
@@ -235,6 +235,28 @@ class user extends CI_Controller {
 		$this->load->view('peternity_user/userstories',$data);
 		$this->load->view('include/footer');
 	}
+		public function profile_pic(){
+			if($_SERVER['REQUEST_METHOD']=='POST')
+						{
+							$url = $this->do_upload();
+							$user =  $this->session->userdata('username');
+							$condition = array('username' => $user);
+							$result_array = $this->Peter->read_ownerinfo($condition);
+							foreach($result_array as $o){
+								$profilepic=array(
+									'fname' => $o['fname'],
+									'lname' => $o['lname'],
+									'email' => $o['email'],
+									'photo' => $url,
+									'username' => $o['username'],
+									'sex' => $o['sex'],
+									'birthdate' => $o['birthdate']
+									);
+							}
+							$this->Peter->update_ownerinfo($profilepic);
+							redirect('user/setting');
+			}
+		}
 		public function addstories(){
 		$this->load->view('peternity_user/adduserstories');
 		$user =  $this->session->userdata('username');

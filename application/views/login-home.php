@@ -1,9 +1,10 @@
 <div class="container-fluid">
 	<div class="panel panel-default text-left col-xs-2 margintop sminfo usermarg" id="userin"><br />
-		<img src="<?php echo base_url('assets/images/123.jpg'); ?>" class="profilepic img-circle logpic " style="width: 35px ; height:35px" alt="profilepic">
+		
 	<?php
 	foreach($usern as $d){
 		echo'
+		<img src="'.base_url($d['photo']).'" class="profilepic img-circle logpic " style="width: 35px ; height:35px" alt="profilepic">
 		<h4 class="heading ">'.$d['fname'].' '.$d['lname'].'</h4>
 		<br />
 		<hr />
