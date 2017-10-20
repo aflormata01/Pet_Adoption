@@ -5,7 +5,7 @@
     </div>
     <ul class="nav navbar-nav">
       <li class="menupad "><a class="sm" href="<?php echo base_url('user')?>">HOME</a></li>
-	  <li class="menupad"><a class="sm" href="<?php echo base_url('peternity/petcatalogue')?>">PET CATALOGUE</a></li>
+	  <li class="menupad"><a class="sm" href="<?php echo base_url('peternity/rescuepet')?>">PET CATALOGUE</a></li>
 	  <li class="dropdown menupad ">
         <a class="sm" class="dropdown-toggle" data-toggle="dropdown" href="#">COMMUNITY
         <span class="caret"></span></a>

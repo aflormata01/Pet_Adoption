@@ -5,7 +5,7 @@
     </div>
     <ul class="nav navbar-nav">
       <li class="userpad"><a class="sm" href="<?php echo base_url('user')?>">HOME</a></li>
-	  <li class="userpad"><a class="sm" href="<?php echo base_url('user/petcatalogue')?>">PET CATALOGUE</a></li>
+	  <li class="userpad"><a class="sm" href="<?php echo base_url('user/rescuepet')?>">PET CATALOGUE</a></li>
 	  <li class="dropdown userpad">
         <a class="sm" class="dropdown-toggle" data-toggle="dropdown" href="#">COMMUNITY
         <span class="caret"></span></a>
