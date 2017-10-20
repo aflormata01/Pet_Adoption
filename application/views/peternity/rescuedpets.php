@@ -17,8 +17,13 @@
 foreach($petrescue as $d){ 
   echo' <div class="col-md-4 marginpettx">
  
-    <div class="ih-item circle effect1 "><a href="#">
-        <div class="spinner">
+    <div class="ih-item circle effect1 "><a href="'.base_url('peternity/info').'" style="text-decoration:none" data-toggle="modal" data-target="#myModal">
+		<div id="table">
+			<div id="myModal" class="modal fade" role="dialog">
+			
+    </div>
+	</div>
+	   <div class="spinner">
 		</div>
         <div class="img"><img src="'.base_url($d['photo']).'" alt="img" class="img-circle imagespin  img-responsive" style="width: cover;" ></div></div></a>
         <div class="panel-body  margintpett">

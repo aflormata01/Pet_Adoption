@@ -5,7 +5,7 @@
 			<button type="button" class="close" data-dismiss="modal">&times;</button>
    <div class="modal-body">
   <div>
-    <div class="form-group text-left">
+    <div class="form-group">
 	<h2 class="font text-center heading">PET INFORMATION</h2>
   </div>
   </div> </div>  </div>

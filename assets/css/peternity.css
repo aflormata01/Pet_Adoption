@@ -48,6 +48,10 @@
 	.button{background-color: #ffcab2;}
 	.picstory{margin-left: 100px; }
 	.usermarg{margin-left: 210px;}
+	.dropdown-menu a:hover {background-color: }
+	.dropdown:hover .dropdown-menu {
+    display: block;
+}
 	
 	panel{margin-left: 600px; margin-right: 600px;}
 	button{margin:auto;}

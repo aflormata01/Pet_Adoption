@@ -41,6 +41,17 @@ class user extends CI_Controller {
 		$this->load->view('include/footer');
 		
 	}	
+	public function info(){
+		$user =  $this->session->userdata('username');
+		$header_data['title'] = "PET INFO";
+		$data['user'] = $user;
+		$this->load->view('include/header',$header_data);
+		$this->load->view('include/menu_user',$data);
+		$this->load->view('peternity_user/petinfo');
+		$this->load->view('include/footer');
+		
+	}	
+	
 	public function rescuepet(){
 		$user =  $this->session->userdata('username');
 		$result_array = $this->Peter->read_petrescued();

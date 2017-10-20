@@ -17,11 +17,11 @@ echo '
 
  
 
-    <div class="ih-item circle effect1 ">
+    <div class="ih-item circle effect1 "><a href="">
 
         <div class="spinner">
 		</div>
-        <div class="img"><img src="'.base_url($p['photo']).'" alt="img" class="img-circle imagespin img-responsive"></div>
+        <div class="img"><img src="'.base_url($p['photo']).'" alt="img" class="img-circle imagespin img-responsive"></div></a>
 		</div></a>
         <div class="panel-body">
 			    <div class="col-sm-11">
