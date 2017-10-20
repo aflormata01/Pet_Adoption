@@ -273,7 +273,13 @@ class user extends CI_Controller {
 					$this->Peter->create_stories_like($like);
 				}
 			}
-			
+			$condition = array('username' => $user);
+			$data['user'] = $user;
+			$result_array = $this->Peter->read_stories();
+			$data['user_stories'] = $result_array;
+			$likes = $this->Peter->read_stories_like($condition);
+			$data['liked_stories'] = $likes;
+			echo $this->load->view('user-stories',$data, TRUE);
 		}
 				
 }
