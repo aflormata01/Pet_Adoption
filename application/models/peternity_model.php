@@ -356,19 +356,26 @@ class peternity_model extends CI_model
         return $query->row_array();
 		}
 		
-			public function create_stories_like($data)
+		public function create_stories_like($data)
 		{
 			$this->db->insert($this->stories_like, $data);
 			return TRUE;	
 		}
 	
-		public function del_stories_like()
+		public function del_stories_like($data)
 		{
 			$this->db->where($data);
 			$this->db->delete($this->stories_like);
 			return TRUE;	
 		}
-
+		public function read_stories_like($condition=null)
+		{
+			$this -> db -> select('*');
+			$this -> db -> from($this-> stories_like);
+			if ( isset($condition)) $this->db->where($condition);
+			$query= $this->db->get();
+			return $query-> result_array();
+		}
 }
 
 ?>
