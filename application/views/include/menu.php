@@ -32,8 +32,8 @@
 
 
 </style>
-<nav class="navbar ">
-  <div class="container ">
+<nav class="navbar">
+  <div class="container">
     <div class="navbar-header menupad">
       <a class="navbar-brand" href="<?php echo base_url('user')?>""><img src="<?php echo base_url('assets/images/logo.png'); ?>" /></a>
     </div>
