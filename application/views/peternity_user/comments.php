@@ -16,12 +16,45 @@
 		
 		echo '
 		<div class="panel panel-heading panel-default">
+		<div class="dropdown1 floater">
+							<button class="none floater dropbtn1"><span><i class="fa fa-ellipsis-h"></i></span></button>
+								<div class="dropdown-content1">
+									<a class="heading sm" <a href="'.base_url('user/delDisc_comments/'.$c['discuss#']).'" onclick = "getConfirm(this.href);"><span><i class="fa fa-trash-o"></i></span>Delete</a>
+								</div>
+					</div>
 		<img src="" class="img img-responsive img-circle float" alt="featured pet 1" style="width: 50px; height:50px;"/>
 			<h5 class="text-left smspace heading">'.$c['username'].'</h5>	
 			<h6 class="text-left smspace ver sm ">'.$c['comment'].'</h6>	
 		</div>';
 		}
 ?>
+
+<script type = "text/javascript">
+
+function getConfirm(l)
+{
+  if(arguments[0] != null)
+  {
+    if(window.confirm('Are you sure you want to delete?\n'))
+    {
+      location.href = l;
+    }
+    
+    else
+    {
+      event.cancelBubble = true;
+      event.returnValue = false;
+      return false;
+    }
+  }
+  
+  else
+  {
+    return false;
+  }
+  return;
+}
+</script>	
 
 <script>
 	$(document).ready(function(){
