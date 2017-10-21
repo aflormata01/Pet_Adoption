@@ -383,9 +383,10 @@ class user extends CI_Controller {
 					$data['disc'] = $disc;
 					echo $this->load->view('peternity_user/comments',$data, TRUE);
 			}
-			
-			
-			
 		}
-				
+		public function delStories($story){
+			$where_array = array('story#'=>$story);
+			$this->Peter->del_stories($where_array);
+			redirect('user');
+		}		
 }

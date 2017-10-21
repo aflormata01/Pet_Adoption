@@ -313,11 +313,9 @@ class peternity_model extends CI_model
 			$this->db->update($this->stories, $data);
 			return TRUE;	
 		}
-		public function del_stories()
+		public function del_stories($where_array)
 		{
-			$this->db->where($data);
-			$this->db->delete($this->stories);
-			return TRUE;	
+			$this->db->delete($this->stories,$where_array);
 		}
 		public function read_stories($condition=null)
 		{
