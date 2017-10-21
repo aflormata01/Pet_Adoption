@@ -237,14 +237,18 @@ class user extends CI_Controller {
         }
 	public function userstories(){
 		$user =  $this->session->userdata('username');
+		$header_data['title'] = "My Stories";
 		$condition = array('username' => $user);
 		$result_array = $this->Peter->read_stories($condition);
+        $result = $this->Peter->read_ownerinfo($condition);
         $data['user_stories'] = $result_array;
-		$data['user'] = $user;
-		$header_data['title'] = "STORIES";
+        $data['usern'] = $result;
+        $data['user'] = $user;
+		$likes = $this->Peter->read_stories_like($condition);
+		$data['liked_stories'] = $likes;
 		$this->load->view('include/header',$header_data);
 		$this->load->view('include/menu_user',$data);
-		$this->load->view('peternity_user/userstories',$data);
+		$this->load->view('login-home',$data);
 		$this->load->view('include/footer');
 	}
 		public function profile_pic(){
