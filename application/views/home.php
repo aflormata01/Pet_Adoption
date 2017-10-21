@@ -96,11 +96,77 @@
 			  </div>
 </div>
 
+	<div class="">
+		<div class="col-md-12">
+			<div class="col-md-8">
+				<h2 class="text-center"> PETERNITY </h2>
+			</div>
+			<div class="col-md-4">
+			<div class="hotAirBalloonMovement">
+			<div class="animatedBalloon">
+				<img alt="" class="horizontalMove" src="<?php echo base_url('assets/images/dogbone.png')?>" style="width: 50px; height: 50px;">
+			</div>
+			<div class="animatedBalloon meri2">
+				<img alt="" class="horizontalMove" src="<?php echo base_url('assets/images/fishbone.png')?>"style="width: 50px; height: 50px;">
+			</div>
+			<div class="animatedBalloon meri3">
+				<img alt="" class="horizontalMove" src="<?php echo base_url('assets/images/dogbone.png')?>"style="width: 50px; height: 50px;">
+			</div>
+			<div class="animatedBalloon meri3">
+				<img alt="" class="horizontalMove" src="<?php echo base_url('assets/images/dogbone.png')?>"style="width: 50px; height: 50px;">
+			</div>
+			<div class="animatedBalloon meri4">
+				<img alt="" class="horizontalMove" src="<?php echo base_url('assets/images/fishbone.png')?>"style="width: 50px; height: 50px;">
+			</div>
+			<div class="animatedBalloon meri5">
+				<img alt="" class="horizontalMove" src="<?php echo base_url('assets/images/dogbone.png')?>"style="width: 50px; height: 50px;">
+			</div>
+			<div class="animatedBalloon meri6">
+				<img alt="" class="horizontalMove" src="<?php echo base_url('assets/images/fishbone.png')?>"style="width: 50px; height: 50px;">
+			</div>
+			<div class="animatedBalloon meri7">
+				<img alt="" class="horizontalMove" src="<?php echo base_url('assets/images/dogbone.png')?>"style="width: 50px; height: 50px;">
+			</div>
+			<div class="animatedBalloon meri8">
+				<img alt="" class="horizontalMove" src="<?php echo base_url('assets/images/fishbone.png')?>"style="width: 50px; height: 50px;">
+			</div>
+			<div class="animatedBalloon meri9">
+				<img alt="" class="horizontalMove" src="<?php echo base_url('assets/images/dogbone.png')?>"style="width: 50px; height: 50px;">
+			</div>
+			<div class="animatedBalloon meri10">
+				<img alt="" class="horizontalMove" src="<?php echo base_url('assets/images/dogbone.png')?>"style="width: 50px; height: 50px;">
+			</div>
+			<div class="animatedBalloon meri11">
+				<img alt="" class="horizontalMove" src="<?php echo base_url('assets/images/fishbone.png')?>"style="width: 50px; height: 50px;">
+			</div>
+			<div class="animatedBalloon meri12">
+				<img alt="" class="horizontalMove" src="<?php echo base_url('assets/images/dogbone.png')?>"style="width: 50px; height: 50px;">
+			</div>
+			<div class="animatedBalloon meri13">
+				<img alt="" class="horizontalMove" src="<?php echo base_url('assets/images/fishbone.png')?>"style="width: 50px; height: 50px;">
+			</div>
+			<div class="animatedBalloon meri14">
+				<img alt="" class="horizontalMove" src="<?php echo base_url('assets/images/fishbone.png')?>"style="width: 50px; height: 50px;">
+			</div>
+			<div class="animatedBalloon meri15">
+				<img alt="" class="horizontalMove" src="<?php echo base_url('assets/images/dogbone.png')?>"style="width: 50px; height: 50px;">
+			</div>
+		</div>
+				<img src="<?php echo base_url('assets/images/cd.png')?>" class="img img-responsive margintop margintop" alt="catdog" />
+			
+			</div>
+		
+		</div>
+
+
+</div>
+
+
   
   
   
   
-  </div>
+ 
   
 
      

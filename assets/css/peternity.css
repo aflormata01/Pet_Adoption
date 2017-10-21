@@ -30,6 +30,7 @@
 	.sign{padding-left: 350px;}
 	.info{margin-left:50px; text-align: left;}
 	.sm{font-size:  12px; font-family: Verdana;}
+	.ver{font-family: Verdana;}
 	.sign{padding-left: 350px;}
 	.heart{min-width: 50px; min-height: 50px; color:}
 	.centered{margin-left: 350px;}
@@ -50,8 +51,10 @@
 	.dropdown-menu a:hover {background-color: }
 	.dropdown:hover .dropdown-menu {display: block;}
 	.spacing{margin-left: 120px;}
+	.smspace{margin-left: 60px;}
 	.white{color: white;}
 	.re{border-radius: 30px;}
+	.cent{margin: 0px 350px 0px 350px;}
 	.panel-default1{background-color: #FAD332;}
 	.fixed-bg {
     background-image: url('../images/petbg2.jpg');
@@ -62,7 +65,6 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;}
-							
 	#textmargin{margin-left: 135px;}
 	panel{margin-left: 600px; margin-right: 600px;}
 	button{margin:auto;}
@@ -273,4 +275,217 @@
 .newss {
   display: inline-block;
   float: left;
+}
+.hotAirBalloonMovement {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	bottom: 0;
+	overflow:hidden;
+}
+.hotAirBalloonMovement .animatedBalloon,
+.hotAirBalloonMovement .meri2,
+.hotAirBalloonMovement .meri3,
+.hotAirBalloonMovement .meri4,
+.hotAirBalloonMovement .meri5,
+.hotAirBalloonMovement .meri6,
+.hotAirBalloonMovement .meri7,
+.hotAirBalloonMovement .meri8,
+.hotAirBalloonMovement .meri9,
+.hotAirBalloonMovement .meri10,
+.hotAirBalloonMovement .meri11,
+.hotAirBalloonMovement .meri12,
+.hotAirBalloonMovement .meri13,
+.hotAirBalloonMovement .meri14,
+.hotAirBalloonMovement .meri15 {
+	display:inline-block;
+	position:absolute;
+	top:-30%;
+	-webkit-animation:hotAirBalloonMovement 25s linear 1s infinite;
+	animation:hotAirBalloonMovement 25s linear 1s infinite;
+}
+.hotAirBalloonMovement .meri2 {
+	left:10%;
+	-webkit-animation:meri2 25s linear 8s infinite;
+	animation:meri2 25s linear 8s infinite;
+}
+.hotAirBalloonMovement .meri3 {
+	left:17%;
+	-webkit-animation:meri2 25s linear 18s infinite;
+	animation:meri2 25s linear 18s infinite;
+}
+.hotAirBalloonMovement .meri4 {
+	left:24%;
+	-webkit-animation:meri2 25s linear 3s infinite;
+	animation:meri2 25s linear 3s infinite;
+}
+.hotAirBalloonMovement .meri5 {
+	left:30%;
+	-webkit-animation:meri2 25s linear 3s infinite;
+	animation:meri2 25s linear 3s infinite;
+}
+.hotAirBalloonMovement .meri6 {
+	left:37%;
+	-webkit-animation:meri2 25s linear 4s infinite;
+	animation:meri2 25s linear 4s infinite;
+}
+.hotAirBalloonMovement .meri7 {
+	left:44%;
+	-webkit-animation:meri2 25s linear 9s infinite;
+	animation:meri2 25s linear 9s infinite;
+}
+.hotAirBalloonMovement .meri8 {
+	left:50%;
+	-webkit-animation:meri2 25s linear 15s infinite;
+	animation:meri2 25s linear 15s infinite;
+}
+.hotAirBalloonMovement .meri9 {
+	left:57%;
+}
+.hotAirBalloonMovement .meri10 {
+	left:64%;
+	-webkit-animation:meri2 25s linear 10s infinite;
+	animation:meri2 25s linear 10s infinite;
+}
+.hotAirBalloonMovement .meri11 {
+	left:71%;
+}
+.hotAirBalloonMovement .meri12 {
+	left:78%;
+	-webkit-animation:meri2 25s linear 7s infinite;
+	animation:meri2 25s linear 7s infinite;
+}
+.hotAirBalloonMovement .meri13 {
+	left:85%;
+}
+.hotAirBalloonMovement .meri14 {
+	left:40%;
+	-webkit-animation:meri2 25s linear 17s infinite;
+	animation:meri2 25s linear 17s infinite;
+}
+.hotAirBalloonMovement .meri15 {
+	left:60%;
+	-webkit-animation:meri2 25s linear 16s infinite;
+	animation:meri2 25s linear 16s infinite;
+}
+@-webkit-keyframes hotAirBalloonMovement {
+	0% { top:0; opacity:0;}
+	10% {top:10%; opacity:1;}
+	20% {top:20%; opacity:1;}
+	30% {top:30%; opacity:1;}
+	40% {top:40%; opacity:1;}
+	50% {top:50%; opacity:1;}
+	60% {top:60%; opacity:1;}
+	70% {top:70%; opacity:1;}
+	80% {top:80%; opacity:1;}
+	90% {top:90%; opacity:1;}	
+	100% { top:100%; opacity:0;}
+}
+@-moz-keyframes hotAirBalloonMovement {
+	0% { top:0; opacity:0;}
+	10% {top:10%; opacity:1;}
+	20% {top:20%; opacity:1;}
+	30% {top:30%; opacity:1;}
+	40% {top:40%; opacity:1;}
+	50% {top:50%; opacity:1;}
+	60% {top:60%; opacity:1;}
+	70% {top:70%; opacity:1;}
+	80% {top:80%; opacity:1;}
+	90% {top:90%; opacity:1;}	
+	100% { top:100%; opacity:0;}
+}
+@keyframes hotAirBalloonMovement {
+	0% { top:0; opacity:0;}
+	10% {top:10%; opacity:1;}
+	20% {top:20%; opacity:1;}
+	30% {top:30%; opacity:1;}
+	40% {top:40%; opacity:1;}
+	50% {top:50%; opacity:1;}
+	60% {top:60%; opacity:1;}
+	70% {top:70%; opacity:1;}
+	80% {top:80%; opacity:1;}
+	90% {top:90%; opacity:1;}	
+	100% { top:100%; opacity:0;}
+}
+
+@-webkit-keyframes meri2 {
+	0% { top:0; opacity:0;}
+	10% {top:10%; opacity:1;}
+	20% {top:20%; opacity:1;}
+	30% {top:30%; opacity:1;}
+	40% {top:40%; opacity:1;}
+	50% {top:50%; opacity:1;}
+	60% {top:60%; opacity:1;}
+	70% {top:70%; opacity:1;}
+	80% {top:80%; opacity:1;}
+	90% {top:90%; opacity:1;}	
+	100% { top:100%; opacity:0;}
+}
+@-moz-keyframes meri2 {
+	0% { top:0; opacity:0;}
+	10% {top:10%; opacity:1;}
+	20% {top:20%; opacity:1;}
+	30% {top:30%; opacity:1;}
+	40% {top:40%; opacity:1;}
+	50% {top:50%; opacity:1;}
+	60% {top:60%; opacity:1;}
+	70% {top:70%; opacity:1;}
+	80% {top:80%; opacity:1;}
+	90% {top:90%; opacity:1;}	
+	100% { top:100%; opacity:0;}
+}
+@keyframes meri2 {
+	0% { top:0; opacity:0;}
+	10% {top:10%; opacity:1;}
+	20% {top:20%; opacity:1;}
+	30% {top:30%; opacity:1;}
+	40% {top:40%; opacity:1;}
+	50% {top:50%; opacity:1;}
+	60% {top:60%; opacity:1;}
+	70% {top:70%; opacity:1;}
+	80% {top:80%; opacity:1;}
+	90% {top:90%; opacity:1;}	
+	100% { top:100%; opacity:0;}
+}
+
+.enter {
+	color: #f33 !important;
+	position: absolute !important;
+	top: 85% !important;
+	left: 50%;
+	z-index: 1 !important;
+	width: 120px;
+	margin-left: -67px;
+}
+
+.column {
+    float: left;
+    width: 25%;
+    padding: 10px;
+}
+
+.column img {
+    margin-top: 12px;
+    width: 100%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media (max-width: 800px) {
+    .column {
+        width: 50%;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+    .column {
+        width: 100%;
+   }
 }
