@@ -9,7 +9,9 @@
 				
 			<?php echo form_open_multipart('user/setting/'.$user.''); //this is equal to <form role="form" method="post" enctype="multipart/form-data" accept-charset="utf-8" action="http://localhost/Pet_Adoption/user/profile_pic"?>
 				<input class="text-center" id="file" name="file" type="file" />
+				
 				</div>
+				</br>
 
 				<div class="profile-usertitle">
 					<div class="profile-usertitle-name text-center">
@@ -17,9 +19,15 @@
 					</div>
 					
 					
+				  <div class="  text-center margintop">
+					<i class="fa fa-edit"></i> <a  href="<?php echo base_url('user/changepass')?>" class="heading">Change Password</a>
+				  </div>
+			
+				
 				</div>
 				<br/>
-				<div class="profile-usermenu text-center">
+				
+				<div class="profile-usermenu text-center marginbottom">
 					<ul class="nav">
 					
 						<li>
@@ -71,12 +79,7 @@
       </div>
 	</div>
 	
-	<div class="form-group">
-      <label class="control-label col-sm-2" for="username">Password:</label>
-      <div class="col-sm-4">
-        <a  href="<?php echo base_url('user/changepass')?>" class="heading">Change Password</a>
-      </div>
-	</div>
+	
 	
 	<div class="form-group">
 		<label class="control-label col-sm-2" for="sex">Sex</label>
