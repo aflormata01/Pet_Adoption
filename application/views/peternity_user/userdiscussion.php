@@ -17,7 +17,7 @@
 					<tr> 
 
 						<td>posted by '.$d['username'].' | '.date("F j, Y, g:i a", strtotime($d['date'])).'</td>
-						<td class="gap sm"><a href="'.base_url('user/discbody').'" class="sm">'.$d['body'].'</a></td>
+						<td class="gap sm"><a href="'.base_url('user/discbody/'.$d['discuss#'].'').'" class="sm">'.$d['body'].'</a></td>
 
 					</tr>
 					<tr> <div class="btn-group">
