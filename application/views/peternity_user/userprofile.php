@@ -1,4 +1,4 @@
-
+`
 <div class="container margintop">   
 
         <div class=" imgmarg col-sm-8">
@@ -14,8 +14,8 @@
 					<div class="col-sm-8 picstory text-left ">
 						<h4 class="heading "><span class="glyphicon glyphicon-user"></span> '.$p['username'].' </h4>
 						<h4 class="heading "><span class="glyphicon glyphicon-envelope"></span> '.$p['email'].'</h4>
-						<h4 class="heading "><span class="glyphicon glyphicon-baby-formula"></span> '.$p['birthdate'].'</h4>
-						<h4 class="heading "><i class="fi-male-female"></i>'.$p['sex'].'</h4> 	</div>' ;
+						<h4 class="heading "><i class="fa fa-birthday-cake"></i></span> '.$p['birthdate'].'</h4>
+						<h4 class="heading "><i class="fa fa-male"></i> | <i class="fa fa-female"></i> '.$p['sex'].'</h4> 	</div>' ;
 				
 					}
 					

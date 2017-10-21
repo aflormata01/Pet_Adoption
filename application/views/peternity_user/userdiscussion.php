@@ -18,9 +18,11 @@
 						<td>posted by '.$d['username'].' | '.$d['date'].' | '.$d['time'].'</td>
 						<td class="gap sm"><a href="" class="sm">'.$d['body'].'</a></td>
 					</tr>
-					<tr> 
-						<td class="text-left"><button class="btn-danger heart"><span class="glyphicon glyphicon-heart"></button></td>
-						
+					<tr> <div class="btn-group">
+						<td class="text-left">
+					<button class=""><i class="fa fa-thumbs-o-up"></i></button>
+					<button class=""><i class="fa fa-thumbs-o-down"></i></button></td>
+						</div>
 					</tr>
 				</tbody>
 			</table>

@@ -43,7 +43,6 @@
 	  <li class="dropdown menupad">
         <a class="sm" class="dropdown-toggle" data-toggle="dropdown" href="#">COMMUNITY</a>
         <ul class="dropdown-content ">
-          <a class="menupad"><a href="<?php echo base_url('peternity/stories')?>" class="sm">SUCCESS STORIES&nbsp;&nbsp;&nbsp;</a></a>
           <a class="menupad"><a href="<?php echo base_url('peternity/discussion')?>" class="sm">DICUSSIONS&nbsp;&nbsp;&nbsp; </a></a>
         </ul>
       </li>

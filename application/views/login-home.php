@@ -8,9 +8,9 @@
 		<h4 class="heading ">'.$d['fname'].' '.$d['lname'].'</h4>
 		<br />
 		<hr />
-		<h6 class="heading "><span class="glyphicon glyphicon-user"></span><a href="'.base_url('user/profile/'.$d['username'].'').'">'.$d['username'].'</a></h6>
+		<h6 class="heading "><span class="glyphicon glyphicon-user"></span> <a class="heading" href="'.base_url('user/profile/'.$d['username'].'').'">'.$d['username'].'</a></h6>
 		<h6 class="heading "><span class="glyphicon glyphicon-envelope"></span> '.$d['email'].'</h6>
-		<h6 class="heading "><span class="glyphicon glyphicon-baby-formula"></span> '.$d['birthdate'].'</h6>
+		<h6 class="heading "><i class="fa fa-birthday-cake"></i> '.$d['birthdate'].'</h6>
 		<h6 class="heading "><span class="glyphicon glyphicon-list-alt"></span> <a href="" class="heading sm">My Stories</a></h6>
 	';
 	}
