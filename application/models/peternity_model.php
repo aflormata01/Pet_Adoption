@@ -246,11 +246,9 @@ class peternity_model extends CI_model
 			$this->db->insert($this->owneraccount, $data);
 			return TRUE;	
 		}
-		public function update_owneraccount()
+		public function update_owneraccount($change)
 		{
-			$this->db->where($data);
-			$this->db->update($this->owneraccount, $data);
-			return TRUE;	
+			$this->db->replace($this->owneraccount,$change);	
 		}
 		public function del_owneraccount()
 		{

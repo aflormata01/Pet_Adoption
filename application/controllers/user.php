@@ -230,11 +230,37 @@ class user extends CI_Controller {
 
 	}
 	public function changepass(){
-		$header_data['title'] = "CHANGE PASSWORD";
+		$user =  $this->session->userdata('username');
+		$condition = array('username' => $user);
+		$array = $this->Peter->read_owneraccount($condition);
+		foreach($array as $o){
+					$password = $o['password'];
+					$username = $o['username'];
+					$date_signedup = $o['date_signedup'];		
+		}
+		$rules = array(
+					array('field'=>'password', 'label'=>'Password', 'rules'=>'required|matches['.$password.']'),
+					array('field'=>'confirm_password', 'label'=>'New Password', 'rules'=>'required'),
+					array('field'=>'new_password', 'label'=>'Re-enter New Password', 'rules'=>'required|matches[confirm_password]')
+		);
+		$this->form_validation->set_rules($rules);
+		$this->form_validation->set_error_delimiters('<p class="error">', '</p>');
+		if($this->form_validation->run()==FALSE){
+			$user =  $this->session->userdata('username');
+			$condition = array('username' => $user);
+			$result_array = $this->Peter->read_owneraccount($condition);
+			$data['d'] = $result_array;
+			$header_data['title'] = "CHANGE PASSWORD";
 			$this->load->view('include/header',$header_data);		
-			$this->load->view('peternity_user/changepass');
+			$this->load->view('peternity_user/changepass',$data);
 			$this->load->view('include/footer');
-        }
+		}else{
+			$user =  $this->session->userdata('username');
+			$change=array('username'=>$user,'password'=>$_POST['new_password']);
+            $this->Peter->update_owneraccount($change);
+			redirect(user/setting);
+		}
+	}
 	public function userstories(){
 		$user =  $this->session->userdata('username');
 		$condition = array('username' => $user);
