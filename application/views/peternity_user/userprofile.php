@@ -1,25 +1,30 @@
 `
 <div class="container margintop">   
 
-        <div class=" imgmarg col-sm-8">
-			<div class="">
+        <div class=" imgmarg col-sm-8 ">
+			<div class="col-sm-10 text-center ">
 				
-					<div class="col-sm-8 text-center ">
-					<?php
+					<div class="col-sm-8">
 						
-						foreach($profile as $p){ 
-						echo '
-						<img src="'.base_url($p['photo']).' ?>" class="profilepic img-circle " style="width: 200px ; height:200px" alt="profilepic">
-						<h1 class="">'.$p['fname'].' '.$p['lname'].'</h1>
-					<div class="col-sm-8 picstory text-left ">
-						<h4 class="heading "><span class="glyphicon glyphicon-user"></span> '.$p['username'].' </h4>
-						<h4 class="heading "><span class="glyphicon glyphicon-envelope"></span> '.$p['email'].'</h4>
-						<h4 class="heading "><i class="fa fa-birthday-cake"></i></span> '.$p['birthdate'].'</h4>
-						<h4 class="heading "><i class="fa fa-male"></i> | <i class="fa fa-female"></i> '.$p['sex'].'</h4> 	</div>' ;
+						<?php
+							
+							foreach($profile as $p){ 
+							echo '
+							<img src="'.base_url($p['photo']).' ?>" class="profilepic img-circle " style="width: 200px ; height:200px" alt="profilepic">
+							</div>
+							<div class="col-sm-12">
+							<div class="text-left border" style="float: right;">
+							<h1 class="">'.$p['fname'].' '.$p['lname'].'</h1>
 				
-					}
+							<h4 class="heading "><span class="glyphicon glyphicon-user"></span> '.$p['username'].' </h4>
+							<h4 class="heading "><span class="glyphicon glyphicon-envelope"></span> '.$p['email'].'</h4>
+							<h4 class="heading "><i class="fa fa-birthday-cake"></i></span> '.$p['birthdate'].'</h4>
+							<h4 class="heading "><i class="fa fa-male"></i> | <i class="fa fa-female"></i> '.$p['sex'].'</h4> 	</div>' ;
 					
-					?>
+						}
+						
+						?>
+						</div>
 					</div>
 			</div>
 		</div>
