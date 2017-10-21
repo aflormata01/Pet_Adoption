@@ -15,8 +15,10 @@
 				</thead>
 				<tbody>
 					<tr> 
-						<td>posted by '.$d['username'].' | '.date("F j, Y, g:i a", strtotime($d['date'])).' </td>
-						<td class="gap sm"><a href="" class="sm">'.$d['body'].'</a></td>
+
+						<td>posted by '.$d['username'].' | '.date("F j, Y, g:i a", strtotime($d['date'])).'</td>
+						<td class="gap sm"><a href="'.base_url('user/discbody').'" class="sm">'.$d['body'].'</a></td>
+
 					</tr>
 					<tr> <div class="btn-group">
 						<td class="text-left">
