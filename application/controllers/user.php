@@ -345,6 +345,7 @@ class user extends CI_Controller {
 				$condition = array('discuss#' => $disc);
 				$comments = $this->Peter->read_disc_comments($condition);
 				$data['comments'] = $comments;
+				
 				$data['disc'] = $disc;
 				echo $this->load->view('peternity_user/comments',$data, TRUE);
 			}

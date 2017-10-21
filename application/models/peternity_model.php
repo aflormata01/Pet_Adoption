@@ -36,6 +36,7 @@ class peternity_model extends CI_model
 		}
 		public function read_discussion($condition=null)
 		{
+			 $this->db->order_by('discuss# DESC');
 			 $this -> db -> select('*');
 			 $this -> db -> from($this-> discussion);
 			 if ( isset($condition)) $this->db->where($condition);
@@ -118,6 +119,7 @@ class peternity_model extends CI_model
 		}
 		public function read_news($condition=null)
 		{
+			 
 			 $this -> db -> select('*');
 			 $this -> db -> from($this-> news);
 			 if ( isset($condition)) $this->db->where($condition);
@@ -146,6 +148,7 @@ class peternity_model extends CI_model
 		}
 		public function read_disc_comments($condition=null)
 		{
+			 $this->db->order_by('comment# DESC');
 			 $this -> db -> select('*');
 			 $this -> db -> from($this-> disc_comments);
 			 if ( isset($condition)) $this->db->where($condition);
@@ -157,32 +160,32 @@ class peternity_model extends CI_model
 		
 		
 		
-		public function create_ownedpets($data)
-		{
-			$this->db->insert($this->ownedpets, $data);
-			return TRUE;	
-		}
-		public function update_ownedpets()
-		{
-			$this->db->where($data);
-			$this->db->update($this->ownedpets, $data);
-			return TRUE;	
-		}
-		public function del_ownedpets()
-		{
-			$this->db->where($data);
-			$this->db->delete($this->ownedpets);
-			return TRUE;	
-		}
-		public function read_ownedpets($condition=null)
-		{
-			 $this -> db -> select('*');
-			 $this -> db -> from($this-> ownedpets);
-			 if ( isset($condition)) $this->db->where($condition);
-			 $query= $this->db->get();
-			 return $query-> result_array();
+		// public function create_ownedpets($data)
+		// {
+			// $this->db->insert($this->ownedpets, $data);
+			// return TRUE;	
+		// }
+		// public function update_ownedpets()
+		// {
+			// $this->db->where($data);
+			// $this->db->update($this->ownedpets, $data);
+			// return TRUE;	
+		// }
+		// public function del_ownedpets()
+		// {
+			// $this->db->where($data);
+			// $this->db->delete($this->ownedpets);
+			// return TRUE;	
+		// }
+		// public function read_ownedpets($condition=null)
+		// {
+			 // $this -> db -> select('*');
+			 // $this -> db -> from($this-> ownedpets);
+			 // if ( isset($condition)) $this->db->where($condition);
+			 // $query= $this->db->get();
+			 // return $query-> result_array();
 		 
-		}
+		// }
 		
 		
 		public function create_ownerinfo($data)
@@ -322,7 +325,8 @@ class peternity_model extends CI_model
 			return TRUE;	
 		}
 		public function read_stories($condition=null)
-		{
+		{	
+			 $this->db->order_by('story# DESC');
 			 $this -> db -> select('*');
 			 $this -> db -> from($this-> stories);
 			 if ( isset($condition)) $this->db->where($condition);
@@ -371,6 +375,7 @@ class peternity_model extends CI_model
 		}
 		public function read_stories_like($condition=null)
 		{
+			$this->db->order_by('time DESC');
 			$this -> db -> select('*');
 			$this -> db -> from($this-> stories_like);
 			if ( isset($condition)) $this->db->where($condition);
