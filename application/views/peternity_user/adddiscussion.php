@@ -7,6 +7,18 @@
   <div>
     <div class="form-group text-left">
 	<h2 class="font text-center heading">ADD DISCUSSION</h2>
+
+		<label class="control-label" for="body">Topics: </label>
+		<select class="form-control" type="text">
+			<option>Pet Grooming</option>
+			<option>Pet Vaccinations and Recommended Medicine</option>
+			<option>Restrictions when taking care of pets</option>
+			<option>Pet Care Tips </option>
+			<option>All about dogs </option>
+			<option>Cat Forum </option>
+			<option>Caring for reptiles and amphibians</option>
+		</select>
+    <div class="form-group text-left">
 		<label class="control-label" for="title">Title: </label><?php echo form_error('title', '<p class="text-danger">', '</p>'); ?>
 		<input class="form-control" type="text" id="title" name="title" type="text" value="<?php echo set_value('title'); ?>"/>
     </div>
