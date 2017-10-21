@@ -4,9 +4,10 @@
 		echo'
 		
 		<div class="panel panel-default marginbottom col-sm-12">
-		<div class="storypic" style="background-image: url('.base_url($d['file_name']).');"/>
-		<div class="capt"><span class="u_story"><a class="story" href="'.base_url('user/profile/'.$d['username'].'').'">'.$d['username'].'</a></span>
+		<div class="storypic margintop" style="background-image: url('.base_url($d['file_name']).');"/>
+		<div class="capt"><span class="u_story"><strong><a class="story" href="'.base_url('user/profile/'.$d['username'].'').'">'.$d['username'].'</a></strong></span>
 		<span class="storycapt">'. $d['title'].'</span></div>
+		
 		<div class="likebtn">';
 		if($liked_stories>0){
 		foreach($liked_stories as $l){
@@ -29,8 +30,17 @@
 		
 		echo'
 		
+		<div class="dropdown1 floater">
+		<button class="none floater dropbtn1"><span><i class="fa fa-ellipsis-h"></i></span></button>
+			<div class="dropdown-content1">
+				<a class="heading sm" href=""><span><i class="fa fa-trash-o"></i></span>Delete</a>
+			</div>
 		</div>
 		</div>
+		</div>
+		
+		
+		
 		';
 	}
 	

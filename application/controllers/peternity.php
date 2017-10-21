@@ -24,6 +24,21 @@ class peternity extends CI_Controller {
 		$this->load->view('include/footer');
 		
 	}	
+	public function steps(){
+		$header_data['title'] = "ADOPT A PET!";
+		$this->load->view('include/header',$header_data);
+		$this->load->view('include/menu');
+		$this->load->view('peternity/formsteps');
+		$this->load->view('include/footer');
+		
+	}	
+	public function adminview(){
+		$header_data['title'] = "admin";
+		$this->load->view('include/header',$header_data);
+		$this->load->view('peternity/admiin');
+		
+		
+	}
 	public function info(){
 		$header_data['title'] = "PET INFO";
 		$this->load->view('include/header',$header_data);
