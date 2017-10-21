@@ -314,5 +314,15 @@ class user extends CI_Controller {
 			$data['liked_stories'] = $likes;
 			echo $this->load->view('user-stories',$data, TRUE);
 		}
+		
+		
+		public function discbody(){
+			$header_data['title'] = "DISCUSSION BODY";
+		$this->load->view('include/header',$header_data);
+			$this->load->view('include/menu_user');			
+			$this->load->view('peternity_user/discbody');
+			$this->load->view('include/footer');
+			
+		}
 				
 }

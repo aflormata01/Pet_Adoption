@@ -7,6 +7,18 @@
   <div>
     <div class="form-group text-left">
 	<h2 class="font text-center heading">ADD DISCUSSION</h2>
+	
+	<div class="form-group text-left">
+		<label class="control-label" for="">Attach an image: </label>
+		<?php
+              if( isset($errors) ){
+                    echo $errors;
+              }
+        ?>
+		<span enctype="multipart/form-data"> </span>
+		<input type="file" name="file" id="file" />
+		
+    </div>
 
 		<label class="control-label" for="body">Topics: </label>
 		<select class="form-control" type="text">
