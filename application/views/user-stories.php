@@ -2,10 +2,12 @@
 	foreach($user_stories as $d){ 
 		$liked=0;
 		echo'
-		<div class="margintop marginbottom">
-		<img src="'.base_url($d['file_name']).'" style="width: 500px; height: 450px;" class="picstory img-responsive"/>
-		<h4 class="heading sm picstory text-warning">posted by <a href="'.base_url('user/profile/'.$d['username'].'').'">'.$d['username'].'</a><br />'. $d['title'].'</h4>
-		<h4 class="sm">';
+		
+		<div class="panel panel-default marginbottom col-sm-12">
+		<div class="storypic" style="background-image: url('.base_url($d['file_name']).');"/>
+		<div class="capt"><span class="u_story"><a class="story" href="'.base_url('user/profile/'.$d['username'].'').'">'.$d['username'].'</a></span>
+		<span class="storycapt">'. $d['title'].'</span></div>
+		<div class="likebtn">';
 		if($liked_stories>0){
 		foreach($liked_stories as $l){
 		if($l['story#']==$d['story#'])
@@ -14,20 +16,22 @@
 		}
 		if($liked==1){
 		echo'
-		<button class="picstory heart  heading like" id="unlike_'.$d['story#'].'" style="color: orange;">
+		<button class=" like" id="unlike_'.$d['story#'].'" style="color: orange;">
 		<span class="glyphicon glyphicon-heart-empty" ></span> LIKE</h4></button>';
 	
 		}
 		else
 		{	
 		echo '
-		<button class="picstory heart  heading like" style="text-decoration: none;" id="like_'.$d['story#'].'">
+		<button class=" like" style="text-decoration: none;" id="like_'.$d['story#'].'">
 		<span class="glyphicon glyphicon-heart-empty" ></span> LIKE</h4></button>';
 		}
 		
 		echo'
+		
 		</div>
-		<hr />';
+		</div>
+		';
 	}
 	
 ?>
