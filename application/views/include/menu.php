@@ -55,7 +55,15 @@
       </li>
       <li class="menupad"><a class="sm" href="<?php echo base_url('peternity/faqs')?>">FAQ's</a></li>   
 	  
-
+		<li class="menupad"><a class="sm" href="<?php echo base_url('peternity/steps')?>">ADOPT A PET!</a></li> 
+		<div id="table">
+			<div id="myModal" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+            <div class="modal-content"></div>
+        </div>
+    </div>
+	</div>  
+	  
 	  
    
   </div>
