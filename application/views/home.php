@@ -96,10 +96,12 @@
 			  </div>
 </div>
 
-	<div class="">
-		<div class="col-md-12">
-			<div class="col-md-8">
-				<h2 class="text-center"> PETERNITY </h2>
+	<div class="container margintop">
+		<div class="col-md-12 margintop">
+			<div class="col-md-8 panel panel-default1 margintop">
+					
+					<h2 class="text-center heading"> " Peternity lets you adopt and create a new home for animals. Help out and build better lives for our pets. Browse our pet catalogue and FAQ's for more information and adopt today! <span><i class="fa fa-paw"></i></span> "</h2>
+				
 			</div>
 			<div class="col-md-4">
 			<div class="hotAirBalloonMovement">
