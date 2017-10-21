@@ -388,5 +388,15 @@ class user extends CI_Controller {
 			$where_array = array('story#'=>$story);
 			$this->Peter->del_stories($where_array);
 			redirect('user');
+		}
+		public function delDiscussion($disc){
+			$where_array = array('discuss#'=>$disc);
+			$this->Peter->del_discussion($where_array);
+			redirect('user/userdiscussion');
+		}	
+		public function delDisc_comments($disc){
+			$where_array = array('discuss#'=>$disc);
+			$this->Peter->del_disc_comments($where_array);
+			redirect('user/userdiscussion');
 		}		
 }
