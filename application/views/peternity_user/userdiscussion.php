@@ -16,7 +16,7 @@
 				<tbody>
 					<tr> 
 						<td>posted by '.$d['username'].' | '.$d['date'].' | '.$d['time'].'</td>
-						<td class="gap sm"><a href="" class="sm">'.$d['body'].'</a></td>
+						<td class="gap sm"><a href="'.base_url('user/discbody').'" class="sm">'.$d['body'].'</a></td>
 					</tr>
 					<tr> <div class="btn-group">
 						<td class="text-left">

@@ -30,6 +30,7 @@
 	.sign{padding-left: 350px;}
 	.info{margin-left:50px; text-align: left;}
 	.sm{font-size:  12px; font-family: Verdana;}
+	.ver{font-family: Verdana;}
 	.sign{padding-left: 350px;}
 	.heart{min-width: 50px; min-height: 50px; color:}
 	.centered{margin-left: 350px;}
@@ -50,8 +51,10 @@
 	.dropdown-menu a:hover {background-color: }
 	.dropdown:hover .dropdown-menu {display: block;}
 	.spacing{margin-left: 120px;}
+	.smspace{margin-left: 60px;}
 	.white{color: white;}
 	.re{border-radius: 30px;}
+	.cent{margin: 0px 350px 0px 350px;}
 	.panel-default1{background-color: #FAD332;}
 	.fixed-bg {
     background-image: url('../images/petbg2.jpg');
@@ -62,7 +65,6 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;}
-							
 	#textmargin{margin-left: 135px;}
 	panel{margin-left: 600px; margin-right: 600px;}
 	button{margin:auto;}
