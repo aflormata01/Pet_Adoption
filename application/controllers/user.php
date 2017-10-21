@@ -118,6 +118,7 @@ class user extends CI_Controller {
 		
 	}
 	public function addDiscussion(){
+		$user =  $this->session->userdata('username');
 		$rules = array(
                     array('field'=>'title', 'label'=>'Title', 'rules'=>'required'),
                     array('field'=>'body', 'label'=>'body', 'rules'=>'required')
@@ -127,7 +128,7 @@ class user extends CI_Controller {
 		if($this->form_validation->run()==FALSE){
 			$this->load->view('peternity_user/adddiscussion');
 		}else{
-			$addDiscuss=array('title'=>$_POST['title'],'body'=>$_POST['body']);
+			$addDiscuss=array('title'=>$_POST['title'],'body'=>$_POST['body'],'username'=>$user);
             $this->Peter->create_discussion($addDiscuss);
             redirect('user/userDiscussion');
 		}
@@ -316,11 +317,18 @@ class user extends CI_Controller {
 		}
 		
 		
-		public function discbody(){
+		public function discbody($disc){
+			$user =  $this->session->userdata('username');
+			$condition = array('discuss#' => $disc);
+			$result_array = $this->Peter->read_discussion($condition);
+			$result = $this->Peter->read_ownerinfo();
+			$data['disc'] = $result_array;
+			$data['pic'] = $result;
+			$data['user'] = $user;
 			$header_data['title'] = "DISCUSSION BODY";
-		$this->load->view('include/header',$header_data);
-			$this->load->view('include/menu_user');			
-			$this->load->view('peternity_user/discbody');
+			$this->load->view('include/header',$header_data);
+			$this->load->view('include/menu_user',$data);			
+			$this->load->view('peternity_user/discbody',$data);
 			$this->load->view('include/footer');
 			
 		}
