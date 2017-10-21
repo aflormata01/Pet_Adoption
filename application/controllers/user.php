@@ -217,13 +217,13 @@ class user extends CI_Controller {
 			$data['set'] = $result_array;
 			$data['user'] = $user;
 			$this->load->view('include/menu_user',$data);			
-			$this->load->view('peternity_user/profile_pic');
 			$this->load->view('peternity_user/settings',$data);
 			$this->load->view('include/footer');
 		}
 
 		else{
-			$settings=array('fname'=>$_POST['fname'],'lname'=>$_POST['lname'],'email'=>$_POST['email'],'username'=>$_POST['username'],'sex'=>$_POST['sex'],'birthdate'=>$_POST['birthdate']);
+			$url = $this->do_upload($_POST['file']);
+			$settings=array('fname'=>$_POST['fname'],'lname'=>$_POST['lname'],'email'=>$_POST['email'],'username'=>$_POST['username'],'sex'=>$_POST['sex'],'birthdate'=>$_POST['birthdate'],'photo'=>$url);
             $this->Peter->update_ownerinfo($settings);
             redirect('user');
 		}
@@ -250,7 +250,7 @@ class user extends CI_Controller {
 		public function profile_pic(){
 			if($_SERVER['REQUEST_METHOD']=='POST')
 						{
-							$url = $this->do_upload();
+							
 							$user =  $this->session->userdata('username');
 							$condition = array('username' => $user);
 							$result_array = $this->Peter->read_ownerinfo($condition);
@@ -322,14 +322,43 @@ class user extends CI_Controller {
 			$condition = array('discuss#' => $disc);
 			$result_array = $this->Peter->read_discussion($condition);
 			$result = $this->Peter->read_ownerinfo();
-			$data['disc'] = $result_array;
+			$data['user_stories'] = $result_array;
+			$data['discuss'] = $result_array;
 			$data['pic'] = $result;
 			$data['user'] = $user;
+			$data['disc'] = $disc;
 			$header_data['title'] = "DISCUSSION BODY";
 			$this->load->view('include/header',$header_data);
 			$this->load->view('include/menu_user',$data);			
 			$this->load->view('peternity_user/discbody',$data);
 			$this->load->view('include/footer');
+			
+		}
+		public function addcomments($disc){
+			$user =  $this->session->userdata('username');
+					$rules = array(
+					array('field'=>'comment', 'label'=>'comment', 'rules'=>'required'));
+			$this->form_validation->set_rules($rules);
+			$this->form_validation->set_error_delimiters('<p class="error">', '</p>');
+				
+			if($this->form_validation->run()==FALSE){
+				$condition = array('discuss#' => $disc);
+				$comments = $this->Peter->read_disc_comments($condition);
+				$data['comments'] = $comments;
+				$data['disc'] = $disc;
+				echo $this->load->view('peternity_user/comments',$data, TRUE);
+			}
+			else{
+					$comment=array('comment'=>$_POST['comment'],'username'=>$user,'discuss#'=>$disc);
+					$condition = array('discuss#' => $disc);
+					$this->Peter->create_disc_comments($comment);
+					$comments = $this->Peter->read_disc_comments($condition);
+					$data['comments'] = $comments;
+					$data['disc'] = $disc;
+					echo $this->load->view('peternity_user/comments',$data, TRUE);
+			}
+			
+			
 			
 		}
 				
