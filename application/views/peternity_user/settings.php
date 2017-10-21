@@ -7,11 +7,9 @@
 				<img src="<?php echo base_url($set[0]['photo']);?>" class="img-responsive img-circle" alt="profilepic" name="photo" id="photo">
 				<label>Change your profile picture : </label>
 				
-				<?php echo form_open_multipart('user/profile_pic'); //this is equal to <form role="form" method="post" enctype="multipart/form-data" accept-charset="utf-8" action="http://localhost/Pet_Adoption/user/profile_pic"?>
+			<?php echo form_open_multipart('user/setting/'.$user.''); //this is equal to <form role="form" method="post" enctype="multipart/form-data" accept-charset="utf-8" action="http://localhost/Pet_Adoption/user/profile_pic"?>
 				<input class="text-center" id="file" name="file" type="file" />
 				</div>
-				<input type="submit" value="Upload" />
-				</form>
 
 				<div class="profile-usertitle">
 					<div class="profile-usertitle-name text-center">
@@ -43,7 +41,7 @@
   <br/><br/>
   <div class="form-horizontal">
   <?php echo validation_errors(); ?>
-  <?php echo form_open('user/setting'); //this is equal to <form method="post" accept-charset="utf-8" action="http://localhost/Pet_Adoption/user/setting"?>
+ 
   
     <div class="form-group">
       <label class="control-label col-sm-2" for="fname">First Name: </label>
@@ -83,8 +81,8 @@
 	<div class="form-group">
 		<label class="control-label col-sm-2" for="sex">Sex</label>
 		<div class="col-sm-6">
-		<input type="radio" class="" id="sex" name="sex" value="Female" value="<?php echo $d['sex']; ?>" /> Male
-		<input type="radio" class="" id="sex" name="sex" value="Male" value="<?php echo $d['sex'];?>" /> Female
+		<input type="radio" class="" id="sex" name="sex" value="Female" value="Male" /> Male
+		<input type="radio" class="" id="sex" name="sex" value="Male" value="Female" /> Female
 	</div>
 	</div>
 		
@@ -106,6 +104,7 @@
       </div>
     </div>
   </form>
+
 </div>
 </div>
             </div>
@@ -113,4 +112,4 @@
 		</div>
 		</div>
 		</div>
-		
+	
