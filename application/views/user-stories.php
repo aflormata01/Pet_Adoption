@@ -3,7 +3,7 @@
 		$liked=0;
 		echo'
 		
-		<div class="panel panel-default marginbottom col-sm-12">
+		<div class="panel panel-default marginbottom col-sm-12 "  style="margin-left: 500px;">
 		<div class="storypic margintop" style="background-image: url('.base_url($d['file_name']).');"/>
 		<div class="capt"><span class="u_story"><strong><a class="story" href="'.base_url('user/profile/'.$d['username'].'').'">'.$d['username'].'</a></strong></span>
 		<span class="storycapt">'. $d['title'].'</span></div>
