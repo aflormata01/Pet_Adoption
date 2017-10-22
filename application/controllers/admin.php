@@ -190,8 +190,14 @@ class admin extends CI_Controller {
 	
 	public function adminlogin()
 	{
-	$header_data['title'] = "ADMIN LOG IN";
-	$this->load->view('include/header',$header_data);
-	$this->load->view('peternity/loginadmin');
+		$header_data['title'] = "ADMIN LOG IN";
+		$this->load->view('include/header',$header_data);
+		$this->load->view('peternity/loginadmin');
+	}
+	public function adminusers(){
+		$header_data['title'] = "USERS";
+		$this->load->view('include/header',$header_data);
+		$this->load->view('include/admin');
+		$this->load->view('peternity/adminuser');
 	}
 }

@@ -26,19 +26,13 @@
 
 
                  <li>
-                  <a href="#">
-                  <i class="fa fa-user fa-lg"></i> Profile
-                  </a>
-                  </li>
-
-                 <li>
-                  <a href="#">
+                  <a href="<?php echo base_url('admin/adminusers')?>">
                   <i class="fa fa-users fa-lg"></i> Users
                   </a>
                 </li>
 				
 				<li>
-                  <a href="#">
+                  <a href="<?php echo base_url('Logout')?>">
                   <i class="glyphicon glyphicon-off"></i>Logout
                   </a>
                   </li>
