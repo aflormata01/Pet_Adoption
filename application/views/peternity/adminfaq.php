@@ -26,8 +26,15 @@ foreach($faqs as $d){
 						<div class=" panel-footer"></div>
 					</div>
 </div>
-				<button class="none heading sm"><a href="'.base_url('admin/updateFaqs').'" class="heading sm"><span><i class="fa fa-edit"></i></span> Edit</a></button> |
+				<button class="none heading sm"><a href="'.base_url('admin/updateFaqs/'.$d['faqs_no']).'" class="heading sm" data-toggle="modal" data-target="#myModal"><span><i class="fa fa-edit"></i></span> Edit</a></button> |
 				<button class="none heading sm"><a href="'.base_url('admin/delFaqs/'.$d['faqs_no']).'" class="heading sm" onclick = "getConfirm(this.href);"><span><i class="fa fa-trash-o"></i></span> Delete</a></button>
+				<div id="table">
+					<div id="myModal" class="modal fade" role="dialog">
+						<div class="modal-dialog">
+							<div class="modal-content"></div>
+						</div>
+					</div>
+				</div>
 ';}
 	?>
     </div>
