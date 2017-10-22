@@ -43,17 +43,17 @@
 	  <li class="dropdown">
         <a class="sm" class="dropdown-toggle" data-toggle="dropdown" href="#">COMMUNITY</a>
         <ul class="dropdown-content">
-          <a class="userpad"><a href="<?php echo base_url('user/userdiscussion/'.$user.'')?>" class="sm">DICUSSIONS</a></a>
+          <a class="userpad"><a href="<?php echo base_url('user/userdiscussion')?>" class="sm">DICUSSIONS</a></a>
         </ul>
       </li>
       <li class="dropdown userpad showhover">
         <a class="sm" class="dropdown-toggle" data-toggle="dropdown" href="#">NEWS AND EVENTS</a>
         <ul class="dropdown-content">
-          <a class="userpad"><a href="<?php echo base_url('user/news/')?>" class="sm">NEWS</a></a>
-          <a class="userpad"><a href="<?php echo base_url('user/upcomingevents/')?>" class="sm">UPCOMING EVENTS</a></a>
+          <a class="userpad"><a href="<?php echo base_url('user/news')?>" class="sm">NEWS</a></a>
+          <a class="userpad"><a href="<?php echo base_url('user/upcomingevents')?>" class="sm">UPCOMING EVENTS</a></a>
         </ul>
       </li>
-      <li class="userpad"><a class="sm" href="<?php echo base_url('user/faqs/')?>">FAQ's</a></li>  
+      <li class="userpad"><a class="sm" href="<?php echo base_url('user/faqs')?>">FAQ's</a></li>  
       <li class="dropdown userpad">
         <a class="dropdown-toggle sm" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"></span> USER<span class="caret"></span></a>
         <ul class="dropdown-menu table-hover">

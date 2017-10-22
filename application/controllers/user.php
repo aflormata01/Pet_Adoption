@@ -414,34 +414,39 @@ class user extends CI_Controller {
 			$rates = $this->Peter->read_rate($condition);
 			if(isset($_POST['post'])&&isset($_POST['rate'])){
 			foreach($rates as $r){
-				if($r['discuss#']==$_POST['post'] && $r['username']==$user &&$r['rate']==$_POST['rate'])
+				if($r['discuss#']==$_POST['post'] && $r['username']==$user && $r['rate']==$_POST['rate'])
 					$check=1;
+				else 
+					$check=0;
 			}
 			
 				if($check>0){
-				$rate=array('discuss#'=>$_POST['post'],'username'=>$user);
+				$rate=array('discuss#'=>$_POST['post'],'username'=>$user,'rate'=>$_POST['rate']);
 				$this->Peter->del_rate($rate);
+				
+				
 				}
 				else if($_POST['rate']=='1')
 				{
 					$rate=array('discuss#'=>$_POST['post'],'username'=>$user,'rate'=>'1');
 					$this->Peter->update_rate($rate);
+					
+					// echo json_encode($del);
 				}
 				else if($_POST['rate']=='2')
 				{
-					$rate=array('discuss#'=>$_POST['post'],'username'=>$user,'rate'=>'0');
+					$rate=array('discuss#'=>$_POST['post'],'username'=>$user,'rate'=>'2');
 					$this->Peter->update_rate($rate);
-				}
-			
 					
-
-			
+				}
+				echo json_encode($del);
 			}
 			
 			$data['user'] = $user;
 			$result_array = $this->Peter->read_discussion();
 			$data['user_discussion'] = $result_array;
 			$data['ratedd'] = $rates;
+			
 			echo $this->load->view('peternity_user/discussion',$data, TRUE);
 		}
 }
