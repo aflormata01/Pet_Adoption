@@ -199,6 +199,7 @@ class user extends CI_Controller {
 				'username' => $o['username'],
 				'birthdate' => $o['birthdate']
 				);
+			$url = $o['photo'];
 		}
 		$data['d']=$info;
 		$rules = array(

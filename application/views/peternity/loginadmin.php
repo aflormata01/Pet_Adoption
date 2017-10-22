@@ -1,3 +1,4 @@
+<title><?php echo $title;?></title>
 <div class="container-fluid adminlog">
      <div class="container col-sm-4  margintop" style="margin: 150px 300px 300px 100px; background-color: rgba(252, 152, 51, 0.3);">
 	  <h3 class="text-center heading">ADMIN LOG IN</h3>
