@@ -56,7 +56,9 @@
 						<input type="password" class="form-control" id="password" name="password"  />
 						<h5 class="heading"><button type="submit" class="btn btn-muted col-xs-5 login" value="Login"><span class="glyphicon glyphicon-log-in"></span> LOG IN</h5></button>
 </br>
-			</form>			<div class="margintop">
+			</form>		
+			<form>
+						<div class="margintop">
 						<h5 class="heading"><a href="<?php echo base_url('peternity/register')?>" class="heading margintop"><span class="glyphicon "></span> Don't have an account yet? Sign up now!</a></h5>
 						</div>
 			</form>
@@ -74,27 +76,22 @@
  
 		 <div class="container margintop">
 			<h2 class="heading white" id="textmargin">-FEATURED PETS-</h2>
-			  <div class="panel panel-default1 col-xs-5 re">
-			  <img src="<?php echo base_url('assets/images/bird1.jpg')?>" class="img img-responsive img-circle margintop marginbottom float" alt="featured pet 1" style="width: 100px; height:100px;"/>
-			  <h4 class="heading margintop spacing"> SERENE</h4>
-			  <h5 class="sm spacing"> Serene is a baby parakeet; She was rescued from an abandoned shelter and now recovered from the traumatic experience. She now enjoys singing especially in the morning. She became a very active parakeet.</h5>
-			  </div>
-			</div>
-			<div class="container">
-			  <div class="panel  panel-default1 col-xs-5 re">
-			  <img src="<?php echo base_url('assets/images/hamster.jpg')?>" class="img img-responsive img-circle margintop marginbottom float" alt="featured pet 1" style="width: 100px; height:100px;"/>
-			  <h4 class="heading margintop spacing"> VLADIMIR</h4>
-			  <h5 class="sm spacing"> Serene is a baby parakeet; She was rescued from an abandoned shelter and now recovered from the traumatic experience. She now enjoys singing especially in the morning. She became a very active parakeet.</h5>
+			 <?php
+		foreach($petrescue as $d){
+			echo'
+			<div class="panel panel-default1 col-xs-5 re">
+			
+			  <img src="'.base_url($d['photo']).'" class="img img-responsive img-circle margintop marginbottom float" alt="featured pet 1" style="width: 100px; height:100px;"/>
+			  <h4 class="heading margintop spacing"> '.$d['pet_nickname'].'</h4>
+			  <h5 class="sm spacing">'.$d['bio'].'</h5>
 			  </div>
 			  </div>
-			  
 			  <div class="container">
-			  <div class="panel panel-default1 col-xs-5 re">
-			  <img src="<?php echo base_url('assets/images/hh.jpg')?>" class="img img-responsive img-circle margintop  marginbottom float" alt="featured pet 1" style="width: 100px; height:100px;"/>
-			 <h4 class="heading margintop spacing"> TORCH</h4>
-			  <h5 class="sm spacing"> Serene is a baby parakeet; She was rescued from an abandoned shelter and now recovered from the traumatic experience. She now enjoys singing especially in the morning. She became a very active parakeet.</h5>
-			  </div>
-			  </div>
+			';
+			  }
+			?> 
+			</div>
+			
 			  
 			 <div class="leftmargin">
 			  <div class="panel panel-default1 col-sm-2 re text-center moving">
