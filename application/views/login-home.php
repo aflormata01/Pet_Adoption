@@ -12,8 +12,9 @@
 		<h6 class="heading "><span class="glyphicon glyphicon-envelope"></span> '.$d['email'].'</h6>
 		<h6 class="heading "><i class="fa fa-birthday-cake"></i> '.$d['birthdate'].'</h6>
 		<hr />
-		<h6 class="heading "><span class="glyphicon glyphicon-list-alt"></span> <a href="" class="heading sm">My Stories</a></h6>
-		<h6 class="heading "><span><i class="fa fa-inbox"></i></span> <a href="" class="heading sm">Inbox</a></h6>
+
+		<h6 class="heading "><span class="glyphicon glyphicon-list-alt"></span> <a href="'.base_url('user/userstories').'" class="heading sm">My Stories</a></h6>
+
 		<a href="'.base_url('user/addstories').'" data-toggle="modal" data-target="#myModal">
 		<h6>
 		<button class="btn btn-muted sm" type="button" id="addButton"><span class="glyphicon glyphicon-plus"> </span>Add Story</button></a>
