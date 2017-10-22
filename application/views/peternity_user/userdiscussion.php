@@ -3,16 +3,28 @@
 
 <div class="panel panel-default text-left col-xs-2 margintop sminfo discmarg" id="userin"><br />
 	
+			
+	<?php
+	foreach($usern as $d){
+		echo'
 		<img src="'.base_url($d['photo']).'" class="profilepic img-circle logpic " style="width: 35px ; height:35px" alt="profilepic">
-		<h4 class="heading ">Chicken Nuggets</h4>
+		<h4 class="heading ">'.$d['fname'].' '.$d['lname'].'</h4>
 		<br />
 		<hr />
-		<h6 class="heading "><span class="glyphicon glyphicon-user"></span> <a class="heading" href="'.base_url('user/profile/'.$d['username'].'').'">chcknnggts</a></h6>
-		<h6 class="heading "><span class="glyphicon glyphicon-envelope"></span>nuggetsrlyf@gmail.com</h6>
-		<h6 class="heading "><i class="fa fa-birthday-cake"></i> 10-22-17</h6>
+		<h6 class="heading "><span class="glyphicon glyphicon-user"></span> <a class="heading" href="'.base_url('user/profile/'.$d['username'].'').'">'.$d['username'].'</a></h6>
+		<h6 class="heading "><span class="glyphicon glyphicon-envelope"></span> '.$d['email'].'</h6>
+		<h6 class="heading "><i class="fa fa-birthday-cake"></i> '.$d['birthdate'].'</h6>
 		<hr />
-		<h6 class="heading "><span class="glyphicon glyphicon-list-alt"></span> <a href="" class="heading sm">My Stories</a></h6>
+
+		<h6 class="heading "><span class="glyphicon glyphicon-list-alt"></span> <a href="'.base_url('user/userstories').'" class="heading sm">My Stories</a></h6>
 		<h6 class="heading "><span><i class="fa fa-inbox"></i></span> <a href="" class="heading sm">Inbox</a></h6>
+
+
+		
+	';
+	}
+	
+	?>
 	
 		<h6>
 		<div class="text-left">
