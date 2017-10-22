@@ -75,7 +75,7 @@
 	<div class="form-group">
       <label class="control-label col-sm-2" for="username">User Name:</label>
       <div class="col-sm-4">
-        <input type="uname" class="form-control" id="username" name="username" value="<?php echo $d['username'];?>">
+        <input type="uname" class="form-control" id="username" name="username" value="<?php echo $d['username'];?>" disabled/>
       </div>
 	</div>
 	
@@ -84,8 +84,13 @@
 	<div class="form-group">
 		<label class="control-label col-sm-2" for="sex">Sex</label>
 		<div class="col-sm-6">
-		<input type="radio" class="" id="sex" name="sex" value="Female" value="Male" /> Male
-		<input type="radio" class="" id="sex" name="sex" value="Male" value="Female" /> Female
+		<?php if($d['sex']=="Male")
+		echo '
+		<input type="radio" class="" id="sex" name="sex" value="Female" value="Male" /> Male';
+		else
+			echo ' 
+		<input type="radio" class="" id="sex" name="sex" value="Male" value="Female" /> Female';
+		?>
 	</div>
 	</div>
 		
