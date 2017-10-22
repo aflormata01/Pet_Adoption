@@ -21,8 +21,8 @@ class user extends CI_Controller {
 		$header_data['title'] = "Peternity";
 		$data['user'] = $user;
 		$result_array = $this->Peter->read_stories();
-		$result = $this->Peter->read_ownerinfo($condition);
         $data['user_stories'] = $result_array;
+		$result = $this->Peter->read_ownerinfo($condition);
         $data['usern'] = $result;
 		$likes = $this->Peter->read_stories_like($condition);
 		$data['liked_stories'] = $likes;
@@ -108,7 +108,10 @@ class user extends CI_Controller {
 	public function userdiscussion(){
 		$user =  $this->session->userdata('username');
 		$result_array = $this->Peter->read_discussion();
+		$condition = array('username' => $user);
         $data['user_discussion'] = $result_array;
+		$result = $this->Peter->read_ownerinfo($condition);
+        $data['usern'] = $result;
 		$data['user'] = $user;
 		$header_data['title'] = "DISCUSSIONS";
 		$this->load->view('include/header',$header_data);
