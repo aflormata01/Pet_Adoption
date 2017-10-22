@@ -48,7 +48,6 @@
 	.button{background-color: #ffcab2;}
 	.picstory{margin-left: 100px; }
 	.usermarg{margin-left: 210px;}
-	.discmarg{margin-left: 155px;}
 	.dropdown-menu a:hover {background-color: }
 	.dropdown:hover .dropdown-menu {display: block;}
 	.spacing{margin-left: 120px;}
@@ -69,7 +68,6 @@
     background-size: cover;}
 	
 	.faqbg {
-
     background-image: url('../images/mainfaq.jpg');
     min-height: 500px;
     min-width: 750px;
@@ -80,7 +78,6 @@
 	
 	
 	.adminlog {
-
     background-image: url('../images/petbg.jpg');
     min-height: 500px;
     min-width: 750px;
@@ -90,7 +87,7 @@
     background-size: cover;}
 	
 	
-
+	
 	#textmargin{margin-left: 135px;}
 	panel{margin-left: 600px; margin-right: 600px;}
 	button{margin:auto;}
@@ -522,15 +519,7 @@
         width: 100%;
    }
 }
-.nav1{
-  overflow: auto;
-  font-family: verdana;
-  font-size: 12px;
-  font-weight: 200;
-  position: fixed;
-  top: 0px;
-  
-}
+
 .nav-side-menu {
   overflow: auto;
   font-family: verdana;
@@ -542,7 +531,7 @@
   width: 300px;
   height: 100%;
   color: #e1ffff;
-  padding-left: 0px;
+ 
 }
 .nav-side-menu .brand {
   background-color: #23282e;
