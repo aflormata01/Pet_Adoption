@@ -9,10 +9,12 @@ class peternity extends CI_Controller {
 	}
 	
 	public function index(){	
+		$result_array = $this->Peter->read_petrescued();
+		$data['petrescue'] = $result_array;
 		$header_data['title'] = "Peternity";
 		$this->load->view('include/header',$header_data);
 		$this->load->view('include/menu');
-		$this->load->view('home');
+		$this->load->view('home',$data);
 		$this->load->view('include/footer');
 		
 	}
