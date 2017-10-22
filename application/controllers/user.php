@@ -404,4 +404,41 @@ class user extends CI_Controller {
 			$this->Peter->del_disc_comments($where_array);
 			redirect('user/userdiscussion');
 		}		
+		
+		public function rateDiscuss(){
+			$user =  $this->session->userdata('username');
+			$condition = array('username' => $user);
+			$rates = $this->Peter->read_rate($condition);
+			if(isset($_POST['post'])&&isset($_POST['rate'])){
+			foreach($rates as $r){
+				if($r['discuss#']==$_POST['post'] && $r['username']==$user &&$r['rate']==$_POST['rate'])
+					$check=1;
+			}
+			
+				if($check>0){
+				$rate=array('discuss#'=>$_POST['post'],'username'=>$user);
+				$this->Peter->del_rate($rate);
+				}
+				else if($_POST['rate']=='1')
+				{
+					$rate=array('discuss#'=>$_POST['post'],'username'=>$user,'rate'=>'1');
+					$this->Peter->update_rate($rate);
+				}
+				else if($_POST['rate']=='2')
+				{
+					$rate=array('discuss#'=>$_POST['post'],'username'=>$user,'rate'=>'0');
+					$this->Peter->update_rate($rate);
+				}
+			
+					
+
+			
+			}
+			
+			$data['user'] = $user;
+			$result_array = $this->Peter->read_discussion();
+			$data['user_discussion'] = $result_array;
+			$data['ratedd'] = $rates;
+			echo $this->load->view('peternity_user/discussion',$data, TRUE);
+		}
 }

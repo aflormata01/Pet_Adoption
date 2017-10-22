@@ -16,6 +16,7 @@ class peternity_model extends CI_model
 	private $petadoption = "petadoption";
 	private $stories = "stories";
 	private $stories_like = "stories_like";
+	private $rate = "disc_rating";
 	
 		public function create_discussion($data)
 		{
@@ -370,6 +371,33 @@ class peternity_model extends CI_model
 			$this->db->order_by('time DESC');
 			$this -> db -> select('*');
 			$this -> db -> from($this-> stories_like);
+			if ( isset($condition)) $this->db->where($condition);
+			$query= $this->db->get();
+			return $query-> result_array();
+		}
+		
+		
+		public function create_rate($data)
+		{
+			$this->db->insert($this->rate, $data);
+			return TRUE;	
+		}
+		public function update_rate($data)
+		{
+			$this->db->replace($this->rate, $data);
+			return TRUE;	
+		}
+		public function del_rate($data)
+		{
+			$this->db->where($data);
+			$this->db->delete($this->rate);
+			return TRUE;	
+		}
+		public function read_rate($condition=null)
+		{
+			
+			$this -> db -> select('*');
+			$this -> db -> from($this-> rate);
 			if ( isset($condition)) $this->db->where($condition);
 			$query= $this->db->get();
 			return $query-> result_array();

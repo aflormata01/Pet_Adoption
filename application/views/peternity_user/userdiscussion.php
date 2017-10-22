@@ -34,34 +34,8 @@
 	<h2 class="text-center heading">-DISCUSSIONS-</h2>	
 	</div>
 	<div class="panel panel-default marginbottom col-sm-6">
-		<table class="table table-bordered">
-		<?php
-		foreach($user_discussion as $d){ 
-		echo'
-						<h4 class="text-left heading">'.$d['Title'].'</h4>
-			
-						<h6 class="sm">posted by '.$d['username'].' | '.date("F j, Y, g:i a", strtotime($d['date'])).'</h6>
-						<p class="sm"><a href="'.base_url('user/discbody/'.$d['discuss#'].'').'" class="sm">'.$d['body'].'</a></p>
-
-					<div class="btn-group text-right ">
-						<button class="none"><i class="fa fa-thumbs-o-up"></i></button>&nbsp;
-						<button class="none"><i class="fa fa-thumbs-o-down"></i></button>
-						</div>
-					
-					<div class="dropdown1 floater">
-							<button class="none floater dropbtn1"><span><i class="fa fa-ellipsis-h"></i></span></button>
-								<div class="dropdown-content1">
-									<a class="heading sm" <a href="'.base_url('user/delDiscussion/'.$d['discuss#']).'" onclick = "getConfirm(this.href);"><span><i class="fa fa-trash-o"></i></span>Delete</a>
-								</div>
-								</hr>
-					</div>
-					
-					</div>
+		<table class="table table-bordered" id="discussions">
 		
-
-		';
-		}
-		?>
 		
 		</table>
 		</div>
@@ -96,4 +70,16 @@ function getConfirm(l)
   return;
 }
 </script>		
+
+<script>
+	 $(document).ready(function(){
+            $.ajax({
+                url: "<?php echo base_url('user/rateDiscuss'); ?>",
+                
+                success: function(data){
+                    $('#discussions').html(data);
+                }
+            });
+        });
+	</script>
 		
