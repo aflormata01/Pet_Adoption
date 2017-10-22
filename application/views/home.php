@@ -55,9 +55,10 @@
 						 <span class="glyphicon glyphicon-lock"></span> <label for="password"> PASSWORD: </label>
 						<input type="password" class="form-control" id="password" name="password"  />
 						<h5 class="heading"><button type="submit" class="btn btn-muted col-xs-5 login" value="Login"><span class="glyphicon glyphicon-log-in"></span> LOG IN</h5></button>
-
-			</form>			
-						<h5 class="heading"><button type="submit" class="btn btn-muted col-xs-5 login margintop"><a href="<?php echo base_url('peternity/register')?>" class="heading"><span class="glyphicon glyphicon-log-in"></span> SIGN UP</a></button></h5>
+</br>
+			</form>			<div class="margintop">
+						<h5 class="heading"><a href="<?php echo base_url('peternity/register')?>" class="heading margintop"><span class="glyphicon "></span> Don't have an account yet? Sign up now!</a></h5>
+						</div>
 			</form>
 
 
@@ -94,6 +95,13 @@
 			  <h5 class="sm spacing"> Serene is a baby parakeet; She was rescued from an abandoned shelter and now recovered from the traumatic experience. She now enjoys singing especially in the morning. She became a very active parakeet.</h5>
 			  </div>
 			  </div>
+			  
+			 <div class="leftmargin">
+			  <div class="panel panel-default1 col-sm-2 re text-center moving">
+				<button class="btn-lg none" ><a href="" style="text-decoration: none;"><span><i class="fa fa-paw"></i></span> ADOPT A PET TODAY</a></button>
+			  </div>
+			 </div>
+			
 </div>
 
 	<div class="container margintop">
