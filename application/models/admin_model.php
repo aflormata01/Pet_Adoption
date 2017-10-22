@@ -32,3 +32,31 @@ class peternity_model extends CI_model
 			 return $query-> result_array();
 		}
 		
+		
+		public function create_news($data)
+		{
+			$this->db->insert($this->news, $data);
+			return TRUE;	
+		}
+		public function update_news()
+		{
+			$this->db->where($data);
+			$this->db->update($this->news, $data);
+			return TRUE;	
+		}
+		public function del_news()
+		{
+			$this->db->where($data);
+			$this->db->delete($this->news);
+			return TRUE;	
+		}
+		public function read_news($condition=null)
+		{
+			 $this -> db -> select('*');
+			 $this -> db -> from($this-> news);
+			 if ( isset($condition)) $this->db->where($condition);
+			 $query= $this->db->get();
+			 return $query-> result_array(); 
+		}
+		
+<?
