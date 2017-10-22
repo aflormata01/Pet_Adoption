@@ -32,6 +32,12 @@
                 </li>
 				
 				<li>
+                  <a href="<?php echo base_url('admin/adminmessage')?>">
+                  <i class="fa fa-envelope fa-lg"></i> Messages
+                  </a>
+                </li>
+				
+				<li>
                   <a href="<?php echo base_url('Logout')?>">
                   <i class="glyphicon glyphicon-off"></i>Logout
                   </a>

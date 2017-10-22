@@ -6,7 +6,8 @@ class admin_model extends CI_model
 	private $petrescued = "petrescued";
 	private $faqs = "faqs";
 	private $news = "news";
-	
+	private $ownerinfo = "ownerinfo";
+	private $messages = "messages";
 	
 	public function create_faqs($data)
 		{
@@ -87,6 +88,51 @@ class admin_model extends CI_model
 			 return $query-> result_array();
 		 
 		}
+		
+		public function create_ownerinfo($data)
+		{
+			$this->db->insert($this->ownerinfo, $data);
+			return TRUE;	
+		}
+		public function update_ownerinfo($settings)
+		{
+			$this->db->replace($this->ownerinfo,$settings);
+		}
 
+		public function del_ownerinfo($where_array)
+		{
+			$this->db->delete($this->ownerinfo,$where_array);
+		}
+		public function read_ownerinfo($condition=null)
+		{
+			 $this->db->select('*');
+			 $this->db->from($this->ownerinfo);
+			 if ( isset($condition)) $this->db->where($condition);
+			 $query=$this->db->get();
+			 return $query->result_array(); 
+		}	
+
+		public function create_messages($data)
+		{
+			$this->db->insert($this->messages, $data);
+			return TRUE;	
+		}
+		public function update_messages($settings)
+		{
+			$this->db->replace($this->messages,$settings);
+		}
+
+		public function del_messages($where_array)
+		{
+			$this->db->delete($this->messages,$where_array);
+		}
+		public function read_messages($condition=null)
+		{
+			 $this->db->select('*');
+			 $this->db->from($this->messages);
+			 if ( isset($condition)) $this->db->where($condition);
+			 $query=$this->db->get();
+			 return $query->result_array(); 
+		}	
 }
 ?>
