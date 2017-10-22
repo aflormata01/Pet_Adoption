@@ -1,7 +1,15 @@
 <div class="fluid">
 <div class="text-center col-sm-6" style="margin-left: 490px;">
 <h1 class="heading">PETERNITY-FAQ's</h1>
-<button class="none heading "><span><i class="fa fa-plus-circle"></i></span> Add Entry</button>
+<a href="<?php echo base_url('admin/addFaqs')?>" class="none heading " data-toggle="modal" data-target="#myModal"><span><i class="fa fa-plus-circle"></i></span> Add Entry</a>
+
+<div id="table">
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content"></div>
+        </div>
+    </div>
+</div>
 </div>
 
 <div class="text-center col-sm-8" style="margin-left: 365px;">
@@ -18,7 +26,7 @@ foreach($faqs as $d){
 						<div class=" panel-footer"></div>
 					</div>
 </div>
-				<button class="none heading sm"><a href="" class="heading sm"><span><i class="fa fa-edit"></i></span> Edit</a></button> |
+				<button class="none heading sm"><a href="'.base_url('admin/updateFaqs').'" class="heading sm"><span><i class="fa fa-edit"></i></span> Edit</a></button> |
 				<button class="none heading sm"><a href="'.base_url('admin/delFaqs/'.$d['faqs_no']).'" class="heading sm" onclick = "getConfirm(this.href);"><span><i class="fa fa-trash-o"></i></span> Delete</a></button>
 ';}
 	?>
