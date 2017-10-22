@@ -1,4 +1,4 @@
-<div class="">
+<div class="side body">
 <div class="fluid" >
 <div class=" text-center col-sm-8" >
 <h1 class="heading">PETERNITY</h1>
