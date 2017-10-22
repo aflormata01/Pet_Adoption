@@ -26,16 +26,16 @@
             <ul id="menu-content" class="menu-content collapse out">
                
                 <li  data-toggle="collapse" data-target="#products" class="collapsed ">
-                  <a href="<?php echo base_url('peternity/adminview')?>"><i class="fa fa-paw"></i>PETS</a>
+                  <a href="<?php echo base_url('admin')?>"><i class="fa fa-paw"></i>PETS</a>
                 </li>
 
                 <li data-toggle="collapse" data-target="#service" class="collapsed">
-                  <a href="<?php echo base_url('peternity/adminnews')?>"><i class="fa fa-globe fa-lg"></i> NEWS</span></a>
+                  <a href="<?php echo base_url('admin/adminnews')?>"><i class="fa fa-globe fa-lg"></i> NEWS</span></a>
                 </li>  
        
 
                 <li>
-                  <a href="<?php echo base_url('peternity/adminfaq')?>">
+                  <a href="<?php echo base_url('admin/adminfaq')?>">
                   <i class="fa fa-question fa-lg"></i> FAQS
                   </a>
                 </li>

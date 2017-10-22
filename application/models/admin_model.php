@@ -1,5 +1,5 @@
 <?php
-class peternity_model extends CI_model
+class admin_model extends CI_model
 {
 	private $petrescued = "petrescued";
 	private $faqs = "faqs";
@@ -17,11 +17,9 @@ class peternity_model extends CI_model
 			$this->db->update($this->faqs, $data);
 			return TRUE;	
 		}
-		public function del_faqs()
+		public function del_faqs($where_array)
 		{
-			$this->db->where($data);
-			$this->db->delete($this->faqs);
-			return TRUE;	
+			$this->db->delete($this->faqs,$where_array);	
 		}
 		public function read_faqs($condition=null)
 		{
@@ -44,11 +42,9 @@ class peternity_model extends CI_model
 			$this->db->update($this->news, $data);
 			return TRUE;	
 		}
-		public function del_news()
+		public function del_news($where_array)
 		{
-			$this->db->where($data);
-			$this->db->delete($this->news);
-			return TRUE;	
+			$this->db->delete($this->news,$where_array);		
 		}
 		public function read_news($condition=null)
 		{
@@ -70,11 +66,9 @@ class peternity_model extends CI_model
 			$this->db->replace($this->petrescued, $data);
 			return TRUE;	
 		}
-		public function del_petrescued()
+		public function del_petrescued($where_array)
 		{
-			$this->db->where($data);
-			$this->db->delete($this->petrescued);
-			return TRUE;	
+			$this->db->delete($this->petrescued,$where_array);		
 		}
 		public function read_petrescued($condition=null)
 		{
@@ -86,4 +80,5 @@ class peternity_model extends CI_model
 			 return $query-> result_array();
 		 
 		}
-<?
+}
+?>
