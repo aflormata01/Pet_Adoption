@@ -1,5 +1,7 @@
 <?php
+
 class admin_model extends CI_model
+
 {
 	private $petrescued = "petrescued";
 	private $faqs = "faqs";
@@ -11,6 +13,7 @@ class admin_model extends CI_model
 			$this->db->insert($this->faqs, $data);
 			return TRUE;	
 		}
+
 		public function update_faqs($updatefaqs)
 		{
 			$this->db->replace($this->faqs,$updatefaqs);
@@ -21,6 +24,7 @@ class admin_model extends CI_model
 		}
 		public function read_faqs($condition=null)
 		{
+
 
 			 $this -> db -> select('*');
 			 $this -> db -> from($this-> faqs);
@@ -41,9 +45,11 @@ class admin_model extends CI_model
 			$this->db->update($this->news, $data);
 			return TRUE;	
 		}
+
 		public function del_news($where_array)
 		{
 			$this->db->delete($this->news,$where_array);		
+
 		}
 		public function read_news($condition=null)
 		{
@@ -65,9 +71,11 @@ class admin_model extends CI_model
 			$this->db->replace($this->petrescued, $data);
 			return TRUE;	
 		}
+
 		public function del_petrescued($where_array)
 		{
 			$this->db->delete($this->petrescued,$where_array);		
+
 		}
 		public function read_petrescued($condition=null)
 		{
@@ -79,5 +87,6 @@ class admin_model extends CI_model
 			 return $query-> result_array();
 		 
 		}
+
 }
 ?>
