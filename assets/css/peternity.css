@@ -55,6 +55,7 @@
 	.white{color: white;}
 	.re{border-radius: 30px;}
 	.cent{margin: 0px 350px 0px 350px;}
+	.moving{margin-left: 300px;}
 	.panel-default1{background-color: #FAD332;}
 	.fixed-bg {
     background-image: url('../images/petbg2.jpg');

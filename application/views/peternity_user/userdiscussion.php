@@ -36,7 +36,7 @@
 						<h6 class="sm">posted by '.$d['username'].' | '.date("F j, Y, g:i a", strtotime($d['date'])).'</h6>
 						<p class="sm"><a href="'.base_url('user/discbody/'.$d['discuss#'].'').'" class="sm">'.$d['body'].'</a></p>
 
-					<div class="btn-group text-right floaty">
+					<div class="btn-group text-right ">
 						<button class="none"><i class="fa fa-thumbs-o-up"></i></button>&nbsp;
 						<button class="none"><i class="fa fa-thumbs-o-down"></i></button>
 						</div>
