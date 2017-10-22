@@ -11,11 +11,9 @@ class admin_model extends CI_model
 			$this->db->insert($this->faqs, $data);
 			return TRUE;	
 		}
-		public function update_faqs()
+		public function update_faqs($updatefaqs)
 		{
-			$this->db->where($data);
-			$this->db->update($this->faqs, $data);
-			return TRUE;	
+			$this->db->replace($this->faqs,$updatefaqs);
 		}
 		public function del_faqs($where_array)
 		{
@@ -23,6 +21,7 @@ class admin_model extends CI_model
 		}
 		public function read_faqs($condition=null)
 		{
+
 			 $this -> db -> select('*');
 			 $this -> db -> from($this-> faqs);
 			 if ( isset($condition)) $this->db->where($condition);
