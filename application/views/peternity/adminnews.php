@@ -1,7 +1,15 @@
 <div class="fluid">
 <div class="text-center col-sm-6" style="margin-left: 490px;">
 <h1 class="heading">PETERNITY-NEWS</h1>
-<button class="none heading "><span><i class="fa fa-plus-circle"></i></span> Add News</button>
+<a href="<?php echo base_url('admin/addNews')?>" class="none heading" data-toggle="modal" data-target="#myModal"><span><i class="fa fa-plus-circle"></i></span> Add News</a>
+
+<div id="table">
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content"></div>
+        </div>
+    </div>
+</div>
 </div>
 
 <div class="text-center col-sm-8" style="margin-left: 365px;">
@@ -21,7 +29,7 @@ foreach($news as $d){
         <div class="caption">
           <h4 class="text-center heading">'.$d['title'].'</h4>
 		  <h6 class="text-center sm">By: Peternity PH</h6>
-		  <h5 class="text-center sm">'.$d['date'].'</h5>
+		  <h5 class="text-center sm">'.date("F j, Y, g:i a", strtotime($d['date'])).'</h5>
 		  <h6 class="text-center sm">"'.$d['body'].'"</h6>
         </div>
       </a>

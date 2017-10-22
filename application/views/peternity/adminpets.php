@@ -1,7 +1,15 @@
 <div class="fluid">
 <div class="text-center col-sm-6" style="margin-left: 490px;">
 <h1 class="heading">PETERNITY</h1>
-<button class="none heading "><span><i class="fa fa-plus-circle"></i></span> Add A Pet</button>
+<a href="<?php echo base_url('admin/addPets')?>" class="none heading " data-toggle="modal" data-target="#myModal"><span><i class="fa fa-plus-circle"></i></span> Add A Pet</a>
+
+<div id="table">
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content"></div>
+        </div>
+    </div>
+</div>
 </div>
 
 
