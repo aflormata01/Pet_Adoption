@@ -4,10 +4,16 @@
 --
 -- Host: 127.0.0.1
 <<<<<<< HEAD
+<<<<<<< HEAD
 -- Generation Time: Oct 22, 2017 at 05:40 PM
 =======
 -- Generation Time: Oct 22, 2017 at 04:23 AM
 >>>>>>> ee7825e6ba7d50e57536401de2f70d3451b153b0
+=======
+
+-- Generation Time: Oct 22, 2017 at 05:40 PM
+
+>>>>>>> 0df7669baaa26210d9ff64bf9a6bad67e6a28fbf
 -- Server version: 5.7.14
 -- PHP Version: 5.6.25
 
@@ -171,10 +177,15 @@ CREATE TABLE `news` (
   `body` varchar(500) NOT NULL,
   `photo` varchar(100) NOT NULL,
 <<<<<<< HEAD
+<<<<<<< HEAD
   `date` varchar(20) NOT NULL
 =======
   `date` varchar(50) NOT NULL
 >>>>>>> ee7825e6ba7d50e57536401de2f70d3451b153b0
+=======
+  `date` varchar(20) NOT NULL
+
+>>>>>>> 0df7669baaa26210d9ff64bf9a6bad67e6a28fbf
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
@@ -183,16 +194,24 @@ CREATE TABLE `news` (
 
 INSERT INTO `news` (`news#`, `title`, `body`, `photo`, `date`) VALUES
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0df7669baaa26210d9ff64bf9a6bad67e6a28fbf
 (1, 'Bugsy the new baby', 'Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum', './assets/uploads/chi.jpg', ''),
 (2, 'Hamster, Forever', 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).', './assets/uploads/candy.jpg', ''),
 (3, 'Puppy for me', 'If you are going to use a passage of Lorem Ipsum, you need to be sure there isn\'t anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.', './assets/uploads/chubs.jpg', ''),
 (4, 'Charlie is sick', 'LoremLorem Lorem Lor emLore mLoremL oremLorem Lor emLor emLor emLoremLo remLorem', './assets/uploads/charlie.jpg', '');
+<<<<<<< HEAD
 =======
 ('1', 'Bugsy the new baby', 'Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum', './assets/uploads/chi.jpg', 'October 1,2016'),
 ('2', 'Hamster, Forever', 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).', './assets/uploads/candy.jpg', 'September 8,2017'),
 ('3', 'Puppy for me', 'If you are going to use a passage of Lorem Ipsum, you need to be sure there isn\'t anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.', './assets/uploads/chubs.jpg', 'November 4,2017'),
 ('4', 'Charlie is sick', 'LoremLorem Lorem Lor emLore mLoremL oremLorem Lor emLor emLor emLoremLo remLorem', './assets/uploads/charlie.jpg', 'November 19, 2016');
 >>>>>>> ee7825e6ba7d50e57536401de2f70d3451b153b0
+=======
+
+>>>>>>> 0df7669baaa26210d9ff64bf9a6bad67e6a28fbf
 
 -- --------------------------------------------------------
 
@@ -290,10 +309,15 @@ CREATE TABLE `petrescued` (
 
 INSERT INTO `petrescued` (`petID`, `pet_nickname`, `date_rescued`, `photo`, `availability`, `bio`) VALUES
 <<<<<<< HEAD
+<<<<<<< HEAD
 ('1', 'PIOLO', '2017', './assets/uploads/1523559ecc0f70c242.jpg', 'Unadopted', NULL),
 =======
 ('1', 'PIOLO', '2017', './assets/uploads/piolo.jpg', 'Unadopted', NULL),
 >>>>>>> ee7825e6ba7d50e57536401de2f70d3451b153b0
+=======
+
+('1', 'PIOLO', '2017', './assets/uploads/1523559ecc0f70c242.jpg', 'Unadopted', NULL),
+>>>>>>> 0df7669baaa26210d9ff64bf9a6bad67e6a28fbf
 ('2', 'LILY', '2016', './assets/uploads/lily.jpg', 'Scheduled', 'Lily is a hamster; She was rescued from an abandoned shelter and now recovered from the traumatic experience. She now enjoys singing especially in the morning. She became a very active hamster.'),
 ('3', 'BOGGART', '2016', './assets/uploads/boggart.jpg', 'Adopted', 'Boggart is a parrot; She was rescued from an abandoned shelter and now recovered from the traumatic experience. She now enjoys singing especially in the morning. She became a very active parrot.'),
 ('4', 'HAMMER', '2017', './assets/uploads/hammer.jpg', 'Scheduled', NULL),
@@ -302,11 +326,17 @@ INSERT INTO `petrescued` (`petID`, `pet_nickname`, `date_rescued`, `photo`, `ava
 ('7', 'BERRY', '2017', './assets/uploads/berry.jpg', 'Scheduled', ''),
 ('8', 'KISSES', '2016', './assets/uploads/kisses.jpg', 'Scheduled', 'Kisses is a lovely dog; She was rescued from an abandoned shelter and now recovered from the traumatic experience. She now enjoys singing especially in the morning. She became a very active dog.'),
 <<<<<<< HEAD
+<<<<<<< HEAD
 ('9', 'ALVIN', '2017', './assets/uploads/alvin.jpg', 'Unadopted', ''),
 ('', 'dfsadf', 'adfasdasf', './assets/uploads/1670759ec8ddd10ae6.png', '', NULL);
 =======
 ('9', 'ALVIN', '2017', './assets/uploads/alvin.jpg', 'Unadopted', '');
 >>>>>>> ee7825e6ba7d50e57536401de2f70d3451b153b0
+=======
+('9', 'ALVIN', '2017', './assets/uploads/alvin.jpg', 'Unadopted', ''),
+('', 'dfsadf', 'adfasdasf', './assets/uploads/1670759ec8ddd10ae6.png', '', NULL);
+
+>>>>>>> 0df7669baaa26210d9ff64bf9a6bad67e6a28fbf
 
 -- --------------------------------------------------------
 

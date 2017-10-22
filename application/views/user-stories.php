@@ -29,14 +29,16 @@
 		<button class=" like" style="text-decoration: none;" id="like_'.$d['story#'].'">
 		<span class="glyphicon glyphicon-heart-empty" ></span> LIKE</h4></button>';
 		}
-		
+		if($d['username']==$user){
 		echo'
 		
 		<div class="dropdown1 floater">
 		<button class="none floater dropbtn1"><span><i class="fa fa-ellipsis-h"></i></span></button>
 			<div class="dropdown-content1">
 				<a class="heading sm" <a href="'.base_url('user/delStories/'.$d['story#']).'" onclick = "getConfirm(this.href);"><span><i class="fa fa-trash-o"></i></span>Delete</a>
-			</div>
+			</div>';
+		}
+		echo '
 		</div>
 		</div>
 		</div>

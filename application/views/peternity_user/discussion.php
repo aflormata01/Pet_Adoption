@@ -38,15 +38,18 @@
 			<button class="rate" id="up_'.$d['discuss#'].'"><i class="fa fa-thumbs-o-up"></i></button>&nbsp;
 			<button class="rate" id="down_'.$d['discuss#'].'"><i class="fa fa-thumbs-o-down"></i></button>';
 		}
-		echo '</div>
+		echo '</div>';
+		if($d['username']==$user){
+			echo '
 					<div class="dropdown1 floater">
 							<button class="none floater dropbtn1"><span><i class="fa fa-ellipsis-h"></i></span></button>
 								<div class="dropdown-content1">
 									<a class="heading sm" <a href="'.base_url('user/delDiscussion/'.$d['discuss#']).'" onclick = "getConfirm(this.href);"><span><i class="fa fa-trash-o"></i></span>Delete</a>
 								</div>
 								<hr />
-					</div>
-					
+					</div>';
+		}			
+		echo '
 					</div>
 					<hr />
 		
