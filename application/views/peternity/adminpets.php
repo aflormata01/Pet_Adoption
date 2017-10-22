@@ -1,3 +1,4 @@
+
 <div class="">
 <div class="fluid " style="padding-right: 420px;">
 <div class=" text-center col-sm-8" style="margin-left: 490px;">
@@ -15,10 +16,12 @@ foreach($pets as $p){
   <div class="text-center col-md-12" style="margin-left: 300px;">
  <div class="ih-item circle effect1 pad "><a href="">
 
+
         <div class="spinner">
 		</div>
         <div class="img"><img src="'.base_url($p['photo']).'" alt="img" class="img-circle imagespin img-responsive"></div></a>
 		</div></a>
+
         <div class="panel-body" style="margin-left: 30px;">
 			    <div class="col-sm-12 text-center" style="margin-left: 55px;">
 				<h4 class="text-center heading">'.$p['pet_nickname'].'</h4>
@@ -76,3 +79,4 @@ function getConfirm(l)
   return;
 }
 </script>	
+
