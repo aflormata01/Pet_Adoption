@@ -37,7 +37,8 @@ class peternity extends CI_Controller {
 	public function adminview(){
 		$header_data['title'] = "admin";
 		$this->load->view('include/header',$header_data);
-		$this->load->view('peternity/admin');
+		$this->load->view('include/admin');
+		$this->load->view('peternity/adminpets');
 		
 		
 	}

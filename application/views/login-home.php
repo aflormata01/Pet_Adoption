@@ -1,5 +1,5 @@
 <div class="container-fluid">
-	<div class="panel panel-default text-left col-xs-2 margintop sminfo usermarg" id="userin"><br />
+	<div class="panel panel-default text-left col-xs-2 margintop sminfo usermarg affix" id="userin"><br />
 		
 	<?php
 	foreach($usern as $d){
@@ -25,8 +25,8 @@
 	
 	?>
 	</div>
-	<div class="col-sm-6">
-	<div class="panel panel-default margintop col-sm-12">
+	<div class="col-sm-6 ">
+	<div class="panel panel-default margintop col-sm-12"  style="margin-left: 500px;">
 		
 	<h2 class="text-center heading">-STORIES-</h2>
 	
@@ -41,7 +41,7 @@
 			</div>
 		</div>
 	</div>
-	<div id="stories">
+	<div id="stories"  >
 	<?php	
 	// foreach($user_stories as $d){ 
 		// $liked=0;
