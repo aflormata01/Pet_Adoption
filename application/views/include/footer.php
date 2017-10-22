@@ -11,8 +11,14 @@
 	<footer class="myfooter">
 		<div class="container-fluid">
 			<div class="row">
+			
+			<div class="col-sm-4" style=" padding-left:50px; padding-top:10px;">
+					<img src="<?php echo base_url('assets/images/peternity.png'); ?>" style="width: 80px; height:80px;"/></div>
+
 				<div class="col-sm-4">
-					<h4 class="title-widget">CONTACTS</h4>
+				<div class="col-sm-12">
+				
+					<h4 class="">FOLLOW US</h4>
 					
 					<!--
 					<ul class="social-icon">
@@ -28,23 +34,20 @@
 						<li> <a href="#" class="icoFacebook"><i class="fa fa-facebook"></i></a></li>
 						<li> <a href="#" class="icoTwitter"> <i class="fa fa-twitter"></i> </a> </li>
 						<li> <a href="#" class="icoGoogle"> <i class="fa fa-google-plus"></i> </a> </li>
-						<li> <a href="#" class="icoRss"> <i class="fa fa-youtube"></i> </a> </li>
+						<li> <a href="#" class="icoRss"> <i class="fa fa-instagram"></i> </a> </li>
 					</ul>
+					<br/>
+				
+				</div>
 				</div>
 				
-				<div class="col-sm-4">
-					<h4 class="title-widget">QUICK LINKS</h4>
-					<div class="category">
-						<a href="#" class="zoom">About Us</a>
-						
-					</div>
-				</div>
+				
 				<div class="col-sm-4">
 					<h4 class="title">IN PARTNERSHIP WITH:</h4>
 					<ul class="payment">
-						<li><a href="#"><i class="fa zoom" aria-hidden="true"><img src= <?php echo base_url('assets/images/part.png'); ?> style="width:70px; height:70px;"/></i></a></li>
-						<li><a href="#"><i class="fa zoom" aria-hidden="true"><img src= <?php echo base_url('assets/images/paws.png'); ?> style="width:70px; height:70px;"/></i></a></li>
-						<li><a href="#"><i class="fa zoom" aria-hidden="true"><img src= <?php echo base_url('assets/images/cara.png'); ?> style="width:70px; height:70px;"/></i></a></li>
+						<li><a href="#"><i class="fa zoom" aria-hidden="true"><img src= "<?php echo base_url('assets/images/part.png'); ?>" style="width:75px; height:75px;"/></i></a></li>
+						<li><a href="#"><i class="fa zoom" aria-hidden="true" style="padding-top:8px;"><img src= "<?php echo base_url('assets/images/paws.png'); ?>" style="width:60px; height:60px;"/></i></a></li>
+						<li><a href="#"><i class="fa zoom" aria-hidden="true" style="padding-top:7px;"><img src= "<?php echo base_url('assets/images/carawoname.png'); ?>" style="width:70px; height:70px;"/></i></a></li>
 				
 					</ul>
 				</div>
