@@ -19,14 +19,14 @@
 		}
 		if($liked==1){
 		echo'
-		<button class=" like" id="unlike_'.$d['story#'].'" style="color: orange;">
+		<button class="like" id="unlike_'.$d['story#'].'" style="color: orange;">
 		<span class="glyphicon glyphicon-heart-empty" ></span> LIKE</h4></button>';
 	
 		}
 		else
 		{	
 		echo '
-		<button class=" like" style="text-decoration: none;" id="like_'.$d['story#'].'">
+		<button class="like" style="text-decoration: none;" id="like_'.$d['story#'].'">
 		<span class="glyphicon glyphicon-heart-empty" ></span> LIKE</h4></button>';
 		}
 		if($d['username']==$user){

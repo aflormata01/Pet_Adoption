@@ -5,7 +5,7 @@
 		
 						<h4 class="text-left heading">'.$d['Title'].'</h4>
 			
-						<h6 class="sm">posted by '.$d['username'].' |<i> '.date("F j, Y, g:i a", strtotime($d['date'])).'</i></h6>
+						<h6 class="sm">posted by <a class="heading" href="'.base_url('user/profile/'.$d['username'].'').'"><strong>'.$d['username'].'</strong></a> |<i> '.date("F j, Y, g:i a", strtotime($d['date'])).'</i></h6>
 						<p class="sm"><a href="'.base_url('user/discbody/'.$d['discuss#'].'').'" class="sm">'.$d['body'].'</a></p>
 
 					<div class="btn-group text-right ">';
@@ -23,20 +23,20 @@
 					{
 						echo '
 						<button class="rate" id="up_'.$d['discuss#'].'"  style="color:orange;" ><i class="fa fa-thumbs-o-up"></i></button>&nbsp;
-						<button class="rate" id="down_'.$d['discuss#'].'"><i class="fa fa-thumbs-o-down"></i></button>';
+						<button class="rate" id="down_'.$d['discuss#'].'"  style="color:black;"><i class="fa fa-thumbs-o-down"></i></button>';
 					}
 					else
 					{
 						echo '
-						<button class="rate" id="up_'.$d['discuss#'].'"  ><i class="fa fa-thumbs-o-up"></i></button>&nbsp;
+						<button class="rate" id="up_'.$d['discuss#'].'"   style="color:black;"><i class="fa fa-thumbs-o-up"></i></button>&nbsp;
 						<button class="rate del" id="down_'.$d['discuss#'].'"  style="color:orange;"><i class="fa fa-thumbs-o-down"></i></button>';
 					}	
 		}		
 		else
 		{
 			echo '
-			<button class="rate" id="up_'.$d['discuss#'].'"><i class="fa fa-thumbs-o-up"></i></button>&nbsp;
-			<button class="rate" id="down_'.$d['discuss#'].'"><i class="fa fa-thumbs-o-down"></i></button>';
+			<button class="rate" id="up_'.$d['discuss#'].'" style="color:black;"><i class="fa fa-thumbs-o-up"></i></button>&nbsp;
+			<button class="rate" id="down_'.$d['discuss#'].'" style="color:black;"><i class="fa fa-thumbs-o-down"></i></button>';
 		}
 		echo '</div>';
 		if($d['username']==$user){
@@ -80,6 +80,7 @@
             type = 2;
         }
 		
+		
         // AJAX Request
         $.ajax({
 			
@@ -87,33 +88,38 @@
             type: "POST",
             data: 
 			{post:postid,rate:type},
-            success: function(){
-                // var likes = data['likes'];
+            success: function(data){
+				var del = data['del'];
+				if(type == 1){
+			
+					
+					
+					if ($("#up_"+postid).css('color') == 'rgb(0, 0, 0)')
+					$("#up_"+postid).css("color","orange");
+				
+					else
+					$("#up_"+postid).css("color","#000000");
+				
+                    $("#down_"+postid).css("color","#000000");
+					$('#discussions').html();
+                }
+				else if(type == 2){
+					if ($("#down_"+postid).css('color') == 'rgb(0, 0, 0)')
+                    $("#down_"+postid).css("color","orange");
+					else
+					$("#down_"+postid).css("color","#000000");
+                    $("#up_"+postid).css("color","#000000");
+					$('#discussions').html();
+					
+                }
+                // var unlikes = data['unlikes'];
                 // var unlikes = data['unlikes'];
 
                 // $("#likes_"+postid).text(likes);        // setting likes
                 // $("#unlikes_"+postid).text(unlikes);    // setting unlikes
-				
-                if(type == 1){
-					
-					$("#up_"+postid).css("color","orange");
-					$("#up_"+postid).css("color","#00000");
-                    $("#down_"+postid).css("color","#000000");
-					$('#discussions').html(data);
-                }
-				if(type == 2){
-					
-                    $("#down_"+postid).css("color","orange");
-                    $("#up_"+postid).css("color","#000000");
-					$('#discussions').html(data);
-					
-                }
-				
-			
             }
             
 			});
-		
 		});
 
 	});
