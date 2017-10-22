@@ -1,15 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.4
+-- version 4.7.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
-
--- Generation Time: Oct 21, 2017 at 11:28 AM
+-- Generation Time: Oct 21, 2017 at 02:14 PM
 -- Server version: 10.1.26-MariaDB
 -- PHP Version: 7.1.8
 
-
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -34,8 +34,9 @@ CREATE TABLE `discussion` (
   `Title` varchar(100) NOT NULL,
   `body` varchar(500) NOT NULL,
   `photo` blob,
-  `date` timestamp(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6) ON UPDATE CURRENT_TIMESTAMP
-) ;
+  `date` timestamp(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6) ON UPDATE CURRENT_TIMESTAMP(6),
+  `category` varchar(30) NOT NULL DEFAULT 'General'
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `discussion`
@@ -51,8 +52,7 @@ INSERT INTO `discussion` (`discuss#`, `username`, `Title`, `body`, `photo`, `dat
 (7, '', 'n', 'jj\r\n', NULL, '0000-00-00 00:00:00.000000', 'General'),
 (8, '', 'bn', 'gcghc', NULL, '0000-00-00 00:00:00.000000', 'General'),
 (9, '', 'bb', 'hgj\r\n', NULL, '0000-00-00 00:00:00.000000', 'General'),
-(10, '', 'fefefe', 'fefefef', NULL, '2017-10-21 03:08:35.299452', 'General'),
-(11, 'aflormata', 'ererer', 'erererer', NULL, '2017-10-21 03:28:38.655063', 'General');
+(10, 'aflormata', 'Never let your dog', 'eat chocolates. IT WILL DIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIEEEEEEEEEEEEEEEEEEEEE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!', NULL, '2017-10-21 10:16:56.052471', 'General');
 
 -- --------------------------------------------------------
 
@@ -80,7 +80,9 @@ INSERT INTO `disc_comments` (`comment#`, `discuss#`, `username`, `comment`, `dat
 (5, '1', 'aflormata', 'asdsadsa', '2017-10-21 09:04:05.205961'),
 (6, '1', 'aflormata', 'awwww', '2017-10-21 09:05:35.378547'),
 (7, '1', 'aflormata', 'ayoko na hehe', '2017-10-21 09:06:02.973724'),
-(8, '1', 'aflormata', ';\'', '2017-10-21 09:06:55.101408');
+(8, '1', 'aflormata', ';\'', '2017-10-21 09:06:55.101408'),
+(9, '10', 'aflormata', 'asus', '2017-10-21 10:23:09.355340'),
+(10, '10', 'aflormata', 'ayaw q na', '2017-10-21 10:29:24.903354');
 
 -- --------------------------------------------------------
 
@@ -142,7 +144,7 @@ CREATE TABLE `news` (
   `news#` varchar(50) NOT NULL,
   `title` varchar(100) NOT NULL,
   `body` varchar(500) NOT NULL,
-  `photo` varchar(100) DEFAULT NULL,
+  `photo` varchar(110) DEFAULT NULL,
   `date` varchar(50) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
@@ -151,10 +153,9 @@ CREATE TABLE `news` (
 --
 
 INSERT INTO `news` (`news#`, `title`, `body`, `photo`, `date`) VALUES
-('1', 'Bugsy the new baby', 'Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum', './assets/uploads/kisses.jpg', 'October 1,2016'),
-('3', 'Puppy for me', 'If you are going to use a passage of Lorem Ipsum, you need to be sure there isn\'t anything embarrassing hidden  ', './assets/uploads/chi.jpg', 'November 4,2017'),
-('4', 'Chubs has tick :(', 'But spotting these tiny bloodsuckers in a dog\'s fur isn\'t always easy. Stay But spotting these tiny bloodsuckers in a dog\'s fur isn\'t always easy. Stay BuBut spotting these tiny bloodsuckers in a dog\'s fur isn\'t always easy. Stay Butt spotting these tiny bloodsuckers in a dog\'s fur isn\'t always easy. Stay alert—if you notice any of these 5 signs, your dog might have ticks. signs, your dog might have ticks. signs, your dog might have ticks.', './assets/uploads/chubs.jpg', 'October 21, 2017'),
-('7', 'Candy got a new bestfriend', 'fasfdsf sdafa ffasfd sfsdaf affasfdsfs dafaffas fd.', './assets/uploads/candy.jpg', 'August 04, 2017');
+('1', 'Bugsy the new baby', 'Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum', NULL, 'October 1,2016'),
+('2', 'Hamster, Forever', 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).', NULL, 'September 8,2017'),
+('3', 'Puppy for me', 'If you are going to use a passage of Lorem Ipsum, you need to be sure there isn\'t anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.', NULL, 'November 4,2017');
 
 -- --------------------------------------------------------
 
@@ -165,8 +166,8 @@ INSERT INTO `news` (`news#`, `title`, `body`, `photo`, `date`) VALUES
 CREATE TABLE `owneraccount` (
   `username` varchar(50) NOT NULL,
   `password` varchar(50) NOT NULL,
-  `date_signedup` timestamp(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6) ON UPDATE CURRENT_TIMESTAMP
-) ;
+  `date_signedup` timestamp(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6) ON UPDATE CURRENT_TIMESTAMP(6)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `owneraccount`
@@ -203,7 +204,6 @@ CREATE TABLE `ownerinfo` (
 --
 
 INSERT INTO `ownerinfo` (`username`, `fname`, `lname`, `photo`, `email`, `birthdate`, `sex`) VALUES
-
 ('aflormata', 'flormata', 'allysa', './assets/uploads/146884780759eae47947dd7.png', 'aflormata2000@gmail.com', '2000-01-01', 'Male'),
 ('chessy', 'chesca', 'cortez', NULL, '', '', ''),
 ('chichi123', 'allysa', 'flormata', './assets/images/peternity.png', '', '', '');
@@ -272,8 +272,8 @@ CREATE TABLE `stories` (
   `username` varchar(50) NOT NULL,
   `title` varchar(50) NOT NULL,
   `file_name` varchar(100) NOT NULL,
-  `date` timestamp(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6) ON UPDATE CURRENT_TIMESTAMP
-) ;
+  `date` timestamp(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6) ON UPDATE CURRENT_TIMESTAMP(6)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `stories`
@@ -285,8 +285,8 @@ INSERT INTO `stories` (`story#`, `username`, `title`, `file_name`, `date`) VALUE
 (12, '', 'fghfgdhfdg', './assets/uploads/2681259e59a7bb23c9.jpg', '0000-00-00 00:00:00.000000'),
 (1, 'dale09', 'Pet', '', '2017-03-02 16:00:00.000000'),
 (15, 'aflormata', 'xmas', './assets/uploads/84343723759e9907416926.png', '0000-00-00 00:00:00.000000'),
-(16, 'aflormata', '', './assets/uploads/185328301659ead76849e0c.jpg', '2017-10-21 05:13:12.444792');
-
+(16, 'aflormata', '', './assets/uploads/185328301659ead76849e0c.jpg', '2017-10-21 05:13:12.444792'),
+(17, 'aflormata', '', './assets/uploads/22998686159eb21be6c841.jpg', '2017-10-21 10:30:22.445684');
 
 -- --------------------------------------------------------
 
@@ -296,24 +296,27 @@ INSERT INTO `stories` (`story#`, `username`, `title`, `file_name`, `date`) VALUE
 
 CREATE TABLE `stories_like` (
   `story#` varchar(30) NOT NULL,
-  `username` varchar(30) NOT NULL
+  `username` varchar(30) NOT NULL,
+  `time` timestamp(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6) ON UPDATE CURRENT_TIMESTAMP(6)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `stories_like`
 --
 
-INSERT INTO `stories_like` (`story#`, `username`) VALUES
-
-('1', 'aflormata'),
-('12', 'aflormata'),
-('14', 'aflormata'),
-('16', 'aflormata');
-
+INSERT INTO `stories_like` (`story#`, `username`, `time`) VALUES
+('14', 'aflormata', '2017-10-21 10:21:11.412861');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `discussion`
+--
+ALTER TABLE `discussion`
+  ADD PRIMARY KEY (`discuss#`),
+  ADD KEY `username` (`username`);
 
 --
 -- Indexes for table `disc_comments`
@@ -350,6 +353,12 @@ ALTER TABLE `news`
   ADD PRIMARY KEY (`news#`);
 
 --
+-- Indexes for table `owneraccount`
+--
+ALTER TABLE `owneraccount`
+  ADD PRIMARY KEY (`username`);
+
+--
 -- Indexes for table `ownerinfo`
 --
 ALTER TABLE `ownerinfo`
@@ -369,6 +378,13 @@ ALTER TABLE `petrescued`
   ADD PRIMARY KEY (`petID`);
 
 --
+-- Indexes for table `stories`
+--
+ALTER TABLE `stories`
+  ADD PRIMARY KEY (`story#`),
+  ADD KEY `username` (`username`);
+
+--
 -- Indexes for table `stories_like`
 --
 ALTER TABLE `stories_like`
@@ -383,12 +399,12 @@ ALTER TABLE `stories_like`
 -- AUTO_INCREMENT for table `discussion`
 --
 ALTER TABLE `discussion`
-  MODIFY `discuss#` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `discuss#` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT for table `disc_comments`
 --
 ALTER TABLE `disc_comments`
-  MODIFY `comment#` bigint(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `comment#` bigint(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT for table `events`
 --
@@ -403,9 +419,7 @@ ALTER TABLE `faqs`
 -- AUTO_INCREMENT for table `stories`
 --
 ALTER TABLE `stories`
-
-  MODIFY `story#` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;COMMIT;
-
+  MODIFY `story#` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

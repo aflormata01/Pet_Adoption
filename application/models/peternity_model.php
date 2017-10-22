@@ -28,11 +28,9 @@ class peternity_model extends CI_model
 			$this->db->update($this->discussion, $data);
 			return TRUE;	
 		}
-		public function del_discussion()
+		public function del_discussion($where_array)
 		{
-			$this->db->where($data);
-			$this->db->delete($this->discussion);
-			return TRUE;	
+			$this->db->delete($this->discussion,$where_array);
 		}
 		public function read_discussion($condition=null)
 		{
@@ -140,11 +138,9 @@ class peternity_model extends CI_model
 			$this->db->update($this->disc_comments, $data);
 			return TRUE;	
 		}
-		public function del_disc_comments()
+		public function del_disc_comments($where_array)
 		{
-			$this->db->where($data);
-			$this->db->delete($this->disc_comments);
-			return TRUE;	
+			$this->db->delete($this->disc_comments,$where_array);
 		}
 		public function read_disc_comments($condition=null)
 		{
@@ -249,11 +245,9 @@ class peternity_model extends CI_model
 			$this->db->insert($this->owneraccount, $data);
 			return TRUE;	
 		}
-		public function update_owneraccount()
+		public function update_owneraccount($change)
 		{
-			$this->db->where($data);
-			$this->db->update($this->owneraccount, $data);
-			return TRUE;	
+			$this->db->replace($this->owneraccount,$change);	
 		}
 		public function del_owneraccount()
 		{
@@ -318,11 +312,9 @@ class peternity_model extends CI_model
 			$this->db->update($this->stories, $data);
 			return TRUE;	
 		}
-		public function del_stories()
+		public function del_stories($where_array)
 		{
-			$this->db->where($data);
-			$this->db->delete($this->stories);
-			return TRUE;	
+			$this->db->delete($this->stories,$where_array);
 		}
 		public function read_stories($condition=null)
 		{	

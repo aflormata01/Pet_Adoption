@@ -20,7 +20,6 @@ class login_model extends CI_Model {
             return $query->result_array();
         else
             return false;
-        
     }
     
     function update($newRecord){

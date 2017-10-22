@@ -32,8 +32,8 @@
 
 
 </style>
-<nav class="navbar ">
-  <div class="container ">
+<nav class="navbar">
+  <div class="container">
     <div class="navbar-header menupad">
       <a class="navbar-brand" href="<?php echo base_url('user')?>""><img src="<?php echo base_url('assets/images/logo.png'); ?>" /></a>
     </div>
@@ -55,14 +55,9 @@
       </li>
       <li class="menupad"><a class="sm" href="<?php echo base_url('peternity/faqs')?>">FAQ's</a></li>   
 	  
-		<li class="menupad"><a class="sm" href="<?php echo base_url('peternity/steps')?>">ADOPT A PET!</a></li> 
-		<div id="table">
-			<div id="myModal" class="modal fade" role="dialog">
-			<div class="modal-dialog">
-            <div class="modal-content"></div>
-        </div>
-    </div>
-	</div>  
+		<li class="menupad"><a class="sm" href="<?php echo base_url('peternity/steps')?>">ADOPT A PET!</a></li>   
+		<li class="menupad"><a class="sm" href="<?php echo base_url('peternity/adminview')?>">ADMIN</a></li>   
+	
 	  
 	  
    

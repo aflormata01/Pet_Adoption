@@ -11,10 +11,6 @@
 <link href="<?php echo base_url('bootstrap/css/bootstrap-theme.css'); ?>" rel="stylesheet" />
 <link href="<?php echo base_url('assets/css/peternity.css'); ?>" rel="stylesheet" />
 
-<link href="<?php echo base_url('assets/css/slider.css'); ?>" rel="stylesheet" />
-<link href="<?php echo base_url('assets/css/AdminLTE.css'); ?>" rel="stylesheet" />
-<link href="<?php echo base_url('assets/css/ionicons.css'); ?>" rel="stylesheet" />
-<link href="<?php echo base_url('assets/css/bootstrp-colorpicker.css'); ?>" rel="stylesheet" />
 
 <link href="<?php echo base_url('assets/css/stories.css'); ?>" rel="stylesheet" />
 

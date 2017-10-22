@@ -74,21 +74,21 @@ button:hover {
         
             <div class="row bs-wizard" style="border-bottom:0;">
                 
-                <div class="col-xs-3 bs-wizard-step complete">
+                <div class="col-xs-3 bs-wizard-step active">
                   <div class="text-center bs-wizard-stepnum">Step 1</div>
                   <div class="progress"><div class="progress-bar"></div></div>
                   <a href="#" class="bs-wizard-dot"></a>
                   <div class="bs-wizard-info text-center">CHOOSE A PET</div>
                 </div>
                 
-                <div class="col-xs-3 bs-wizard-step complete"><!-- complete -->
+                <div class="col-xs-3 bs-wizard-step disabled"><!-- complete -->
                   <div class="text-center bs-wizard-stepnum">Step 2</div>
                   <div class="progress"><div class="progress-bar"></div></div>
                   <a href="#" class="bs-wizard-dot"></a>
                   <div class="bs-wizard-info text-center">CONTACT INFO</div>
                 </div>
                 
-                <div class="col-xs-3 bs-wizard-step active"><!-- complete -->
+                <div class="col-xs-3 bs-wizard-step disabled"><!-- complete -->
                   <div class="text-center bs-wizard-stepnum">Step 3</div>
                   <div class="progress"><div class="progress-bar"></div></div>
                   <a href="#" class="bs-wizard-dot"></a>
@@ -117,10 +117,9 @@ button:hover {
     
   </div>
   <div class="tab">Contact Info:
-  <div class="margleft">
+
     <p><input class="col-sm-8 " placeholder="Phone" oninput="this.className = ''" name="phone"></p><br/>
     <p><input class="col-sm-8 " placeholder="Address" oninput="this.className = ''" name="add"></p><br/>
-  </div>
   </div>
   <br/>
   <br/>
