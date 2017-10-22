@@ -18,7 +18,17 @@
 		<button class="btn btn-muted sm" type="button" id="addButton"><span class="glyphicon glyphicon-plus"> </span>Add Story</button></a>
 		</h6>
 		<h6>
-		<button class="btn btn-muted sm" type="button" id="addButton"><span class="glyphicon glyphicon-plus"> </span>Add Discussion</button></a>
+		<div class="text-left">
+		<a href="<?php echo base_url('user/addDiscussion')?>" data-toggle="modal" data-target="#myModal"><button class="btn btn-muted sm" type="button" id="addButton"><span class="glyphicon glyphicon-plus"> </span>Add Discussion</button></a>
+
+    <div id="table">
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content"></div>
+        </div>
+    </div>
+</div>
+</div>
 		</h6>
 
 	</div>
@@ -59,18 +69,10 @@
 		</table>
 		</div>
 		</div>
-	<div class="text-right">
-		<a href="<?php echo base_url('user/addDiscussion')?>" data-toggle="modal" data-target="#myModal">
-   </a>
-    <div id="table">
-    <div id="myModal" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-            <div class="modal-content"></div>
-        </div>
-    </div>
+	
 </div>
-</div>
-</div>
+
+
 <script type = "text/javascript">
 
 function getConfirm(l)
