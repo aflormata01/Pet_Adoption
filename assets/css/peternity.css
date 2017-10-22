@@ -835,3 +835,32 @@ a.myfooter .socialIcon:hover, .myfooter .socialHoverClass {
      -moz-transition-duration: 0.3s;
      -o-transition-duration: 0.3s;
  }
+ 
+ .panel.date {
+    margin: 0px;
+    width: 80px;
+    text-align: center;
+}
+
+.panel.date .month {
+    padding: 2px 0px;
+    font-weight: 700;
+    text-transform: uppercase;
+	width:78px;
+}
+
+.panel.date .day {
+    padding: 3px 0px;
+    font-weight: 700;
+    font-size: 1.5em;
+	width:78px;
+}
+#panel{
+	left:20px;
+	padding-right: 1000px;
+	max-height: 500px;
+	
+}
+.s{
+	overflow: scroll;
+}
