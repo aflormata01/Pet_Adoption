@@ -48,7 +48,9 @@
 	.button{background-color: #ffcab2;}
 	.picstory{margin-left: 100px; }
 	.usermarg{margin-left: 210px;}
-	.discmarg{margin-left: 155px;}
+
+	.discmarg{margin-left: 195px;}
+
 	.dropdown-menu a:hover {background-color: }
 	.dropdown:hover .dropdown-menu {display: block;}
 	.spacing{margin-left: 120px;}
@@ -69,7 +71,6 @@
     background-size: cover;}
 	
 	.faqbg {
-
     background-image: url('../images/mainfaq.jpg');
     min-height: 500px;
     min-width: 750px;
@@ -80,7 +81,6 @@
 	
 	
 	.adminlog {
-
     background-image: url('../images/petbg.jpg');
     min-height: 500px;
     min-width: 750px;
@@ -90,7 +90,7 @@
     background-size: cover;}
 	
 	
-
+	
 	#textmargin{margin-left: 135px;}
 	panel{margin-left: 600px; margin-right: 600px;}
 	button{margin:auto;}
@@ -522,15 +522,7 @@
         width: 100%;
    }
 }
-.nav1{
-  overflow: auto;
-  font-family: verdana;
-  font-size: 12px;
-  font-weight: 200;
-  position: fixed;
-  top: 0px;
-  
-}
+
 .nav-side-menu {
   overflow: auto;
   font-family: verdana;
@@ -542,7 +534,7 @@
   width: 300px;
   height: 100%;
   color: #e1ffff;
-  padding-left: 0px;
+ 
 }
 .nav-side-menu .brand {
   background-color: #23282e;
@@ -843,3 +835,32 @@ a.myfooter .socialIcon:hover, .myfooter .socialHoverClass {
      -moz-transition-duration: 0.3s;
      -o-transition-duration: 0.3s;
  }
+ 
+ .panel.date {
+    margin: 0px;
+    width: 80px;
+    text-align: center;
+}
+
+.panel.date .month {
+    padding: 2px 0px;
+    font-weight: 700;
+    text-transform: uppercase;
+	width:78px;
+}
+
+.panel.date .day {
+    padding: 3px 0px;
+    font-weight: 700;
+    font-size: 1.5em;
+	width:78px;
+}
+#panel{
+	left:20px;
+	padding-right: 1000px;
+	max-height: 500px;
+	
+}
+.s{
+	overflow: scroll;
+}
