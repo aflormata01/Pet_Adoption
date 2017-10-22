@@ -46,6 +46,7 @@
 	<div class="form">
      <div class="form-content shadow">
 	  <h3 class="text-center heading ">LOG IN</h3>
+	   <?php echo validation_errors(); ?>
 		 <form method="post">
 					<div class="form-group text-center b">
 						<span class="glyphicon glyphicon-user"></span> <label for="username"> USERNAME: </label>
