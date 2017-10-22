@@ -2,7 +2,7 @@
 <div class="container">
 	<h2 class="text-center heading">DISCUSSIONS</h2>
 	
-	<div class="panel panel-default container text-left col-sm-8">
+	<div class="panel panel-default container text-left col-sm-8 discmarg" >
 		<div class="table table-bordered">
 		<?php
 		foreach($discussion as $d){ 
@@ -31,4 +31,5 @@
 		</td>
 		</tr>-->
 	</div>
+</div>	
 </div>	
