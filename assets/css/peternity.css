@@ -66,6 +66,17 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;}
+	
+	.faqbg {
+    background-image: url('../images/petbg.jpg');
+    min-height: 500px;
+    min-width: 750px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;}
+	
+	
 	#textmargin{margin-left: 135px;}
 	panel{margin-left: 600px; margin-right: 600px;}
 	button{margin:auto;}
