@@ -123,4 +123,11 @@ class admin extends CI_Controller {
 					return $url;
 		return "";
 	}
+	
+	public function adminlogin()
+	{
+	$header_data['title'] = "ADMIN LOG IN";
+	$this->load->view('include/header',$header_data);
+	$this->load->view('peternity/loginadmin');
+	}
 }
