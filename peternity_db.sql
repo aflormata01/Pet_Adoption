@@ -3,7 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 22, 2017 at 04:23 AM
+
+-- Generation Time: Oct 22, 2017 at 05:40 PM
+
 -- Server version: 5.7.14
 -- PHP Version: 5.6.25
 
@@ -19,6 +21,24 @@ SET time_zone = "+00:00";
 --
 -- Database: `peternity_db`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admin`
+--
+
+CREATE TABLE `admin` (
+  `username` varchar(20) NOT NULL,
+  `password` int(20) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`username`, `password`) VALUES
+('admin', 123);
 
 -- --------------------------------------------------------
 
@@ -47,7 +67,6 @@ INSERT INTO `discussion` (`discuss#`, `username`, `Title`, `body`, `photo`, `dat
 (5, '', 'asa', 'adasd', NULL, '0000-00-00 00:00:00.000000', 'General'),
 (7, '', 'n', 'jj\r\n', NULL, '0000-00-00 00:00:00.000000', 'General'),
 (8, '', 'bn', 'gcghc', NULL, '0000-00-00 00:00:00.000000', 'General'),
-(9, '', 'bb', 'hgj\r\n', NULL, '0000-00-00 00:00:00.000000', 'General'),
 (10, 'aflormata', 'Never let your dog', 'eat chocolates. IT WILL DIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIEEEEEEEEEEEEEEEEEEEEE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!', NULL, '2017-10-21 10:16:56.052471', 'General');
 
 -- --------------------------------------------------------
@@ -92,6 +111,13 @@ CREATE TABLE `disc_rating` (
   `rate` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `disc_rating`
+--
+
+INSERT INTO `disc_rating` (`discuss#`, `username`, `rate`) VALUES
+(10, 'aflormata', '1');
+
 -- --------------------------------------------------------
 
 --
@@ -128,7 +154,8 @@ CREATE TABLE `faqs` (
 --
 
 INSERT INTO `faqs` (`faqs_no`, `body`) VALUES
-(1, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.');
+(1, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.ddd'),
+(6, 'fasdfsdaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa');
 
 -- --------------------------------------------------------
 
@@ -137,11 +164,12 @@ INSERT INTO `faqs` (`faqs_no`, `body`) VALUES
 --
 
 CREATE TABLE `news` (
-  `news#` varchar(50) NOT NULL,
+  `news#` int(50) NOT NULL,
   `title` varchar(100) NOT NULL,
   `body` varchar(500) NOT NULL,
   `photo` varchar(100) NOT NULL,
-  `date` varchar(50) NOT NULL
+  `date` varchar(20) NOT NULL
+
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
@@ -149,10 +177,12 @@ CREATE TABLE `news` (
 --
 
 INSERT INTO `news` (`news#`, `title`, `body`, `photo`, `date`) VALUES
-('1', 'Bugsy the new baby', 'Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum', './assets/uploads/chi.jpg', 'October 1,2016'),
-('2', 'Hamster, Forever', 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).', './assets/uploads/candy.jpg', 'September 8,2017'),
-('3', 'Puppy for me', 'If you are going to use a passage of Lorem Ipsum, you need to be sure there isn\'t anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.', './assets/uploads/chubs.jpg', 'November 4,2017'),
-('4', 'Charlie is sick', 'LoremLorem Lorem Lor emLore mLoremL oremLorem Lor emLor emLor emLoremLo remLorem', './assets/uploads/charlie.jpg', 'November 19, 2016');
+
+(1, 'Bugsy the new baby', 'Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum', './assets/uploads/chi.jpg', ''),
+(2, 'Hamster, Forever', 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).', './assets/uploads/candy.jpg', ''),
+(3, 'Puppy for me', 'If you are going to use a passage of Lorem Ipsum, you need to be sure there isn\'t anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.', './assets/uploads/chubs.jpg', ''),
+(4, 'Charlie is sick', 'LoremLorem Lorem Lor emLore mLoremL oremLorem Lor emLor emLor emLoremLo remLorem', './assets/uploads/charlie.jpg', '');
+
 
 -- --------------------------------------------------------
 
@@ -249,7 +279,8 @@ CREATE TABLE `petrescued` (
 --
 
 INSERT INTO `petrescued` (`petID`, `pet_nickname`, `date_rescued`, `photo`, `availability`, `bio`) VALUES
-('1', 'PIOLO', '2017', './assets/uploads/piolo.jpg', 'Unadopted', NULL),
+
+('1', 'PIOLO', '2017', './assets/uploads/1523559ecc0f70c242.jpg', 'Unadopted', NULL),
 ('2', 'LILY', '2016', './assets/uploads/lily.jpg', 'Scheduled', 'Lily is a hamster; She was rescued from an abandoned shelter and now recovered from the traumatic experience. She now enjoys singing especially in the morning. She became a very active hamster.'),
 ('3', 'BOGGART', '2016', './assets/uploads/boggart.jpg', 'Adopted', 'Boggart is a parrot; She was rescued from an abandoned shelter and now recovered from the traumatic experience. She now enjoys singing especially in the morning. She became a very active parrot.'),
 ('4', 'HAMMER', '2017', './assets/uploads/hammer.jpg', 'Scheduled', NULL),
@@ -257,7 +288,9 @@ INSERT INTO `petrescued` (`petID`, `pet_nickname`, `date_rescued`, `photo`, `ava
 ('6', 'CHARLIE', '2017', './assets/uploads/charlie.jpg', 'Scheduled', ''),
 ('7', 'BERRY', '2017', './assets/uploads/berry.jpg', 'Scheduled', ''),
 ('8', 'KISSES', '2016', './assets/uploads/kisses.jpg', 'Scheduled', 'Kisses is a lovely dog; She was rescued from an abandoned shelter and now recovered from the traumatic experience. She now enjoys singing especially in the morning. She became a very active dog.'),
-('9', 'ALVIN', '2017', './assets/uploads/alvin.jpg', 'Unadopted', '');
+('9', 'ALVIN', '2017', './assets/uploads/alvin.jpg', 'Unadopted', ''),
+('', 'dfsadf', 'adfasdasf', './assets/uploads/1670759ec8ddd10ae6.png', '', NULL);
+
 
 -- --------------------------------------------------------
 
@@ -377,7 +410,12 @@ ALTER TABLE `events`
 -- AUTO_INCREMENT for table `faqs`
 --
 ALTER TABLE `faqs`
-  MODIFY `faqs_no` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `faqs_no` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+--
+-- AUTO_INCREMENT for table `news`
+--
+ALTER TABLE `news`
+  MODIFY `news#` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT for table `stories`
 --
