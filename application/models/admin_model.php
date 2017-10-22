@@ -59,4 +59,31 @@ class peternity_model extends CI_model
 			 return $query-> result_array(); 
 		}
 		
+		
+		public function create_petrescued($data)
+		{
+			$this->db->insert($this->petrescued, $data);
+			return TRUE;	
+		}
+		public function update_petrescued($data)
+		{
+			$this->db->replace($this->petrescued, $data);
+			return TRUE;	
+		}
+		public function del_petrescued()
+		{
+			$this->db->where($data);
+			$this->db->delete($this->petrescued);
+			return TRUE;	
+		}
+		public function read_petrescued($condition=null)
+		{
+			 $this -> db -> select('*');
+			 $this -> db -> from($this->petrescued);
+			 if ( isset($condition)) 
+				 $this->db->where($condition);
+			 $query= $this->db->get();
+			 return $query-> result_array();
+		 
+		}
 <?
