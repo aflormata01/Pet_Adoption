@@ -77,6 +77,17 @@
     background-size: cover;}
 	
 	
+	.adminlog {
+    background-image: url('../images/petbg.jpg');
+    min-height: 500px;
+    min-width: 750px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;}
+	
+	
+	
 	#textmargin{margin-left: 135px;}
 	panel{margin-left: 600px; margin-right: 600px;}
 	button{margin:auto;}
@@ -132,6 +143,8 @@
 		padding: 10px 20px 0px 20px;
         margin-right:15px; /* width of .container gutter */
     }
+}
+
 }
 
 
