@@ -7,16 +7,67 @@
 <div class="text-center col-sm-8" style="margin-left: 365px;">
 
         <div class="panel-body" style="margin-left: 50px;">
-			    <div class="col-sm-3 text-center">
-				
+		
+		<div class="row">
+				<?php
+foreach($news as $d){ 
+  echo'
+  
+
+	<div class="column">
+    <div class="thumbnail">
+      <a href="'.base_url($d['photo']).'">
+        <img src="'.base_url($d['photo']).'" alt="Lights" style="width:100%">
+        <div class="caption">
+          <h4 class="text-center heading">'.$d['title'].'</h4>
+		  <h6 class="text-center sm">By: Peternity PH</h6>
+		  <h5 class="text-center sm">'.$d['date'].'</h5>
+		  <h6 class="text-center sm">"'.$d['body'].'"</h6>
+        </div>
+      </a>
+	  </div>
+	  
+	
+
 				<button class="none heading sm"><a href="" class="heading sm"><span><i class="fa fa-edit"></i></span> Edit</a></button> |
-				<button class="none heading sm"><a href="" class="heading sm"><span><i class="fa fa-trash-o"></i></span> Delete</a></button>
-    </div>
+				<button class="none heading sm"><a href="'.base_url('admin/delNews/'.$d['news#']).'" class="heading sm" onclick = "getConfirm(this.href);"><span><i class="fa fa-trash-o"></i></span> Delete</a></button>
+	
+	
+	</div>
+    ';
+}
+?>	
+</div>
+<script type = "text/javascript">
 
-
+function getConfirm(l)
+{
+  if(arguments[0] != null)
+  {
+    if(window.confirm('Are you sure you want to delete?\n'))
+    {
+      location.href = l;
+    }
+    
+    else
+    {
+      event.cancelBubble = true;
+      event.returnValue = false;
+      return false;
+    }
+  }
+  
+  else
+  {
+    return false;
+  }
+  return;
+}
+</script>	
 
 
 </div>
-
-
 </div>
+</div>
+
+
