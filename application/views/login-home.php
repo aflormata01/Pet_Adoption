@@ -1,5 +1,7 @@
-<div class="container-fluid">
-	<div class="panel panel-default text-left col-xs-2 margintop sminfo usermarg affix" id="userin"><br />
+
+<div class="container-fluid fixed-bg">
+	<div class="panel panel-default text-left col-xs-2 margintop sminfo usermarg" id="userin"><br />
+
 		
 	<?php
 	foreach($usern as $d){
@@ -14,11 +16,15 @@
 		<hr />
 
 		<h6 class="heading "><span class="glyphicon glyphicon-list-alt"></span> <a href="'.base_url('user/userstories').'" class="heading sm">My Stories</a></h6>
+		<h6 class="heading "><span><i class="fa fa-inbox"></i></span> <a href="" class="heading sm">Inbox</a></h6>
 
 		<a href="'.base_url('user/addstories').'" data-toggle="modal" data-target="#myModal">
+		<div>
 		<h6>
 		<button class="btn btn-muted sm" type="button" id="addButton"><span class="glyphicon glyphicon-plus"> </span>Add Story</button></a>
 		</h6>
+		
+		</div>
 		
 	';
 	}
@@ -26,7 +32,9 @@
 	?>
 	</div>
 	<div class="col-sm-6 ">
-	<div class="panel panel-default margintop col-sm-12"  style="margin-left: 500px;">
+
+	<div class="panel panel-default margintop col-sm-12" >
+
 		
 	<h2 class="text-center heading">-STORIES-</h2>
 	

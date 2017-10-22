@@ -17,7 +17,9 @@ class Login extends CI_Controller {
 			$this->load->view('include/header',$header_data);
 			$this->load->view('include/menu');
 			$this->load->view('home',$data);
+
 			 $this->load->view('include/footer');
+
         }
         else {
             redirect(base_url('user'));

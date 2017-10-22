@@ -48,6 +48,7 @@
 	.button{background-color: #ffcab2;}
 	.picstory{margin-left: 100px; }
 	.usermarg{margin-left: 210px;}
+	.discmarg{margin-left: 155px;}
 	.dropdown-menu a:hover {background-color: }
 	.dropdown:hover .dropdown-menu {display: block;}
 	.spacing{margin-left: 120px;}
@@ -68,6 +69,18 @@
     background-size: cover;}
 	
 	.faqbg {
+
+    background-image: url('../images/mainfaq.jpg');
+    min-height: 500px;
+    min-width: 750px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;}
+	
+	
+	.adminlog {
+
     background-image: url('../images/petbg.jpg');
     min-height: 500px;
     min-width: 750px;
@@ -77,6 +90,7 @@
     background-size: cover;}
 	
 	
+
 	#textmargin{margin-left: 135px;}
 	panel{margin-left: 600px; margin-right: 600px;}
 	button{margin:auto;}
@@ -132,6 +146,8 @@
 		padding: 10px 20px 0px 20px;
         margin-right:15px; /* width of .container gutter */
     }
+}
+
 }
 
 
@@ -475,7 +491,9 @@
     width: 25%;
     padding: 10px;
 }
-
+.pad{
+	padding-left: 0px;
+}
 .margleft{
 	padding-left: 20px;
 }
@@ -504,72 +522,15 @@
         width: 100%;
    }
 }
-
-
-.bs-wizard {margin-top: 40px;}
-
-/*Form Wizard*/
-.bs-wizard {
-	border-bottom: solid 1px #fbe8aa; padding: 0 0 0 0;
-	}
-.bs-wizard > .bs-wizard-step {
-	padding: 0; position: relative;
-	}
-.bs-wizard > .bs-wizard-step + .bs-wizard-step {}
-.bs-wizard > .bs-wizard-step .bs-wizard-stepnum {
-	color: #595959; font-size: 16px; margin-bottom: 5px;
-	}
-.bs-wizard > .bs-wizard-step .bs-wizard-info {
-	color: #999; font-size: 14px;
-	}
-.bs-wizard > .bs-wizard-step > .bs-wizard-dot {
-	position: absolute; width: 30px; 
-	height: 30px; display: block; background: #fbe8aa; 
-	top: 45px; left: 50%; margin-top: -15px; 
-	margin-left: -15px; border-radius: 50%;
-	} 
-.bs-wizard > .bs-wizard-step > .bs-wizard-dot:after {
-	content: ' '; width: 14px; height: 14px; background: #ccffea; 
-	border-radius: 50px; position: absolute; top: 8px; left: 8px;
-	} 
-.bs-wizard > .bs-wizard-step > .progress {
-	position: relative; border-radius: 0px; 
-	height: 8px; box-shadow: none; margin: 20px 0;
-	}
-.bs-wizard > .bs-wizard-step > .progress > .progress-bar {
-	width:0px; box-shadow: none; background: #fbe8aa;
-	}
-.bs-wizard > .bs-wizard-step.complete > .progress > .progress-bar {
-	width:100%;
-	}
-.bs-wizard > .bs-wizard-step.active > .progress > .progress-bar {
-	width:50%;
-	}
-.bs-wizard > .bs-wizard-step:first-child.active > .progress > .progress-bar {
-	width:0%;
-	}
-.bs-wizard > .bs-wizard-step:last-child.active > .progress > .progress-bar {
-	width: 100%;
-	}
-.bs-wizard > .bs-wizard-step.disabled > .bs-wizard-dot {
-	background-color: #f5f5f5;
-	}
-.bs-wizard > .bs-wizard-step.disabled > .bs-wizard-dot:after {
-	opacity: 0;
-	}
-.bs-wizard > .bs-wizard-step:first-child  > .progress {
-	left: 50%; width: 50%;
-	}
-.bs-wizard > .bs-wizard-step:last-child  > .progress {
-	width: 50%;
-	}
-.bs-wizard > .bs-wizard-step.disabled a.bs-wizard-dot{
-	pointer-events: none;
-	}
-/*END Form Wizard*/
-
-
-
+.nav1{
+  overflow: auto;
+  font-family: verdana;
+  font-size: 12px;
+  font-weight: 200;
+  position: fixed;
+  top: 0px;
+  
+}
 .nav-side-menu {
   overflow: auto;
   font-family: verdana;
@@ -581,7 +542,7 @@
   width: 300px;
   height: 100%;
   color: #e1ffff;
-  margin-top: 58px;
+  padding-left: 0px;
 }
 .nav-side-menu .brand {
   background-color: #23282e;
@@ -799,7 +760,7 @@ body {
 
 
 .myfooter .social a.icoRss:hover {
-	background-color: #F56505;
+	background-color: #FF3396;
 }
 .myfooter .social a.icoFacebook:hover {
 	background-color:#3B5998;

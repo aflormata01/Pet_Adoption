@@ -39,6 +39,7 @@
     </div>
     <ul class="nav navbar-nav show-on-hover">
       <li class="menupad "><a class="sm" href="<?php echo base_url('user')?>">HOME</a></li>
+	  
 	  <li class="menupad"><a class="sm" href="<?php echo base_url('peternity/rescuepet')?>">PET CATALOGUE</a></li>
 	  <li class="dropdown menupad">
         <a class="sm" class="dropdown-toggle" data-toggle="dropdown" href="#">COMMUNITY</a>
@@ -56,10 +57,10 @@
       <li class="menupad"><a class="sm" href="<?php echo base_url('peternity/faqs')?>">FAQ's</a></li>   
 	  
 		<li class="menupad"><a class="sm" href="<?php echo base_url('peternity/steps')?>">ADOPT A PET!</a></li>   
-		<li class="menupad"><a class="sm" href="<?php echo base_url('peternity/adminview')?>">ADMIN</a></li>   
+		<li class="menupad"><a class="sm" href="<?php echo base_url('admin')?>">ADMIN</a></li>   
 	
 	  
 	  
    
   </div>
-</nav>
+</nav>	

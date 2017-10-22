@@ -1,7 +1,7 @@
 
 <div class="container-fluid">
 
-<div class="panel panel-default text-left col-xs-2 margintop sminfo usermarg" id="userin"><br />
+<div class="panel panel-default text-left col-xs-2 margintop sminfo discmarg" id="userin"><br />
 	
 		<img src="'.base_url($d['photo']).'" class="profilepic img-circle logpic " style="width: 35px ; height:35px" alt="profilepic">
 		<h4 class="heading ">Chicken Nuggets</h4>
@@ -30,18 +30,18 @@
 
 	</div>
 	
-	<div class="panel panel-default margintop col-sm-6">
+	<div class="panel panel-default margintop col-sm-7">
 	<h2 class="text-center heading">-DISCUSSIONS-</h2>	
 	</div>
-	<div class="panel panel-default marginbottom col-sm-6">
-		<table class="table table-bordered" id="discussions">
+	<div class="panel panel-default marginbottom col-sm-7">
+		<div  id="discussions">
 		
 		
-		</table>
 		</div>
 		</div>
+	</div>
 	
-</div>
+
 
 
 <script type = "text/javascript">
