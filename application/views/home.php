@@ -56,6 +56,7 @@
 						<input type="password" class="form-control" id="password" name="password"  />
 						<h5 class="heading"><button type="submit" class="btn btn-muted col-xs-5 login" value="Login"><span class="glyphicon glyphicon-log-in"></span> LOG IN</h5></button>
 </br>
+
 			</form>	
 			
 			<form>
@@ -85,9 +86,11 @@
 			  <img src="'.base_url($d['photo']).'" class="img img-responsive img-circle margintop marginbottom float" alt="featured pet 1" style="width: 100px; height:100px;"/>
 			  <h4 class="heading margintop spacing"> '.$d['pet_nickname'].'</h4>
 			  <h5 class="sm spacing">'.$d['bio'].'</h5>
+
 			  </div>
 			   <div class="panel panel-default1 col-sm-2 re text-center border marginbottom" style="margin-left: 700px;">
 				<button class="btn-lg none" ><a href="" style="text-decoration: none;"><span><i class="fa fa-paw"></i></span> ADOPT A PET TODAY</a></button>
+
 			  </div>
 			
 			
@@ -97,6 +100,8 @@
 			  }
 			?> 
 			</div>
+
+
 			
 			  
 		

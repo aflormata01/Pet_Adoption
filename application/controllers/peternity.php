@@ -9,6 +9,7 @@ class peternity extends CI_Controller {
 	}
 	
 	public function index(){	
+
 		$condition = array('date_rescued' => '2016');
 		$result_array = $this->Peter->read_petrescued($condition);
 		$data['petrescue'] = $result_array;
@@ -35,6 +36,34 @@ class peternity extends CI_Controller {
 		$this->load->view('include/footer');
 		
 	}	
+
+	public function adminview(){
+		$header_data['title'] = "admin";
+		$this->load->view('include/header',$header_data);
+		$this->load->view('include/admin');
+		$this->load->view('peternity/adminpets');
+		
+		
+	}
+	
+	public function adminnews(){
+		$header_data['title'] = "admin";
+		$this->load->view('include/header',$header_data);
+		$this->load->view('include/admin');
+		$this->load->view('peternity/adminnews');
+		
+		
+	}
+	
+	public function adminfaq(){
+		$header_data['title'] = "admin";
+		$this->load->view('include/header',$header_data);
+		$this->load->view('include/admin');
+		$this->load->view('peternity/adminfaq');
+		
+		
+	}
+
 	public function info(){
 		$header_data['title'] = "PET INFO";
 		$this->load->view('include/header',$header_data);

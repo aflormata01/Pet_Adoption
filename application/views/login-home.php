@@ -1,5 +1,7 @@
+
 <div class="container-fluid fixed-bg">
 	<div class="panel panel-default text-left col-xs-2 margintop sminfo usermarg" id="userin"><br />
+
 		
 	<?php
 	foreach($usern as $d){
@@ -30,7 +32,9 @@
 	?>
 	</div>
 	<div class="col-sm-6 ">
+
 	<div class="panel panel-default margintop col-sm-12" >
+
 		
 	<h2 class="text-center heading">-STORIES-</h2>
 	
