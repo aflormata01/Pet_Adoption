@@ -39,6 +39,7 @@
     </div>
     <ul class="nav navbar-nav show-on-hover">
       <li class="menupad "><a class="sm" href="<?php echo base_url('user')?>">HOME</a></li>
+	  
 	  <li class="menupad"><a class="sm" href="<?php echo base_url('peternity/rescuepet')?>">PET CATALOGUE</a></li>
 	  <li class="dropdown menupad">
         <a class="sm" class="dropdown-toggle" data-toggle="dropdown" href="#">COMMUNITY</a>
@@ -62,4 +63,4 @@
 	  
    
   </div>
-</nav>
+</nav>	
