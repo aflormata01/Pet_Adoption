@@ -28,7 +28,7 @@ echo '
 				<h3 class="text-center heading">'.$p['pet_nickname'].'</h3>
 				<h5 class="text-center sm">Rescued '.$p['date_rescued'].'</h5>
 
-				<a href="'.base_url('user/adopt/'.$p['petID'].'').'" style="text-decoration:none" data-toggle="modal" data-target="#myModal">
+				<a href="'.base_url('user/adoption').'" style="text-decoration:none" />
 				<button type="submit" class="btn btn-adopt">ADOPT </a></h5></button>
 
 				<div id="table">

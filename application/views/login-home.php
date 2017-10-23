@@ -1,5 +1,5 @@
 
-<div class="container-fluid fixed-bg">
+<div class="container-fluid">
 	<div class="panel panel-default text-left col-xs-2 margintop sminfo usermarg" id="userin"><br />
 
 		

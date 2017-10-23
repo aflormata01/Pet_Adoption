@@ -13,7 +13,7 @@
 	.border{border: solid 2px orange;margin: 15px 0px 0px 0px;padding: 10px;}
 	.adoptborder{border: 4px solid #A55F00;}
 	.height{height: 500px;}
-	.menupad{padding-right:30px; background-color:#da9b83;}
+	.menupad{margin-right: 56px; background-color:#da9b83;}
 	.userpad{padding-right:45px;  background-color:#da9b83;}
 	.auto{margin: auto; margin-top: 10px;}
 	.adoptimg{margin-top: 10px;}
@@ -54,7 +54,7 @@
 	.dropdown-content {background-color:#da9b83;}
 	.dropdown{background-color:#da9b83;}
 	.dropdown-content a:hover {background-color:#da9b83;}
-	.dropdown:hover .dropdown-menu {display: block;  background-color:#da9b83;}
+	.dropdown:hover .dropdown-menu {display: block;  background-color:#ffcab2;}
 	.spacing{margin-left: 120px;}
 	.smspace{margin-left: 60px;}
 	.white{color: white;}
@@ -68,6 +68,16 @@
     min-width: 750px;
 	border-radius: 40px;
     background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;}
+	
+	.bg {
+    background-image: url('../images/bonesbg.png');
+    min-height: 500px;
+    min-width: 750px;
+	border-radius: 40px;
+
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;}
