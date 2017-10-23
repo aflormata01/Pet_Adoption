@@ -57,7 +57,7 @@
       <li class="menupad"><a class="sm" href="<?php echo base_url('peternity/faqs')?>">FAQ's</a></li>   
 	  
 		<li class="menupad"><a class="sm" href="<?php echo base_url('peternity/steps')?>">ADOPT A PET!</a></li>   
-		<li class="menupad"><a class="sm" href="<?php echo base_url('login_admin')?>">ADMIN</a></li>   
+		
 	
 	  
 	  
