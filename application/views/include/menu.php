@@ -50,7 +50,7 @@
       <li class="menupad"><a class="sm" href="<?php echo base_url('peternity/faqs')?>">FAQ's</a></li>   
 	  
 		<li class="menupad"><a class="sm" href="<?php echo base_url('peternity/signup')?>" style="text-decoration:none" data-toggle="modal" data-target="#myModal">ADOPT A PET!</a></li>   
-		
+
 	
 	  
 	  

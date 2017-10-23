@@ -98,12 +98,15 @@ button:hover {
   <!-- One "tab" for each step in the form: -->
   
   <div class="tab heading">
+
   <div class="col-md-12">
+
 <?php foreach ($petadopt as $p){
 
 
 echo '
  
+
  <div class="col-md-5 ">
 
  
@@ -116,11 +119,14 @@ echo '
 		</div></a>
         <div class="panel-body">
 			    <div class="col-sm-12" style="margin-left:45px;">
+
 				<h3 class="text-center heading">'.$p['pet_nickname'].'</h3>
 				<h5 class="text-center sm">Rescued '.$p['date_rescued'].'</h5>
 
 				<a href="'.base_url('peternity/signup').'" style="text-decoration:none" data-toggle="modal" data-target="#myModal">
+
 				<button type="submit" class="btn btn-adopt" style="margin-left:65px;">ADOPT </a></h5></button>
+
 
 				<div id="table">
 			<div id="myModal" class="modal fade" role="dialog">
@@ -138,8 +144,7 @@ echo '
 </div>
 	 
 </div>
-    
- 
+
   <div style="overflow:auto;">
     <div style="float:right;">
       <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>

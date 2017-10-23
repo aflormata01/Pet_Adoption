@@ -36,7 +36,7 @@
 	<div class="panel panel-default margintop col-sm-12" >
 
 		
-	<h2 class="text-center heading">-STORIES-</h2>
+	<h2 class="text-center heading"><a class="heading" href="<?php echo base_url('user')?>">-STORIES-</a></h2>
 	
 		<div class="text-center">
 			

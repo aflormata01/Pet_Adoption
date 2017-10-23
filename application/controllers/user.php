@@ -178,6 +178,11 @@ class user extends CI_Controller {
 			$data['profile'] = $result_array;
 			$header_data['title'] = "USER HOME";
 			$data['user'] = $user;
+			$condition = array('username' => $user);
+			$result_array = $this->Peter->read_stories($condition);
+			$data['user_stories'] = $result_array;
+			$likes = $this->Peter->read_stories_like();
+			$data['likes'] = $likes;
 			$this->load->view('include/header',$header_data);
 			$this->load->view('include/menu_user',$data);
 			$this->load->view('peternity_user/userprofile',$data);
