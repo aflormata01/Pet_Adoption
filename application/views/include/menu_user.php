@@ -35,7 +35,7 @@
 <nav class="navbar ">
   <div class="">
     <div class="navbar-header userpad">
-      <a class="navbar-brand " href="<?php echo base_url('user')?>" style="margin-left:50px;"><img src="<?php echo base_url('assets/images/logo.png'); ?>" /></a>
+      <a class="navbar-brand " href="<?php echo base_url('user')?>" style="margin-left:50px;"><img src="<?php echo base_url('assets/svg/peternity_1.svg'); ?>" /></a>
     </div>
     <ul class="nav navbar-nav">
       <li class="userpad"><a class="sm" href="<?php echo base_url('user')?>">HOME</a></li>
