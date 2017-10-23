@@ -10,7 +10,7 @@ class Login extends CI_Controller {
             $this->form_validation->set_rules('password','Password','callback_verifyLogin');
         if($this->form_validation->run()==FALSE){
 			$this->load->model('peternity_model','Peter');
-			$condition = array('date_rescued' => '2016');
+			$condition = array('availability'=>'Unadopted');
 			$result_array = $this->Peter->read_petrescued($condition);
 			$data['petrescue'] = $result_array;
             $header_data['title'] = "Peternity";

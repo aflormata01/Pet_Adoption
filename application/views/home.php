@@ -46,6 +46,7 @@
 	<div class="form">
      <div class="form-content shadow">
 	  <h3 class="text-center heading ">LOG IN</h3>
+	   <?php echo validation_errors(); ?>
 		 <form method="post">
 					<div class="form-group text-center b">
 						<span class="glyphicon glyphicon-user"></span> <label for="username"> USERNAME: </label>
@@ -88,10 +89,7 @@
 			  <h5 class="sm spacing">'.$d['bio'].'</h5>
 
 			  </div>
-			   <div class="panel panel-default1 col-sm-2 re text-center border marginbottom" style="margin-left: 700px;">
-				<button class="btn-lg none" ><a href="" style="text-decoration: none;"><span><i class="fa fa-paw"></i></span> ADOPT A PET TODAY</a></button>
-
-			  </div>
+			   
 			
 			
 			  </div>
@@ -101,7 +99,10 @@
 			?> 
 			</div>
 
+			<div class="panel panel-default1 col-sm-2 re text-center border marginbottom" style="margin-left: 700px;">
+				<button class="btn-lg none" ><a href="" style="text-decoration: none;"><span><i class="fa fa-paw"></i></span> ADOPT A PET TODAY</a></button>
 
+			  </div>
 			
 			  
 		

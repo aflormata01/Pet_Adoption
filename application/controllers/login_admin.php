@@ -14,6 +14,7 @@ class login_admin extends CI_Controller {
 			//$result_array = $this->Peter->read_petrescued($condition);
 			//$data['petrescue'] = $result_array;
             $header_data['title'] = "ADMIN";
+
 			$this->load->view('include/header',$header_data);
 			$this->load->view('peternity/loginadmin');
         }
