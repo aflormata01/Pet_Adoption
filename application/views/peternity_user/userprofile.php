@@ -1,3 +1,4 @@
+<div class="container-fluid">   
 <div class="container margintop">   
 
         <div class=" imgmarg col-sm-8 ">
@@ -29,11 +30,11 @@
 
 
 
-		<div>
+		<div class="container" style="margin-left: 25px;">
 <?php foreach($user_stories as $d){ 
 				echo'
 				
-				<div class="panel panel-default marginbottom col-sm-4 " style="float:left; width:300px; height:300px;">
+				<div class="panel panel-default marginbottom col-sm-4 " style="float:left; width:300px; height:300px; margin-right: 80px;">
 
 					<div class="storypic margintop" style="background-image: url('.base_url($d['file_name']).'); height: 200px;"></div>
 							<div class="dropdown1 floater">

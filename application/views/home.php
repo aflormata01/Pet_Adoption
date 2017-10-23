@@ -1,3 +1,4 @@
+<div class="container-fluid"> 
 <div class="carouselcontain container"> 
 	
 						
@@ -99,7 +100,7 @@
 			?> 
 			</div>
 
-			<div class="panel panel-default1 col-sm-2 re text-center border marginbottom" style="margin-left: 700px;">
+			<div class="panel panel-default1 col-sm-2 re text-center border marginbottom" style="margin-left: 160px;">
 				<button class="btn-lg none" ><a href="" style="text-decoration: none;"><span><i class="fa fa-paw"></i></span> ADOPT A PET TODAY</a></button>
 
 			  </div>
@@ -174,6 +175,7 @@
 		</div>
 
 
+</div>
 </div>
 
 
