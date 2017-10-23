@@ -10,7 +10,7 @@ class peternity extends CI_Controller {
 	
 	public function index(){	
 
-		$condition = array('date_rescued' => '2016');
+		$condition = array('availability'=>'Unadopted');
 		$result_array = $this->Peter->read_petrescued($condition);
 		$data['petrescue'] = $result_array;
 		$header_data['title'] = "Peternity";
