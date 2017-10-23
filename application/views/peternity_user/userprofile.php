@@ -28,49 +28,41 @@
 
 
 
+
 		<div>
+<?php foreach($user_stories as $d){ 
+				echo'
+				
 				<div class="panel panel-default marginbottom col-sm-4 " style="float:left; width:300px; height:300px;">
 
-					<div class="storypic margintop" style="background-image: url('.base_url($d['file_name']).');"/>
+					<div class="storypic margintop" style="background-image: url('.base_url($d['file_name']).'); height: 200px;"></div>
 							<div class="dropdown1 floater">
 							<button class="none floater dropbtn1"><span><i class="fa fa-ellipsis-h"></i></span></button>
 								<div class="dropdown-content1">
 									<a class="heading sm" <a href="'.base_url('user/delStories/'.$d['story#']).'" onclick = "getConfirm(this.href);"><span><i class="fa fa-trash-o"></i></span>Delete</a>
 								</div>
+					
 							</div>
-						
+					<div class="heading">'.$d['title'].'</div>';
+				$likescnt=0;
+				foreach($likes as $f){
+					if($f['story#'] == $d['story#'])
+					$likescnt++;
+				}
+				if($likescnt>0){
+					echo '
+					<div class="heading" style="float: left; margin-top: 500px;"><span class="glyphicon glyphicon-heart-empty" ></span>
+					</div>
+					';
+					
+				}
+				echo '
 				</div>
-
-		</div>
-		<div>
-				<div class="panel panel-default marginbottom col-sm-4 " style="float:left; width:300px; height:300px; margin-left:115px;">
-
-					<div class="storypic margintop" style="background-image: url('.base_url($d['file_name']).');"/>
-							<div class="dropdown1 floater">
-							<button class="none floater dropbtn1"><span><i class="fa fa-ellipsis-h"></i></span></button>
-								<div class="dropdown-content1">
-									<a class="heading sm" <a href="'.base_url('user/delStories/'.$d['story#']).'" onclick = "getConfirm(this.href);"><span><i class="fa fa-trash-o"></i></span>Delete</a>
-								</div>
-							</div>
-						
-				</div>
-
-		</div>
+				';
+				
+}
+?>
 		
-		<div>
-				<div class="panel panel-default marginbottom col-sm-4 " style="float:left; width:300px; height:300px; margin-left:115px;">
-
-					<div class="storypic margintop" style="background-image: url('.base_url($d['file_name']).');"/>
-							<div class="dropdown1 floater">
-							<button class="none floater dropbtn1"><span><i class="fa fa-ellipsis-h"></i></span></button>
-								<div class="dropdown-content1">
-									<a class="heading sm" <a href="'.base_url('user/delStories/'.$d['story#']).'" onclick = "getConfirm(this.href);"><span><i class="fa fa-trash-o"></i></span>Delete</a>
-								</div>
-							</div>
-						
-				</div>
-
-		</div>
 		
 		
 			
@@ -83,6 +75,9 @@
 		
 </div>
 </div>
+</div>
+
+
 
 
 			

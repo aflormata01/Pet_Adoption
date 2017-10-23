@@ -50,6 +50,7 @@
       <li class="menupad"><a class="sm" href="<?php echo base_url('peternity/faqs')?>">FAQ's</a></li>   
 	  
 		<li class="menupad"><a class="sm" href="<?php echo base_url('peternity/signup')?>" style="text-decoration:none" data-toggle="modal" data-target="#myModal">ADOPT A PET!</a></li>   
+<<<<<<< HEAD
 		
 				<div id="table">
 			<div id="myModal" class="modal fade" role="dialog">
@@ -58,6 +59,9 @@
         </div>
     </div>
 	</div>
+=======
+
+>>>>>>> 6874f1842c21bc03ae32927eb8148992a553adbc
 	
 	  
 	  
