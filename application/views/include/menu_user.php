@@ -35,7 +35,7 @@
 <nav class="navbar ">
   <div class="">
     <div class="navbar-header userpad">
-      <a class="navbar-brand " href="<?php echo base_url('user')?>" style="margin-left:50px;"><img src="<?php echo base_url('assets/svg/peternity_1.svg'); ?>" /></a>
+      <a class="navbar-brand " href="<?php echo base_url('user')?>" style="margin-left:50px;"><img src="<?php echo base_url('assets/images/logo.png'); ?>" /></a>
     </div>
     <ul class="nav navbar-nav">
       <li class="userpad"><a class="sm" href="<?php echo base_url('user')?>">HOME</a></li>
@@ -54,6 +54,8 @@
         </ul>
       </li>
       <li class="userpad"><a class="sm" href="<?php echo base_url('user/faqs')?>">FAQ's</a></li>  
+	  <li class="menupad"><a class="sm" href="<?php echo base_url('peternity/steps')?>">ADOPT A PET!</a></li>   
+		
       <li class="dropdown userpad">
         <a class="dropdown-toggle sm" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"></span> USER<span class="caret"></span></a>
         <ul class="dropdown-menu table-hover">
