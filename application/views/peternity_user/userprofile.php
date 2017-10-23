@@ -1,66 +1,93 @@
-`
 <div class="container margintop">   
 
         <div class=" imgmarg col-sm-8 ">
 			<div class="col-sm-10 text-center ">
 				
-					<div class="col-sm-8">
+					
 						
 						<?php
 							
 							foreach($profile as $p){ 
 							echo '
-							<img src="'.base_url($p['photo']).' ?>" class="profilepic img-circle " style="width: 200px ; height:200px" alt="profilepic">
+							<div class="col-sm-12 text-left panel-default1" style="margin:20px; border-radius: 30px;">
+								<img src="'.base_url($p['photo']).' ?>" class="profilepic img-circle border" style="width: 200px ; height:200px; float:left;" alt="profilepic">&nbsp;
+									<div style="margin-left: 220px;">
+										<h1 class="">'.$p['fname'].' '.$p['lname'].'</h1>
+										<h4 class="heading "><span class="glyphicon glyphicon-user"></span> '.$p['username'].' </h4>
+										<h4 class="heading "><span class="glyphicon glyphicon-envelope"></span> '.$p['email'].'</h4>
+										<h4 class="heading "><i class="fa fa-birthday-cake"></i></span> '.$p['birthdate'].'</h4>
+										<h4 class="heading "><i class="fa fa-male"></i> | <i class="fa fa-female"></i> '.$p['sex'].'</h4> 	
+									</div>
 							</div>
-							<div class="col-sm-12">
-							<div class="text-left border" style="float: right;">
-							<h1 class="">'.$p['fname'].' '.$p['lname'].'</h1>
-				
-							<h4 class="heading "><span class="glyphicon glyphicon-user"></span> '.$p['username'].' </h4>
-							<h4 class="heading "><span class="glyphicon glyphicon-envelope"></span> '.$p['email'].'</h4>
-							<h4 class="heading "><i class="fa fa-birthday-cake"></i></span> '.$p['birthdate'].'</h4>
-							<h4 class="heading "><i class="fa fa-male"></i> | <i class="fa fa-female"></i> '.$p['sex'].'</h4> 	</div>' ;
+			</div>' ;
 					
 						}
 						
 						?>
-						</div>
-					</div>
-			</div>
 		</div>
-	
-		<div class="row">
-		<div class="col-sm-4">
-			<div class="panel">
-				<div class="thumb panel-heading">
-					<img src="<?php echo base_url('assets/images/cat.jpg'); ?>" class="img-responsive" style="width:400px ; height:300px" alt="PET1">
-					
-				</div>
-			</div>
-		</div>
-		
-		<div class="row">
-		<div class="col-sm-4">
-			<div class="panel">
-				<div class="thumb panel-heading">
-					<img src="<?php echo base_url('assets/images/bunny.jpg'); ?>" class="img-responsive" style="width:400px ; height:300px" alt="PET2">
-					 
-				</div>
-			</div>
-		</div>
-		
-		<div class="row">
-		<div class="col-sm-4">
-			<div class="panel">
-				<div class="thumb panel-heading">
-					<img src="<?php echo base_url('assets/images/r10.jpg'); ?>" class="img-responsive" style="width:400px ; height:300px" alt="PET3">
-					 
-				</div>
-			</div>
-		</div>
-    
 
+
+
+		<div>
+				<div class="panel panel-default marginbottom col-sm-4 " style="float:left; width:300px; height:300px;">
+
+					<div class="storypic margintop" style="background-image: url('.base_url($d['file_name']).');"/>
+							<div class="dropdown1 floater">
+							<button class="none floater dropbtn1"><span><i class="fa fa-ellipsis-h"></i></span></button>
+								<div class="dropdown-content1">
+									<a class="heading sm" <a href="'.base_url('user/delStories/'.$d['story#']).'" onclick = "getConfirm(this.href);"><span><i class="fa fa-trash-o"></i></span>Delete</a>
+								</div>
+							</div>
+						
+				</div>
+
+		</div>
+		<div>
+				<div class="panel panel-default marginbottom col-sm-4 " style="float:left; width:300px; height:300px; margin-left:115px;">
+
+					<div class="storypic margintop" style="background-image: url('.base_url($d['file_name']).');"/>
+							<div class="dropdown1 floater">
+							<button class="none floater dropbtn1"><span><i class="fa fa-ellipsis-h"></i></span></button>
+								<div class="dropdown-content1">
+									<a class="heading sm" <a href="'.base_url('user/delStories/'.$d['story#']).'" onclick = "getConfirm(this.href);"><span><i class="fa fa-trash-o"></i></span>Delete</a>
+								</div>
+							</div>
+						
+				</div>
+
+		</div>
+		
+		<div>
+				<div class="panel panel-default marginbottom col-sm-4 " style="float:left; width:300px; height:300px; margin-left:115px;">
+
+					<div class="storypic margintop" style="background-image: url('.base_url($d['file_name']).');"/>
+							<div class="dropdown1 floater">
+							<button class="none floater dropbtn1"><span><i class="fa fa-ellipsis-h"></i></span></button>
+								<div class="dropdown-content1">
+									<a class="heading sm" <a href="'.base_url('user/delStories/'.$d['story#']).'" onclick = "getConfirm(this.href);"><span><i class="fa fa-trash-o"></i></span>Delete</a>
+								</div>
+							</div>
+						
+				</div>
+
+		</div>
+		
+		
+			
+			
+			
+			
+			
+		</div>
+		
+		
 </div>
- 
+</div>
+
+
+			
+
+	
+
 	
 	
