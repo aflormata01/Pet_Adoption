@@ -1,36 +1,37 @@
   <style>
-
 .dropdown {
     position: relative;
     display: inline-block;
-	background-color:#da9b83;
-}
 
+	background-color: #da9b83;
+
+}
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #da9b83;
+
+    background-color:#da9b83;
+
     z-index: 1;
 }
-
 .dropdown-content a {
     padding: 5px 2px 5px 2px;
     text-decoration: none;
     display: block;
-	background-color: #da9b83;
-}
 
+	background-color: #da9b83;;
+
+}
 .dropdown-content a:hover {
 	text-decoration: none;
-	background-color:  #ffcab2;
+
+	background-color: #b1cdda;
+
 	
 }
-
 .dropdown:hover .dropdown-content {
     display: block;
 }
-
-
 </style>
 <nav class="navbar ">
   <div class="">

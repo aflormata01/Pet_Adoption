@@ -1,6 +1,6 @@
 <div class="container-fluid">
 <div class="side-body">
-<div class="text-center col-sm-6" style="margin-left: 490px;">
+<div class="text-center col-sm-12" >
 <h1 class="heading">PETERNITY-USERS</h1>
 <a href="<?php echo base_url('admin/addUser');?>" class="none heading " data-toggle="modal" data-target="#myModal"><span><i class="fa fa-plus-circle"></i></span>Add</a>
 

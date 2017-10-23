@@ -1,7 +1,7 @@
 <div class="container"><br/>
 <div class="side-body">
 <div class="text-center col-sm-12" >
-<h1 class="heading">PETERNITY EVENTS</h1>
+<h1 class="heading">PETERNITY-EVENTS</h1>
 <a href="<?php echo base_url('admin/addEvents')?>" class="none heading" data-toggle="modal" data-target="#myModal"><span><i class="fa fa-plus-circle"></i></span> Add Events</a>
 
 <div id="table">

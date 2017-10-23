@@ -45,7 +45,7 @@
 }
 ?>		
 
-                    <a href="#" class="btn btn-block">More Events »</a>
+                
                 
            </div> </div>
             <!-- End fluid width widget --> 
