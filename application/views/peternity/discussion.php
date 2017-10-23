@@ -1,8 +1,22 @@
 
-<div class="container">
+<div class="container-fluid">
+
+<div class="">
 	<h2 class="text-center heading">DISCUSSIONS</h2>
 	
-	<div class="panel panel-default container text-left col-sm-8 discmarg" >
+<div class="panel panel-default text-left col-xs-3 " style="margin-left: 50px; margin-right: 10px;">
+<h4 class="heading text-center">TOPICS:</h4>
+<h6 ><span><i class="fa fa-circle"></i></span><a href="" class="sm heading" "style="text-decoration: none;"> Pet Vaccinations and Recommended Medicine</h6>
+<h6 ><span><i class="fa fa-circle"></i></span><a href="" class="sm heading" "style="text-decoration: none;"> Pet Grooming</h6>
+<h6 ><span><i class="fa fa-circle"></i></span><a href="" class="sm heading" "style="text-decoration: none;"> Pet Care Tips</h6>
+<h6 ><span><i class="fa fa-circle"></i></span><a href="" class="sm heading" "style="text-decoration: none;"> All About Dogs6>
+<h6 ><span><i class="fa fa-circle"></i></span><a href="" class="sm heading" "style="text-decoration: none;"> Cat Forum</h6>
+<h6 ><span><i class="fa fa-circle"></i></span><a href="" class="sm heading" "style="text-decoration: none;"> Caring for reptiles and Amphibians</h6>
+
+</div>
+
+			
+	<div class="panel panel-default  text-left col-sm-8 " >
 		<div class="table table-bordered">
 		<?php
 		foreach($discussion as $d){ 
@@ -31,5 +45,6 @@
 		</td>
 		</tr>-->
 	</div>
+</div>	
 </div>	
 </div>	

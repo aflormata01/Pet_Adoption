@@ -162,9 +162,68 @@ class admin extends CI_Controller {
 		$this->load->view('peternity/loginadmin');
 	}
 	public function adminusers(){
+		$result_array = $this->admin->read_ownerinfo();
+		$data['user'] = $result_array;
 		$header_data['title'] = "USERS";
 		$this->load->view('include/header',$header_data);
 		$this->load->view('include/admin');
-		$this->load->view('peternity/adminuser');
+		$this->load->view('peternity/adminuser',$data);
 	}
+	public function addUser(){
+		$rules = array(
+                    array('field'=>'username', 'label'=>'Username', 'rules'=>'required'),
+					array('field'=>'fname', 'label'=>'First Name', 'rules'=>'required'),
+					array('field'=>'lname', 'label'=>'Last Name', 'rules'=>'required'),
+					array('field'=>'email', 'label'=>'Email', 'rules'=>'required'),
+					array('field'=>'birthdate', 'label'=>'Birthdate', 'rules'=>'required'),
+					array('field'=>'sex', 'label'=>'Sex', 'rules'=>'required')
+				);
+		$this->form_validation->set_rules($rules);
+		$this->form_validation->set_error_delimiters('<p class="error">', '</p>');
+		if($this->form_validation->run()==FALSE){
+			$this->load->view('peternity/add_admin_user');
+		}else{
+			$adduser=array('username'=>$_POST['username'],'fname'=>$_POST['fname'],'lname'=>$_POST['lname'],'birthdate'=>$_POST['birthdate'],'sex'=>$_POST['sex'],'email'=>$_POST['email']);
+            $this->admin->create_ownerinfo($adduser);
+            redirect('admin/adminusers');
+		}
+	}
+	public function delUser($user){
+		$where_array = array('username'=>$user);
+		$this->admin->del_ownerinfo($where_array);
+		redirect('admin/adminusers');
+	}
+	public function adminmessage(){
+		$result_array = $this->admin->read_messages();
+		$data['msg'] = $result_array;
+		$header_data['title'] = "MESSAGES";
+		$this->load->view('include/header',$header_data);
+		$this->load->view('include/admin');
+		$this->load->view('peternity/adminmessage',$data);
+	}
+	public function addMessage(){
+		$rules = array(
+                    array('field'=>'msg', 'label'=>'Message', 'rules'=>'required')
+				);
+		$this->form_validation->set_rules($rules);
+		$this->form_validation->set_error_delimiters('<p class="error">', '</p>');
+		if($this->form_validation->run()==FALSE){
+			$this->load->view('peternity/add_admin_msg');
+		}else{
+			
+			$record=$this->admin->read_messages();
+			 foreach($record as $o){
+				$user= $o['username'];
+			 }
+			$addmsg=array('username'=>$user,'msg'=>$_POST['msg']);
+            $this->admin->create_messages($addmsg);
+            redirect('admin/adminmessage');
+		}
+	}
+	public function delMessage($msg){
+		$where_array = array('msg#'=>$msg);
+		$this->admin->del_messages($where_array);
+		redirect('admin/adminmessage');
+	}
+	
 }

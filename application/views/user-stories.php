@@ -15,8 +15,17 @@
 		foreach($liked_stories as $l){
 		if($l['story#']==$d['story#'])
 		$liked++;
+	
 		}
 		}
+		$likescnt=0;
+		foreach($total as $f){
+					if($f['story#'] == $d['story#'])
+					$likescnt++;
+				}
+		if($likescnt>0)
+			echo '<span>'.$likescnt.'</span>';
+					
 		if($liked==1){
 		echo'
 		<button class="like" id="unlike_'.$d['story#'].'" style="color: orange;">
@@ -95,7 +104,8 @@ function getConfirm(l)
         }else{
             type = 0;
         }
-
+		 
+			
         // AJAX Request
         $.ajax({
 			

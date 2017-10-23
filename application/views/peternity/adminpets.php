@@ -21,8 +21,6 @@ foreach($pets as $p){
 			    <div class="col-sm-4" style="margin-left: 25px;" >
 				<h4 class="text-center heading">'.$p['pet_nickname'].'</h4>
 				<h5 class="text-center sm">Rescued '.$p['date_rescued'].'</h5>
-				
-				<button class="none heading sm"><a href="" class="heading sm"><span><i class="fa fa-edit"></i></span> Edit</a></button> |
 				<h5 class="text-center sm">'.$p['availability'].'</h5>
 					
 				<button class="none heading sm"><a href="'.base_url('admin/updatePets/'.$p['petID']).'" class="heading sm" data-toggle="modal" data-target="#myModal"><span><i class="fa fa-edit"></i></span> Edit</a></button> |
