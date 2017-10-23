@@ -51,6 +51,13 @@
 	  
 		<li class="menupad"><a class="sm" href="<?php echo base_url('peternity/signup')?>" style="text-decoration:none" data-toggle="modal" data-target="#myModal">ADOPT A PET!</a></li>   
 		
+				<div id="table">
+			<div id="myModal" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+            <div class="modal-content"></div>
+        </div>
+    </div>
+	</div>
 	
 	  
 	  
