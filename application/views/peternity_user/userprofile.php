@@ -44,7 +44,7 @@
 								</div>
 					
 							</div>
-					<div class="heading">'.$d['title'].'</div>';
+					<div class="heading text-center">'.$d['title'].'</div>';
 				$likescnt=0;
 				foreach($likes as $f){
 					if($f['story#'] == $d['story#'])
