@@ -43,6 +43,14 @@ class admin extends CI_Controller {
 		$this->load->view('include/admin',$data);
 		$this->load->view('peternity/adminnews');
 	}
+	public function adminevents(){
+		$result_array = $this->admin->read_events();
+        $data['events'] = $result_array;
+		$header_data['title'] = "admin";
+		$this->load->view('include/header',$header_data);
+		$this->load->view('include/admin',$data);
+		$this->load->view('peternity/adminevents',$data);
+	}
 	public function addNews(){
 		$this->load->view('peternity/add_admin_news');
 				if($_SERVER['REQUEST_METHOD']=='POST')
@@ -105,6 +113,29 @@ class admin extends CI_Controller {
 			$addfaqs=array('body'=>$_POST['body']);
             $this->admin->create_faqs($addfaqs);
             redirect('admin/adminfaq');
+		}
+	}
+	public function addEvents(){
+		$rules = array(
+                    array('field'=>'event_no', 'label'=>'event_no', 'rules'=>'required')
+				);
+		$rules = array(
+                    array('field'=>'title', 'label'=>'title', 'rules'=>'required')
+				);
+		$rules = array(
+                    array('field'=>'date', 'label'=>'date', 'rules'=>'required')
+				);
+		$rules = array(
+                    array('field'=>'body', 'label'=>'body', 'rules'=>'required')
+				);
+		$this->form_validation->set_rules($rules);
+		$this->form_validation->set_error_delimiters('<p class="error">', '</p>');
+		if($this->form_validation->run()==FALSE){
+			$this->load->view('peternity/add_admin_events');
+		}else{
+			$addfaqs=array('body'=>$_POST['body']);
+            $this->admin->create_events($addevents);
+            redirect('admin/adminevents');
 		}
 	}
 	public function delFaqs($faqs){

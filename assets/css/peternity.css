@@ -529,29 +529,6 @@
   margin-right: 0;
   margin-left: 0;
 }
-/* 
-    Sometimes the sub menus get too large for the page and prevent the menu from scrolling, limiting functionality
-    A quick fix is to change .side-menu to 
-
-    -> position:absolute
-    
-    and uncomment the code below.
-    You also need to uncomment 
-    
-    -> <div class="absolute-wrapper"> </div> in the html file
-
-    you also need to tweek the animation. Just uncomment the code in that section
-    --------------------------------------------------------------------------------------------------------------------
-    If you want to make it really neat i suggest you look into an alternative like http://areaaperta.com/nicescroll/
-    This will allow the menu to say fixed on body scoll and scoll on the side bar if it get to large
-*/
-/*.absolute-wrapper{
-    position: fixed;
-    width: 300px;
-    height: 100%;
-    background-color: #f8f8f8;
-    border-right: 1px solid #e7e7e7;
-}*/
 
 .side-menu {
   position: fixed;
@@ -568,7 +545,6 @@
   border-bottom: 1px solid #e7e7e7;
 }
 .side-menu .navbar-nav .active a {
-  background-color: transparent;
   margin-right: -1px;
   border-right: 5px solid #e7e7e7;
 }
@@ -674,7 +650,6 @@
   top: 0;
   border: 0;
   border-radius: 0;
-  background-color: #f3f3f3;
   padding: 15px 18px;
 }
 /* Main body section */
@@ -760,7 +735,6 @@
     top: 43px;
     height: 100%;
     border-right: 1px solid #e7e7e7;
-    background-color: #f8f8f8;
     -moz-animation: slideout 300ms forwards;
     -o-animation: slideout 300ms forwards;
     -webkit-animation: slideout 300ms forwards;
@@ -853,7 +827,7 @@
     padding: 18px;
     margin: 0;
     border-radius: 0;
-    background-color: #f3f3f3;
+
   }
   /* Search */
   #search .panel-body .navbar-form {
@@ -1070,3 +1044,16 @@ a.myfooter .socialIcon:hover, .myfooter .socialHoverClass {
 	overflow: scroll;
 }
 
+.row-striped:nth-of-type(odd){
+  background-color: #efefef;
+  border-left: 4px #000000 solid;
+}
+
+.row-striped:nth-of-type(even){
+  background-color: #ffffff;
+  border-left: 4px #efefef solid;
+}
+
+.row-striped {
+    padding: 0 0;
+}

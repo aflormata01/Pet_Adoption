@@ -1,7 +1,7 @@
 <div class="container-fluid">
 <div class="side-body">
 
-<div class="text-center col-sm-6" ">
+<div class="text-center col-sm-12" ">
 <h1 class="heading">PETERNITY-FAQ's</h1>
 
 <a href="<?php echo base_url('admin/addFaqs')?>" class="none heading " data-toggle="modal" data-target="#myModal"><span><i class="fa fa-plus-circle"></i></span> Add Entry</a>

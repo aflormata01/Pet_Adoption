@@ -6,6 +6,7 @@ class admin_model extends CI_model
 	private $petrescued = "petrescued";
 	private $faqs = "faqs";
 	private $news = "news";
+	private $events = "events";
 	
 	
 	public function create_faqs($data)
@@ -60,7 +61,19 @@ class admin_model extends CI_model
 			 return $query-> result_array(); 
 		}
 		
-		
+		public function read_events($condition=null)
+		{
+			 $this -> db -> select('*');
+			 $this -> db -> from($this-> events);
+			 if ( isset($condition)) $this->db->where($condition);
+			 $query= $this->db->get();
+			 return $query-> result_array(); 
+		}
+		public function create_events($data)
+		{
+			$this->db->insert($this->events, $data);
+			return TRUE;	
+		}
 		public function create_petrescued($data)
 		{
 			$this->db->insert($this->petrescued, $data);

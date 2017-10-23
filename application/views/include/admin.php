@@ -1,7 +1,4 @@
-<div class="row">
-    <!-- uncomment code for absolute positioning tweek see top comment in css -->
-    <!-- <div class="absolute-wrapper"> </div> -->
-    <!-- Menu -->
+
     <div class="side-menu">
     
     <nav class="navbar " role="navigation">
@@ -36,7 +33,7 @@
                         <div class="form-group">
                             <input type="text" class="form-control" placeholder="Search">
                         </div>
-                        <button type="submit" class="btn btn-default "><span class="glyphicon glyphicon-ok"></span></button>
+                        <button type="submit" class="btn "><span class="glyphicon glyphicon-ok"></span></button>
                     </form>
                 </div>
             </div>
@@ -79,8 +76,8 @@
                   <i class="glyphicon glyphicon-off"></i>Logout
                   </a>
                   </li>
-
-  
+				  
+	
 
         </ul>
     </div><!-- /.navbar-collapse -->

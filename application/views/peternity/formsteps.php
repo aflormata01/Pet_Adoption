@@ -10,7 +10,7 @@ body {
   margin: 100px auto;
   font-family: Raleway;
   padding: 40px;
-  width: 50%;
+  width: 70%;
   min-width: 300px;
 }
 h1 {
@@ -92,7 +92,7 @@ button:hover {
 
 <div class="">
 
-            <div class="row bs-wizard" style="border-bottom:0;">
+            <div class="row bs-wizard heading" style="border-bottom:0;">
                 
                 <div class="col-xs-3 bs-wizard-step complete">
                   <div class="text-center bs-wizard-stepnum">Step 1</div>
@@ -129,10 +129,10 @@ button:hover {
         
 	</div>
 
-  <h1 class="text-center">ADOPT A PET!</h1>
+  <h1 class="text-center heading">ADOPT A PET!</h1>
   <!-- One "tab" for each step in the form: -->
   
-  <div class="tab">
+  <div class="tab heading">
    <h3>"yung pets na pede i adopt"</h3>
     
    </div>
