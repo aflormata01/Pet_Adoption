@@ -450,4 +450,14 @@ class user extends CI_Controller {
 			
 			echo $this->load->view('peternity_user/discussion',$data, TRUE);
 		}
+		
+		public function inbox(){
+
+		$header_data['title'] = "INBOX";
+		$this->load->view('include/header',$header_data);
+		$this->load->view('include/menu_user');
+		$this->load->view('peternity_user/inbox');
+		$this->load->view('include/footer');
+		
+	}
 }
