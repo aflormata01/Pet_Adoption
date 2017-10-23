@@ -11,6 +11,7 @@ class user extends CI_Controller {
 			redirect('login','refresh');
 		
 		$this->load->model('peternity_model','Peter');
+		$this->load->model('admin_model','Admin');
 		
 		
 	}
@@ -105,6 +106,70 @@ class user extends CI_Controller {
             redirect('user/petcatalogue');
 		}
 	}
+	
+	public function adoptionform($petID){
+		$user =  $this->session->userdata('username');
+		$rules = array(
+                    array('field'=>'contactno', 'label'=>'Contact No.', 'rules'=>'required'),
+                    array('field'=>'address', 'label'=>'Address', 'rules'=>'required'),
+                    array('field'=>'remember', 'label'=>'Agreement sign', 'rules'=>'required'),
+                );
+        $this->form_validation->set_rules($rules);
+		$this->form_validation->set_error_delimiters('<p class="error">', '</p>');
+		if($this->form_validation->run()==FALSE){
+			$header_data['title'] = "ADOPTION FORM";
+			$data['petID']=$petID;
+			$data['user']=$user;
+			$this->load->view('include/header',$header_data);
+			$this->load->view('include/menu_user',$data);
+			$this->load->view('peternity_user/formstep2',$data);
+			$this->load->view('include/footer');
+		}
+		else{
+			$adoption=array('petID'=>$petID,'username'=>$user,'contactno'=>$_POST['contactno'],'address'=>$_POST['address']);
+            $this->Peter->create_adopt($adoption);
+			$condition=array('petID'=>$petID);
+			$record=$this->Peter->read_petrescued($condition);
+			 foreach($record as $o){
+            $date= $o['date_rescued'];
+            $nickname = $o['pet_nickname'];
+            $photo = $o['photo'];
+			 }
+			$adoption=array('petID'=>$petID,'date_rescued'=>$date,'pet_nickname'=>$nickname,'photo'=>$photo,'availability'=>'Scheduled');
+			$this->Peter->update_petrescued($adoption);
+            redirect('user/success/'.$petID.'');
+		}
+	}
+	public function adoption(){
+		$user =  $this->session->userdata('username');
+		$data['user'] = $user;
+		$condition = array('availability' => 'Unadopted');
+		$result_array = $this->Peter->read_petrescued($condition);
+        $data['petadopt'] = $result_array;
+		$data['user'] = $user;
+		$header_data['title'] = "PETS FOR ADOPTION";
+		$this->load->view('include/header',$header_data);
+		$this->load->view('include/menu_user',$data);
+		$this->load->view('peternity_user/formsteps',$data);
+		$this->load->view('include/footer');
+	}
+	public function success($petID){
+		$user =  $this->session->userdata('username');
+		$header_data['title'] = "Successful Adoption!";
+		$data['petID'] = $petID;
+		$data['user'] = $user;
+		$condition = array('petID' => $petID);
+		$pet = $this->Peter->read_petrescued($condition);
+		$petadopt = $this->Peter->read_petadoption($condition);
+		$adoption=array('username'=>$user,
+						'message'=>'You have successfully scheduled '.$pet[0]['pet_nickname'].' for adoption!
+									Please text the following number '.$petadopt['contactno'].' within 48 hours for verification');
+		$this->Admin->create_messages($adoption);
+		$this->load->view('include/header',$header_data);
+		$this->load->view('include/menu_user',$data);
+		$this->load->view('peternity_user/formstep4',$data);
+		$this->load->view('include/footer');
+	}
 	public function userdiscussion(){
 		$user =  $this->session->userdata('username');
 		$result_array = $this->Peter->read_discussion();
@@ -192,6 +257,7 @@ class user extends CI_Controller {
 	
 	public function setting(){
 		$user =  $this->session->userdata('username');
+		$data['user'] = $user;
 		$condition = array('username' => $user);
 		$result_array = $this->Peter->read_ownerinfo($condition);
         foreach($result_array as $o){
@@ -464,11 +530,18 @@ class user extends CI_Controller {
 		}
 		
 		public function inbox(){
-
+		
+		$user =  $this->session->userdata('username');
+		$data['user'] = $user;
+		$condition = array('username'=>$user);
 		$header_data['title'] = "INBOX";
+		$result_array = $this->Admin->read_messages($condition);
+		$result = $this->Peter->read_ownerinfo($condition);
+		$data['msg'] = $result_array;
+		$data['usern'] = $result;
 		$this->load->view('include/header',$header_data);
-		$this->load->view('include/menu_user');
-		$this->load->view('peternity_user/inbox');
+		$this->load->view('include/menu_user',$data);
+		$this->load->view('peternity_user/inbox',$data);
 		$this->load->view('include/footer');
 		
 	}
