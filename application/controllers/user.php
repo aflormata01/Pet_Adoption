@@ -333,20 +333,24 @@ class user extends CI_Controller {
 		public function addstorylikes(){
 			$user =  $this->session->userdata('username');
 			if(isset($_POST['post'])&&isset($_POST['del'])){
-				
 				$like=array('story#'=>$_POST['post'],'username'=>$user);
-				if($_POST['del']=='0')
+				if($_POST['del']=='0'){
 					$this->Peter->del_stories_like($like);
+				}
 				else{
 					$this->Peter->create_stories_like($like);
 				}
+				
 			}
+			
 			$condition = array('username' => $user);
 			$data['user'] = $user;
-			$result_array = $this->Peter->read_stories();
-			$data['user_stories'] = $result_array;
 			$likes = $this->Peter->read_stories_like($condition);
 			$data['liked_stories'] = $likes;
+			$result_array = $this->Peter->read_stories();
+			$likecounter= $this->Peter->read_stories_like();
+			$data['user_stories'] = $result_array;
+			$data['total'] = $likecounter;
 			echo $this->load->view('user-stories',$data, TRUE);
 		}
 		
@@ -447,7 +451,10 @@ class user extends CI_Controller {
 			$result_array = $this->Peter->read_discussion();
 			$data['user_discussion'] = $result_array;
 			$data['ratedd'] = $rates;
-			
+			$ups = $this->Peter->read_rate(array('rate'=>'1'));
+			$downs = $this->Peter->read_rate(array('rate'=>'2'));
+			$data['up'] = $ups;
+			$data['down'] = $downs;
 			echo $this->load->view('peternity_user/discussion',$data, TRUE);
 		}
 }
