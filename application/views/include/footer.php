@@ -54,7 +54,7 @@
 			</div>
 			<hr>
 			
-			<div class="row text-center"> © 2017. PETERNITY</div>
+			<div class="row text-center"><a class="sm" href="<?php echo base_url('login_admin')?>"> © 2017. PETERNITY<a class="sm" href="<?php echo base_url('login_admin')?>"></div>
 		</div> <!-- ./container -->
     
     
