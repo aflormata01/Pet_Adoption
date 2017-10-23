@@ -145,6 +145,7 @@ class admin_model extends CI_model
 		}
 		public function read_messages($condition=null)
 		{
+			$this->db->order_by('msg# DESC');
 			 $this->db->select('*');
 			 $this->db->from($this->messages);
 			 if ( isset($condition)) $this->db->where($condition);

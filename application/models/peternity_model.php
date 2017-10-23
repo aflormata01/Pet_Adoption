@@ -299,6 +299,32 @@ class peternity_model extends CI_model
 			 return $query-> result_array();
 		 
 		}
+		public function create_petadoption($data)
+		{
+			$this->db->insert($this->petadoption, $data);
+			return TRUE;	
+		}
+		public function update_petadoption($data)
+		{
+			$this->db->replace($this->petadoption, $data);
+			return TRUE;	
+		}
+		public function del_adoption()
+		{
+			$this->db->where($data);
+			$this->db->delete($this->adoption);
+			return TRUE;	
+		}
+		public function read_petadoption($condition=null)
+		{
+			 $this -> db -> select('*');
+			 $this -> db -> from($this->petadoption);
+			 if ( isset($condition)) 
+				 $this->db->where($condition);
+			 $query= $this->db->get();
+			 return $query-> result_array();
+		 
+		}
 		
 		
 		
