@@ -29,10 +29,13 @@ class peternity extends CI_Controller {
 		
 	}	
 	public function steps(){
+		$condition = array('availability' => 'Unadopted');
+		$result_array = $this->Peter->read_petrescued($condition);
+        $data['petadopt'] = $result_array;
 		$header_data['title'] = "ADOPT A PET!";
 		$this->load->view('include/header',$header_data);
 		$this->load->view('include/menu');
-		$this->load->view('peternity/formsteps');
+		$this->load->view('peternity/formsteps',$data);
 		$this->load->view('include/footer');
 		
 	}	
@@ -65,10 +68,10 @@ class peternity extends CI_Controller {
 	}
 
 	public function info(){
-		$header_data['title'] = "PET INFO";
+		
 		$this->load->view('include/header',$header_data);
 		$this->load->view('include/menu');
-		$this->load->view('peternity/petinfo');
+		$this->load->view('peternity/petinfo',$data);
 		$this->load->view('include/footer');
 		
 	}	
