@@ -3,12 +3,19 @@
 		$rated=0;
 		echo'
 		
-						<h4 class="text-left heading">'.$d['Title'].'</h4>
+						<h4 class="text-left heading"><strong><a href="'.base_url('user/discbody/'.$d['discuss#'].'').'" class="sm">'.$d['Title'].'</a></strong></h4>
 			
 						<h6 class="sm">posted by <a class="heading" href="'.base_url('user/profile/'.$d['username'].'').'"><strong>'.$d['username'].'</strong></a> |<i> '.date("F j, Y, g:i a", strtotime($d['date'])).'</i></h6>
-						<p class="sm"><a href="'.base_url('user/discbody/'.$d['discuss#'].'').'" class="sm">'.$d['body'].'</a></p>
+						<p class="sm">'.$d['body'].'</p>
 
 					<div class="btn-group text-right ">';
+		$upvotes = 0;
+		foreach($up as $p){
+			if($p['discuss#']==$d['discuss#'])
+				$upvotes++;
+		}
+		if($upvotes>0)
+			echo '<span><font color="green">'.$upvotes.'</font></span>';
 		if($ratedd>0){
 		foreach($ratedd as $l){
 			if($l['discuss#']==$d['discuss#']){
@@ -17,6 +24,7 @@
 			}
 		}
 		}
+		
 		if($rated>0)
 		{				
 					if($rate=='1')
@@ -38,6 +46,14 @@
 			<button class="rate" id="up_'.$d['discuss#'].'" style="color:black;"><i class="fa fa-thumbs-o-up"></i></button>&nbsp;
 			<button class="rate" id="down_'.$d['discuss#'].'" style="color:black;"><i class="fa fa-thumbs-o-down"></i></button>';
 		}
+		
+		$dnvotes = 0;
+		foreach($down as $p){
+			if($p['discuss#']==$d['discuss#'])
+				$dnvotes++;
+		}
+		if($dnvotes>0)
+			echo '<span><font color="red">'.$dnvotes.'</font></span>';
 		echo '</div>';
 		if($d['username']==$user){
 			echo '
@@ -61,7 +77,6 @@
 
 <script>
 	$(document).ready(function(){
-
     // like and unlike click
     $(".rate").click(function(){
 		
@@ -120,8 +135,15 @@
             }
             
 			});
+			
 		});
 
 	});
-		
+	
 	</script>
+<script>
+
+			setInterval(function(){
+				  $('#discussions').reload('discussion.php');
+			 },1000);
+</script>

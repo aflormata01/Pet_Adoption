@@ -401,7 +401,12 @@ class peternity_model extends CI_model
 			if ( isset($condition)) $this->db->where($condition);
 			$query= $this->db->get();
 			return $query-> result_array();
+		}public function read_likesnum($condition=null)
+		{
+			
+			$this->db->where($condition)->from($this-> stories_like)->count_all_results();
 		}
+		
 }
 
 ?>
