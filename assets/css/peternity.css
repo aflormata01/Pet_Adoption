@@ -52,6 +52,7 @@
 	.discmarg{margin-left: 195px;}
 
 	.dropdown-content {background-color:#da9b83;}
+	.dropdown{background-color:#da9b83;}
 	.dropdown-content a:hover {background-color:#da9b83;}
 	.dropdown:hover .dropdown-menu {display: block;  background-color:#da9b83;}
 	.spacing{margin-left: 120px;}
