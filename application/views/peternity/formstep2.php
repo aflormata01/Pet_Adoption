@@ -75,17 +75,13 @@ button:hover {
 <div class="row">
 <div class="col-md-12">
 			<div class="col-md-3 bord" >
-				<p class="heading text-center">Step 1:</p>
-				<p class="heading text-center">CHOOSE A PET</p></div>
+				<p class="heading">Step 1</p></div>
 			<div class="col-md-3 bord" >
-				<p class="heading text-center">Step 2:</p>
-				<p class="heading ">INFORMATION</p></div>
+				<p class="heading ">Step 2</p></div>
 			<div class="col-md-3 bord" >
-				<p class="heading text-center">Step 3: </p>
-				<p class="heading text-center">AGREEMENT</p></div>
+				<p class="heading">Step 3</p>	</div>
 			<div class="col-md-3 bord" >
-				<p class="heading text-center">Step 4: </p>
-				<p class="heading text-center">SUBMIT</p></div>
+				<p class="heading">Step 4</p></div>
 
 	
 	
@@ -96,55 +92,14 @@ button:hover {
 
   <h1 class="text-center heading">ADOPT A PET!</h1>
   <!-- One "tab" for each step in the form: -->
+ 
+
+ <div class="tab">
+ CONTACT INFO:
+    <p><input placeholder="Contact" oninput="this.className = ''" name="contact"></p>
+    <p><input placeholder="Address" oninput="this.className = ''" name="add"></p>
+  </div>
   
-  <div class="tab heading">
-
-  <div class="col-md-12">
-
-<?php foreach ($petadopt as $p){
-
-
-echo '
- 
-
- <div class="col-md-5 ">
-
- 
-
-    <div class="ih-item circle effect1" style="margin-left:35px;"><a href="">
-
-        <div class="spinner col-md-12" style="margin-left:45px;">
-		</div>
-        <div class="img "style="margin-left:40px"><img src="'.base_url($p['photo']).'" alt="img" class="img-circle imagespin img-responsive "></div></a>
-		</div></a>
-        <div class="panel-body">
-			    <div class="col-sm-12" style="margin-left:45px;">
-
-				<h3 class="text-center heading">'.$p['pet_nickname'].'</h3>
-				<h5 class="text-center sm">Rescued '.$p['date_rescued'].'</h5>
-
-				<a href="'.base_url('peternity/signup').'" style="text-decoration:none" data-toggle="modal" data-target="#myModal">
-
-				<button type="submit" class="btn btn-adopt" style="margin-left:65px;">ADOPT </a></h5></button>
-
-
-				<div id="table">
-			<div id="myModal" class="modal fade" role="dialog">
-			<div class="modal-dialog">
-            <div class="modal-content"></div>
-        </div>
-    </div>
-	</div>
-            </div>
-    </div>
-    </div>';
-}
-?>
-	
-</div>
-	 
-</div>
-
   <div style="overflow:auto;">
     <div style="float:right;">
       <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>

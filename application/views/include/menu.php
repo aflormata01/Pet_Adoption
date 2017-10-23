@@ -1,36 +1,29 @@
-  <style>
-
+ <style>
 .dropdown {
     position: relative;
     display: inline-block;
 	background-color: #ffcab2;
 }
-
 .dropdown-content {
     display: none;
     position: absolute;
     background-color: #ffcab2;
     z-index: 1;
 }
-
 .dropdown-content a {
     padding: 5px 2px 5px 2px;
     text-decoration: none;
     display: block;
 	background-color: #ffcab2;
 }
-
 .dropdown-content a:hover {
 	text-decoration: none;
 	background-color: #ccffea;
 	
 }
-
 .dropdown:hover .dropdown-content {
     display: block;
 }
-
-
 </style>
 <nav class="navbar">
   <div class="container">
@@ -56,8 +49,8 @@
       </li>
       <li class="menupad"><a class="sm" href="<?php echo base_url('peternity/faqs')?>">FAQ's</a></li>   
 	  
-		<li class="menupad"><a class="sm" href="<?php echo base_url('peternity/steps')?>">ADOPT A PET!</a></li>   
-		
+		<li class="menupad"><a class="sm" href="<?php echo base_url('peternity/signup')?>" style="text-decoration:none" data-toggle="modal" data-target="#myModal">ADOPT A PET!</a></li>   
+
 	
 	  
 	  
