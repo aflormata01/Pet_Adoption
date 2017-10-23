@@ -1,12 +1,12 @@
 
 <div class="container-fluid adminlog">
-	<div class="row" id="#panel">
-		<div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2">
+	<div class="row" id="#panel" style="float: left;">
+		<div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2" >
         
   	
 			<br/>
 			
-    	    <div class="panel"  class="col-md-12">
+    	    <div class="panel border"  class="">
                 <div class="panel-heading">
                     <h3 class="panel-title text-center">
                         <span class="glyphicon glyphicon-calendar"></span>

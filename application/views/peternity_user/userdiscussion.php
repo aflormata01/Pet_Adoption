@@ -26,6 +26,8 @@
 	
 	?>
 	
+	
+	
 		<h6>
 		<div class="text-left">
 		<a href="<?php echo base_url('user/addDiscussion')?>" data-toggle="modal" data-target="#myModal"><button class="btn btn-muted sm" type="button" id="addButton"><span class="glyphicon glyphicon-plus"> </span>Add Discussion</button></a>
@@ -39,6 +41,18 @@
 </div>
 </div>
 		</h6>
+		
+		
+		<label class="control-label" for="body">Topics: </label>
+		<select class="form-control marginbottom" type="text">
+			<option>Pet Grooming</option>
+			<option>Pet Vaccinations and Recommended Medicine</option>
+			<option>Restrictions when taking care of pets</option>
+			<option>Pet Care Tips </option>
+			<option>All about dogs </option>
+			<option>Cat Forum </option>
+			<option>Caring for reptiles and amphibians</option>
+		</select>
 
 	</div>
 	
