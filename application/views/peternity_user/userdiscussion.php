@@ -44,16 +44,13 @@
 		
 		
 		<label class="control-label" for="body">Topics: </label>
-		<select class="form-control marginbottom" type="text">
-			<option>Pet Grooming</option>
-			<option>Pet Vaccinations and Recommended Medicine</option>
-			<option>Restrictions when taking care of pets</option>
-			<option>Pet Care Tips </option>
-			<option>All about dogs </option>
-			<option>Cat Forum </option>
-			<option>Caring for reptiles and amphibians</option>
-		</select>
-
+		<h6 ><span><i class="fa fa-circle"></i></span><a href="<?php echo base_url('user/userdiscussion')?>" class="sm heading" style="text-decoration: none;"> General</a></h6>
+		<h6 ><span><i class="fa fa-circle"></i></span><a href="<?php echo base_url('user/category/Pet Vaccinations and Recommended Medicine')?>" class="sm heading" style="text-decoration: none;"> Pet Vaccinations and Recommended Medicine</a></h6>
+		<h6 ><span><i class="fa fa-circle"></i></span><a href="<?php echo base_url('user/category/Pet Grooming')?>" class="sm heading" style="text-decoration: none;"> Pet Grooming</a></h6>
+		<h6 ><span><i class="fa fa-circle"></i></span><a href="<?php echo base_url('user/category/Pet Care Tips')?>" class="sm heading" style="text-decoration: none;"> Pet Care Tips</a></h6>
+		<h6 ><span><i class="fa fa-circle"></i></span><a href="<?php echo base_url('user/category/All About Dogs')?>" class="sm heading" style="text-decoration: none;"> All About Dogs</a></h6>
+		<h6 ><span><i class="fa fa-circle"></i></span><a href="<?php echo base_url('user/category/Cat Forum')?>" class="sm heading" style="text-decoration: none;"> Cat Forum</a></h6>
+		<h6 ><span><i class="fa fa-circle"></i></span><a href="<?php echo base_url('user/category/Caring for reptiles and Amphibians')?>" class="sm heading" style="text-decoration: none;"> Caring for reptiles and Amphibians</a></h6>
 	</div>
 	
 	<div class="panel panel-default margintop col-sm-7">

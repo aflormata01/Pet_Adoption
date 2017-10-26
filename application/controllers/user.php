@@ -545,4 +545,22 @@ class user extends CI_Controller {
 		$this->load->view('include/footer');
 		
 	}
+	public function category($categ){
+		$categ = urlencode($categ);
+		$cond = array('category'=>$categ);
+		$user =  $this->session->userdata('username');
+		$result_array = $this->Peter->read_discussion($cond);
+		$condition = array('username' => $user);
+        $data['user_discussion'] = $result_array;
+		$result = $this->Peter->read_ownerinfo($condition);
+        $data['usern'] = $result;
+		$data['user'] = $user;
+		$header_data['title'] = "DISCUSSIONS";
+		$this->load->view('include/header',$header_data);
+		$this->load->view('include/menu_user',$data);
+		$this->load->view('peternity_user/userdiscussion',$data);
+		$this->load->view('peternity_user/discussion',$data);
+		$this->load->view('include/footer');
+		
+	}
 }
