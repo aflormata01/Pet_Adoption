@@ -195,7 +195,18 @@ class peternity extends CI_Controller {
 		
 		
 	}
-	
+	public function category($categ){
+		$categ = urlencode($categ);
+		$cond = array('category'=>$categ);
+		$result_array = $this->Peter->read_discussion($cond);
+        $data['discussion'] = $result_array;
+		$header_data['title'] = "DISCUSSIONS";
+		$this->load->view('include/header',$header_data);
+		$this->load->view('include/menu');
+		$this->load->view('peternity/discussion',$data);
+		$this->load->view('include/footer');
+		
+	}
 	
 	
 	/*public function loghome(){
