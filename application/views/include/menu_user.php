@@ -55,7 +55,6 @@
         </ul>
       </li>
       <li class="userpad"><a class="sm" href="<?php echo base_url('user/faqs')?>">FAQ's</a></li>  
-	  <li class="userpad"><a class="sm" href="<?php echo base_url('peternity/steps')?>">ADOPT A PET!</a></li>   
 		
       <li class="dropdown userpad">
         <a class="dropdown-toggle sm" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"></span> USER<span class="caret"></span></a>

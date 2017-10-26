@@ -86,10 +86,12 @@
 		<div class="col-sm-6">
 		<?php if($d['sex']=="Male")
 		echo '
-		<input type="radio" class="" id="sex" name="sex" value="Female" value="Male" /> Male';
+		<input type="radio" class="" id="sex" name="sex" value="Male" checked/> Male
+		<input type="radio" class="" id="sex" name="sex" value="Female" /> Female';
 		else
 			echo ' 
-		<input type="radio" class="" id="sex" name="sex" value="Male" value="Female" /> Female';
+		<input type="radio" class="" id="sex" name="sex" value="Male" /> Male
+		<input type="radio" class="" id="sex" name="sex" value="Female" checked/> Female';
 		?>
 	</div>
 	</div>
