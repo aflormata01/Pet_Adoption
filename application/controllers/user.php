@@ -277,7 +277,6 @@ class user extends CI_Controller {
                     array('field'=>'fname', 'label'=>'First Name', 'rules'=>'required'),
                     array('field'=>'lname', 'label'=>'Last Name', 'rules'=>'required'),
                     array('field'=>'email', 'label'=>'Email', 'rules'=>'required'),
-					array('field'=>'username', 'label'=>'Username', 'rules'=>'required'),
 					array('field'=>'sex', 'label'=>'Sex', 'rules'=>'required'),
 					array('field'=>'birthdate', 'label'=>'Birthday', 'rules'=>'required')
                 );
@@ -297,8 +296,9 @@ class user extends CI_Controller {
 		}
 
 		else{
+			if(isset($_POST['file']))
 			$url = $this->do_upload($_POST['file']);
-			$settings=array('fname'=>$_POST['fname'],'lname'=>$_POST['lname'],'email'=>$_POST['email'],'username'=>$_POST['username'],'sex'=>$_POST['sex'],'birthdate'=>$_POST['birthdate'],'photo'=>$url);
+			$settings=array('fname'=>$_POST['fname'],'lname'=>$_POST['lname'],'email'=>$_POST['email'],'username'=>$user,'sex'=>$_POST['sex'],'birthdate'=>$_POST['birthdate'],'photo'=>$url);
             $this->Peter->update_ownerinfo($settings);
             redirect('user');
 		}
